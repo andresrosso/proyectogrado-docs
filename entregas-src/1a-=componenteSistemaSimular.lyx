@@ -1,0 +1,429 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+ANÁLISIS SISTÉMICO
+\end_layout
+
+\begin_layout Subsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+Un sistema puede verse como un objeto en el cual interactúan variables de
+ diferentes clases para producir señales observables denominadas; salidas.
+ Las señales externas también pueden afectar e influir en el comportamiento
+ del sistema, pero estas señales son susceptibles de manipulación El sistema
+ además, puede presentar perturbaciones que pueden ser clasificadas en observaci
+ones mesurables y aquellas que solamente pueden observarse.
+ Todas estas señales son fundamentales para poder determinar el modelo de
+ un sistema.
+\end_layout
+
+\begin_layout Standard
+Para el desarrollo del presente estudio, hemos identificado el sistema edificio,
+ éste constituye un ejemplo de los sistemas abiertos.
+ Así mismo, se ha identificado el subsistema elevador.
+ Un sistema abierto “puede considerarse como un conjunto de partes en constante
+ interacción constituyendo un todo sinérgico orientado hacia determinados
+ propósitos y en permanente relación de interdependencia con el ambiente
+ externo” [19].
+ Un sistema abierto como un club, el gobierno o un edificio, -como es el
+ caso nuestro-, necesita garantizar la asimilación de sus salidas por el
+ ambiente.
+ Por consiguiente, el sistema requiere información constante y depurada
+ del ambiente no sólo en cuanto a la naturaleza del medio sino también a
+ la calidad y cantidad de entradas disponibles, y principalmente en cuanto
+ a la eficacia o adecuación de los productos o respuestas del sistema al
+ ambiente.
+ El funcionamiento del sistema debe estudiarse con respecto a las relaciones
+ y procesos continuos con el medio que lo rodea.
+ 
+\end_layout
+
+\begin_layout Subsection
+Consideraciones de Diseño
+\end_layout
+
+\begin_layout Itemize
+Las llamadas generadas en los pisos son hechas a traves de una matriz de
+ botones, esto permite que el sistema conozca con anterioridad el piso destino
+ de cada pasajero antes de ser embarcado 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Siikonen2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+El edificio modelado podrá ser parametrizado en los siguientes aspectos.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Número de pisos de la edificación.
+\end_layout
+
+\begin_layout Itemize
+Número de cabinas de ascensor.
+\end_layout
+
+\begin_layout Itemize
+Velocidad promedio de los ascensores.
+\end_layout
+
+\begin_layout Itemize
+Dinámica de movimiento de los pasajeros:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tráfico presente en la edificación durante todo el día, sin tener en cuenta
+ variables estacionales.
+\end_layout
+
+\begin_layout Itemize
+Tiempo promedio que dura un pasajero entrando y saliendo del ascensor.
+\end_layout
+
+\begin_layout Itemize
+Pisos por los cuales se entra o se sale de la edificación.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Una vez las llamadas son asignadas no pueden ser reasignadas.
+\end_layout
+
+\begin_layout Itemize
+Los ascensores del sistemas estarán sujetos y no pueden violar ninguna de
+ las reglas expuestas más adelante.
+\end_layout
+
+\begin_layout Itemize
+The elevator systems comprises more than one elevator car, and operates
+ under up-peak traffic condition only, i.e., the dominant traffic flow is
+ in an upward direction, with the majority of passengers entering the elevator
+ system at the main terminal.
+ • Elevators return to the main terminal, even when there are no calls.
+\end_layout
+
+\begin_layout Itemize
+Empty elevators await orders at the main terminal, and do not leave without
+ passengers considering on VIP service.
+ • The main terminal has adequate space to accommodate arrival passengers.
+ • Passengers can select elevators at will; • Passenger arrivals, at the
+ main terminal, follow the Poisson process and independent of each other.
+ • The queue service discipline is first come, first served.
+ • When a passenger arrives at the main terminal, if all the elevators are
+ busy, then he enters into the waiting queue automatically to wait for an
+ elevator to come.
+ • Service is by batches of size no greater than the size of rated capacity
+ of the elevator.
+ • The service time for each batch is exponentially distributed with a mean
+ service time of each elevator car.
+ 
+\end_layout
+
+\begin_layout Subsection
+Variable de Simulación
+\end_layout
+
+\begin_layout Subsubsection
+Variables Independientes
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Velocidad del ascensor
+\series default
+ (
+\begin_inset Formula $v_{e}$
+\end_inset
+
+): Velocidad promedio con la que el ascensor recorre el edificio, medida
+ en pisos por segundo.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Número de elevadores
+\series default
+ (
+\begin_inset Formula $e$
+\end_inset
+
+): Número de ascensores con los que se correrá la simulación.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Número de pisos 
+\series default
+(
+\begin_inset Formula $f$
+\end_inset
+
+): 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pisos portal
+\series default
+ (
+\begin_inset Formula $p_{i}=1$
+\end_inset
+
+ si es portal, 
+\begin_inset Formula $0$
+\end_inset
+
+ en otro caso.
+ Para todo 
+\begin_inset Formula $i\:\epsilon\:0\leq i\leq f$
+\end_inset
+
+ ): ): Pisos por los cuales están entrando nuevos usuarios al sistema.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pisos reposo de ascensor
+\series default
+ (
+\begin_inset Formula $r_{j}$
+\end_inset
+
+.
+ Para todo 
+\begin_inset Formula $j\:\epsilon\:0\leq j\leq e$
+\end_inset
+
+ ): Pisos a donde va cada ascensor 
+\begin_inset Formula $e$
+\end_inset
+
+ una vez que no tenga lamadas de servicio.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo cierre puerta ascensor
+\series default
+ (
+\begin_inset Formula $t_{c}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo apertura puerta ascensor
+\series default
+ (
+\begin_inset Formula $t_{o}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Capacidad de cada cabina
+\series default
+ (
+\begin_inset Formula $c_{k}$
+\end_inset
+
+, para todo 
+\begin_inset Formula $k\:\epsilon\:0\leq k\leq e$
+\end_inset
+
+ ):
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Capacidad de cada cabina
+\series default
+ (
+\begin_inset Formula $c_{k}$
+\end_inset
+
+, para todo 
+\begin_inset Formula $k\:\epsilon\:0\leq k\leq e$
+\end_inset
+
+ ):
+\end_layout
+
+\begin_layout Subsubsection
+Varibles Dependientes
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de transferencia de pasajeros
+\series default
+ (
+\begin_inset Formula $t_{t}$
+\end_inset
+
+) : Tiempo que dura.
+\end_layout
+
+\begin_layout Itemize
+Numero de pasajeros que arrivan ( N(t) ): Nuero de pasajeros que arrivan
+ al edifici
+\end_layout
+
+\begin_layout Subsection
+Componentes del Simulador
+\end_layout
+
+\begin_layout Subsubsection
+Controlador de ascensor
+\end_layout
+
+\begin_layout Itemize
+El elevador no llevara a un pasajero dentro del ascensor en dirección contraria
+ a la que él se dirige.
+\end_layout
+
+\begin_layout Itemize
+La capacidad de cada ascensor son n personas, y si el cupo está lleno no
+ atenderá llamadas.
+\end_layout
+
+\begin_layout Itemize
+Un elevador viaja a una velocidad constante de n pisos por segundo.
+\end_layout
+
+\begin_layout Itemize
+Atender cada piso toma 
+\begin_inset Formula $n$
+\end_inset
+
+ segundos.
+ Durante este tiempo entran y salen del ascensor 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ personas, por lo tanto el tiempo que el ascensor está detenido en cada
+ piso es:
+\begin_inset Formula $n+\alpha(\rho)$
+\end_inset
+
+, en donde 
+\begin_inset Formula $\rho$
+\end_inset
+
+ es un factor multiplicador.
+\end_layout
+
+\begin_layout Itemize
+Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando una
+ de las restricciones anteriormente mencionadas.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Patrones de tráfico
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Referencias
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "C:/Repositorio/MiSyC/ProyectoMaestria/tesisBibtext"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
