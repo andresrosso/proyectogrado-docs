@@ -463,34 +463,59 @@ Definciones Principales
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch NoChildDocument
-status collapsed
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "thesisExample"
-options "alpha"
-
-\end_inset
-
-
+Tiempo de espera: es el tiempo comprendido entre la generación de la llamada
+ de elevedor y el arribo de este al piso de la llamada.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "custom"
-width "2.5cm"
-
-\end_inset
-
-
+Tiempo de viaje: es el tiempo comprendido desde que el pasajero entra al
+ elevador hasta que llega a su piso destino.
 \end_layout
 
+\begin_layout Standard
+Tiempo total: es el tiempo que se comprende desde arribo del usuario al
+ sistema hasta la llegada de este al piso destino, es la suma del tiempo
+ de espera y el tiempo de viaje, es tambien llamado tiempo de servicio 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "POWELL1992"
+
 \end_inset
 
+ o tiempo a destino 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NAKAI1994"
 
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tiempo de retorno de viaje (round trip time): Es el tiempo que un elevador
+ comprendido desde que recoje pasjeros en el primer piso (lobby), lleva
+ 
+\end_layout
+
+\begin_layout Standard
+ourney time is approximated by average time to destination (Fortune 1995),
+ transit time to destination (Schröder 1984), or by maximum passenger transit
+ time to the destination (Strakosch 1984).
+ The travel time from the bottom to top floor at full speed is used to define
+ the elevator speed.
+ In elevator planning, a theoretical up-peak situation where all the elevators
+ leave the lobby with 80 per-cent load is normally used.
+ The two most important planning parameters, the up-peak interval and handling
+ capacity, are calculated from the round trip time.
+ The round trip time starts when a car opens its doors at the lobby, and
+ continues until an elevator has made a trip around the building and starts
+ to open its doors after returning to the lobby.
+ The interval is the average time between car departures from the lobby.
+ The handling capacity gives the number of passengers the elevator system
+ can transport in five minutes during up-peak.
+ The main parameters in defining the passenger service level used in this
+ work are shown in Figure 1.
 \end_layout
 
 \end_body
