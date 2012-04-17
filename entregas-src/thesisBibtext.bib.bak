@@ -30,6 +30,16 @@
   timestamp = {2012.03.05}
 }
 
+@ELECTRONIC{EMPORIS2012,
+  author = {EMPORIS},
+  year = {2012},
+  title = {World's tallest buildings - Top 200},
+  address = {http://www.emporis.com/statistics/worlds-tallest-buildings},
+  url = {http://www.emporis.com/statistics/worlds-tallest-buildings},
+  owner = {arosso},
+  timestamp = {2012.04.17}
+}
+
 @ARTICLE{HAKONEN2003,
   author = {Henri Hakonen},
   title = {Simulation of Building Traffic and Evacuation by Elevators},
@@ -67,14 +77,6 @@
 	Politécnico Superior. Servicio de Publicaciones},
   isbn = {9788492134922},
   url = {http://bks3.books.google.com.ec/books?id=D-O6AAAACAAJ}
-}
-
-@ARTICLE{,
-  author = {Nakai, S., Kubo, S., Imasaki, N., Yoshitsuku, T., Kiji, J, Endo,
-	T.},
-  title = {Elevator group control system with fuzzy neural network model},
-  owner = {arosso},
-  timestamp = {2012.04.17}
 }
 
 @CONFERENCE{NAKAI1994,
@@ -176,6 +178,13 @@
   year = {1997},
   owner = {arosso},
   timestamp = {2012.04.16}
+}
+
+@ARTICLE{JOCHEMWIT,
+  author = {Jochem Wit},
+  title = {Elevator planning for high rise buildings},
+  owner = {arosso},
+  timestamp = {2012.04.17}
 }
 
 @ARTICLE{ZHENSHAN2010,

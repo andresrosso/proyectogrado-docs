@@ -286,6 +286,59 @@ Edificaciones de Gran altura
 \end_layout
 
 \begin_layout Standard
+Las edificaciones de gran altura existen gracias a la eficiencia de los
+ sistemas de elevadores y no vice versa.
+\end_layout
+
+\begin_layout Standard
+En un contexto funcional el sistema de elevadores es la arteria principal
+ del edificio.
+ Fue despues que Elijah Graves Otis inventó el sistema de govierno de velocidad
+ para elevadores y el sistema seguro de frenado para elevadores, que los
+ sistemas de elevadores se conviertieron en una opción viable para transportar
+ y la altura de la construcción dejó de ser un factor limitante.
+\end_layout
+
+\begin_layout Standard
+A partir de entonces las construcciones eran cada vez más altas, y en paises
+ como Estados Unidos y Asia se marcaba una clara tendencia a preferir este
+ tipo de edificaciones en ciudad con alta densidad poblacional.
+ Un ejemplo de estas edificaciones son la torre Taipei 101 con una altura
+ de 509 metros o la torre Burj Khalifa en Dubai con 828 metros de altura
+ y 163 pisos de altura, siendo hasta el momento la construcción habitable
+ más alta del mundo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EMPORIS2012"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La torre Taipei 101 cuenta con cincuenta elevadores de alta velocidad, con
+ un costo apróximado de $85 millones de dolares.
+ La velocidad de ascenso de estos elevadores de 16 m/s, es decir apróximadamente
+ 60 km/h
+\end_layout
+
+\begin_layout Standard
+Para la construcción de edificaciones de gran altura se deben considerar
+ varias limitantes, como las condiciones del suelo, el riesgo sismico, facilidad
+es de accesibilidad, regulaciones gubernamentales, consumo de energía y
+ eficiencia del sistema de elevadores.
+ 
+\end_layout
+
+\begin_layout Standard
+Limitaciones finan• construction time (phases, investment risk and permitted
+ daily work hours) • soil conditions (foundations) • seismic/wind hazards
+ • accessibility/mobility at ground level • regulations (construction, daylight
+ access) • energy consumption and effi ciency • prestige
+\end_layout
+
+\begin_layout Standard
 Elevators have been built throughout history but the first modern passenger
  elevators were developed no more than about 150 years ago.
  Steam and hydraulic elevators had already been introduced by 1852, when
@@ -340,6 +393,44 @@ e the "intelligence" from the machine room to the elevator components, even
 
 \begin_layout Section
 Simuladores de Tráfico Vertical
+\end_layout
+
+\begin_layout Standard
+El primer simulador de tráfico para edificaciones basado en software se
+ desarrollo en el año de 1970 REFE????.
+ En el año de 1980 se desarrollo el primer simulador para PC, estos simuladores
+ solo contemplaban un elevedor y el algorítmo de control para la asiganación
+ de llamadas seguía unas reglas simples basadas en la posición del elevador
+ y la ubicación de la llamada.
+\end_layout
+
+\begin_layout Standard
+En este momento los simuladores son desarrollados principalmente por las
+ empresas fabrcantes de sistemas de elevadores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OTISPLAN_Brochure"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN_BTS2004"
+
+\end_inset
+
+.
+ Solamente una empresa de investigación en planificación de edificaciones
+ de gran altura cuenta con un simulador de licencia comercial 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ElevateLicence"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -411,11 +502,7 @@ A typical architecture of an elevator control system is shown in Figure
 \begin_inset Float figure
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -427,7 +514,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
+EGCS Arquitectura Típica
 \end_layout
 
 \end_inset
