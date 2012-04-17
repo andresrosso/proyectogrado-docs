@@ -411,7 +411,11 @@ A typical architecture of an elevator control system is shown in Figure
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -423,7 +427,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-EGCS Arquitectura Típica
+
 \end_layout
 
 \end_inset

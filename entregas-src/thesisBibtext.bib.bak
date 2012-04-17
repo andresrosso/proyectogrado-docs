@@ -69,6 +69,15 @@
   url = {http://bks3.books.google.com.ec/books?id=D-O6AAAACAAJ}
 }
 
+@ARTICLE{OTISPLAN_Brochure,
+  author = {OTIS},
+  title = {OTIS Elevatot Plan Brochure},
+  journal = {Otis Elevator Company},
+  year = {1999},
+  owner = {arosso},
+  timestamp = {2012.04.16}
+}
+
 @ARTICLE{ZHIFENG2007,
   author = {Zhifeng Pan and Fei Luo and Yuge Xu},
   title = {Elevator Traffic Flow Model Based On Dynamic Passenger Distribution},
@@ -93,6 +102,14 @@
   timestamp = {2012.02.13}
 }
 
+@ELECTRONIC{ElevateLicence,
+  author = {Peters Research},
+  title = {Peters Research Elevate Simulator},
+  url = {https://www.peters-research.com/catalog/index.php},
+  owner = {arosso},
+  timestamp = {2012.04.16}
+}
+
 @ARTICLE{ROBERT2000,
   author = {C. Robert},
   title = {Elevate traffic analysis software (Eliminating the 
@@ -113,6 +130,15 @@
   year = {2004},
   owner = {arosso},
   timestamp = {2012.02.20}
+}
+
+@ARTICLE{SIIKONEN_BTS2004,
+  author = {Marja-Liisa Siikonen},
+  title = {Elevator Simulation And Control},
+  journal = {KONE Elevators},
+  year = {2004},
+  owner = {arosso},
+  timestamp = {2012.04.16}
 }
 
 @ARTICLE{ZHENSHAN2010,

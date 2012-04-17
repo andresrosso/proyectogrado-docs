@@ -281,29 +281,96 @@ thepage
 Introducción
 \end_layout
 
-\begin_layout Section
-Overview
+\begin_layout Standard
+El uso de las construcciones verticales experimenta un fenómeno de expansión
+ debido al gran precio del terreno y la densidad poblacional de las grandes
+ urbes.
+ 
 \end_layout
 
 \begin_layout Standard
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
- bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
- bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
- bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
- bla bla bla bla DLC-coatings
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "DLC"
-description "diamond-like carbon"
+El incremento de este tipo de construcciones trae el problema de transportar
+ eficientemente el gran número de personas visitantes o residente de la
+ edificación.
+ Para el transporte en edificios de gran altura no existe un medio más adecuando
+ que las cabinas de ascensor, pero su capacidad reducida, el alto flujo
+ de pasajeros en horas pico y la considerable distancia que deben recorrer
+ los ascensores hace que el sistema tienda a colapsar elevendo el tiempo
+ promedio que una persona debe esperar para ser transportada.
+\end_layout
+
+\begin_layout Standard
+En rascacielos o edificaciones de gran altura los sistemas de control tradiciona
+l son ineficientes para cubrir la necesidad de transporte de pasajeros.
+ Es por esto que grandes multinacionales constructoras de elevadores como
+ por ejemplo MITSUBISHI y OTIS entre otras, gastan millones de dólares en
+ investigaciones tendientes a solventar esta creciente necesidad, la investigaci
+ón aislada sobre este campo es reducida y la información disponible de esta
+ área es también escasa.+
+\end_layout
+
+\begin_layout Section
+Definición del Problema
+\end_layout
+
+\begin_layout Standard
+En un sistema de transporte vertical de un solo elevador, este se encarga
+ de atender todas las llamadas que se generen en el sistema.
+ En el caso de varios elevadores el sistema de control debe tener en cuenta
+ las condiciones de todos los elevadores para asiganar aquel que pueda atender
+ en mejor medida la llamada.
+ 
+\end_layout
+
+\begin_layout Standard
+Debido a la importancia de transportar eficientemente las personas en edificacio
+nes de gran altura las grandes compañias líderes en esta área, han presentantado
+ diversos algoritmos de control 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN-SIIKONEN-2008,SIIKONEN2004"
 
 \end_inset
 
- bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
- bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla,
- see 
+que presentan una eficacia mayor medida en tiempo se servicio promedio de
+ pasajeros.
+ Estas compañias cuentan con los recursos financieros para investigación
+ bastante altos.
+ Sus avances y nuevos algorítmos de control para grupo de elevadores son
+ verificados en simuladores construidos
+\shape italic
+ ad-hoc
+\shape default
+ que reproducen con precisión el tráfico de psaajeros y que miden con exactitud
+ los tiempos invertidos por los usuarios para movilizarce dentro de la edificaci
+ón.
+ Algunos de estos ambientes de simulación son OtisPlan de Otis Corporation
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Fowl1928"
+key "OTISPLAN_Brochure"
+
+\end_inset
+
+, Building Traffic Simulator (BTS) de la empresa finlandesa KONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN_BTS2004"
+
+\end_inset
+
+, Elevate desarrollado por Peter Research ltd.
+ 
+\end_layout
+
+\begin_layout Standard
+Estas herramientas de simulación sofisticadas tienen en común que son propietari
+as, en el caso de BTS y OtisPlan su uso está restringido a personal de la
+ compañia únicamente y para el caso de Elevate existe una licencia comercial
+ de usuario único con un costo de 2900 dolares 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ElevateLicence"
 
 \end_inset
 
@@ -311,7 +378,81 @@ key "Fowl1928"
 \end_layout
 
 \begin_layout Section
-The next section
+Objetivos
+\end_layout
+
+\begin_layout Subsection
+Objetivo General 
+\end_layout
+
+\begin_layout Standard
+Modelar la dinámica de tráfico presente en las edificaciones y asignar de
+ manera eficiente los ascensores haciendo uso de conceptos traídos de la
+ teoría evolutiva de juegos.
+ 
+\end_layout
+
+\begin_layout Subsection
+Objetivos Específicos 
+\end_layout
+
+\begin_layout Standard
+1.
+ Modelar el problema como un sistema dinámico.
+ 2.
+ Resolver la asignación de ascensores por medio de teoría de evolutiva de
+ juegos y sistemas multiagente.
+ 3.
+ Validar por medio de simulación el modelo propuesto y comparar contra la
+ técnica tradicional.
+ 
+\end_layout
+
+\begin_layout Section
+Contenido del Libro
+\end_layout
+
+\begin_layout Standard
+El sistema descrito presenta un comportamiento dinámico, en donde el estado
+ del mismo evoluciona en el tiempo, este comportamiento es posible modelarlo
+ matemáticamente simplificándolo pero sin perder los detalles importantes
+ [ALLIGOOD1996].
+ El sistema lo componen el medio ambiente (edificio, pisos), los pasajeros
+ y las cabinas de ascensor que para nuestro caso son los jugadores.
+ Se introduce el término jugador, ya que se plantea que las cabinas de ascensor
+ compitan entre ellas para atender las llamadas de los pasajeros.
+ Si la llamada es atendida satisfactoriamente (más adelante se definen estos
+ criterios) la cabina obtiene un pago por esto, y si en conjunto todas las
+ cabinas atienden satisfactoriamente las llamadas hay también una recompensa
+ grupal.
+ La recompensa grupal se reparte entre todas las cabinas, esto hace que
+ las funciones de decisión de las cabinas evolucionen en el tiempo y que
+ al final se obtenga cooperación como comportamiento emergente, algo similar
+ ocurre en el dilema del prisionero iterado [STANFORD2011].
+ La teoría de juegos no es muy apropiada para tratar problemas que envuelven
+ fenómenos dinámicos relacionados con varios participantes, en muchos problemas
+ de teoría de juegos las acciones de los jugadores modifican el ambiente
+ así como las decisiones que los demás jugadores puedan tomar, al tener
+ la teoría de juegos tradicional una matriz estática de pagos no es posible
+ modelar este comportamiento dinámico [AKIYAMA1999].
+ La necesidad ya había sido identificada por el propio von Neumman en su
+ libro “Theory of Games and Economic Behavior” en él reconoce que una teoría
+ dinámica sería más completa [STANFORD2011].
+ Este problema en particular permite modelar a las cabinas de ascensor como
+ agentes autónomos que compiten por servir las llamadas de los pasajeros
+ y obtener un pago individual y un pago grupal que incentivará la cooperación
+ entre los agentes.
+ Es importante verificar el desempeño de la técnica de control a usar, y
+ debido a lo costoso que sería hacerlo en la realidad se propone el diseño
+ y la construcción de un simulador, este simulador debe modelar de manera
+ precisa el comportamiento dinámico del sistema para que de manera controlada
+ se pueda verificar el funcionamiento de la solución propuesta midiendo
+ su eficiencia respecto al sistema de control tradicional.
+ 
+\end_layout
+
+\begin_layout Section
+
 \end_layout
 
 \begin_layout Standard

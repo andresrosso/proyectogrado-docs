@@ -488,11 +488,11 @@ El diagrama siguiente ilustra el flujo que por lo general sigue una simulación
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename fcSimulationGeneric.png
+	filename resources/fcSimulationGeneric.png
 	scale 50
 
 \end_inset

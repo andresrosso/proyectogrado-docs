@@ -69,9 +69,12 @@ Justificación
 \end_layout
 
 \begin_layout Standard
-The domestic research on simulation verification study about elevator traffic
- planning for high-rise buildings is not sufficient and concrete, and there
- are little literatures on this aspect.
+La investigación académica sobre el peoblema de controlar el tráfico en
+ edificaciones de gran altura aún no es lo suficientemente concreto y hay
+ poca literatura en el medio académico.
+ La mayoría de los traba The domestic research on simulation verification
+ study about elevator traffic planning for high-rise buildings is not sufficient
+ and concrete, and there are little literatures on this aspect.
  ElevateTM 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -90,7 +93,31 @@ analysis & simulation evaluations, but the cost of the package is very expensive
  it’s source code.
 \end_layout
 
+\begin_layout Standard
+Debido a que existen varios tipos de simulación se hace necesario categorizar
+ la simulación objeto de estudio 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "INSUA2000"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
+Simulación de eventos discretos
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación de eventos discretos comprende; emular el flujo
+ de un sistema a través del tiempo, donde las variables de interés son discretas
+, cada hilo del proceso general tiene asociado una línea de tiempo diferente,
+ las cuales deben ser sincronizadas de alguna manera.
+ 
+\end_layout
+
+\begin_layout Subsubsection
 Avance por Eventos 
 \end_layout
 
@@ -129,10 +156,6 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename event-advanceSimDesign.jpg
 
@@ -160,16 +183,12 @@ key "PERROS2009"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Avance por Unidad de Tiempo
 \end_layout
 
@@ -194,7 +213,7 @@ Esta técnica es usada perincipalmente en simlaciones de fenómenos físicos
  no tienden a infinito.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Simulación Basada en Actividades
 \end_layout
 
@@ -215,7 +234,7 @@ key "PERROS2009"
  y cuando termina, además de controlar que ocurre depués de cada actividad.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Comparación Técnicas de Simulación
 \end_layout
 
@@ -420,10 +439,25 @@ Tabla comparativa
 \end_layout
 
 \begin_layout Subsection
+Simulación Estocástica o Determinística 
+\end_layout
+
+\begin_layout Standard
+El sistema tiene un comportamiento estocástico debido a que existen componentes
+ aleatorios dentro del sistema.
+ Una de las variables aleatorias que podemos encontrar es la tasa de arribo
+ a determinado piso, ya que nos interesa reproducir el tráfico que posiblemente
+ tendrá un edificio es necesario simular el sistema estocásticamente usando
+ distribuciones de probabilidades que el usuario podrá variar para representar
+ en términos de probabilidad una edificación específica.
+ 
+\end_layout
+
+\begin_layout Subsection
 Técnica de Simulación Escogida
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 Al tener eventos con separación entre ellos corta, el tiempo de ocio de
  sistema es bajo.
  Esto hace que el mejor métdo de simulación para este caso sea el diseño
@@ -435,7 +469,56 @@ Avance por Unidad de Tiempo
 \begin_inset Quotes erd
 \end_inset
 
+ con comportamiento estocástico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AVERILL2000"
+
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Standard
+El diagrama siguiente ilustra el flujo que por lo general sigue una simulación
+ de este tipo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fcSimulationGeneric.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de flujo simulación avance por unidad de tiempo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -445,7 +528,7 @@ Referencias
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "C:/Repositorio/MiSyC/ProyectoMaestria/tesisBibtext"
+bibfiles "tesisBibtext"
 options "plain"
 
 \end_inset

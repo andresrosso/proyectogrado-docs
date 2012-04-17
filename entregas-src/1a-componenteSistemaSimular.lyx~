@@ -617,15 +617,11 @@ Tiempo de transito entre dos pisos adyacentes
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename probLeftBehindUser.png
+	filename resources/probLeftBehindUser.png
 
 \end_inset
 
@@ -1033,15 +1029,11 @@ d
 \begin_inset Float figure
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename componentsUML.png
+	filename resources/componentsUML.png
 
 \end_inset
 
@@ -1387,7 +1379,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename performanceCriteria_wt.png
+	filename resources/performanceCriteria_wt.png
 	lyxscale 50
 	scale 50
 
