@@ -1,0 +1,1824 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+% increase link area for cross-references and autoname them
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\newlength{\abc}
+\settowidth{\abc}{\space}
+\AtBeginDocument{%
+\addto\extrasenglish{
+ \renewcommand{\equationautorefname}{\hspace{-\abc}}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Fig.\negthinspace}
+ \renewcommand{\tableautorefname}{Tab.\negthinspace}
+}
+}
+
+% in case somebody want to have the label "Gleichung"
+%\renewcommand{\eqref}[1]{Gleichung~(\negthinspace\autoref{#1})}
+
+% put the link to figure floats to the beginning
+% of the figure and not to its end
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% make caption labels bold
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enable calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoid that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+\end_preamble
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\use_default_options true
+\master thesis.lyx
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Your title"
+\pdf_author "Your name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\branch NoChildDocument
+\selected 0
+\filename_suffix 0
+\color #ff0000
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+chaptername
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thechapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Enable page headers and add the chapter to the header line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leftmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Right Footer
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Simulador
+\end_layout
+
+\begin_layout Section
+Técnicas de Simulación
+\end_layout
+
+\begin_layout Standard
+La investigación académica sobre el peoblema de controlar el tráfico en
+ edificaciones de gran altura aún no es lo suficientemente concreto y hay
+ poca literatura en el medio académico.
+ La mayoría de los traba The domestic research on simulation verification
+ study about elevator traffic planning for high-rise buildings is not sufficient
+ and concrete, and there are little literatures on this aspect.
+ ElevateTM [ROBERT2000], developed by Dr.
+ Richard Peters, is a international publicly available software package
+ for elevator traffic 
+\end_layout
+
+\begin_layout Standard
+analysis & simulation evaluations, but the cost of the package is very expensive
+ and limited only to general introduction in literatures without opening
+ it’s source code.
+\end_layout
+
+\begin_layout Standard
+Debido a que existen varios tipos de simulación se hace necesario categorizar
+ la simulación objeto de estudio [INSUA2000].
+\end_layout
+
+\begin_layout Subsection
+Simulación de eventos discretos
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación de eventos discretos comprende; emular el flujo
+ de un sistema a través del tiempo, donde las variables de interés son discretas
+, cada hilo del proceso general tiene asociado una línea de tiempo diferente,
+ las cuales deben ser sincronizadas de alguna manera.
+ 
+\end_layout
+
+\begin_layout Subsection
+Avance por Eventos 
+\end_layout
+
+\begin_layout Standard
+Esta técnica esta basada en el principio que el estado del sistema cambia
+ cada vez que un evento ocurre.
+ Durante el tiempo trasnscurrido entre un evento y otro el sistema permanece
+ inalterado[PERROS2009].
+ El sistema por lo tanto desliza el tiempo entre eventos, yendo de un evento
+ a otro en el tiempo sin hacer pausas.
+ 
+\end_layout
+
+\begin_layout Standard
+Los eventos deben ser enlazados de acuerdo al momento en el que se van a
+ ejecutar.
+ Para almacenar estos eventos se pueden usar estructuras como listas enlazadas,
+ doblemente enlazadas.
+ Las cuales deben mantener un órden cronológico de los eventos, es decir,
+ si se genera un evento que ocurre en un tiempo que no es el último, la
+ estructura debe mover los nodos de tal manera que no quede desordenada
+ la lista.
+\end_layout
+
+\begin_layout Subsection
+Avance por Unidad de Tiempo
+\end_layout
+
+\begin_layout Standard
+Esta técnica mantiene un reloj interno del sistema que avanza un intervalo
+ de tiempo definido en cada iteración.
+ En cada avance de tiempo se valida si hay eventos que ocurran en ese preciso
+ instante o y se ejecutan las tareas necesarias [PERROS2009]..
+ 
+\end_layout
+
+\begin_layout Standard
+Esta técnica es usada perincipalmente en simlaciones de fenómenos físicos
+ que ocurren durante un tiempo no muy largo, es decir ensimulaciones que
+ no tienden a infinito.
+\end_layout
+
+\begin_layout Subsection
+Simulación Basada en Actividades
+\end_layout
+
+\begin_layout Standard
+En una simulación de este tipo, el sistema modelado es una colección de
+ actividades o procesos.
+ Por ejemplo para un típico ejemplo te teoría de colas las actividades serían:
+ a) Arribo del objeto b) Servicio del objeto c) Entrega del objeto atendido
+ [PERROS2009].
+ En estas simulaciones es importante conocer cuando la actividad empieza
+ y cuando termina, además de controlar que ocurre depués de cada actividad.
+\end_layout
+
+\begin_layout Subsection
+Simulación Estocástica o Determinística 
+\end_layout
+
+\begin_layout Standard
+El sistema tiene un comportamiento estocástico debido a que existen componentes
+ aleatorios dentro del sistema.
+ Una de las variables aleatorias que podemos encontrar es la tasa de arribo
+ a determinado piso, ya que nos interesa reproducir el tráfico que posiblemente
+ tendrá un edificio es necesario simular el sistema estocásticamente usando
+ distribuciones de probabilidades que el usuario podrá variar para representar
+ en términos de probabilidad una edificación específica.
+ 
+\end_layout
+
+\begin_layout Subsection
+Técnica de Simulación Escogida
+\end_layout
+
+\begin_layout Standard
+Al tener eventos con separación entre ellos corta, el tiempo de ocio de
+ sistema es bajo.
+ Esto hace que el mejor métdo de simulación para este caso sea el diseño
+ basado en “Avance por Unidad de Tiempo” con comportamiento estocástico
+ [AVERILL2000].
+\end_layout
+
+\begin_layout Standard
+El diagrama siguiente ilustra el flujo que por lo general sigue una simulación
+ de este tipo.
+\end_layout
+
+\begin_layout Section
+Diseño de la Simulación
+\end_layout
+
+\begin_layout Subsection
+Objetivos
+\end_layout
+
+\begin_layout Itemize
+Se desea simular una edificación real en la cual el estudio de tráfico se
+ haya hecho previamente y el número de ascensores sea sufuciente para servir
+ correctamente a los usuarios.
+\end_layout
+
+\begin_layout Itemize
+Se busca medir el desempeño de diferentes estrategias de control para grupo
+ de elevadores.
+\end_layout
+
+\begin_layout Itemize
+Se desea medir el tiempo que toma una evacuación por medio de los elevadores.
+ Esto depende de la naturaleza de la emergencia 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NATSAFCOUNCIL"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Se debe poder determinar si la configuación del sistema de ascensores es
+ suficiente para servir la población del edificio.
+\end_layout
+
+\begin_layout Subsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+El primer simulador de tráfico fue desarrollado para verificar el tráfico
+ en edificaciones altas, tal como el WORLD TRADE CENTER, en este entonces
+ los controladores para grupos de ascensores eran evaluados con simuladores
+ híbridos, los cuales consisten en modelos análogos y digitales.
+ En estos simuladores las tarjetas de control de los elevadores, eran conectadas
+ con el simulador, más adelante estos vendrían dentro de minicomputadores
+ en donde varios fenómenos de tráfico eran estudiados 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+ Recientemente estos simuladores pueden ser ejecutados en computadores personale
+s.
+ El simulador a desarrollar permitirá tener un ambiente controlado que represent
+a las características más importantes de una edificación y simplifica su
+ representación, facilitando así, el mantenimiento, adaptación y reutilización.
+\end_layout
+
+\begin_layout Subsection
+Análisis Sistémico
+\end_layout
+
+\begin_layout Standard
+Un sistema puede verse como un objeto en el cual interactúan variables de
+ diferentes clases para producir señales observables denominadas; salidas.
+ Las señales externas también pueden afectar e influir en el comportamiento
+ del sistema, pero estas señales son susceptibles de manipulación El sistema
+ además, puede presentar perturbaciones que pueden ser clasificadas en observaci
+ones mesurables y aquellas que solamente pueden observarse.
+ Todas estas señales son fundamentales para poder determinar el modelo de
+ un sistema.
+\end_layout
+
+\begin_layout Standard
+Para el desarrollo del presente estudio, se ha identificado el sistema edificio,
+ éste constituye un ejemplo de los sistemas abiertos.
+ Así mismo, se ha identificado el subsistema elevador.
+ Un sistema abierto “puede considerarse como un conjunto de partes en constante
+ interacción constituyendo un todo sinérgico orientado hacia determinados
+ propósitos y en permanente relación de interdependencia con el ambiente
+ externo” 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "INSUA2000"
+
+\end_inset
+
+.
+ Un sistema abierto como un club, el gobierno o un edificio, -como es el
+ caso nuestro-, necesita garantizar la asimilación de sus salidas por el
+ ambiente.
+ Por consiguiente, el sistema requiere información constante y depurada
+ del ambiente no sólo en cuanto a la naturaleza del medio sino también a
+ la calidad y cantidad de entradas disponibles, y principalmente en cuanto
+ a la eficacia o adecuación de los productos o respuestas del sistema al
+ ambiente.
+ El funcionamiento del sistema debe estudiarse con respecto a las relaciones
+ y procesos continuos con el medio que lo rodea.
+ 
+\end_layout
+
+\begin_layout Subsection
+Componentes del Sistema
+\end_layout
+
+\begin_layout Standard
+Del análisis sistémico realizado de encontraron estos como componentes principal
+es.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Edificio
+\series default
+: Espacio dentro del cual se movilizan personas u objetos, es el ente contenedor
+ de los elevadores del sistema.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ascensor
+\series default
+: Es el objeto que se encarga de recorrer el edificio transportando a las
+ personas entre sus diferentes pisos.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Piso(s)
+\series default
+: Objeto componente del edificio, a través de los cuales se desplaza el
+ elevador transportando a las personas.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pasajero
+\series default
+: Es el objeto a transportar entre las diferentes plantas o pisos de la
+ edificación, presenta un comportamiento aleatorio en cuanto a la tasa de
+ arribo.
+ 
+\end_layout
+
+\begin_layout Subsection
+Consideraciones de Diseño
+\end_layout
+
+\begin_layout Standard
+Antes de diseñar el sistema se deben considerar algunas reglas básicas que
+ condicionaran el diseño del simulador.
+\end_layout
+
+\begin_layout Itemize
+Las llamadas generadas en los pisos son hechas a traves de una matriz de
+ botones, esto permite que el sistema conozca con anterioridad el piso destino
+ de cada pasajero antes de ser embarcado 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Una vez las llamadas son asignadas no pueden ser reasignadas.
+\end_layout
+
+\begin_layout Itemize
+Una vez el ascensor sirva todas sus llamadas y quede libre, regresara a
+ su piso reposo.
+\end_layout
+
+\begin_layout Itemize
+Los pasajeros que arriban al sistema, siguen un proceso de Poisson, sobre
+ esto se detallará más adelante.
+\end_layout
+
+\begin_layout Itemize
+La política del asignación de llamadas del sistema es de tipo colas FIFO,
+ primera llamada que entra al sistema, primera llamada en ser atendida.
+\end_layout
+
+\begin_layout Subsection
+Proceso General De La Simulación
+\end_layout
+
+\begin_layout Standard
+La simulación como metodología de análisis de sistemas está basada en la
+ construcción de un modelo que describe el comportamiento del sistema 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "INSUA2000"
+
+\end_inset
+
+, en este caso implementado en un ordenador.
+ 
+\end_layout
+
+\begin_layout Standard
+Pese a la gran variedad de modelos de simulación existentes todos estos
+ se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
+ se usará esta simplificación .
+\end_layout
+
+\begin_layout Enumerate
+Obtener observaciones básicas de una fuente de números aleatorios.
+ En la simulación de este trabajo es necesario generar los usuarios del
+ sistema y comportamientos dentro de el, esta generación estará basáda en
+ observaciones de la realidad identificada en otros trabajos académicos.
+\end_layout
+
+\begin_layout Enumerate
+Transformar las observaciones básicas de entradas al modelo, según las especific
+aciones del mismo.
+ Es necesario por lo tanto asignar a estos datos aleatorios un significado
+ real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
+ al sistema según la variable temporal de la simulación, o el piso al que
+ se dirije según el patrón de tráfico presente.
+\end_layout
+
+\begin_layout Enumerate
+Trasformar las entradas, a traves del modelo, en salidas.
+ Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
+ las salidas medidas del sistema.
+\end_layout
+
+\begin_layout Enumerate
+Calcular estadísticas a partir de salidas, para estimar las medidas de comportam
+iento.
+ Una vez corrida y finalizada la simulación es necesario medir estadísticamente
+ el desempeño del sistema.
+\end_layout
+
+\begin_layout Subsection
+Variables de Simulación
+\end_layout
+
+\begin_layout Subsubsection
+Variables Independientes
+\end_layout
+
+\begin_layout Paragraph*
+Simulación
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Cronómetro de la simualción
+\series default
+ (
+\begin_inset Formula $t$
+\end_inset
+
+): Tiempo actual de la simulación.
+\end_layout
+
+\begin_layout Paragraph
+Edificio
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Número de pisos 
+\series default
+(
+\begin_inset Formula $f$
+\end_inset
+
+): Número de pisos de la edificación a simular.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pisos portal
+\series default
+ (
+\begin_inset Formula $g_{i}=1$
+\end_inset
+
+ si es portal, 
+\begin_inset Formula $0$
+\end_inset
+
+ en otro caso.
+ Para todo 
+\begin_inset Formula $i\:\epsilon\:0\leq i\leq f$
+\end_inset
+
+ ): ): Pisos por los cuales están entrando nuevos usuarios al sistema.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pisos reposo de ascensor
+\series default
+ (
+\begin_inset Formula $r_{j}$
+\end_inset
+
+.
+ Para todo 
+\begin_inset Formula $j\:\epsilon\:0\leq j\leq e$
+\end_inset
+
+ ): Pisos a donde va cada ascensor 
+\begin_inset Formula $e$
+\end_inset
+
+ una vez que no tenga lamadas de servicio.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Distancia entre pisos
+\series default
+ (
+\begin_inset Formula $d_{f}$
+\end_inset
+
+): Distancia que hay entre 2 pisos adyacentes.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Población en cada piso
+\series default
+ (
+\begin_inset Formula $P_{i}$
+\end_inset
+
+, en dónde 
+\begin_inset Formula $i\in[0,f]$
+\end_inset
+
+): Población que alberga cada piso.
+\end_layout
+
+\begin_layout Paragraph*
+Sistema de Ascensores
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Número de elevadores
+\series default
+ (
+\begin_inset Formula $e$
+\end_inset
+
+): Número de ascensores con los que se correrá la simulación.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Capacidad del elevador
+\series default
+ (
+\begin_inset Formula $CCi$
+\end_inset
+
+, para todo 
+\begin_inset Formula $i\in[0,e]$
+\end_inset
+
+): Cantidad máxima de pasajeros para el ascensor 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Aceleración del elevador
+\series default
+ (
+\begin_inset Formula $A_{i}$
+\end_inset
+
+, para todo 
+\begin_inset Formula $i\in[0,e]$
+\end_inset
+
+): Aceleración de cada elevador.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Velocidad del ascensor
+\series default
+ (
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, para todo 
+\begin_inset Formula $i\in[0,e]$
+\end_inset
+
+): Velocidad promedio con la que el ascensor 
+\begin_inset Formula $i$
+\end_inset
+
+ recorre el edificio, medida en metros por segundo.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de viaje entre dos pisos adyacentes
+\series default
+ (
+\begin_inset Formula $t_{fi}$
+\end_inset
+
+, para todo 
+\begin_inset Formula $i\in[0,e]$
+\end_inset
+
+): Tiempo que tarda un ascensor en llegar de un piso a otro adyacente cuando
+ tiene que parar.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo cierre puerta ascensor
+\series default
+ (
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, para todo 
+\begin_inset Formula $i\in[0,e]$
+\end_inset
+
+): Tiempo medido en segundos que dura la puerta del ascensor 
+\begin_inset Formula $i$
+\end_inset
+
+ en cerrase.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo apertura puerta ascensor
+\series default
+ (
+\begin_inset Formula $o_{i}$
+\end_inset
+
+, para todo 
+\begin_inset Formula $i\in[0,e]$
+\end_inset
+
+): Tiempo medido en segundos que dura la puerta del ascensor 
+\begin_inset Formula $i$
+\end_inset
+
+ en abrirse.
+\end_layout
+
+\begin_layout Paragraph
+Pasajero
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de transferencia por pasajero
+\series default
+ (
+\begin_inset Formula $t_{p}$
+\end_inset
+
+): Tiempo que dura un pasajero en entrar o salir del ascensor.
+\end_layout
+
+\begin_layout Subsubsection
+Varibles Dependientes
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Población de pasajeros del sistema
+\series default
+ (
+\begin_inset Formula $P$
+\end_inset
+
+
+\begin_inset Formula $=0.8CC$
+\end_inset
+
+) : Promedio de de pasajeros cargados en cada viaje del sistema.
+ Para evitar que queden pasajeros sin atender en la cola del sistema se
+ asume que el factor de utilización es menor que el 100% de la capacidad
+ del sistema
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, aunque en algunos sistemas lo pasajero son encolados en los sistemas de
+ grupos de ascensor esto no se considera.
+ Generalmente se toma un valor del 80% como promedio de utilización de la
+ capacidad del sistema, esto se puede ver en la gráfica.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de transito entre dos pisos adyacentes
+\series default
+ (
+\begin_inset Formula $t_{ti}=\frac{d_{fi}}{v_{i}}$
+\end_inset
+
+, para todo 
+\begin_inset Formula $i\in[0,e]$
+\end_inset
+
+): Tiempo que tarda un ascensor en pasar por un piso adyacente cuando NO
+ tiene que parar.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/probLeftBehindUser.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Probabilidad de no recoger un pasajero 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de viaje del pasajero (
+\begin_inset Formula $TT_{i}$
+\end_inset
+
+
+\series default
+, para todo
+\series bold
+ 
+\begin_inset Formula $i\in P$
+\end_inset
+
+)
+\series default
+ : Tiempo que dura un pasajero desde que toma el ascensor hasta que llega
+ al piso destino.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $TT_{i}=2H\frac{d_{f}}{v_{i}}+(S+1)(c_{i}+o_{i}+t_{fi}-t_{ti})+2Pt_{p}$
+\end_inset
+
+, en donde:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+P : Cantidad de pasajeros en la cabina.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Queda por determinar la forma de estimar este dato, la estimación de BARNEY
+ no es exacta.
+ ?????????? BARNEY--PAG 127
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+S : Promedio de paradas que hace el ascensor en el viaje completo.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Queda por estimar este dato ???????? 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+H : Promedio del piso más alto alcanzado.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Queda por estimar este dato ???????? 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Tiempo de transferencia de pasajeros
+\series default
+ (
+\begin_inset Formula $C(i,j),$
+\end_inset
+
+en donde 
+\begin_inset Formula $i$
+\end_inset
+
+ es el número de pasajeros que entran al ascensor y 
+\begin_inset Formula $j$
+\end_inset
+
+ los que salen) : Tiempo que dura la entrada y salida de pasajeros viene
+ dado por la fourmula.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $?????$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Pasajero
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Numero de pasajeros que arriban en un tiempo t 
+\series default
+(
+\begin_inset Formula $N(t)$
+\end_inset
+
+ ): Número de pasajeros que arriban a la edifición en el tiempo t.
+ Depende de la población en el edificio.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Número de pasajeros viajando en el tiempo t
+\series default
+ (
+\begin_inset Formula $Q(t)$
+\end_inset
+
+): Total de personas que están dentro de alguna cabina y no han llegado
+ a su piso destino.
+ Depende de la población en el edificio.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Número de pasajeros sin atender en el tiempo t
+\series default
+ (
+\begin_inset Formula $P(t)$
+\end_inset
+
+): Número de personas que esperan ascensor en el pasillo.
+ Depende de la población en el edificio.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Número de pasajeros atendidos desde t=0 hasta un t actual
+\series default
+ (
+\begin_inset Formula $R(t)$
+\end_inset
+
+): Total de pasajeros que ya llegaron y se bajaron del ascensor en el tiempo
+ t.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de espera por pasajero atendido en el tiempo t
+\series default
+ (
+\begin_inset Formula $W{}_{k}(t)$
+\end_inset
+
+, para todo 
+\begin_inset Formula $k\:\epsilon\: R(t)$
+\end_inset
+
+ ): Tiempo de espera de los pasajeros que ya fueron atendidos.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de viaje por pasajero atendido en el tiempo t
+\series default
+ (
+\begin_inset Formula $T{}_{k}(t)$
+\end_inset
+
+, para todo 
+\begin_inset Formula $k\:\epsilon\: R(t)$
+\end_inset
+
+ ): Tiempo de viaje de los pasajeros que ya fueron atendidos.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de espera por pasajero sin atender
+\series default
+ (
+\begin_inset Formula $Q_{k}(t)$
+\end_inset
+
+, para todo 
+\begin_inset Formula $k\:\epsilon\: P(t)$
+\end_inset
+
+ ): Tiempo de espera por pasajero sin atender.
+\end_layout
+
+\begin_layout Subsection
+Componentes del Simulador
+\end_layout
+
+\begin_layout Standard
+Los componentes de la simulación discreta basada en avance de tiempo se
+ majean como lo propone Averill para este tipo de sistemas a simular 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AVERILL2000"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Estado de Sistema: 
+\series default
+Son el conjunto de variables necesarias para describir el sistema en un
+ tiempo particular.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Reloj de la Simulación
+\series default
+: Es la variable que da el tiempo actual de la simulación.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lista de Eventos: 
+\series default
+Lista que contiene el tiempo en el que cada tipo de evento va a ocurrir.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Rutina de Inicializaciòn: 
+\series default
+Rutina programada para iniciar la simulación en el tiempo 0.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Rutina para Manejo del Tiempo: 
+\series default
+Es un subprograma que determina el siguiente evento a ocurrir en la lista
+ de eventos.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ruta para Evento: 
+\series default
+Rutina que actualiza el estado del sistema cuando un tipo de evento ocurre,
+ hay una rutina para cada tipo de evento.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Rutinas de Librería: 
+\series default
+Son el conjunto de subprogramas usados para generar observaciones de acuerdo
+ a distribuiciones de probalidad.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Generador de Tráfico: 
+\series default
+Este componente generará de manera aleatoria los pasajeros que arriban al
+ sistema, la generación de pasajeros se hará usando el modelo de un proceso
+ de Poisson y la aproximación por número de ocurrencias.
+ Un modelo de Poisson es un proceso estocástico en dónde no se tiene certeza
+ del momento en el que ocurrirán los eventos y estos eventos independientes.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Generador de Reportes: 
+\series default
+Es un subprograma que mide el desempeño del sistema produciendo un reporte
+ una vez la simulación termina.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Programa Principal: 
+\series default
+Es un subprograma que invoca la rutina de tiempo para determinar el siguiente
+ evento y transferir el control a la correspondiente rutina de evento y
+ actualizar el estado del sistema apropiadamente.
+ El programa principal verifica de igual manera la terminación de la simulación
+ y llama la visualización del reporte estadístico.
+\end_layout
+
+\begin_layout Section
+Implementación de la Simulación
+\end_layout
+
+\begin_layout Subsection
+Principios de Diseño
+\end_layout
+
+\begin_layout Itemize
+El simulador debe ser parametrizable en los aspectos que tienen mayor relevancia
+ en la simulación.
+\end_layout
+
+\begin_layout Itemize
+La aplicación debe correr en cualquier sistema operativo, debe desarrollarse
+ bajo un lenguaje portable.
+\end_layout
+
+\begin_layout Itemize
+No se desarrollarán rutinas matemáticas o utilitarias si existe una libreía
+ de código libre que se pueda usar.
+\end_layout
+
+\begin_layout Itemize
+El simulador debe ser de código libre y abierto para la comunidad científica.
+\end_layout
+
+\begin_layout Itemize
+Es de gran valor presentar la dinámica del sistema gráficamente, con esto
+ cualquiera pdodria decir si el sistema es eficiente o no.
+\end_layout
+
+\begin_layout Itemize
+Al final de cada simulación debe mostrarse un informe estadístico del desempeño
+ del sistema.
+\end_layout
+
+\begin_layout Subsection
+Módulos de Software del Simulador
+\end_layout
+
+\begin_layout Standard
+De acuerdo al análisis realizado y siguiendo los principios de diseño, se
+ contemplan los siguientes módulos del simulador.
+\end_layout
+
+\begin_layout Standard
+asd
+\end_layout
+
+\begin_layout Standard
+asd
+\end_layout
+
+\begin_layout Standard
+asd
+\end_layout
+
+\begin_layout Standard
+as
+\end_layout
+
+\begin_layout Standard
+d
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/componentsUML.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Módulos del Simulador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dinámica de Arribo de Pasajeros
+\end_layout
+
+\begin_layout Standard
+Los usuarios arribaran al sistema siguiendo un proceso de Poisson, esto
+ es aceptado en generalmente en las investigaciones de este tipo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+ La distribución de Poisson ha sido también usada para describir otros fenómenos
+ como: la generación de particulas radioactivas o la cantidad de llamadas
+ que son recibidas por una central telefónica.
+\end_layout
+
+\begin_layout Standard
+La probabilidad de tener n pasajeros en el intervalo de tiempo T para una
+ tasa de arribo obtenida de la experiencia de 
+\begin_inset Formula $\lambda$
+\end_inset
+
+(en llamadas por segundo) es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{r}(n)=\frac{(\lambda T)^{n}}{n!}e^{-\lambda T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Diseño del Controlador de Grupo de Elevadores
+\end_layout
+
+\begin_layout Itemize
+El elevador no llevara a un pasajero dentro del ascensor en dirección contraria
+ a la que él se dirige.
+\end_layout
+
+\begin_layout Itemize
+La capacidad de cada ascensor son n personas, y si el cupo está lleno no
+ atenderá llamadas.
+\end_layout
+
+\begin_layout Itemize
+Un elevador viaja a una velocidad constante de n pisos por segundo.
+\end_layout
+
+\begin_layout Itemize
+Atender cada piso toma 
+\begin_inset Formula $n$
+\end_inset
+
+ segundos.
+ Durante este tiempo entran y salen del ascensor 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ personas, por lo tanto el tiempo que el ascensor está detenido en cada
+ piso es:
+\begin_inset Formula $n+\alpha(\rho)$
+\end_inset
+
+, en donde 
+\begin_inset Formula $\rho$
+\end_inset
+
+ es un factor multiplicador.
+\end_layout
+
+\begin_layout Itemize
+Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando una
+ de las restricciones anteriormente mencionadas.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Controlador Convencional
+\end_layout
+
+\begin_layout Standard
+El diseño de controladores convencionales en el campo de tráfico de pasajeros
+ en edificaciones está orientado por reglas de tráfico fijas en las cuales
+ no se tienen en cuenta la optimización del servicio.
+ Esta aproximación no tiene en cuanta la naturaleza dinámica del problema
+ que implica parámetros de operación cambiantes -por patrones de tráfico
+ diferentes y fluctuaciones en el transcurrir normal de los mismos-.
+ 
+\end_layout
+
+\begin_layout Standard
+En la actualidad se han normalizado un grupo de algoritmos para el control
+ de elevadores, éstos se programan en microprocesadores y se convierten
+ en soluciones generalizadas al problema del control de tráfico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+.A continuación se describen brevemente los principios básicos de los algoritmos
+ más empleados.
+\end_layout
+
+\begin_layout Standard
+•
+\series bold
+ Maniobra Universal Por Pulsadores
+\series default
+: Cuando el ascensor está desocupado, y es el primero en recibir la orden
+ ira a atender la llamada.
+ Si durante el funcionamiento se solicita el ascensor desde cualquier otra
+ planta la llamada será ignorada y el carro seguirá obedeciendo la orden
+ que ha iniciado la llamada.
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+Maniobra Duplex
+\series default
+: Cualquier llamada es atendida por el elevador que se encuentre libre;
+ pero si están libre dos elevadores, acudirá a la llamada el que esté mas
+ próximo al piso origen del llamado.
+ Solamente acude un elevador a cualquier llamado.
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+Maniobra Colectiva selectiva en los dos sentidos
+\series default
+: El elevador va a registrar únicamente los llamados que se generen en el
+ sentido que va el ascensor.
+ Es decir si el ascensor va hacia arriba sólo se registrarán los llamados
+ que se hagan en los pisos superiores, y si va hacia abajo sólo registrará
+ los que se generen en pisos inferiores.
+ El sentido se invierte cuando el elevador llega al último piso, ya sea
+ por una llamada de piso o una llamada de ascensor.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Reglas Básicas
+\end_layout
+
+\begin_layout Standard
+El control convencional usualmente atiende las llamadas hechas por los pasajeros
+ siguiendo ciertas reglas básicas:
+\end_layout
+
+\begin_layout Standard
+• El elevador no llevara a un pasajero dentro del ascensor en dirección
+ contraria a la que él se dirige.
+\end_layout
+
+\begin_layout Standard
+• La capacidad de cada ascensor son n personas, y si el cupo está lleno
+ no atenderá llamadas.
+\end_layout
+
+\begin_layout Standard
+• Un elevador viaja a una velocidad constante de n pisos por segundo.
+\end_layout
+
+\begin_layout Standard
+• Atender cada piso toma n segundos.
+ Durante este tiempo la persona entrara o saldrá del ascensor.
+ Si el número de personas es mayor que n se necesitaran de n+2 segundos.
+\end_layout
+
+\begin_layout Standard
+• Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando
+ una de las restricciones anteriormente mencionadas.
+ 
+\end_layout
+
+\begin_layout Subsection
+Criterios De Desempeño
+\end_layout
+
+\begin_layout Standard
+Para medir la eficiencia del sistema de control usado, usualmente se tienen
+ criterios de desempeño orientados al servicio.
+ Estos criterios búscan reducir la insatisfacción del cliente en cuanto
+ al tiempo que invierte para movilizarse desde su piso origen hasta el piso
+ destino.
+ El criterio de desempeño más usado en cualquier tipo de edificación diurna
+ va en busca de redurcir el tiempo de espera que el pasajero gasta desde
+ que oprime el botón de llamada y el tiempo que el ascensor toma para llevar
+ el pasajero a su piso destino 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN-SIIKONEN-2008"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Se tendrán en cuenta como criterios de optimización de servicio el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Espera
+\begin_inset Quotes erd
+\end_inset
+
+ y el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de Espera: 
+\series default
+Uno de los factores que justifica como objetivo el tiempo de espera es que
+ sicológicamente una pasajero pierde la paciencia después de esperar 60
+ segundo en promedio 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de Viaje
+\series default
+: Es también comprobable que sicológicamente una persona espera a lo sumo
+ que el tiempo desde que toma el ascensor hasta que llega a su piso destino
+ no debe ser mayor a los 90 segundos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Situación de emergencia
+\series default
+: por medio de estudios realizados se determinó que el el tiempo en el que
+ se debe efectuar una evacuación completa de una edificación esta entre
+ los 15 y 30 minutos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Desempeño dado por el Tiempo De Espera
+\end_layout
+
+\begin_layout Standard
+En un sistema de elevadores con buen desempeño se observa que el tiempo
+ de espera sigue una distribución exponencial 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, de esta forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{t}=exp(-t/T_{av}),$
+\end_inset
+
+en donde 
+\begin_inset Formula $T_{av}$
+\end_inset
+
+, es el promedio de tiempode espera y 
+\begin_inset Formula $F_{t}$
+\end_inset
+
+ muestra las fracciones de tiempos de espera que que exceden el tiempo t.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/performanceCriteria_wt.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "performanceCriteria_wt"
+
+\end_inset
+
+Criterio de desempeño <Tiempo de Espera>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Desempeño dado por el Tiempo De Viaje
+\end_layout
+
+\begin_layout Standard
+Para el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+ se usa una distribución Gamma.
+ Los límites de esta se encuentran en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "performanceCriteria_rt"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/performanceCriteria_rt.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "performanceCriteria_rt"
+
+\end_inset
+
+Criterio de desempeño <Tiempo de Viaje>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
