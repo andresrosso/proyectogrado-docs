@@ -192,7 +192,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename logo-PUJ.png
+	filename resources/logo-PUJ.png
 
 \end_inset
 
@@ -597,6 +597,25 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "chapter-2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch chapter-2
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapter-3.lyx"
 
 \end_inset
 
