@@ -278,7 +278,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Marco Teórico
+Marco Teórico 
 \end_layout
 
 \begin_layout Section
@@ -388,12 +388,83 @@ Tiempo de espera aceptado por tipo de edificación
 
 \end_layout
 
+\begin_layout Section
+Simuladores de Tráfico Vertical
+\end_layout
+
 \begin_layout Standard
-Para la construcción de edificaciones de gran altura se deben considerar
- varias limitantes, como las condiciones del suelo, el riesgo sismico, facilidad
-es de accesibilidad, regulaciones gubernamentales, consumo de energía y
- eficiencia del sistema de elevadores.
+El primer simulador de tráfico para edificaciones basado en software se
+ desarrollo en el año de 1970 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, para este momentos los simuladores eran hibridos analog-digitales, en
+ donde los controles reales del ascensor eran incorporados al simulador.
+\end_layout
+
+\begin_layout Standard
+Con la llegada de los microprocesadores en los años ochentas se llevaron
+ los simuladores a estos dispositivos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, pero requerian de varios dispositivos digitales para su funcionameinto
+ y la progración de los mismos se hacía en lenguajes de bajo nivel.
+\end_layout
+
+\begin_layout Standard
+En el año de 1988 se desarrollo el primer simulador para PC, estos simuladores
+ solo contemplaban un elevedor y el algorítmo de control para la asiganación
+ de llamadas seguía unas reglas simples basadas en la posición del elevador
+ y la ubicación de la llamada.
+ Los algoritmos de control fueron avanazando en su complejidad y las compañias
+ grandes ya podían verificar el funcionamiento en los avances sobre el control
+ que iban teniendo.
+ Los simuladores son desarrollados principalmente por y para las empresas
+ fabricantes de sistemas de elevadores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OTISPLAN_Brochure"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN_BTS2004"
+
+\end_inset
+
+.
+ Solamente Peters Research, empresa de investigación en planificación de
+ edificaciones de gran altura cuenta con un simulador de licencia comercial
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ElevateLicence"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los simadores de tráfico vertical son útiles no solamente para verificar
+ algorítmos de control, estos también son usados para determinar el número
+ de elevadores necesarios de determinada edificación.
+ Asi mismo el simulador es útil para recrear situaciones de emergencia en
+ un edificio y conocer el tiempo que tardaría una edificación en ser evacuada
+ por medio de los ele
+\end_layout
+
+\begin_layout Section
+Controladores de Grupo de Elevadores
 \end_layout
 
 \begin_layout Standard
@@ -417,88 +488,6 @@ e the "intelligence" from the machine room to the elevator components, even
  the hall call allocation compared to the old relay controls.
  The first aim of this work is to describe new microprocessor-based hall
  call optimization methods that optimize passenger service level.
-\end_layout
-
-\begin_layout Section
-Simuladores de Tráfico Vertical
-\end_layout
-
-\begin_layout Standard
-El primer simulador de tráfico para edificaciones basado en software se
- desarrollo en el año de 1970 REFE????.
- En el año de 1980 se desarrollo el primer simulador para PC, estos simuladores
- solo contemplaban un elevedor y el algorítmo de control para la asiganación
- de llamadas seguía unas reglas simples basadas en la posición del elevador
- y la ubicación de la llamada.
-\end_layout
-
-\begin_layout Standard
-En este momento los simuladores son desarrollados principalmente por las
- empresas fabrcantes de sistemas de elevadores 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "OTISPLAN_Brochure"
-
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "SIIKONEN_BTS2004"
-
-\end_inset
-
-.
- Solamente una empresa de investigación en planificación de edificaciones
- de gran altura cuenta con un simulador de licencia comercial 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ElevateLicence"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-The effect of the group control on the hall call times and on the passenger
- service level can be determined by simulation.
- The first elevator traffic simulators were built to test the traffic service
- in tall buildings, such as the World Trade Center (Browne et al.1968).
- At that time the group controls in elevator companies were tested with
- hybrid simulators, which consisted of analog and digital models (Weinberger
- 1967).
- In these simulators the real elevator control boards were attached to the
- traffic simulator.
- Later, group controls were brought into minicomputers, where various traffic
- phenomena were studied and clarified (Barney et al.
- 1985).
- More recently, the same digital simulators were installed in personal computers
- (Barney 1988).
- Usually in personal computers, generic call allocation algorithms are used
- in the simulators (Lustig 1986).
- The Advanced Lift Traffic Simulator, ALTS, runs on a personal computer.
- In ALTS, the original group control software was brought from the microprocesso
-r boards to a personal computer, and it was combined with the traffic simulator
- code.
- Initially, the ALTS simulator was built for marketing and demonstration
- purposes.
- Soon ALTS was adapted as a research tool for developing new group control
- principles.
- Different traffic situations can be repeated, which is important for testing
- purposes.
- This was not possible with the hybrid simulators, where the delays did
- not repeat similarly.
- In this section the main features of the ALTS simulator, and some traffic
- phenomena found by ALTS simulations, are described.
- Process models for the passenger traffic generation, the elevator control,
- the door control and the drive control of the ALTS simulator are described
- in more detail in Publication II.
-\end_layout
-
-\begin_layout Section
-Controladores de Grupo de Elevadores
 \end_layout
 
 \begin_layout Standard
