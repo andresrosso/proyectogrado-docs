@@ -324,7 +324,14 @@ La torre Taipei 101 cuenta con cincuenta elevadores de alta velocidad, con
  Esto le permite mantener un servicio dentro de los límites de servicio
  considerados aceptables para el servicio de pasajeros de sistemas de elevadores
 , en la siguiente tabla se muestra el resultado de un estudio orientado
- al servicio.
+ al servicio 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JOCHEMWIT"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
