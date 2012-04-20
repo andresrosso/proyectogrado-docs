@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -137,6 +137,8 @@ customHeadersFooters
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -189,6 +191,8 @@ rightmark
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 Enable page headers and add the chapter to the header line.
 \end_layout
 
@@ -202,6 +206,8 @@ Enable page headers and add the chapter to the header line.
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -227,6 +233,8 @@ leftmark
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -279,6 +287,49 @@ thepage
 
 \begin_layout Chapter
 Simulador
+\end_layout
+
+\begin_layout Standard
+Validar el desempeño del controlador y su eficiencia respecto a las técnicas
+ tradicionales requiere manipular las condiciones del sistema y efectuar
+ un gran número de pruebas.
+ Realizar estas pruebas en una edificación real sería bastante complicado
+ y costoso.
+ Por esta razón es necesario desarrollar un simulador de edificios desde
+ el cual se puedan cambiar las condiciones del sistema y medir con exactitud
+ los tiempos registrados por los usuarios.
+ 
+\end_layout
+
+\begin_layout Standard
+Para evitar la construcción del simulador se buscó en la comunidad académica
+ opciones libre, pero no se encontró ningún ambiente de simulación.
+ Se debió construir un simulador sencillo siguiendo el flujo descrito por
+ Banks [BANKS2000] en el que partiendo de un sistema real se llega a un
+ modelo por computador.
+ 
+\end_layout
+
+\begin_layout Standard
+Actualmente no existen simuladores de código libre para poder verificar
+ los algoritmos de control.
+ Sería importante construir un simulador para uso de la comunidad científica
+ y que a través de este problema se estudien las técnicas de control inteligente
+s.
+\end_layout
+
+\begin_layout Standard
+Las grandes compañías cuentan con simuladores propios y por obvios motivos
+ no son prestados para fines académicos, ejemplo de estos simuladores son
+ el Building Traffic Simulator, de la empresa finlandesa KONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2001"
+
+\end_inset
+
+.
+ Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.
 \end_layout
 
 \begin_layout Section
@@ -981,6 +1032,8 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+
+\lang english
 Probabilidad de no recoger un pasajero 
 \end_layout
 
@@ -1389,6 +1442,8 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
+
+\lang english
 Módulos del Simulador
 \end_layout
 
@@ -1733,12 +1788,16 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "performanceCriteria_wt"
 
 \end_inset
 
+
+\lang spanish
 Criterio de desempeño <Tiempo de Espera>
 \end_layout
 
@@ -1797,12 +1856,16 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset CommandInset label
 LatexCommand label
 name "performanceCriteria_rt"
 
 \end_inset
 
+
+\lang spanish
 Criterio de desempeño <Tiempo de Viaje>
 \end_layout
 
@@ -1813,10 +1876,6 @@ Criterio de desempeño <Tiempo de Viaje>
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 

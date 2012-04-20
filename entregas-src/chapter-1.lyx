@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -137,6 +137,8 @@ customHeadersFooters
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -189,6 +191,8 @@ rightmark
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 Enable page headers and add the chapter to the header line.
 \end_layout
 
@@ -202,6 +206,8 @@ Enable page headers and add the chapter to the header line.
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -227,6 +233,8 @@ leftmark
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -429,6 +437,8 @@ El libro está organizado ....
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 Esto parte del libro se escribe al final.
 \end_layout
 
@@ -444,6 +454,12 @@ Definciones Principales
 \begin_layout Standard
 Se presentan los conceptos principales que serán usados a los largo del
  libro, se recogen los conceptos que pueden ser interpretados ambieguamente.
+\end_layout
+
+\begin_layout Itemize
+Tráfico vertical: Se entiende por tráfico en una edificación; el movimiento
+ o tránsito de personas dentro del edificio, este tráfico tiene dos componentes
+ tasa de arribo y probabilidad de destino, en donde:
 \end_layout
 
 \begin_layout Itemize

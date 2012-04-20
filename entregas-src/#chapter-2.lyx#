@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -137,6 +137,8 @@ customHeadersFooters
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -189,6 +191,8 @@ rightmark
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 Enable page headers and add the chapter to the header line.
 \end_layout
 
@@ -202,6 +206,8 @@ Enable page headers and add the chapter to the header line.
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -227,6 +233,8 @@ leftmark
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -286,12 +294,34 @@ Edificaciones de Gran altura
 \end_layout
 
 \begin_layout Standard
-Las edificaciones de gran altura existen gracias a la eficiencia de los
- sistemas de elevadores y no vice versa.
+Actualmente las edificaciones de gran altura enfrentan el problema de transporta
+r satisfactoriamente a los usuarios entre los pisos.
+ Este transporte tiende a complicarse debido a la gran demanda que tiene
+ el sistema y la considerable distancia que deben recorrer los ascensores.
+ Entre los factores más importantes que impulsan el aumento de construcciones
+ de gran altura están:
 \end_layout
 
 \begin_layout Standard
-En un contexto funcional el sistema de elevadores es la arteria principal
+• Escasez de terrenos disponibles.
+\end_layout
+
+\begin_layout Standard
+• Alto precio de los terrenos.
+\end_layout
+
+\begin_layout Standard
+• Densidad poblacional.
+\end_layout
+
+\begin_layout Standard
+• Nuevas tendencias.
+\end_layout
+
+\begin_layout Standard
+Las edificaciones de gran altura existen gracias a la eficiencia de los
+ sistemas de elevadores y no vice versa.
+ En un contexto funcional el sistema de elevadores es la arteria principal
  del edificio.
  Fue despues que Elijah Graves Otis inventó el sistema de govierno de velocidad
  para elevadores y el sistema seguro de frenado para elevadores en el año
@@ -371,6 +401,8 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+
+\lang english
 Tiempo de espera aceptado por tipo de edificación
 \end_layout
 
@@ -390,6 +422,64 @@ Tiempo de espera aceptado por tipo de edificación
 
 \begin_layout Section
 Simuladores de Tráfico Vertical
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación puede ser definido como la imitación de la operación
+ en un proceso real o un sistema sobre el tiempo.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BANKS2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación comprende tres elementos fundamentales: Sistema
+ real, Modelo, Ordenador.
+ Estos elementos están conectados como se aprecia en la ilustración 10.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BANKS2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El modelo representa una versión simplificada del sistema real, permitiendo
+ así, facilitar su estudio y análisis.
+ Un edificio tiene características que varían en el tiempo, ejemplo de ellas
+ son; la tasa de arribo de pasajeros por piso y el piso destino de las llamadas.
+ Debido a estas características el sistema tiene un comportamiento no lineal.
+\end_layout
+
+\begin_layout Standard
+El comportamiento del sistema debe ser igual al del sistema real para así
+ poder experimentar bajo un ambiente simulado, si el sistema modelado no
+ representa al sistema real de acuerdo a las características que se consideraron
+ relevantes tendrá lugar otra iteración en la cual un nuevo modelo será
+ desarrollado y pasará nuevamente por las etapas de verificación y validación.
+ 
+\end_layout
+
+\begin_layout Standard
+El primer simulador de tráfico fue desarrollado para verificar el tráfico
+ en edificaciones altas, tal como el WORLD TRADE CENTER.
+ En este entonces los controladores para grupos de ascensores eran evaluados
+ con simuladores híbridos, los cuales consisten en modelos análogos y digitales.
+ En estos simuladores las tarjetas de control de los elevadores debían ser
+ conectadas con el simulador.
+ Más adelante estos vendrían dentro de minicomputadores en donde varios
+ fenómenos de tráfico eran estudiados.
+ Recientemente estos simuladores pueden ser ejecutados en computadores personale
+s.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -455,16 +545,727 @@ key "ElevateLicence"
 \end_layout
 
 \begin_layout Standard
-Los simadores de tráfico vertical son útiles no solamente para verificar
+Los simuladores de tráfico vertical son útiles no solamente para verificar
  algorítmos de control, estos también son usados para determinar el número
- de elevadores necesarios de determinada edificación.
+ de elevadores necesarios de servir en determinada edificación.
  Asi mismo el simulador es útil para recrear situaciones de emergencia en
  un edificio y conocer el tiempo que tardaría una edificación en ser evacuada
- por medio de los ele
+ por medio de los elevadores.Son muchas más las aplicaciones que se le pueden
+ dar al simuador al ser un componente fundamental de cualqueir edificación.
+\end_layout
+
+\begin_layout Subsection
+Tráfico Vertical
+\end_layout
+
+\begin_layout Standard
+Se entiende por tráfico en una edificación; el movimiento o tránsito de
+ personas dentro del edificio, este tráfico tiene dos componentes tasa de
+ arribo y probabilidad de destino, en donde:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Tasa de Arribo:
+\series default
+ Es el número de usuarios que llegan al sistema en determinado espacio de
+ tiempo.
+ La tasa de arribo en una edificación cambia de acuerdo a dos factores,
+ uno es el tiempo en el que se mide y otro es el piso.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Probabilidad Destino
+\series default
+: Es la probabilidad que tiene un pasajero de dirigirse del piso po, al
+ piso pd, en determinado instante de tiempo.
+ 
+\end_layout
+
+\begin_layout Standard
+El tráfico que se presenta en una edificación tiene un comportamiento probabilís
+tico.
+ Según los estudios sobre el tema 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1997"
+
+\end_inset
+
+, el flujo de pasajeros sigue un proceso de Poisson.
+ 
+\end_layout
+
+\begin_layout Standard
+Un ejemplo del tráfico en una edificación real 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1997"
+
+\end_inset
+
+, se muestra en la siguiente imagen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../Optimizacion/Proyecto/patronTrafico.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Patrón de tráfico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1997"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Debido a que existen diferentes tipos de edificios como son; hospitales,
+ edificios de oficinas, universidades, edificios residenciales, se debe
+ tener en cuenta que no es igual el tráfico existente dentro de ellos.
+ Por ejemplo, en un edificio residencial existe un tráfico recurrente entre
+ el primer piso y otros pisos superiores, pero es casi nulo el tráfico entre
+ pisos; caso contrario ocurre con un hospital en donde el tráfico entre
+ pisos es más común.
+\end_layout
+
+\begin_layout Standard
+Tradicionalmente se identifican cuatro patrones de tráfico, que ocurren
+ durante el día 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2001"
+
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Subida -Uppeak-
+\series default
+: se refiere al tramo horario coincidente con el acceso al edificio, y por
+ tanto se producen viajes de subida desde la planta baja.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Bajada -Downpeak
+\series default
+-: se refiere al tramo horario coincidente con el salida del edificio, y
+ por tanto se producen viajes de bajada desde las diferentes plantas a los
+ pisos más bajos.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Almuerzo -Lunchpeak-
+\series default
+: se refiere al tramo horario en el que el edificio se abandona par ir a
+ comer, pero también se accede a él tras venir de comer, dándose una mezcla
+ de los patrones uppeak y downpeak.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Entre Pisos -Interfloor-
+\series default
+: se refiere al resto de tramos horarios donde existe la probabilidad de
+ viajes entre plantas (este patrón sólo se produciría en edificios destinados
+ a uso profesional y en ese tramo horario específico).
+\end_layout
+
+\begin_layout Subsection
+Determinación Y Predicción Del Tráfico
+\end_layout
+
+\begin_layout Standard
+La determinación de los patrones de tráfico resulta un problema complejo.
+ Para estimar el flujo de personas se ha usado la observación directa y
+ datos procedentes de macro-encuestas realizadas por centros de investigación.
+ Centros que sirven este tipo de información son el CIBSE (The Chartered
+ Institution of Building Services Engineers) y el BRE (Building Research
+ Establishment).
+ 
+\end_layout
+
+\begin_layout Standard
+A parte del método por observación directa aparece el 
+\begin_inset Quotes eld
+\end_inset
+
+SP Inverso
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Este estima el número de pasajeros que usan el ascensor basándose en el
+ número de llamadas y en los movimientos del mismo, tiene comprobada efectividad
+ cuando el patrón de tráfico es de subida y de bajada.
+ Otro método es 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación del flujo de tráfico completo de Peters
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PETERS2000"
+
+\end_inset
+
+, que obtiene información de tráfico haciendo uso de métodos estadísticos,
+ mediante el establecimiento de los intervalos de tiempo en los que el tráfico
+ es más intenso.
+ 
+\end_layout
+
+\begin_layout Standard
+La inteligencia artificial también ha sido usado en la predicción y determinació
+n de tráfico.
+ Se encuentra el Modelo de reconocimiento del patrón de tráfico mediante
+ reglas de lógica difusa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1997"
+
+\end_inset
+
+, el cual se basa en 8 conjuntos difusos que representan 8 patrones de tráfico
+ diferentes.
+ 
+\end_layout
+
+\begin_layout Standard
+Las redes neuronales también has sido usadas para esta tarea, está el modelo
+ de predicción mediante redes neuronales 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IMRAK2000"
+
+\end_inset
+
+.
+ Este trata de acoplar una red neuronal en el sistema de control de un grupo
+ de ascensores para mejorar la actuación del controlador del grupo.
+ Así, se trata de que la red neuronal proporcione un mecanismo de aprendizaje
+ dinámico del comportamiento del edificio y realice la predicción de futuros
+ eventos basándose en lo que ha aprendido a lo largo del tiempo.
+ 
+\end_layout
+
+\begin_layout Standard
+El estudio en la determinación de tráfico sigue avanzando, existen hoy solucione
+s RFID, radares de personas y visión por computador como nuevas tecnologías
+ que apoyan esta importante tarea.
 \end_layout
 
 \begin_layout Section
 Controladores de Grupo de Elevadores
+\end_layout
+
+\begin_layout Standard
+La investigación de nuevos modelos de control es poco tratada en nuestro
+ país ya que no contamos con rascacielos, los cuales si abundan en Japón,
+ China o Dubai.
+ Las técnicas de control no-tradicionales para asignar las llamadas de un
+ grupo de elevadores, empezaron a aparecer en los años 90 y fueron desarrolladas
+ por empresas privadas que contaban con la colaboración de centros de investigac
+ión y universidades.
+ 
+\end_layout
+
+\begin_layout Standard
+Se pueden encontrar patentes registradas desde la época de los 80
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MACDONALD1988,THANGAVELU1989"
+
+\end_inset
+
+.
+ La colaboración universidad-empresas para esta materia ha sido muy activa,
+ en España por ejemplo se realiza investigación orientada al mejor funcionamient
+o de estos sistemas, mancomunadamente entre la Universidad de Sevilla y
+ MAC PUAR S.A.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LARRANETA2001"
+
+\end_inset
+
+.
+ Otro ejemplo está en Berlin, el centro académico el Konrad-Zuse-Zentrumfür
+ Information stechnik de Berlin colabora con la multinacional del transporte
+ vertical Schindler 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAUPTMEIER1999"
+
+\end_inset
+
+ o el Systems Analysis Laboratory de la Universidad Tecnológica de Helsinki
+ con KONE Corporation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1998"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Criterios De Optimización en el Transporte Vertical
+\end_layout
+
+\begin_layout Standard
+El problema de asignación de elevadores para atender las llamadas se puede
+ ver como un problema de optimización.
+ El objetivo del controlador es asignar las llamadas a los ascensores que
+ tienen mayores posibilidades de atenderla eficientemente.
+ El problema en si es una combinación de programación no lineal en tiempo
+ real, distribución de recursos y control estocástico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es común que los controladores para grupo de ascensor manejen los mismos
+ criterios de optimización, recopilando todos los criterios vistos se pueden
+ dividir en dos grupos.
+\end_layout
+
+\begin_layout Subsubsection
+Funcionamiento del Sistema
+\end_layout
+
+\begin_layout Itemize
+Consumo energético del sistema: El cual se debe minimizar haciendo que el
+ ascensor pare lo menos posible y evite los desplazamientos innecesarios.
+\end_layout
+
+\begin_layout Itemize
+Capacidad del grupo de ascensores (volumen de viajeros transportados): También
+ se le conoce como carga, entre más persona se logre llevar en la misma
+ cabina mucho mejor.
+\end_layout
+
+\begin_layout Subsubsection
+Servicio ofrecido al usuario
+\end_layout
+
+\begin_layout Enumerate
+Tiempo De Espera: Promedio del tiempo de espera de los pasajeros para ser
+ atendidos.
+ Representa el tiempo que un elevador necesita para viajar desde su posición
+ actual hasta el piso en el que se genera la llamada.
+ El objetivo es llevar este tiempo al mínimo.
+\end_layout
+
+\begin_layout Enumerate
+Tiempo de viaje: Tiempo que el pasajero dura dentro del ascensor hasta que
+ llegue al piso objetivo.
+ El objetivo es minimizar este tiempo.
+\end_layout
+
+\begin_layout Enumerate
+Tiempo de esperas muy largos: Minimizar el porcentaje de largas esperas
+ por la llegada de un ascensor, es conocido que sicológicamente las personas
+ pierden la paciencia pasados 3 minutos sin ser atendidas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Técnicas De Control
+\end_layout
+
+\begin_layout Standard
+La asignación de llamadas en una edificación de gran altura requiere de
+ técnicas modernas de control que basándose en el estado del sistema tome
+ la mejor decisión.
+ La asignación de llamadas a los ascensores ocupa gran parte del trabajo
+ de compañías como MITSUBISHI, KONE, SCHINDLER.
+ El control de este tipo de sistemas no es sencillo, presenta un comportamiento
+ dinámico, variante en el tiempo.
+ Los factores que dificultan el control entre otros son:
+\end_layout
+
+\begin_layout Itemize
+Falta de certeza en los parámetros que definen el problema, muchas veces
+ estos son tomados de un predictor.
+\end_layout
+
+\begin_layout Itemize
+Combinación muy alta de posibilidades en el espacio de búsqueda, lo que
+ lo hace muchas veces intratable computacionalmente.
+\end_layout
+
+\begin_layout Itemize
+Variables estacionales en los patrones de tráfico con cierta incertidumbre.
+\end_layout
+
+\begin_layout Standard
+Las técnicas más usadas para tratar con este tipo de problema se pueden
+ agrupar de la siguiente manera.
+\end_layout
+
+\begin_layout Itemize
+Técnicas tradicionales 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PARKER1971"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Maniobra Universal Por Pulsadores.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Cuando el ascensor está desocupado, y es el primero en recibir la orden
+ ira a atender la llamada.
+ Si durante el funcionamiento se solicita el ascensor desde cualquier otra
+ planta la llamada será ignorada y el carro seguirá obedeciendo la orden
+ que ha iniciado la llamada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Maniobra Duplex.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Cualquier llamada es atendida por el elevador que se encuentre libre; pero
+ si están libre dos elevadores, acudirá a la llamada el que esté mas próximo
+ al piso origen del llamado.
+ Solamente acude un elevador a cualquier llamado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Maniobra Colectiva selectiva en los dos sentidos.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+El elevador va a registrar únicamente los llamados que se generen en el
+ sentido que va el ascensor.
+ Es decir si el ascensor va hacia arriba sólo se registrarán los llamados
+ que se hagan en los pisos superiores, y si va hacia abajo sólo registrará
+ los que se generen en pisos inferiores.
+ El sentido se invierte cuando el elevador llega al último piso, ya sea
+ por una llamada de piso o una llamada de ascensor.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Técnicas no tradicionales
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lógica difusa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KHIANG1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Optimización robusta 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LIQIAN-DOU"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Optimización por colonia de hormigas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ZHANGTANG"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Optimización Híbrida.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JIANLIU2010"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Aprendizaje reforzado.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CRITES1998"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Algoritmos genéticos.
+ 
+\end_layout
+
+\begin_layout Itemize
+Redes neuronales.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IMRAK2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Optimización por enjambres.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BRANDSTATTER2000"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Métodos De Control Tradicionales
+\end_layout
+
+\begin_layout Standard
+El diseño de controladores convencionales en el campo de tráfico de pasajeros
+ en edificaciones está orientado por reglas de tráfico fijas en las cuales
+ no se tiene en cuenta la optimización del servicio.
+ Para el control de tráfico vertical, nos enfrentamos con diferentes situaciones
+, que implican parámetros de operación cambiantes, al experimentar patrones
+ de tráfico diferentes y fluctuaciones en el transcurrir normal de los mismos.
+ 
+\end_layout
+
+\begin_layout Standard
+Las reglas por las que se guían los controladores convencionales se numeran
+ a continuación.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PARKER1971"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El elevador no llevara a un pasajero dentro del ascensor en la dirección
+ contraria a la que se dirige.
+ 
+\end_layout
+
+\begin_layout Enumerate
+La capacidad de cada ascensor son k personas, y si el cupo esta lleno no
+ atenderá llamadas.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Un elevador viaja a una velocidad constante de n pisos por segundo.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Atender cada piso toma i segundos.
+ Durante este tiempo la persona entrara o saldrá del ascensor.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Si el número de personas es mayor que v se necesitaran de w segundos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Un ascensor no ignorará alguna llamada, a no ser que este ejecutando una
+ de las restricciones anteriormente mencionadas.
+ 
+\end_layout
+
+\begin_layout Standard
+A continuación se describen brevemente los métodos básicos de control más
+ empleados.
+\end_layout
+
+\begin_layout Subsection
+Maniobra Universal Por Pulsadores
+\end_layout
+
+\begin_layout Standard
+Cuando el ascensor esta desocupado, y es el primero en recibir la orden
+ irá a atender la llamada.
+ Si durante el funcionamiento se solicita el ascensor desde cualquier otro
+ piso la llamada será ignorada y el carro seguirá obedeciendo la orden que
+ ha iniciado la llamada.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Maniobra Duplex
+\end_layout
+
+\begin_layout Standard
+Cualquier llamada es atendida por el elevador que se encuentre libre; pero
+ si están libres dos elevadores, acudirá a la llamada el que esté mas próximo
+ al piso origen del llamado.
+ Solamente acude un elevador a cualquier llamado.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Maniobra Colectiva selectiva en los dos sentidos
+\end_layout
+
+\begin_layout Standard
+El elevador registra únicamente los llamados que se generen en el sentido
+ que va el ascensor.
+ Es decir si el ascensor va hacia arriba solo se registrarán los llamados
+ que se hagan en los pisos superiores, y si va hacia abajo solo registrará
+ los que se generen en pisos inferiores.
+ El sentido se invierte cuando llegue el elevador al último piso, ya sea
+ por una llamada de piso o una llamada de ascensor.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -531,6 +1332,8 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
+
+\lang english
 EGCS Arquitectura Típica
 \end_layout
 
@@ -584,6 +1387,8 @@ Sistemas Multiagente
 status collapsed
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "thesisExample"
@@ -595,6 +1400,8 @@ options "alpha"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
 set_width "custom"
