@@ -293,19 +293,6 @@ Las edificaciones de gran altura existen gracias a la eficiencia de los
 \begin_layout Standard
 En un contexto funcional el sistema de elevadores es la arteria principal
  del edificio.
-<<<<<<< HEAD
- Fue despues que Elijah Graves Otis inventó el sistema de gobierno de velocidad
- para elevadores y el sistema seguro de frenado para elevadores, que los
- sistemas de elevadores se conviertieron en una opción viable para transportar
- y la altura de la construcción dejó de ser un factor limitante 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BARNEY2003"
-
-\end_inset
-
-.
-=======
  Fue despues que Elijah Graves Otis inventó el sistema de govierno de velocidad
  para elevadores y el sistema seguro de frenado para elevadores en el año
  de 1857, que los sistemas de elevadores se conviertieron en una opción
@@ -324,7 +311,6 @@ Para el año de 1880 Werner von Siemens introdujo la utilización de fuentes
  electricas para los sistemas de elevadores.
  El desarrollo de la energía eléctrica le proporcionó un nuevo impetú en
  el uso de construcciones de gran altura.
->>>>>>> branch 'master' of https://andresrosso@github.com/andresrosso/proyectogrado-docs.git
 \end_layout
 
 \begin_layout Standard
@@ -534,7 +520,7 @@ A typical architecture of an elevator control system is shown in Figure
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
