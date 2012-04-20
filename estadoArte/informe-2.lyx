@@ -1,0 +1,2646 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass IEEEtran
+\begin_preamble
+% for subfigures/subtables
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+\usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Estado Del Arte Control De Grupo De Ascensores
+\end_layout
+
+\begin_layout Special Paper Notice
+Proyecto De Grado Modelo Cooperativo para Controlar Eficientemente el Tráfico
+ en una Edificación 
+\end_layout
+
+\begin_layout Author
+Andrés Enrique Rosso Mateus
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Maestría en Ingeniería de Sistemas, Bogotá, Colombia, arosso@javeriana.edu.co:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "arosso@javeriana.edu.co"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Special Paper Notice
+Maestría en Ingeniería de Sistemas
+\end_layout
+
+\begin_layout Special Paper Notice
+Universidad Javeriana
+\end_layout
+
+\begin_layout Abstract
+El uso de las construcciones verticales experimenta un fenómeno de expansión
+ vertiginoso debido al gran precio del terreno y la densidad poblacional
+ de las grandes urbes.
+ El incremento de este tipo de construcciones trae el problema de transportar
+ eficientemente el alto número de personas que estas edificaciones albergan
+ a diario.
+ Los sistemas de control tradicionales son ineficientes para cubrir esta
+ necesidad debido a que su diseño solo contempla reglas simples de control
+ como la dirección en la que dirige el ascensor, o el número de pasajeros
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+.
+ La creciente necesidad hizo que nuevas técnicas más complejas empezaran
+ a ser aplicadas a este problema.
+ El presente artículo hace un recorrido por las técnicas de control modernas
+ usadas para resolver este problema.
+\end_layout
+
+\begin_layout Keywords
+control 
+\lang english
+robusto
+\lang spanish
+, lógica difusa, optimización.
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+Actualmente las edificaciones de gran altura enfrentan el problema de transporta
+r satisfactoriamente a los usuarios entre los pisos.
+ Este transporte tiende a complicarse debido a la gran demanda que tiene
+ el sistema y la considerable distancia que deben recorrer los ascensores.
+ Entre los factores más importantes que impulsan el aumento de construcciones
+ de gran altura están:
+\end_layout
+
+\begin_layout Itemize
+Escasez de terrenos disponibles.
+\end_layout
+
+\begin_layout Itemize
+Alto precio de los terrenos.
+\end_layout
+
+\begin_layout Itemize
+Densidad poblacional.
+\end_layout
+
+\begin_layout Itemize
+Nuevas tendencias.
+\end_layout
+
+\begin_layout Standard
+La creciente necesidad hizo que nuevas técnicas más complejas empezaran
+ a ser aplicadas a este problema.
+ Un ejemplo que reta el control de tráfico es el dado por la torre “Burj
+ Khalifa” en Dubai.
+ La cual cuenta con más de 160 pisos y alcanza una altura aproximada de
+ 828mts.
+ El desplazamiento entre los 160 pisos se hace con 58 ascensores cada uno
+ de dos pisos y con capacidad para 14 personas por ascensor.
+\end_layout
+
+\begin_layout Standard
+La investigación de nuevos modelos de control es poco tratada en nuestro
+ país ya que no contamos con rascacielos, los cuales si abundan en Japón,
+ China o Dubai.
+ Las técnicas de control no-tradicionales para asignar las llamadas de un
+ grupo de elevadores, empezaron a aparecer en los años 90 y fueron desarrolladas
+ por empresas privadas que contaban con la colaboración de centros de investigac
+ión y universidades.
+ 
+\end_layout
+
+\begin_layout Standard
+Se pueden encontrar patentes registradas desde la época de los 80
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MACDONALD1988,THANGAVELU1989"
+
+\end_inset
+
+.
+ La colaboración universidad-empresas para esta materia ha sido muy activa,
+ en España por ejemplo se realiza investigación orientada al mejor funcionamient
+o de estos sistemas, mancomunadamente entre la Universidad de Sevilla y
+ MAC PUAR S.A.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LARRANETA2001"
+
+\end_inset
+
+.
+ Otro ejemplo está en Berlin, el centro académico el Konrad-Zuse-Zentrumfür
+ Information stechnik de Berlin colabora con la multinacional del transporte
+ vertical Schindler 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAUPTMEIER1999"
+
+\end_inset
+
+ o el Systems Analysis Laboratory de la Universidad Tecnológica de Helsinki
+ con KONE Corporation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1998"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename burj_khalifa.jpg
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Burj Khalifa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El presente artículo busca hacer un recorrido por los método de control
+ tradicionales y no tradicionales aplicados a este problema.
+ Mientras la sociedad siga creciendo tecnológicamente y demográficamente
+ este tipo de sistemas será de vital importancia, su relevancia es enorme.
+ El avance en esta área ha sido muy grande si se tiene en cuenta que aparece
+ a finales de los años 80, muchas empresas invierten millones de dinero
+ en investigación en esta área.
+ 
+\end_layout
+
+\begin_layout Subsection
+Tráfico Vertical
+\end_layout
+
+\begin_layout Standard
+Se entiende por tráfico en una edificación; el movimiento o tránsito de
+ personas dentro del edificio, este tráfico tiene dos componentes tasa de
+ arribo y probabilidad de destino, en donde:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Tasa de Arribo:
+\series default
+ Es el número de usuarios que llegan al sistema en determinado espacio de
+ tiempo.
+ La tasa de arribo en una edificación cambia de acuerdo a dos factores,
+ uno es el tiempo en el que se mide y otro es el piso.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Probabilidad Destino
+\series default
+: Es la probabilidad que tiene un pasajero de dirigirse del piso po, al
+ piso pd, en determinado instante de tiempo.
+ 
+\end_layout
+
+\begin_layout Standard
+El tráfico que se presenta en una edificación tiene un comportamiento probabilís
+tico.
+ Según los estudios sobre el tema 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1997"
+
+\end_inset
+
+, el flujo de pasajeros sigue un proceso de Poisson.
+ 
+\end_layout
+
+\begin_layout Standard
+Un ejemplo del tráfico en una edificación real 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1997"
+
+\end_inset
+
+, se muestra en la siguiente imagen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../Optimizacion/Proyecto/patronTrafico.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Patrón de tráfico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1997"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Debido a que existen diferentes tipos de edificios como son; hospitales,
+ edificios de oficinas, universidades, edificios residenciales, se debe
+ tener en cuenta que no es igual el tráfico existente dentro de ellos.
+ Por ejemplo, en un edificio residencial existe un tráfico recurrente entre
+ el primer piso y otros pisos superiores, pero es casi nulo el tráfico entre
+ pisos; caso contrario ocurre con un hospital en donde el tráfico entre
+ pisos es más común.
+\end_layout
+
+\begin_layout Standard
+Tradicionalmente se identifican cuatro patrones de tráfico, que ocurren
+ durante el día 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2001"
+
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Subida -Uppeak-
+\series default
+: se refiere al tramo horario coincidente con el acceso al edificio, y por
+ tanto se producen viajes de subida desde la planta baja.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Bajada -Downpeak
+\series default
+-: se refiere al tramo horario coincidente con el salida del edificio, y
+ por tanto se producen viajes de bajada desde las diferentes plantas a los
+ pisos más bajos.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Almuerzo -Lunchpeak-
+\series default
+: se refiere al tramo horario en el que el edificio se abandona par ir a
+ comer, pero también se accede a él tras venir de comer, dándose una mezcla
+ de los patrones uppeak y downpeak.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Entre Pisos -Interfloor-
+\series default
+: se refiere al resto de tramos horarios donde existe la probabilidad de
+ viajes entre plantas (este patrón sólo se produciría en edificios destinados
+ a uso profesional y en ese tramo horario específico).
+\end_layout
+
+\begin_layout Subsection
+Determinación Y Predicción Del Tráfico
+\end_layout
+
+\begin_layout Standard
+La determinación de los patrones de tráfico resulta un problema complejo.
+ Para estimar el flujo de personas se ha usado la observación directa y
+ datos procedentes de macro-encuestas realizadas por centros de investigación.
+ Centros que sirven este tipo de información son el CIBSE (The Chartered
+ Institution of Building Services Engineers) y el BRE (Building Research
+ Establishment).
+ 
+\end_layout
+
+\begin_layout Standard
+A parte del método por observación directa aparece el 
+\begin_inset Quotes eld
+\end_inset
+
+SP Inverso
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Este estima el número de pasajeros que usan el ascensor basándose en el
+ número de llamadas y en los movimientos del mismo, tiene comprobada efectividad
+ cuando el patrón de tráfico es de subida y de bajada.
+ Otro método es 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación del flujo de tráfico completo de Peters
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PETERS2000"
+
+\end_inset
+
+, que obtiene información de tráfico haciendo uso de métodos estadísticos,
+ mediante el establecimiento de los intervalos de tiempo en los que el tráfico
+ es más intenso.
+ 
+\end_layout
+
+\begin_layout Standard
+La inteligencia artificial también ha sido usado en la predicción y determinació
+n de tráfico.
+ Se encuentra el Modelo de reconocimiento del patrón de tráfico mediante
+ reglas de lógica difusa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN1997"
+
+\end_inset
+
+, el cual se basa en 8 conjuntos difusos que representan 8 patrones de tráfico
+ diferentes.
+ 
+\end_layout
+
+\begin_layout Standard
+Las redes neuronales también has sido usadas para esta tarea, está el modelo
+ de predicción mediante redes neuronales 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IMRAK2000"
+
+\end_inset
+
+.
+ Este trata de acoplar una red neuronal en el sistema de control de un grupo
+ de ascensores para mejorar la actuación del controlador del grupo.
+ Así, se trata de que la red neuronal proporcione un mecanismo de aprendizaje
+ dinámico del comportamiento del edificio y realice la predicción de futuros
+ eventos basándose en lo que ha aprendido a lo largo del tiempo.
+ 
+\end_layout
+
+\begin_layout Standard
+El estudio en la determinación de tráfico sigue avanzando, existen hoy solucione
+s RFID, radares de personas y visión por computador como nuevas tecnologías
+ que apoyan esta importante tarea.
+\end_layout
+
+\begin_layout Subsection
+Criterios De Optimización en el Transporte Vertical
+\end_layout
+
+\begin_layout Standard
+El problema de asignación de elevadores para atender las llamadas se puede
+ ver como un problema de optimización.
+ El objetivo del controlador es asignar las llamadas a los ascensores que
+ tienen mayores posibilidades de atenderla eficientemente.
+ El problema en si es una combinación de programación no lineal en tiempo
+ real, distribución de recursos y control estocástico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es común que los controladores para grupo de ascensor manejen los mismos
+ criterios de optimización, recopilando todos los criterios vistos se pueden
+ dividir en dos grupos.
+\end_layout
+
+\begin_layout Subsubsection
+Funcionamiento del Sistema
+\end_layout
+
+\begin_layout Itemize
+Consumo energético del sistema: El cual se debe minimizar haciendo que el
+ ascensor pare lo menos posible y evite los desplazamientos innecesarios.
+\end_layout
+
+\begin_layout Itemize
+Capacidad del grupo de ascensores (volumen de viajeros transportados): También
+ se le conoce como carga, entre más persona se logre llevar en la misma
+ cabina mucho mejor.
+\end_layout
+
+\begin_layout Subsubsection
+Servicio ofrecido al usuario
+\end_layout
+
+\begin_layout Enumerate
+Tiempo De Espera: Promedio del tiempo de espera de los pasajeros para ser
+ atendidos.
+ Representa el tiempo que un elevador necesita para viajar desde su posición
+ actual hasta el piso en el que se genera la llamada.
+ El objetivo es llevar este tiempo al mínimo.
+\end_layout
+
+\begin_layout Enumerate
+Tiempo de viaje: Tiempo que el pasajero dura dentro del ascensor hasta que
+ llegue al piso objetivo.
+ El objetivo es minimizar este tiempo.
+\end_layout
+
+\begin_layout Enumerate
+Tiempo de esperas muy largos: Minimizar el porcentaje de largas esperas
+ por la llegada de un ascensor, es conocido que sicológicamente las personas
+ pierden la paciencia pasados 3 minutos sin ser atendidas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Técnicas De Control
+\end_layout
+
+\begin_layout Standard
+La asignación de llamadas en una edificación de gran altura requiere de
+ técnicas modernas de control que basándose en el estado del sistema tome
+ la mejor decisión.
+ La asignación de llamadas a los ascensores ocupa gran parte del trabajo
+ de compañías como MITSUBISHI, KONE, SCHINDLER.
+ El control de este tipo de sistemas no es sencillo, presenta un comportamiento
+ dinámico, variante en el tiempo.
+ Los factores que dificultan el control entre otros son:
+\end_layout
+
+\begin_layout Itemize
+Falta de certeza en los parámetros que definen el problema, muchas veces
+ estos son tomados de un predictor.
+\end_layout
+
+\begin_layout Itemize
+Combinación muy alta de posibilidades en el espacio de búsqueda, lo que
+ lo hace muchas veces intratable computacionalmente.
+\end_layout
+
+\begin_layout Itemize
+Variables estacionales en los patrones de tráfico con cierta incertidumbre.
+\end_layout
+
+\begin_layout Standard
+Las técnicas más usadas para tratar con este tipo de problema se pueden
+ agrupar de la siguiente manera.
+\end_layout
+
+\begin_layout Itemize
+Técnicas tradicionales 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PARKER1971"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Maniobra Universal Por Pulsadores.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Cuando el ascensor está desocupado, y es el primero en recibir la orden
+ ira a atender la llamada.
+ Si durante el funcionamiento se solicita el ascensor desde cualquier otra
+ planta la llamada será ignorada y el carro seguirá obedeciendo la orden
+ que ha iniciado la llamada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Maniobra Duplex.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Cualquier llamada es atendida por el elevador que se encuentre libre; pero
+ si están libre dos elevadores, acudirá a la llamada el que esté mas próximo
+ al piso origen del llamado.
+ Solamente acude un elevador a cualquier llamado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Maniobra Colectiva selectiva en los dos sentidos.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+El elevador va a registrar únicamente los llamados que se generen en el
+ sentido que va el ascensor.
+ Es decir si el ascensor va hacia arriba sólo se registrarán los llamados
+ que se hagan en los pisos superiores, y si va hacia abajo sólo registrará
+ los que se generen en pisos inferiores.
+ El sentido se invierte cuando el elevador llega al último piso, ya sea
+ por una llamada de piso o una llamada de ascensor.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Técnicas no tradicionales
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lógica difusa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KHIANG1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Optimización robusta 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LIQIAN-DOU"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Optimización por colonia de hormigas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ZHANGTANG"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Optimización Híbrida.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JIANLIU2010"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Aprendizaje reforzado.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CRITES1998"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Algoritmos genéticos.
+ 
+\end_layout
+
+\begin_layout Itemize
+Redes neuronales.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IMRAK2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Optimización por enjambres.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BRANDSTATTER2000"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Métodos De Control Tradicionales
+\end_layout
+
+\begin_layout Standard
+El diseño de controladores convencionales en el campo de tráfico de pasajeros
+ en edificaciones está orientado por reglas de tráfico fijas en las cuales
+ no se tiene en cuenta la optimización del servicio.
+ Para el control de tráfico vertical, nos enfrentamos con diferentes situaciones
+, que implican parámetros de operación cambiantes, al experimentar patrones
+ de tráfico diferentes y fluctuaciones en el transcurrir normal de los mismos.
+ 
+\end_layout
+
+\begin_layout Standard
+Las reglas por las que se guían los controladores convencionales se numeran
+ a continuación.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PARKER1971"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El elevador no llevara a un pasajero dentro del ascensor en la dirección
+ contraria a la que se dirige.
+ 
+\end_layout
+
+\begin_layout Enumerate
+La capacidad de cada ascensor son k personas, y si el cupo esta lleno no
+ atenderá llamadas.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Un elevador viaja a una velocidad constante de n pisos por segundo.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Atender cada piso toma i segundos.
+ Durante este tiempo la persona entrara o saldrá del ascensor.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Si el número de personas es mayor que v se necesitaran de w segundos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Un ascensor no ignorará alguna llamada, a no ser que este ejecutando una
+ de las restricciones anteriormente mencionadas.
+ 
+\end_layout
+
+\begin_layout Standard
+A continuación se describen brevemente los métodos básicos de control más
+ empleados.
+\end_layout
+
+\begin_layout Subsection
+Maniobra Universal Por Pulsadores
+\end_layout
+
+\begin_layout Standard
+Cuando el ascensor esta desocupado, y es el primero en recibir la orden
+ irá a atender la llamada.
+ Si durante el funcionamiento se solicita el ascensor desde cualquier otro
+ piso la llamada será ignorada y el carro seguirá obedeciendo la orden que
+ ha iniciado la llamada.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Maniobra Duplex
+\end_layout
+
+\begin_layout Standard
+Cualquier llamada es atendida por el elevador que se encuentre libre; pero
+ si están libres dos elevadores, acudirá a la llamada el que esté mas próximo
+ al piso origen del llamado.
+ Solamente acude un elevador a cualquier llamado.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Maniobra Colectiva selectiva en los dos sentidos
+\end_layout
+
+\begin_layout Standard
+El elevador registra únicamente los llamados que se generen en el sentido
+ que va el ascensor.
+ Es decir si el ascensor va hacia arriba solo se registrarán los llamados
+ que se hagan en los pisos superiores, y si va hacia abajo solo registrará
+ los que se generen en pisos inferiores.
+ El sentido se invierte cuando llegue el elevador al último piso, ya sea
+ por una llamada de piso o una llamada de ascensor.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Métodos De Control Modernos
+\end_layout
+
+\begin_layout Subsection
+Controlador Basado En Lógica Difusa
+\end_layout
+
+\begin_layout Subsubsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+La mayoría de los fenómenos que encontramos cada día son imprecisos, es
+ decir, tienen implícito un cierto grado de difusidad en la descripción
+ de su naturaleza.
+ Esta imprecisión puede estar asociada con su forma, posición, momento,
+ color, etc.
+ El control difuso puede tratar las imposiciones de los sistemas para dar
+ soluciones en condiciones más reales y menos ideales, la estructura de
+ un controlador difuso por lo general es la siguiente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../Optimizacion/Proyecto/fuzzyProc.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Proceso controlador difuso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Formulación del Problema 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KHIANG1996"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el desarrollo del controlador difuso se requiere inicialmente definir
+ los objetivos, las restricciones y el comportamiento del sistema.
+ Esto se hace por medio de los conjuntos de entrada y de salida del sistema,
+ las reglas de inferencia y la ponderación asociada a cada una de estas
+ reglas.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Conjuntos De Entrada
+\end_layout
+
+\begin_layout Itemize
+Tiempo De Espera (Waiting Time W): Representa el tiempo que un elevador
+ necesita para viajar desde su posición actual hasta el piso en el que se
+ genera la llamada, este tiempo también puede interpretarse como aquel que
+ debe esperar el pasajero para que llegue el ascensor.
+\end_layout
+
+\begin_layout Itemize
+Tiempo de viaje (Riding Time R): Comprende el tiempo que permanece un pasajero
+ dentro del ascensor, hasta ser transportado a su piso destino.
+\end_layout
+
+\begin_layout Itemize
+Carga (Loading L): Entendido como el número de pasajeros que se encuentran
+ dentro del ascensor.
+\end_layout
+
+\begin_layout Itemize
+Distancia de Viaje (Travelling Distance T): Distancia que existe entre la
+ posición actual del elevador y el piso en el que se generó la llamada,
+ está dada en términos de pisos.
+ 
+\end_layout
+
+\begin_layout Itemize
+Peso del destino de la llamada (Destination Area Weight D): Se entiende
+ como el peso que le asigna el elevador al piso de destino de la nueva llamada.
+ Teniendo en cuenta que cada ascensor compite por tomar la llamada, el peso
+ de destino de ésta es la importancia que cada ascensor le da al destino
+ de llamada, por ejemplo si un ascensor tenía encolada una llamada a este
+ mismo piso, el peso de esta llamada va a ser alto.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Conjuntos De Salida
+\end_layout
+
+\begin_layout Standard
+La salida del controlador difuso es la prioridad que cada ascensor tiene
+ sobre una llamada específica, el ascensor que tenga la prioridad mas alta,
+ será el que al final se haga cargo de ésta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../Optimizacion/Proyecto/conjuntosDif.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Conjuntos difusos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Reglas De Inferencia
+\end_layout
+
+\begin_layout Standard
+A continuación se presentan las reglas de inferencia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../Optimizacion/Proyecto/fuzzyRules.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Reglas difusas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Parámetros De Controlador Difuso
+\end_layout
+
+\begin_layout Itemize
+Defuzificación por centro de gravedad: 
+\begin_inset Formula $\frac{\intop xf(x)\; dx}{\intop f(x)\; dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Reglas difusas están ponderadas entre 0 y 1.
+\end_layout
+
+\begin_layout Itemize
+Mecanismo de Inferencia (Mandami): 
+\begin_inset Formula $min(U_{1}(x),U_{2}(x))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Resultados Tiempo De Espera 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SENEVIRATHNA"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../Optimizacion/Proyecto/fuzzyWT.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Tiempo de espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Resultados Tiempo De Viaje 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SENEVIRATHNA"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../Optimizacion/Proyecto/fuzzyRT.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Tiempo de viaje
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones
+\end_layout
+
+\begin_layout Itemize
+La lógica difusa permite representar fácilmente, los objetivos de control.
+\end_layout
+
+\begin_layout Itemize
+Los resultados obtenido son buenos en cuanto al rendimiento del controlador.
+\end_layout
+
+\begin_layout Itemize
+El controlador es robusto, ya que las variaciones pequeñas del sistema no
+ afectan el resultado.
+\end_layout
+
+\begin_layout Itemize
+Es posible mejorar aún más el rendimiento optimizando los conjuntos difusos
+ y la ponderación de las reglas.
+\end_layout
+
+\begin_layout Itemize
+Es fácil implementar este método de control computacionalmente.
+\end_layout
+
+\begin_layout Itemize
+El controlador propuesto debe ser ajustado a la edificación para obtener
+ resultados óptimos.
+\end_layout
+
+\begin_layout Subsection
+Controlador Basado En Optimización Robusta
+\end_layout
+
+\begin_layout Subsubsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+En los modelos de programación matemática aplicados a fenómenos reales se
+ suele suponer que los datos que intervienen son conocidos y constantes,
+ lo que permite abordar su planteamiento y resolución.
+ Sin embargo, esta hipótesis de constancia no suele ser cierta puesto que
+ normalmente los datos pueden ser erróneos o incompletos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CANOSMJ"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los valores de los datos que se usan en el modelo son a veces estimaciones
+ basadas en una predicción de las condiciones futuras.
+ Para no tener que resolver un nuevo problema cada vez que se produce un
+ cambio en los datos o saber hasta que punto es fiable la solución, se han
+ desarrollado entre otras técnicas la optimización robusta.
+ Una integración de la programación por objetivos con una descripción de
+ los datos del problema basados en escenarios posibles.
+ Con esto se generan una serie de soluciones que progresivamente se convierten
+ en menos sensibles a las posibles realizaciones de los diferentes escenarios.
+\end_layout
+
+\begin_layout Standard
+El término robusto se puede emplear en dos acepciones: respecto a la optimalidad
+ y respecto a la factibilidad.
+ Una solución es robusta respecto a la optimalidad si se mantiene “cerrada”
+ en el óptimo, es decir, si varía muy poco la solución óptima, para la realizaci
+ón de cualquier escenario.
+ 
+\end_layout
+
+\begin_layout Itemize
+Los métodos de optimización robusta permiten trabajar con cierta incertidumbre
+ en los parámetros.
+ 
+\end_layout
+
+\begin_layout Itemize
+A través de la generación de una serie de soluciones, se generan otras menos
+ sensibles a los posibles cambios en los parámetros.
+\end_layout
+
+\begin_layout Itemize
+Se dice que una solución es robusta si es casi óptima en todos los escenarios
+ posibles.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LIQIAN-DOU"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Objetivos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LIQIAN-DOU"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Predecir el flujo de tráfico y estimar el error para su corrección.
+\end_layout
+
+\begin_layout Itemize
+Controlar la asignación de ascensor por medio de Optimización Robusta para
+ así manejar la incertidumbre.
+\end_layout
+
+\begin_layout Itemize
+Utilizar sistemas multiagente para reducir la complejidad computacional.
+\end_layout
+
+\begin_layout Subsubsection
+Planteamiento Del Problema 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LIQIAN-DOU"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Función Objetivo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $min\; f(x,\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s.t.\; g_{i}(x,\xi)\leq0,\;\forall\xi\in U,\; i=1,...,m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+x es la variable de diseño
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\xi$
+\end_inset
+
+es el conjunto de datos del problema, los cuales son estocásticos.
+\end_layout
+
+\begin_layout Standard
+La solución encontrada debe 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, debe satisfacer todas las posibles realizaciones de la función de restricción
+ 
+\begin_inset Formula $g_{i}(x,\xi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Parámetros
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P(k)=\frac{\lambda^{k}}{k!}e^{-\lambda}$
+\end_inset
+
+, probabilidad de arribo.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+λ es la media de números de sucesos en este intervalo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{i}^{*},$
+\end_inset
+
+ predicción de tráfico.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{i}=$
+\end_inset
+
+
+\begin_inset Formula $P_{i}^{*}+\Delta P_{i},\;\Delta P_{i}\in[-\sigma_{i},\sigma_{i}]$
+\end_inset
+
+predicción de tráfico.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{iu},\, i=1,...,m.$
+\end_inset
+
+ Llamadas de subida en el piso i.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{id},\, i=1,...,m.$
+\end_inset
+
+ Llamadas de bajada en el piso i.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r_{iku},\, i=1,...,m\;;k=1,...,n$
+\end_inset
+
+.
+ Costo del ascensor k que es despachado para responder la llamada de subida
+ en el piso i.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r_{ikd},\, i=1,...,m\;;k=1,...,n$
+\end_inset
+
+.
+ Costo del ascensor k que es despachado para responder la llamada de bajada
+ en el piso i.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r_{id}$
+\end_inset
+
+ y 
+\begin_inset Formula $r_{iu}$
+\end_inset
+
+., vectores costo para las llamada de subida y de bajada en el piso i.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{iu}$
+\end_inset
+
+, despacho para la llamada de subida i.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{id}$
+\end_inset
+
+, despacho para la llamada de bajada i.
+\end_layout
+
+\begin_layout Subsubsection
+Formulación Robusta EGCS
+\end_layout
+
+\begin_layout Itemize
+Debe ser computacionalmente tratable del problema
+\begin_inset Formula 
+\[
+min\left\{ \sum_{i=1}^{n}\; p_{iu}(r_{iu})^{T}x_{iu}-\sum_{i=1}^{m}\; p_{id}(r_{id})^{T}x_{id}\mid x\geq0\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s.t.\; P_{iu},P_{id}\in U=\left\{ \sum_{i=1}^{m}\;\frac{(P_{i}-P_{i}^{*})^{2}}{\sigma_{i}^{2}}\leq\theta^{2},\; i=1,...,m\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+en\; donde\;,\; r_{i}=\sqrt{\rho_{w}T_{wi}(p)^{2}+\rho_{c}C_{ip}^{2}},\quad\rho_{w}+\rho_{c}=1
+\]
+
+\end_inset
+
+.
+ siendo T(p) el tiempo de espera, C el número de paradas necesarias y 
+\begin_inset Formula $\rho$
+\end_inset
+
+son los pesos de cada criterio.
+\end_layout
+
+\begin_layout Subsubsection
+Representación Cuadrática del Problema
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+min\left\{ \sum_{i=1}^{n}\;(p_{iu}^{*}(r_{iu})^{T}x_{iu}+p_{id}^{*}(r_{id})^{T}x_{id})-\theta V^{1/2}(x)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\; V(x)=\sum_{i=1}^{m}\;(((r_{iu})^{T}x_{iu})^{2}\sigma_{iu}^{2}+(r_{id})^{T}x_{id})^{2}\sigma_{id}^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La demostración se encuentra en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NEMIROVSKI1998"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Representación Gráfica
+\end_layout
+
+\begin_layout Standard
+Es quizás más sencillo ver la formulación del problema gráficamente.
+ El radio de estabilidad en determinado punto, es la bola más grande que
+ puede ser formada con centro en el punto
+\begin_inset Formula $\overset{\sim}{p}$
+\end_inset
+
+.
+ En donde todos los puntos interiores satisfacen las condiciones de estabilidad
+ de la solución.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../Optimizacion/Proyecto/stability_regions.gif
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Radio de robustez
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Resultados
+\end_layout
+
+\begin_layout Standard
+El autor del artículo finalmente saca las siguientes conclusiones del trabajo
+ de investigación.
+\end_layout
+
+\begin_layout Itemize
+Las llamadas son asignadas eficientemente.
+\end_layout
+
+\begin_layout Itemize
+Si se cuenta con un gran número de pisos y de ascensores esta solución no
+ es factible ya que implica gran costo computacional.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../Optimizacion/Proyecto/resultsRO.png
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Resultados comparación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones
+\end_layout
+
+\begin_layout Itemize
+La optimización robusta es una muy buena opción para resolver este problema
+ ya que garantiza convergencia al óptimo.
+\end_layout
+
+\begin_layout Itemize
+La optimización robusta es tolerante a pequeñas variaciones en las condiciones
+ iniciales de optimización.
+\end_layout
+
+\begin_layout Itemize
+La implementación computacional de este algoritmo es muy compleja y el tiempo
+ de ejecución será muy pobre.
+\end_layout
+
+\begin_layout Itemize
+La eficiencia de la solución obtenida con este método es alta, más es costoso
+ su tiempo de ejecución.
+\end_layout
+
+\begin_layout Itemize
+No es necesario conocer las distribuciones de probabilidad de los parámetros
+ del problema.
+\end_layout
+
+\begin_layout Itemize
+La optimización robusta cuenta con rigor matemático, es demostrable la efectivid
+ad.
+\end_layout
+
+\begin_layout Subsection
+Optimización Por Colonia De Hormigas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ZHANGTANG"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los algoritmos de optimización por hormigas son buenos para resolver problemas
+ de optimización combinacionales.
+ Tienen gran velocidad de convergencia para encontrar la solución óptima.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Modelo Del Problema.
+\end_layout
+
+\begin_layout Standard
+En el siguiente diagrama se presenta la arquitectura del controlador.
+ El número de hormigas es n, el número de pisos es m.
+ Las llamadas de subida, bajada están representadas por u y d respectivamente.
+ Una topología válida es aquella que circula por todos los nodos de llamadas
+ a través de las hormigas.
+ Por ejemplo la topología (u1->u2->dq), significa que un ascensor tomar
+ las llamadas de subida 1 y 2 para después servir la llamada de bajada q.
+ Cada plan posible conforma el espacio de búsqueda de la solución al problema,
+ el costo del plan se mide en energía consumida.
+ El camino que represente menor costo será el camino más corto y por lo
+ tanto la solución óptima.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename antCol1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo de control
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Restricciones Del Modelo
+\end_layout
+
+\begin_layout Standard
+El modelo propuesto genera una malla por la cual las hormigas pasaran para
+ encontrar cual es el camino que minimiza el costo, las restricciones que
+ pone el modelo son.
+\end_layout
+
+\begin_layout Enumerate
+Cuando algún plan de elevador atiende todas las llamadas de subida, debe
+ tomar primero la llamada del piso inferior más bajo y seguidamente los
+ más altos.
+\end_layout
+
+\begin_layout Enumerate
+Cuando algún plan de elevador atiende todas las llamadas de bajada, debe
+ tomar primero el pasajero que está en el piso más alto y seguidamente los
+ más bajos.
+\end_layout
+
+\begin_layout Subsubsection
+Modelo De Optimización
+\end_layout
+
+\begin_layout Standard
+La optimización se realiza por actualizaciones de la feromona y probabilidades
+ de escogencia del elevador.
+ 
+\begin_inset Formula $\tau_{ij}$
+\end_inset
+
+ representa la feromona, i es el índice del elevador y j es la llamada.
+ Cuando se encuentre una solución factible se debe actualizar la feromona
+ en cada uno de los nodos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tau_{ij}(t+1)=\rho\tau_{ij}(t)+\Delta\tau_{ij}^{k}$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\rho$
+\end_inset
+
+, toma un valor entre [0,1]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Delta\tau_{ij}^{k}$
+\end_inset
+
+, es el incremento de la feromona sobre el camino ij.
+\end_layout
+
+\begin_layout Standard
+Se busca de esta manera la solución óptima iterando sobre el grupo de elevadores.
+ La decisión sobre si el ascensor i atiende la llama está basada en el valor
+ de la feromona, para entenderlo un poco mejor se presenta el siguiente
+ diagrama de flujo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename antCol2.png
+	scale 48
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo de control
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Simulación
+\end_layout
+
+\begin_layout Standard
+Se realizaron pruebas para verificar el controlador basado en colonias de
+ hormigas simulando una edificación de 16 pisos y 4 elevadores.
+ Se comparan los resultados frente a otros dos controladores eficientes,
+ Static y Min Waiting Time.
+ Los resultados experimentales se presentan a continuación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename antCol3.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Resultados de la simulación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones
+\end_layout
+
+\begin_layout Itemize
+Se propone un mecanismo control basado en el mejor camino -menos costo-
+ que un enjambre de hormigas pueda encontrar.
+ 
+\end_layout
+
+\begin_layout Itemize
+Los resultados de la simulación muestran que la eficiencia del controlador
+ es mayor a los otros dos métodos presentados.
+ 
+\end_layout
+
+\begin_layout Itemize
+La convergencia a la solución óptima es lenta, debido a que el espacio de
+ búsqueda es muy grande.
+\end_layout
+
+\begin_layout Itemize
+Al ser tan elevado el tiempo de respuesta del algoritmo es difícil implementarlo
+ en la realidad ya que la respuesta debería ser casi inmediata.
+\end_layout
+
+\begin_layout Itemize
+No se garantiza un óptimo global con este algoritmo.
+\end_layout
+
+\begin_layout Itemize
+Si el espacio de solución del sistema crece mucho, se vuelve intratable
+ el problema.
+\end_layout
+
+\begin_layout Subsection
+Controlador Híbrido Para Grupo De Ascensores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JIANLIU2010"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+Los sistemas de elevadores operan sobre un espacio altamente dimensional
+ tanto en espacio continuo como discreto.
+ El estado de este no es observable fácilmente, por lo tanto la solución
+ de control no puede usar técnicas de optimización tradicionales.
+ En este artículo se presenta un método de control híbrido -Red Neuronal
+ y PSO-.
+\end_layout
+
+\begin_layout Subsubsection
+Funciones De Costo
+\end_layout
+
+\begin_layout Standard
+Los parámetros de optimización están basados en tres criterios: Tiempo de
+ viaje, tiempo de espera, energía consumida.
+ Estas variables se incluyen en la función de costo de esta manera.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu_{i}=W_{1}T_{AWT(i)}+W_{2}T_{RM(i)}+W_{3}T_{PC(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Z=min(\mu_{1}\mu_{2}...\mu_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En donde i es el número de ascensores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu$
+\end_inset
+
+ es el criterio de la función de costo de los elevadores.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{RM(i)}$
+\end_inset
+
+ , es el tiempo de viaje.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{PC(i)}$
+\end_inset
+
+ , es el promedio del tiempo de espera.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $W_{1},W_{2},W_{3},$
+\end_inset
+
+ son los pesos de cada factor a optimizar.
+\end_layout
+
+\begin_layout Subsubsection
+Producción Red Neuronal De Base Radial RBF
+\end_layout
+
+\begin_layout Standard
+El criterio más importante a minimizar en este caso es el tiempo de espera
+ de los pasajeros.
+ Si el controlador es capaz de conocer el tipo de tráfico presente, podría
+ parquear los ascensores óptimamente para reducir este tiempo.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MANHEW2003"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esto es lo que el controlador de ascensor debe aprender por medio de la
+ red neuronal de base radial RBF.
+ Las redes neuronales de base radial tienen una topología más compacta y
+ necesitan menos iteraciones para aprender.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename rbfANN.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Topología ANN RBF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En donde las entradas están dadas por el vector x, las función de activación
+ es 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y cuenta con tres capas.
+ La salida de la red está dada en la siguiente formula.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{k}=\overset{h}{\underset{i=1}{\sum}}W_{i}\phi_{i}\Vert x-c_{i}\Vert$
+\end_inset
+
+, La salida indica el tráfico previsto (
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ indica tráfico de subida, 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ indica tráfico entre pisos, 
+\begin_inset Formula $y_{3}$
+\end_inset
+
+ indica tráfico de bajada ).
+\end_layout
+
+\begin_layout Subsubsection
+Optimización Por Enjambres
+\end_layout
+
+\begin_layout Standard
+La optimización por enjambres fue propuesta por Kennedy y Eberhart, esta
+ técnica está inspirada en la inteligencia colectiva de los bancos de peces
+ y aves.
+ Esta poderosa herramienta puede resolver pruebas con discontinuidades,
+ no convexos y multimodales.
+ Cada individuo del enjambre representa una solución del problema en el
+ área factible, los individuos se van moviendo en el espacio de búsqueda
+ y tienen memoria de la mejor posición que han alcanzado.
+ 
+\end_layout
+
+\begin_layout Standard
+En este caso particular la optimización por enjambre tiene la función de
+ actualizar los pesos de la red de acuerdo a una función de aptitud ´fitness´.
+ En el siguiente diagrama se observa el algoritmo de control con la optimización
+ por enjambre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename rbfANN-SWARM.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de flujo algoritmo RBF+PSO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La técnica de optimización por enjambres hace que la red neuronal converja
+ más rápidamente al óptimo, en el artículo estudiado no se presentan resultados
+ respecto a la verificación del controlador bajo simulación.
+\end_layout
+
+\begin_layout Subsubsection
+Conclusiones
+\end_layout
+
+\begin_layout Itemize
+Se propone un mecanismo control híbrido, red neuronal de base radial + optimizac
+ión por enjambres.
+ 
+\end_layout
+
+\begin_layout Itemize
+Se parte del principio que si se conoce el tráfico se pueden parquear los
+ ascensores para que queden más cerca a los pisos en donde hay más usuarios.
+\end_layout
+
+\begin_layout Itemize
+La solución propuesta es buena ya que al tener los usuarios cerca los ascensores
+ el tiempo de espera se reduce.
+\end_layout
+
+\begin_layout Itemize
+Al tener solo un objetivo de control 
+\begin_inset Quotes eld
+\end_inset
+
+tiempo de espera
+\begin_inset Quotes erd
+\end_inset
+
+, se está perdiendo la oportunidad de hacer una asignación de llamadas más
+ inteligente.
+\end_layout
+
+\begin_layout Itemize
+La convergencia a la solución óptima es lenta, sin embargo al usar una red
+ neuronal de base radial se obtiene un mejor resultado.
+\end_layout
+
+\begin_layout Itemize
+Tiene la ventaja que una vez entrenada la red neuronal el desempeño en producció
+n irá a ser mejor.
+\end_layout
+
+\begin_layout Itemize
+En una edificación real se pueden presentar mezcla de patrones, para lo
+ cual la red podría no estar entrenada correctamente.
+\end_layout
+
+\begin_layout Subsection
+Control Mediante Aprendizaje Reforzado 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CRITES1998"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inspirado por el comportamiento psicológico de los individuos el aprendizaje
+ reforzado permite a una máquina aprender por medio de recompensas.
+ Este método pertenece a los métodos no supervisados, por lo tanto no se
+ hace necesario presentarle a la máquina la respuesta correcta.
+\end_layout
+
+\begin_layout Standard
+En el campo de los controladores para grupo de ascensores se usa para recompensa
+r a todo el sistema si la llamada fue atendida correctamente por alguno
+ de sus miembros.
+ Si no fue bien atendida se envía una señal de retroalimentación a cada
+ uno de los nodos que participó en esta decisión.
+ El objetivo del aprendizaje el maximizar los incentivos y está descrita
+ por la siguiente formula.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{t}=\overset{\infty}{\underset{i=0}{\sum}}\gamma_{i}r_{t+i+1}$
+\end_inset
+
+, en donde 
+\lang english
+
+\begin_inset Formula $\gamma_{i}\epsilon[0,1)$
+\end_inset
+
+
+\lang spanish
+ es la tasa de descuento-.
+\end_layout
+
+\begin_layout Subsection
+Otros Métodos De Control
+\end_layout
+
+\begin_layout Standard
+Debido a la gran cantidad de métodos de control usados para tratar problemas
+ de optimización, no es posible listar todos.
+ Se presentan a continuación aquellos métodos que al criterio del autor
+ son más innovadores.
+\end_layout
+
+\begin_layout Itemize
+Timed Petri Net Based Approach for Elevator Group Controls.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "YOUNG2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A New Hybrid Elevator Group Control System Scheduling Strategy Based on
+ Particle Swarm Simulated Annealing Optimization Algorithm.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LUOFEI2010"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Hybrid Destination Registration Elevator Group Control System with Artificial
+ Immune Optimization Algorithm.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "XIAOCUI2010"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Multi-Car Elevator System using Genetic Network Programming for High-rise
+ Building.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LUYU2009"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Genetic Algorithm For Controllers In Elevator Groups: Analysis And Simulation
+ During Lunchpeak Traffic.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CORTES2001"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Real-Time Combinatorial Optimization for Elevator Group Dispatching.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "UTGOFF2010"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Simulador
+\end_layout
+
+\begin_layout Subsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación puede ser definido como la imitación de la operación
+ en un proceso real o un sistema sobre el tiempo.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BANKS2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación comprende tres elementos fundamentales: Sistema
+ real, Modelo, Ordenador.
+ Estos elementos están conectados como se aprecia en la ilustración 10.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BANKS2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El modelo representa una versión simplificada del sistema real, permitiendo
+ así, facilitar su estudio y análisis.
+ Un edificio tiene características que varían en el tiempo, ejemplo de ellas
+ son; la tasa de arribo de pasajeros por piso y el piso destino de las llamadas.
+ Debido a estas características el sistema tiene un comportamiento no lineal.
+\end_layout
+
+\begin_layout Standard
+El comportamiento del sistema debe ser igual al del sistema real para así
+ poder experimentar bajo un ambiente simulado, si el sistema modelado no
+ representa al sistema real de acuerdo a las características que se consideraron
+ relevantes tendrá lugar otra iteración en la cual un nuevo modelo será
+ desarrollado y pasará nuevamente por las etapas de verificación y validación.
+ 
+\end_layout
+
+\begin_layout Standard
+El primer simulador de tráfico fue desarrollado para verificar el tráfico
+ en edificaciones altas, tal como el WORLD TRADE CENTER.
+ En este entonces los controladores para grupos de ascensores eran evaluados
+ con simuladores híbridos, los cuales consisten en modelos análogos y digitales.
+ En estos simuladores las tarjetas de control de los elevadores debían ser
+ conectadas con el simulador.
+ Más adelante estos vendrían dentro de minicomputadores en donde varios
+ fenómenos de tráfico eran estudiados.
+ Recientemente estos simuladores pueden ser ejecutados en computadores personale
+s.
+ 
+\end_layout
+
+\begin_layout Subsection
+Tipos De Simulación
+\end_layout
+
+\begin_layout Subsubsection
+Simulación de eventos discretos
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación de eventos discretos comprende; emular el flujo
+ de un sistema a través del tiempo, donde las variables de interés son discretas
+, cada hilo del proceso general tiene asociado una línea de tiempo diferente,
+ las cuales deben ser sincronizadas de alguna manera.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BANKS2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Simulación de eventos continuos
+\end_layout
+
+\begin_layout Standard
+Se llama simulación continua a las representaciones numéricas de realidades
+ cambiantes en el tiempo en base a procesos sincronizados; es decir que
+ el tiempo es una única variable global que sirve de referencia para todas
+ las otras variables.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BANKS2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Simulación Estocástica
+\end_layout
+
+\begin_layout Standard
+El sistema tiene un comportamiento estocástico debido a que existen componentes
+ aleatorios dentro del sistema.
+ Una de las variables aleatorias que podemos encontrar es la tasa de arribo
+ a determinado piso, ya que nos interesa reproducir el tráfico que posiblemente
+ tendrá un edificio es necesario simular el sistema estocásticamente usando
+ distribuciones de probabilidades que el usuario podrá variar para representar
+ en términos de probabilidad una edificación específica.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BANKS2000"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Justificación
+\end_layout
+
+\begin_layout Standard
+Validar el desempeño del controlador y su eficiencia respecto a las técnicas
+ tradicionales requiere manipular las condiciones del sistema y efectuar
+ un gran número de pruebas.
+ Realizar estas pruebas en una edificación real sería bastante complicado
+ y costoso.
+ Por esta razón es necesario desarrollar un simulador de edificios desde
+ el cual se puedan cambiar las condiciones del sistema y medir con exactitud
+ los tiempos registrados por los usuarios.
+ 
+\end_layout
+
+\begin_layout Standard
+Para evitar la construcción del simulador se buscó en la comunidad académica
+ opciones libre, pero no se encontró ningún ambiente de simulación.
+ Se debió construir un simulador sencillo siguiendo el flujo descrito por
+ Banks [BANKS2000] en el que partiendo de un sistema real se llega a un
+ modelo por computador.
+ 
+\end_layout
+
+\begin_layout Standard
+Actualmente no existen simuladores de código libre para poder verificar
+ los algoritmos de control.
+ Sería importante construir un simulador para uso de la comunidad científica
+ y que a través de este problema se estudien las técnicas de control inteligente
+s.
+\end_layout
+
+\begin_layout Standard
+Las grandes compañías cuentan con simuladores propios y por obvios motivos
+ no son prestados para fines académicos, ejemplo de estos simuladores son
+ el Building Traffic Simulator, de la empresa finlandesa KONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2001"
+
+\end_inset
+
+.
+ Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.
+\end_layout
+
+\begin_layout Section
+Conclusiones
+\end_layout
+
+\begin_layout Itemize
+La investigación en algoritmos de control para grupos de elevadores es un
+ área vigente.
+\end_layout
+
+\begin_layout Itemize
+Aunque existen varios métodos de control, la mayoría de estos tienen una
+ arquitectura centralizada.
+\end_layout
+
+\begin_layout Itemize
+Formular este problema desde la perspectiva de control óptimo resulta difícil
+ por los requerimientos de tiempo de respuesta del sistema ( < 500 milisengundos
+).
+\end_layout
+
+\begin_layout Itemize
+Los métodos híbridos ayudan a mejorar el rendimiento del sistema, pero aumentan
+ la carga computacional.
+\end_layout
+
+\begin_layout Itemize
+La investigación sobre esta área se realiza principalmente en empresas extrajera
+s, el apoyo financiero que tienen es muy grande.
+\end_layout
+
+\begin_layout Itemize
+Todos los métodos de control tienden al óptimo pero no es fácil comparar
+ el desempeño entre ellos.
+\end_layout
+
+\begin_layout Itemize
+No existe software de simulación de edificios de código abierto, si se quiere
+ investigar sobre este tema es necesario construir un simulador propio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "C:/Andres/TesisMaestria/scge"
+options "IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
