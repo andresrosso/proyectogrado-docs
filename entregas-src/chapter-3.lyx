@@ -295,7 +295,21 @@ Validar el desempeño del controlador y su eficiencia respecto a las técnicas
  un gran número de pruebas.
  Realizar estas pruebas en una edificación real sería bastante complicado
  y costoso.
- Por esta razón es necesario desarrollar un simulador de edificios desde
+ Las grandes compañías cuentan con simuladores propios y por obvios motivos
+ no son prestados para fines académicos, ejemplo de estos simuladores son
+ el Building Traffic Simulator, de la empresa finlandesa KONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2001"
+
+\end_inset
+
+.
+ Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.
+\end_layout
+
+\begin_layout Standard
+Por esta razón es necesario desarrollar un simulador de edificios desde
  el cual se puedan cambiar las condiciones del sistema y medir con exactitud
  los tiempos registrados por los usuarios.
  
@@ -311,25 +325,41 @@ Para evitar la construcción del simulador se buscó en la comunidad académica
 \end_layout
 
 \begin_layout Standard
-Actualmente no existen simuladores de código libre para poder verificar
- los algoritmos de control.
- Sería importante construir un simulador para uso de la comunidad científica
- y que a través de este problema se estudien las técnicas de control inteligente
-s.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-Las grandes compañías cuentan con simuladores propios y por obvios motivos
- no son prestados para fines académicos, ejemplo de estos simuladores son
- el Building Traffic Simulator, de la empresa finlandesa KONE 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "SIIKONEN2001"
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo simulación
+\end_layout
 
 \end_inset
 
-.
- Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ya que no existen simuladores de código libre para poder verificar los algoritmo
+s de control, se hace importante su construcción bajo código abierto.
+ De tal manera que a traves de este problema se puedan estudiar técnicas
+ de control inteligentes aplicadas a este campo en particular.
 \end_layout
 
 \begin_layout Section

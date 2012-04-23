@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -137,6 +137,8 @@ customHeadersFooters
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -189,6 +191,8 @@ rightmark
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 Enable page headers and add the chapter to the header line.
 \end_layout
 
@@ -202,6 +206,8 @@ Enable page headers and add the chapter to the header line.
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -227,6 +233,8 @@ leftmark
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -295,8 +303,9 @@ El incremento de este tipo de construcciones trae el problema de transportar
  Para el transporte en edificios de gran altura no existe un medio más adecuando
  que las cabinas de ascensor, pero su capacidad reducida, el alto flujo
  de pasajeros en horas pico y la considerable distancia que deben recorrer
- los ascensores hace que el sistema tienda a colapsar elevendo el tiempo
- promedio que una persona debe esperar para ser transportada.
+ los ascensores hace que el sistema tienda a colapsar elevando el tiempo
+ promedio que una persona debe esperar para ser transportada o llegar a
+ su destino.
 \end_layout
 
 \begin_layout Standard
@@ -306,7 +315,7 @@ l son ineficientes para cubrir la necesidad de transporte de pasajeros.
  por ejemplo MITSUBISHI y OTIS entre otras, gastan millones de dólares en
  investigaciones tendientes a solventar esta creciente necesidad, la investigaci
 ón aislada sobre este campo es reducida y la información disponible de esta
- área es también escasa.+
+ área es también escasa.
 \end_layout
 
 \begin_layout Section
@@ -324,7 +333,7 @@ En un sistema de transporte vertical de un solo elevador, este se encarga
 
 \begin_layout Standard
 Debido a la importancia de transportar eficientemente las personas en edificacio
-nes de gran altura las grandes compañias líderes en esta área, han presentantado
+nes de gran altura las grandes compañías líderes en esta área, han presentado
  diversos algoritmos de control 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -334,15 +343,15 @@ key "HAKONEN-SIIKONEN-2008,SIIKONEN2004"
 
 que presentan una eficacia mayor medida en tiempo se servicio promedio de
  pasajeros.
- Estas compañias cuentan con los recursos financieros para investigación
+ Estas compañías cuentan con los recursos financieros para investigación
  bastante altos.
- Sus avances y nuevos algorítmos de control para grupo de elevadores son
+ Sus avances y nuevos algoritmos de control para grupo de elevadores son
  verificados en simuladores construidos
 \shape italic
  ad-hoc
 \shape default
- que reproducen con precisión el tráfico de psaajeros y que miden con exactitud
- los tiempos invertidos por los usuarios para movilizarce dentro de la edificaci
+ que reproducen con precisión el tráfico de pasajeros y que miden con exactitud
+ los tiempos invertidos por los usuarios para movilizarse dentro de la edificaci
 ón.
  Algunos de estos ambientes de simulación son OtisPlan de Otis Corporation
  
@@ -366,7 +375,7 @@ key "SIIKONEN_BTS2004"
 \begin_layout Standard
 Estas herramientas de simulación sofisticadas tienen en común que son propietari
 as, en el caso de BTS y OtisPlan su uso está restringido a personal de la
- compañia únicamente y para el caso de Elevate existe una licencia comercial
+ compañía únicamente y para el caso de Elevate existe una licencia comercial
  de usuario único con un costo de 2900 dolares 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -381,37 +390,41 @@ key "ElevateLicence"
 Objetivos
 \end_layout
 
+\begin_layout Standard
+El trabajo presentado es un aporte a la academia en el estudio del tráfico
+ vertical, promueve además la investigación en esta área al ofrecer un simulador
+ de código abierto.
+ Lo objetivos planteados para siguiente trabajo se enuncian a continuación.
+\end_layout
+
 \begin_layout Subsection
 Objetivo General 
 \end_layout
 
 \begin_layout Standard
-Modelar la dinámica de tráfico presente en las edificaciones y asignar de
- manera eficiente los ascensores haciendo uso de conceptos traídos de la
- teoría evolutiva de juegos.
- 
+Diseñar un método distribuido de control para asignar de manera eficiente
+ el tráfico de personas presente en una edificación, haciendo uso de técnicas
+ de inteligencia artificial (I.A.).
 \end_layout
 
 \begin_layout Subsection
 Objetivos Específicos 
 \end_layout
 
-\begin_layout Standard
-1.
- Modelar el problema como un sistema dinámico.
+\begin_layout Enumerate
+Modelar matemáticamente el problema de tráfico presentado en las edificaciones
+ de gran altura.
 \end_layout
 
-\begin_layout Standard
-2.
- Resolver la asignación de ascensores por medio de teoría de evolutiva de
- juegos y sistemas multiagente.
+\begin_layout Enumerate
+Diseño del método distribuido de control para la asignación de ascensores,
+ haciendo uso de técnicas de control inteligente.
  
 \end_layout
 
-\begin_layout Standard
-3.
- Validar por medio de simulación el modelo propuesto y comparar contra la
- técnica tradicional.
+\begin_layout Enumerate
+Evaluar la técnica de control desarrollada y comparar su eficiencia respecto
+ a una técnica tradicional en un ambiente simulado.
  
 \end_layout
 
@@ -420,62 +433,50 @@ Contenido del Libro
 \end_layout
 
 \begin_layout Standard
-El sistema descrito presenta un comportamiento dinámico, en donde el estado
- del mismo evoluciona en el tiempo, este comportamiento es posible modelarlo
- matemáticamente simplificándolo pero sin perder los detalles importantes
- [ALLIGOOD1996].
- El sistema lo componen el medio ambiente (edificio, pisos), los pasajeros
- y las cabinas de ascensor que para nuestro caso son los jugadores.
- Se introduce el término jugador, ya que se plantea que las cabinas de ascensor
- compitan entre ellas para atender las llamadas de los pasajeros.
- Si la llamada es atendida satisfactoriamente (más adelante se definen estos
- criterios) la cabina obtiene un pago por esto, y si en conjunto todas las
- cabinas atienden satisfactoriamente las llamadas hay también una recompensa
- grupal.
- La recompensa grupal se reparte entre todas las cabinas, esto hace que
- las funciones de decisión de las cabinas evolucionen en el tiempo y que
- al final se obtenga cooperación como comportamiento emergente, algo similar
- ocurre en el dilema del prisionero iterado [STANFORD2011].
- La teoría de juegos no es muy apropiada para tratar problemas que envuelven
- fenómenos dinámicos relacionados con varios participantes, en muchos problemas
- de teoría de juegos las acciones de los jugadores modifican el ambiente
- así como las decisiones que los demás jugadores puedan tomar, al tener
- la teoría de juegos tradicional una matriz estática de pagos no es posible
- modelar este comportamiento dinámico [AKIYAMA1999].
- La necesidad ya había sido identificada por el propio von Neumman en su
- libro “Theory of Games and Economic Behavior” en él reconoce que una teoría
- dinámica sería más completa [STANFORD2011].
- Este problema en particular permite modelar a las cabinas de ascensor como
- agentes autónomos que compiten por servir las llamadas de los pasajeros
- y obtener un pago individual y un pago grupal que incentivará la cooperación
- entre los agentes.
- Es importante verificar el desempeño de la técnica de control a usar, y
- debido a lo costoso que sería hacerlo en la realidad se propone el diseño
- y la construcción de un simulador, este simulador debe modelar de manera
- precisa el comportamiento dinámico del sistema para que de manera controlada
- se pueda verificar el funcionamiento de la solución propuesta midiendo
- su eficiencia respecto al sistema de control tradicional.
- 
+El libro está organizado ....
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Esto parte del libro se escribe al final.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Definciones Principales
+Definiciones Principales
 \end_layout
 
 \begin_layout Standard
+Se presentan los conceptos principales que serán usados a los largo del
+ libro, se recogen los conceptos que pueden ser interpretados ambiguamente.
+\end_layout
+
+\begin_layout Itemize
+Tráfico vertical: Se entiende por tráfico en una edificación; el movimiento
+ o tránsito de personas dentro del edificio, este tráfico tiene dos componentes
+ tasa de arribo y probabilidad de destino.
+\end_layout
+
+\begin_layout Itemize
 Tiempo de espera: es el tiempo comprendido entre la generación de la llamada
- de elevedor y el arribo de este al piso de la llamada.
+ de elevador y el arribo de este al piso origen de la llamada.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Tiempo de viaje: es el tiempo comprendido desde que el pasajero entra al
  elevador hasta que llega a su piso destino.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Tiempo total: es el tiempo que se comprende desde arribo del usuario al
  sistema hasta la llegada de este al piso destino, es la suma del tiempo
- de espera y el tiempo de viaje, es tambien llamado tiempo de servicio 
+ de espera y el tiempo de viaje, es también llamado tiempo de servicio 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "POWELL1992"
@@ -492,30 +493,23 @@ key "NAKAI1994"
 .
 \end_layout
 
-\begin_layout Standard
-Tiempo de retorno de viaje (round trip time): Es el tiempo que un elevador
- comprendido desde que recoje pasjeros en el primer piso (lobby), lleva
- 
+\begin_layout Itemize
+Tiempo de retorno de viaje (round trip time): Es el tiempo comprendido desde
+ que un elevador recoge pasajeros en el primer piso (lobby), lleva los pasajeros
+ a los pisos superiores y regresa a la primera planta (lobby) para volver
+ a servir a los nuevos pasajeros.
 \end_layout
 
-\begin_layout Standard
-ourney time is approximated by average time to destination (Fortune 1995),
- transit time to destination (Schröder 1984), or by maximum passenger transit
- time to the destination (Strakosch 1984).
- The travel time from the bottom to top floor at full speed is used to define
- the elevator speed.
- In elevator planning, a theoretical up-peak situation where all the elevators
- leave the lobby with 80 per-cent load is normally used.
- The two most important planning parameters, the up-peak interval and handling
- capacity, are calculated from the round trip time.
- The round trip time starts when a car opens its doors at the lobby, and
- continues until an elevator has made a trip around the building and starts
- to open its doors after returning to the lobby.
- The interval is the average time between car departures from the lobby.
- The handling capacity gives the number of passengers the elevator system
- can transport in five minutes during up-peak.
- The main parameters in defining the passenger service level used in this
- work are shown in Figure 1.
+\begin_layout Itemize
+Capacidad del transporte del sistema: es el número de pasajeros que un grupo
+ de elevadores puede transportar en una fracción de tiempo de cinco minutos.
+\end_layout
+
+\begin_layout Itemize
+Patrón de tráfico: es la caracterización del comportamiento estocástico
+ que se presenta en el arribo de pasajeros al sistema.
+ Para este trabajo se consideran principalmente cuatro patrones: subida
+ -uppeak-, entre pisos -interfloor-, bajada -downpeak-.
 \end_layout
 
 \end_body

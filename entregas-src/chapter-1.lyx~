@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -137,6 +137,8 @@ customHeadersFooters
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -189,6 +191,8 @@ rightmark
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 Enable page headers and add the chapter to the header line.
 \end_layout
 
@@ -202,6 +206,8 @@ Enable page headers and add the chapter to the header line.
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -227,6 +233,8 @@ leftmark
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -296,7 +304,8 @@ El incremento de este tipo de construcciones trae el problema de transportar
  que las cabinas de ascensor, pero su capacidad reducida, el alto flujo
  de pasajeros en horas pico y la considerable distancia que deben recorrer
  los ascensores hace que el sistema tienda a colapsar elevendo el tiempo
- promedio que una persona debe esperar para ser transportada.
+ promedio que una persona debe esperar para ser transportada o llegar a
+ su destino.
 \end_layout
 
 \begin_layout Standard
@@ -306,7 +315,7 @@ l son ineficientes para cubrir la necesidad de transporte de pasajeros.
  por ejemplo MITSUBISHI y OTIS entre otras, gastan millones de dólares en
  investigaciones tendientes a solventar esta creciente necesidad, la investigaci
 ón aislada sobre este campo es reducida y la información disponible de esta
- área es también escasa.+
+ área es también escasa.
 \end_layout
 
 \begin_layout Section
@@ -382,9 +391,9 @@ Objetivos
 \end_layout
 
 \begin_layout Standard
-El trabajo que se presentado el un aporte a la academia en el estudio del
- tráfico vertical, promueve además la investigación en esta área al ofrecer
- un simulador de código abierto.
+El trabajo presentado es un aporte a la academia en el estudio del tráfico
+ vertical, promueve además la investigación en esta área al ofrecer un simulador
+ de código abierto.
  Lo objetivos planteados para siguiente trabajo se enuncian a continuación.
 \end_layout
 
@@ -429,6 +438,8 @@ El libro está organizado ....
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 Esto parte del libro se escribe al final.
 \end_layout
 
@@ -447,8 +458,14 @@ Se presentan los conceptos principales que serán usados a los largo del
 \end_layout
 
 \begin_layout Itemize
+Tráfico vertical: Se entiende por tráfico en una edificación; el movimiento
+ o tránsito de personas dentro del edificio, este tráfico tiene dos componentes
+ tasa de arribo y probabilidad de destino.
+\end_layout
+
+\begin_layout Itemize
 Tiempo de espera: es el tiempo comprendido entre la generación de la llamada
- de elevedor y el arribo de este al piso de la llamada.
+ de elevedor y el arribo de este al piso origen de la llamada.
 \end_layout
 
 \begin_layout Itemize
@@ -477,10 +494,10 @@ key "NAKAI1994"
 \end_layout
 
 \begin_layout Itemize
-Tiempo de retorno de viaje (round trip time): Es el tiempo que un elevador
- comprendido desde que recoje pasjeros en el primer piso (lobby), lleva
- los pasajeros a los pisos superiores y regresa a la primera planta (lobby)
- para volver a servir a los nuevos pasajeros.
+Tiempo de retorno de viaje (round trip time): Es el tiempo comprendido desde
+ que un elevador recoje pasjeros en el primer piso (lobby), lleva los pasajeros
+ a los pisos superiores y regresa a la primera planta (lobby) para volver
+ a servir a los nuevos pasajeros.
 \end_layout
 
 \begin_layout Itemize

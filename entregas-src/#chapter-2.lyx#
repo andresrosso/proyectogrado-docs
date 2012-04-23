@@ -323,12 +323,28 @@ Las edificaciones de gran altura existen gracias a la eficiencia de los
  sistemas de elevadores y no vice versa.
  En un contexto funcional el sistema de elevadores es la arteria principal
  del edificio.
- Fue despues que Elijah Graves Otis inventó el sistema de govierno de velocidad
+ 
+\end_layout
+
+\begin_layout Standard
+Fue despues que Elijah Graves Otis inventó el sistema de govierno de velocidad
  para elevadores y el sistema seguro de frenado para elevadores en el año
- de 1857, que los sistemas de elevadores se conviertieron en una opción
- viable para transportar y la altura de la construcción dejó de ser un factor
- limitante.
- La primera construcción de gran altura en usaba el sistea Otis fue instalada
+ de 1857 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, que los sistemas de elevadores se conviertieron en una opción viable para
+ transportar persona.
+ Este fue un factor determinante para que la altura en las construcciones
+ dejara de ser un factor limitante.
+ 
+\end_layout
+
+\begin_layout Standard
+La primera construcción de gran altura que usaba el sistea Otis fue instalada
  en la tienda Haughwout&Company en New York.
  Los sistemas de elevadores para este entonces funcionanban con bombas de
  agua presurizada y grandes motores, uno de estos sistemas fue presentado
@@ -346,11 +362,11 @@ Para el año de 1880 Werner von Siemens introdujo la utilización de fuentes
 \begin_layout Standard
 A partir de entonces las construcciones eran cada vez más altas, y en paises
  como Estados Unidos y Asia se marcaba una clara tendencia a preferir este
- tipo de edificaciones en ciudad con alta densidad poblacional.
+ tipo de edificaciones en ciudades con alta densidad poblacional.
  Un ejemplo de estas edificaciones son la torre Taipei 101 con una altura
  de 509 metros o la torre Burj Khalifa en Dubai con 828 metros de altura
- y 163 pisos de altura, siendo hasta el momento la construcción habitable
- más alta del mundo 
+ y 163 pisos, siendo hasta el momento la construcción habitable más alta
+ del mundo 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "EMPORIS2012"
@@ -421,7 +437,7 @@ Tiempo de espera aceptado por tipo de edificación
 \end_layout
 
 \begin_layout Section
-Simuladores de Tráfico Vertical
+Simulación
 \end_layout
 
 \begin_layout Standard
@@ -440,7 +456,7 @@ key "BANKS2000"
 \begin_layout Standard
 El proceso de simulación comprende tres elementos fundamentales: Sistema
  real, Modelo, Ordenador.
- Estos elementos están conectados como se aprecia en la ilustración 10.
+ Estos elementos están conectados como se aprecia en la siguiente figura.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -452,60 +468,110 @@ key "BANKS2000"
 \end_layout
 
 \begin_layout Standard
-El modelo representa una versión simplificada del sistema real, permitiendo
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/modeloSimBANKS.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo de simulación de BANKS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este modelo representa una versión simplificada del sistema real, permitiendo
  así, facilitar su estudio y análisis.
  Un edificio tiene características que varían en el tiempo, ejemplo de ellas
  son; la tasa de arribo de pasajeros por piso y el piso destino de las llamadas.
  Debido a estas características el sistema tiene un comportamiento no lineal.
+ Durante el modelado del sistema a simular se llevan a cabo operaciones
+ de verificación y validación del sistema, estas hacen parte del proceso
+ iterativo para la simulación de un sistema real, según Banks 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BANKS2000"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-El comportamiento del sistema debe ser igual al del sistema real para así
- poder experimentar bajo un ambiente simulado, si el sistema modelado no
- representa al sistema real de acuerdo a las características que se consideraron
- relevantes tendrá lugar otra iteración en la cual un nuevo modelo será
- desarrollado y pasará nuevamente por las etapas de verificación y validación.
- 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/procesoSimBANKS.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Proceso de simulación de BANKS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Simuladores de Tráfico Vertical
 \end_layout
 
 \begin_layout Standard
-El primer simulador de tráfico fue desarrollado para verificar el tráfico
- en edificaciones altas, tal como el WORLD TRADE CENTER.
- En este entonces los controladores para grupos de ascensores eran evaluados
- con simuladores híbridos, los cuales consisten en modelos análogos y digitales.
- En estos simuladores las tarjetas de control de los elevadores debían ser
- conectadas con el simulador.
- Más adelante estos vendrían dentro de minicomputadores en donde varios
- fenómenos de tráfico eran estudiados.
- Recientemente estos simuladores pueden ser ejecutados en computadores personale
-s.
- 
-\end_layout
-
-\begin_layout Standard
-El primer simulador de tráfico para edificaciones basado en software se
- desarrollo en el año de 1970 
+En el año de 1970 fue desarrollado el primer simulador de tráfico con el
+ fin de verificar el comportamiento de los elevadores en la que era para
+ ese entonces la edificación de mayor altura el WORLD TRADE CENTER.
+ Este simulador híbrido consistía en un componente análogo y otro digital,
+ las tarjetas de control que se ubicaban el los pisos de la edificación
+ se debían conectar la simulador digital.
+ De esta manera todo el tráfico se debía ingresar por medio de los botones
+ reales que se ubican en los pisos de las edificación.
+ Era un procedimiento tedioso ya que necesario modelar todo el tráfico manualmen
+te y la verficación del modelo simulado debía pasar por múltiples iteraciones
+ que implicaban un gran trabaujo manual 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BARNEY2003"
 
 \end_inset
 
-, para este momentos los simuladores eran hibridos analog-digitales, en
- donde los controles reales del ascensor eran incorporados al simulador.
-\end_layout
-
-\begin_layout Standard
-Con la llegada de los microprocesadores en los años ochentas se llevaron
- los simuladores a estos dispositivos 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BARNEY2003"
-
-\end_inset
-
-, pero requerian de varios dispositivos digitales para su funcionameinto
- y la progración de los mismos se hacía en lenguajes de bajo nivel.
+.
 \end_layout
 
 \begin_layout Standard
@@ -550,11 +616,12 @@ Los simuladores de tráfico vertical son útiles no solamente para verificar
  de elevadores necesarios de servir en determinada edificación.
  Asi mismo el simulador es útil para recrear situaciones de emergencia en
  un edificio y conocer el tiempo que tardaría una edificación en ser evacuada
- por medio de los elevadores.Son muchas más las aplicaciones que se le pueden
- dar al simuador al ser un componente fundamental de cualqueir edificación.
+ por medio de los elevadores.
+ Son muchas más las aplicaciones que se le pueden dar al simuador al ser
+ un componente fundamental de cualqueir edificación.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Tráfico Vertical
 \end_layout
 
@@ -580,27 +647,22 @@ Tasa de Arribo:
 \series bold
 Probabilidad Destino
 \series default
-: Es la probabilidad que tiene un pasajero de dirigirse del piso po, al
- piso pd, en determinado instante de tiempo.
+: Es la probabilidad que tiene un pasajero de dirigirse del piso 
+\begin_inset Formula $p_{o}$
+\end_inset
+
+, al piso 
+\begin_inset Formula $p_{d}$
+\end_inset
+
+, en determinado instante de tiempo.
  
 \end_layout
 
 \begin_layout Standard
 El tráfico que se presenta en una edificación tiene un comportamiento probabilís
-tico.
- Según los estudios sobre el tema 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "SIIKONEN1997"
-
-\end_inset
-
-, el flujo de pasajeros sigue un proceso de Poisson.
- 
-\end_layout
-
-\begin_layout Standard
-Un ejemplo del tráfico en una edificación real 
+tico siguiendo un proceso de Poisson.
+ Un ejemplo del tráfico en una edificación real 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SIIKONEN1997"
@@ -614,7 +676,7 @@ key "SIIKONEN1997"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
