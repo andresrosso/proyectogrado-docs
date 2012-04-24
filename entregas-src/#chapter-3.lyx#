@@ -296,8 +296,8 @@ Validar el desempeño del controlador y su eficiencia respecto a las técnicas
  Realizar estas pruebas en una edificación real sería bastante complicado
  y costoso.
  Las grandes compañías cuentan con simuladores propios y por obvios motivos
- no son compartidos para fines académicos, ejemplo de estos simuladores
- son el Building Traffic Simulator, de la empresa finlandesa KONE 
+ no son prestados para fines académicos, ejemplo de estos simuladores son
+ el Building Traffic Simulator, de la empresa finlandesa KONE 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SIIKONEN2001"
@@ -305,13 +305,10 @@ key "SIIKONEN2001"
 \end_inset
 
 .
- Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.
-\end_layout
-
-\begin_layout Standard
-Por esta razón es necesario desarrollar un simulador de edificios desde
- el cual se puedan cambiar las condiciones del sistema y medir con exactitud
- los tiempos registrados por los usuarios.
+ Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.Por esta razón es necesario
+ desarrollar un simulador de edificios desde el cual se puedan cambiar las
+ condiciones del sistema y medir con exactitud los tiempos registrados por
+ los usuarios.
  
 \end_layout
 
@@ -331,19 +328,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Falta incluir la gráfica
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -376,13 +360,135 @@ s de control, se hace importante su construcción bajo código abierto.
 \end_layout
 
 \begin_layout Section
-Diseño de la Simulación
+Técnicas de Simulación
 \end_layout
 
 \begin_layout Standard
-El simulador a desarrollar permitirá tener un ambiente controlado que representa
- las características más importantes de una edificación y simplifica su
- representación, facilitando así, el mantenimiento, adaptación y reutilización.
+La investigación académica sobre el peoblema de controlar el tráfico en
+ edificaciones de gran altura aún no es lo suficientemente concreto y hay
+ poca literatura en el medio académico.
+ La mayoría de los traba The domestic research on simulation verification
+ study about elevator traffic planning for high-rise buildings is not sufficient
+ and concrete, and there are little literatures on this aspect.
+ ElevateTM [ROBERT2000], developed by Dr.
+ Richard Peters, is a international publicly available software package
+ for elevator traffic 
+\end_layout
+
+\begin_layout Standard
+analysis & simulation evaluations, but the cost of the package is very expensive
+ and limited only to general introduction in literatures without opening
+ it’s source code.
+\end_layout
+
+\begin_layout Standard
+Debido a que existen varios tipos de simulación se hace necesario categorizar
+ la simulación objeto de estudio [INSUA2000].
+\end_layout
+
+\begin_layout Subsection
+Simulación de eventos discretos
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación de eventos discretos comprende; emular el flujo
+ de un sistema a través del tiempo, donde las variables de interés son discretas
+, cada hilo del proceso general tiene asociado una línea de tiempo diferente,
+ las cuales deben ser sincronizadas de alguna manera.
+ 
+\end_layout
+
+\begin_layout Subsection
+Avance por Eventos 
+\end_layout
+
+\begin_layout Standard
+Esta técnica esta basada en el principio que el estado del sistema cambia
+ cada vez que un evento ocurre.
+ Durante el tiempo trasnscurrido entre un evento y otro el sistema permanece
+ inalterado[PERROS2009].
+ El sistema por lo tanto desliza el tiempo entre eventos, yendo de un evento
+ a otro en el tiempo sin hacer pausas.
+ 
+\end_layout
+
+\begin_layout Standard
+Los eventos deben ser enlazados de acuerdo al momento en el que se van a
+ ejecutar.
+ Para almacenar estos eventos se pueden usar estructuras como listas enlazadas,
+ doblemente enlazadas.
+ Las cuales deben mantener un órden cronológico de los eventos, es decir,
+ si se genera un evento que ocurre en un tiempo que no es el último, la
+ estructura debe mover los nodos de tal manera que no quede desordenada
+ la lista.
+\end_layout
+
+\begin_layout Subsection
+Avance por Unidad de Tiempo
+\end_layout
+
+\begin_layout Standard
+Esta técnica mantiene un reloj interno del sistema que avanza un intervalo
+ de tiempo definido en cada iteración.
+ En cada avance de tiempo se valida si hay eventos que ocurran en ese preciso
+ instante o y se ejecutan las tareas necesarias [PERROS2009]..
+ 
+\end_layout
+
+\begin_layout Standard
+Esta técnica es usada perincipalmente en simlaciones de fenómenos físicos
+ que ocurren durante un tiempo no muy largo, es decir ensimulaciones que
+ no tienden a infinito.
+\end_layout
+
+\begin_layout Subsection
+Simulación Basada en Actividades
+\end_layout
+
+\begin_layout Standard
+En una simulación de este tipo, el sistema modelado es una colección de
+ actividades o procesos.
+ Por ejemplo para un típico ejemplo te teoría de colas las actividades serían:
+ a) Arribo del objeto b) Servicio del objeto c) Entrega del objeto atendido
+ [PERROS2009].
+ En estas simulaciones es importante conocer cuando la actividad empieza
+ y cuando termina, además de controlar que ocurre depués de cada actividad.
+\end_layout
+
+\begin_layout Subsection
+Simulación Estocástica o Determinística 
+\end_layout
+
+\begin_layout Standard
+El sistema tiene un comportamiento estocástico debido a que existen componentes
+ aleatorios dentro del sistema.
+ Una de las variables aleatorias que podemos encontrar es la tasa de arribo
+ a determinado piso, ya que nos interesa reproducir el tráfico que posiblemente
+ tendrá un edificio es necesario simular el sistema estocásticamente usando
+ distribuciones de probabilidades que el usuario podrá variar para representar
+ en términos de probabilidad una edificación específica.
+ 
+\end_layout
+
+\begin_layout Subsection
+Técnica de Simulación Escogida
+\end_layout
+
+\begin_layout Standard
+Al tener eventos con separación entre ellos corta, el tiempo de ocio de
+ sistema es bajo.
+ Esto hace que el mejor métdo de simulación para este caso sea el diseño
+ basado en “Avance por Unidad de Tiempo” con comportamiento estocástico
+ [AVERILL2000].
+\end_layout
+
+\begin_layout Standard
+El diagrama siguiente ilustra el flujo que por lo general sigue una simulación
+ de este tipo.
+\end_layout
+
+\begin_layout Section
+Diseño de la Simulación
 \end_layout
 
 \begin_layout Subsection
@@ -417,9 +523,30 @@ Se debe poder determinar si la configuación del sistema de ascensores es
  suficiente para servir la población del edificio.
 \end_layout
 
-\begin_layout Itemize
-Se desean simular situaciónes de emergencia, como por ejemplo que un elevador
- quede fuera de servicio.
+\begin_layout Subsection
+Introducción
+\end_layout
+
+\begin_layout Standard
+El primer simulador de tráfico fue desarrollado para verificar el tráfico
+ en edificaciones altas, tal como el WORLD TRADE CENTER, en este entonces
+ los controladores para grupos de ascensores eran evaluados con simuladores
+ híbridos, los cuales consisten en modelos análogos y digitales.
+ En estos simuladores las tarjetas de control de los elevadores, eran conectadas
+ con el simulador, más adelante estos vendrían dentro de minicomputadores
+ en donde varios fenómenos de tráfico eran estudiados 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+ Recientemente estos simuladores pueden ser ejecutados en computadores personale
+s.
+ El simulador a desarrollar permitirá tener un ambiente controlado que represent
+a las características más importantes de una edificación y simplifica su
+ representación, facilitando así, el mantenimiento, adaptación y reutilización.
 \end_layout
 
 \begin_layout Subsection
@@ -452,6 +579,16 @@ key "INSUA2000"
 \end_inset
 
 .
+ Un sistema abierto como un club, el gobierno o un edificio, -como es el
+ caso nuestro-, necesita garantizar la asimilación de sus salidas por el
+ ambiente.
+ Por consiguiente, el sistema requiere información constante y depurada
+ del ambiente no sólo en cuanto a la naturaleza del medio sino también a
+ la calidad y cantidad de entradas disponibles, y principalmente en cuanto
+ a la eficacia o adecuación de los productos o respuestas del sistema al
+ ambiente.
+ El funcionamiento del sistema debe estudiarse con respecto a las relaciones
+ y procesos continuos con el medio que lo rodea.
  
 \end_layout
 
@@ -547,70 +684,6 @@ La política del asignación de llamadas del sistema es de tipo colas FIFO,
 \end_layout
 
 \begin_layout Subsection
-Técnica de Simulación Escogida
-\end_layout
-
-\begin_layout Standard
-Al tener eventos con separación entre ellos corta, el tiempo de ocio de
- sistema es bajo.
- Esto hace que el mejor método de simulación para este caso sea el diseño
- basado en “Avance por Unidad de Tiempo” con comportamiento estocástico
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AVERILL2000"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-El diagrama siguiente ilustra el flujo que por lo general sigue una simulación
- de este tipo.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-insertar la imagen correspondiente
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
 Proceso General De La Simulación
 \end_layout
 
@@ -677,7 +750,7 @@ Simulación
 \begin_layout Itemize
 
 \series bold
-Cronómetro de la simulación
+Cronómetro de la simualción
 \series default
  (
 \begin_inset Formula $t$

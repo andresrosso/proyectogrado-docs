@@ -327,7 +327,7 @@ Las edificaciones de gran altura existen gracias a la eficiencia de los
 \end_layout
 
 \begin_layout Standard
-Fue despues que Elijah Graves Otis inventó el sistema de govierno de velocidad
+Fue después que Elijah Graves Otis inventó el sistema de gobierno de velocidad
  para elevadores y el sistema seguro de frenado para elevadores en el año
  de 1857 
 \begin_inset CommandInset citation
@@ -336,7 +336,7 @@ key "BARNEY2003"
 
 \end_inset
 
-, que los sistemas de elevadores se conviertieron en una opción viable para
+, que los sistemas de elevadores se convirtieron en una opción viable para
  transportar persona.
  Este fue un factor determinante para que la altura en las construcciones
  dejara de ser un factor limitante.
@@ -344,23 +344,23 @@ key "BARNEY2003"
 \end_layout
 
 \begin_layout Standard
-La primera construcción de gran altura que usaba el sistea Otis fue instalada
- en la tienda Haughwout&Company en New York.
- Los sistemas de elevadores para este entonces funcionanban con bombas de
+La primera construcción de gran altura que usaba el sistema de Otis fue
+ instalada en la tienda Haughwout&Company en New York.
+ Los sistemas de elevadores para este entonces funcionaban con bombas de
  agua presurizada y grandes motores, uno de estos sistemas fue presentado
- en la feria de exposición universal de Paris que debía mover la cabina
- del elevador sobre los 321 metros que constiyen la torre Eiffel.
+ en la feria de exposición universal de París que debía mover la cabina
+ del elevador sobre los 321 metros que constituyen la torre Eiffel.
 \end_layout
 
 \begin_layout Standard
 Para el año de 1880 Werner von Siemens introdujo la utilización de fuentes
- electricas para los sistemas de elevadores.
- El desarrollo de la energía eléctrica le proporcionó un nuevo impetú en
+ eléctricas para los sistemas de elevadores.
+ El desarrollo de la energía eléctrica le proporcionó un nuevo ímpetu en
  el uso de construcciones de gran altura.
 \end_layout
 
 \begin_layout Standard
-A partir de entonces las construcciones eran cada vez más altas, y en paises
+A partir de entonces las construcciones eran cada vez más altas, y en países
  como Estados Unidos y Asia se marcaba una clara tendencia a preferir este
  tipo de edificaciones en ciudades con alta densidad poblacional.
  Un ejemplo de estas edificaciones son la torre Taipei 101 con una altura
@@ -378,8 +378,8 @@ key "EMPORIS2012"
 
 \begin_layout Standard
 La torre Taipei 101 cuenta con cincuenta elevadores de alta velocidad, con
- un costo apróximado de $85 millones de dolares.
- La velocidad de ascenso de estos elevadores de 16 m/s, es decir apróximadamente
+ un costo aproximado de $85 millones de dolares.
+ La velocidad de ascenso de estos elevadores de 16 m/s, es decir aproximadamente
  60 km/h.
  Esto le permite mantener un servicio dentro de los límites de servicio
  considerados aceptables para el servicio de pasajeros de sistemas de elevadores
@@ -549,6 +549,112 @@ Proceso de simulación de BANKS
 
 \end_layout
 
+\begin_layout Subsection
+Técnicas de Simulación
+\end_layout
+
+\begin_layout Subsubsection
+Simulación de eventos discretos
+\end_layout
+
+\begin_layout Standard
+El proceso de simulación de eventos discretos comprende; emular el flujo
+ de un sistema a través del tiempo, donde las variables de interés son discretas
+, cada hilo del proceso general tiene asociado una línea de tiempo diferente,
+ las cuales deben ser sincronizadas de alguna manera.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Avance por Eventos 
+\end_layout
+
+\begin_layout Standard
+Esta técnica esta basada en el principio que el estado del sistema cambia
+ cada vez que un evento ocurre.
+ Durante el tiempo transcurrido entre un evento y otro el sistema permanece
+ inalterado 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PERROS2009"
+
+\end_inset
+
+.
+ El sistema por lo tanto desliza el tiempo entre eventos, yendo de un evento
+ a otro en el tiempo sin hacer pausas.
+ 
+\end_layout
+
+\begin_layout Standard
+Los eventos deben ser enlazados de acuerdo al momento en el que se van a
+ ejecutar.
+ Para almacenar estos eventos se pueden usar estructuras como listas enlazadas,
+ doblemente enlazadas.
+ Las cuales deben mantener un orden cronológico de los eventos, es decir,
+ si se genera un evento que ocurre en un tiempo que no es el último, la
+ estructura debe mover los nodos de tal manera que no quede desordenada
+ la lista.
+\end_layout
+
+\begin_layout Subsubsection
+Avance por Unidad de Tiempo
+\end_layout
+
+\begin_layout Standard
+Esta técnica mantiene un reloj interno del sistema que avanza un intervalo
+ de tiempo definido en cada iteración.
+ En cada avance de tiempo se valida si hay eventos que ocurran en ese preciso
+ instante o y se ejecutan las tareas necesarias 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PERROS2009"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Esta técnica es usada principalmente en simulaciones de fenómenos físicos
+ que ocurren durante un tiempo no muy largo, es decir en simulaciones que
+ no tienden a infinito.
+\end_layout
+
+\begin_layout Subsubsection
+Simulación Basada en Actividades
+\end_layout
+
+\begin_layout Standard
+En una simulación de este tipo, el sistema modelado es una colección de
+ actividades o procesos.
+ Por ejemplo para un típico ejemplo te teoría de colas las actividades serían:
+ a) Arribo del objeto b) Servicio del objeto c) Entrega del objeto atendido
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PERROS2009"
+
+\end_inset
+
+.
+ En estas simulaciones es importante conocer cuando la actividad empieza
+ y cuando termina, además de controlar que ocurre después de cada actividad.
+\end_layout
+
+\begin_layout Subsubsection
+Simulación Estocástica o Determinística 
+\end_layout
+
+\begin_layout Standard
+El sistema puede tener un comportamiento estocástico debido a que existen
+ componentes aleatorios.
+ Una de las variables aleatorias que podemos encontrar es la tasa de arribo
+ en la cola de servicio, por lo general los sistemas a simular son estocásticos
+ pero en alguna ocasiones como en algunos sistemas físicos los fenómenos
+ simular son determinísticos, podríamos hablar de un circuito electrónico.
+\end_layout
+
 \begin_layout Section
 Simuladores de Tráfico Vertical
 \end_layout
@@ -556,15 +662,15 @@ Simuladores de Tráfico Vertical
 \begin_layout Standard
 En el año de 1970 fue desarrollado el primer simulador de tráfico con el
  fin de verificar el comportamiento de los elevadores en la que era para
- ese entonces la edificación de mayor altura el WORLD TRADE CENTER.
+ ese entonces la edificación de mayor altura, el WORLD TRADE CENTER.
  Este simulador híbrido consistía en un componente análogo y otro digital,
  las tarjetas de control que se ubicaban el los pisos de la edificación
  se debían conectar la simulador digital.
  De esta manera todo el tráfico se debía ingresar por medio de los botones
  reales que se ubican en los pisos de las edificación.
- Era un procedimiento tedioso ya que necesario modelar todo el tráfico manualmen
-te y la verficación del modelo simulado debía pasar por múltiples iteraciones
- que implicaban un gran trabaujo manual 
+ Era un procedimiento tedioso ya que era necesario modelar todo el tráfico
+ manualmente y la verificación del modelo simulado debía pasar por múltiples
+ iteraciones que implicaban un gran trabajo manual 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BARNEY2003"
@@ -576,10 +682,10 @@ key "BARNEY2003"
 
 \begin_layout Standard
 En el año de 1988 se desarrollo el primer simulador para PC, estos simuladores
- solo contemplaban un elevedor y el algorítmo de control para la asiganación
+ solo contemplaban un elevador y el algoritmo de control para la asignación
  de llamadas seguía unas reglas simples basadas en la posición del elevador
  y la ubicación de la llamada.
- Los algoritmos de control fueron avanazando en su complejidad y las compañias
+ Los algoritmos de control fueron avanzando en su complejidad y las compañías
  grandes ya podían verificar el funcionamiento en los avances sobre el control
  que iban teniendo.
  Los simuladores son desarrollados principalmente por y para las empresas
@@ -612,13 +718,13 @@ key "ElevateLicence"
 
 \begin_layout Standard
 Los simuladores de tráfico vertical son útiles no solamente para verificar
- algorítmos de control, estos también son usados para determinar el número
- de elevadores necesarios de servir en determinada edificación.
- Asi mismo el simulador es útil para recrear situaciones de emergencia en
- un edificio y conocer el tiempo que tardaría una edificación en ser evacuada
- por medio de los elevadores.
- Son muchas más las aplicaciones que se le pueden dar al simuador al ser
- un componente fundamental de cualqueir edificación.
+ algoritmos de control, estos también son usados para determinar el número
+ de elevadores necesarios para servir en determinada edificación.
+ Así mismo el simulador es útil para recrear situaciones de emergencia en
+ un edificio y por ejemplo conocer el tiempo que tardaría una edificación
+ en ser evacuada por medio de los elevadores.
+ Son muchas más las aplicaciones que se le pueden dar al simulador al ser
+ un componente fundamental de cualquier edificación.
 \end_layout
 
 \begin_layout Section
@@ -661,15 +767,19 @@ Probabilidad Destino
 
 \begin_layout Standard
 El tráfico que se presenta en una edificación tiene un comportamiento probabilís
-tico siguiendo un proceso de Poisson.
- Un ejemplo del tráfico en una edificación real 
+tico que sigue un proceso de Poisson.
+ Un ejemplo del tráfico en una edificación real se muestra en la siguiente
+ imagen 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SIIKONEN1997"
 
 \end_inset
 
-, se muestra en la siguiente imagen.
+.
+ Este patrón pertenece a la Tour Europe en París, el trafico fue medido
+ usando foto celdas en las puertas de los ascensores y el trafico resultante
+ fue dividido en tres patrones de trafico
 \end_layout
 
 \begin_layout Standard
@@ -692,9 +802,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\lang english
 Patrón de tráfico 
+\lang english
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SIIKONEN1997"
@@ -725,8 +835,8 @@ Debido a que existen diferentes tipos de edificios como son; hospitales,
 \end_layout
 
 \begin_layout Standard
-Tradicionalmente se identifican cuatro patrones de tráfico, que ocurren
- durante el día 
+Tradicionalmente se identifican tres patrones de tráfico, que ocurren durante
+ el día 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SIIKONEN2001"
@@ -739,19 +849,23 @@ key "SIIKONEN2001"
 \begin_layout Itemize
 
 \series bold
-Subida -Uppeak-
+Entrada 
 \series default
-: se refiere al tramo horario coincidente con el acceso al edificio, y por
- tanto se producen viajes de subida desde la planta baja.
+-incoming-: se refiere al tramo horario coincidente con el acceso al edificio,
+ y por tanto se producen viajes de subida desde la planta baja.
  
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
-Bajada -Downpeak
+Bajada 
 \series default
--: se refiere al tramo horario coincidente con el salida del edificio, y
+-outgoing
+\series bold
+-
+\series default
+: se refiere al tramo horario coincidente con el salida del edificio, y
  por tanto se producen viajes de bajada desde las diferentes plantas a los
  pisos más bajos.
 \end_layout
@@ -759,26 +873,15 @@ Bajada -Downpeak
 \begin_layout Itemize
 
 \series bold
-Almuerzo -Lunchpeak-
+Entre pisos 
 \series default
-: se refiere al tramo horario en el que el edificio se abandona par ir a
- comer, pero también se accede a él tras venir de comer, dándose una mezcla
- de los patrones uppeak y downpeak.
- 
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Entre Pisos -Interfloor-
-\series default
-: se refiere al resto de tramos horarios donde existe la probabilidad de
- viajes entre plantas (este patrón sólo se produciría en edificios destinados
- a uso profesional y en ese tramo horario específico).
+-interfloor-: se refiere al resto de tramos horarios donde existe la probabilida
+d de viajes entre plantas (este patrón sólo se produciría en edificios destinado
+s a uso profesional y en ese tramo horario específico).
 \end_layout
 
 \begin_layout Subsection
-Determinación Y Predicción Del Tráfico
+Determinación y Predicción de Tráfico
 \end_layout
 
 \begin_layout Standard
@@ -803,7 +906,8 @@ SP Inverso
 .
  Este estima el número de pasajeros que usan el ascensor basándose en el
  número de llamadas y en los movimientos del mismo, tiene comprobada efectividad
- cuando el patrón de tráfico es de subida y de bajada.
+ cuando el patrón de tráfico es de subida y de bajada, pero para el tráfico
+ entre pisos no es muy acertado.
  Otro método es 
 \begin_inset Quotes eld
 \end_inset
@@ -851,10 +955,11 @@ key "IMRAK2000"
 \end_inset
 
 .
- Este trata de acoplar una red neuronal en el sistema de control de un grupo
- de ascensores para mejorar la actuación del controlador del grupo.
- Así, se trata de que la red neuronal proporcione un mecanismo de aprendizaje
- dinámico del comportamiento del edificio y realice la predicción de futuros
+ Este trata de acoplar una red neuronal de predicción de tráfico en el sistema
+ de control de un grupo de ascensores para mejorar la actuación del controlador
+ del grupo.
+ De esta manera la red neuronal proporciona un mecanismo de aprendizaje
+ dinámico del comportamiento del edificio y realiza la predicción de futuros
  eventos basándose en lo que ha aprendido a lo largo del tiempo.
  
 \end_layout
@@ -889,10 +994,10 @@ key "MACDONALD1988,THANGAVELU1989"
 \end_inset
 
 .
- La colaboración universidad-empresas para esta materia ha sido muy activa,
- en España por ejemplo se realiza investigación orientada al mejor funcionamient
-o de estos sistemas, mancomunadamente entre la Universidad de Sevilla y
- MAC PUAR S.A.
+ La colaboración universidad-empresas para esta materia ha sido muy activa.
+ En España por ejemplo se realiza investigación orientada al mejor funcionamient
+o de estos sistemas mancomunadamente entre la Universidad de Sevilla y MAC
+ PUAR S.A.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -901,7 +1006,7 @@ key "LARRANETA2001"
 \end_inset
 
 .
- Otro ejemplo está en Berlin, el centro académico el Konrad-Zuse-Zentrumfür
+ Otro ejemplo está en Berlín, el centro académico el Konrad-Zuse-Zentrumfür
  Information stechnik de Berlin colabora con la multinacional del transporte
  vertical Schindler 
 \begin_inset CommandInset citation
@@ -921,8 +1026,107 @@ key "SIIKONEN1998"
 .
 \end_layout
 
+\begin_layout Standard
+La arquitectura típica de un sistema de control para grupo de elevadores
+ se presenta en la siguiente figura.
+ El controlador de grupo de elevadores es el cerebro del sistema, este sistema
+ asigna las llamadas a cada controlador de elevador optimizando la función
+ de costo.
+ El controlador de elevador existe para cada uno de los elevadores del grupo,
+ este solo tiene la responsabilidad de almacenar las llamadas hechas por
+ los usuarios y mover el elevador dentro de sistema.
+ Los controladores de elevador no están en comunicación unos con otros,
+ estos son coordinados por el controlador de grupo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/architectureEGCS.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+EGCS Arquitectura Típica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Actualmente los controladores de grupo de ascensores cuentan con más información
+ que la que se tenía antes.
+ En las nuevas edificaciones se colocan matrices de botones que sirven para
+ que el pasajero introduzca el piso hacia donde se dirige 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN_BTS2004"
+
+\end_inset
+
+, por esta razón ya no es necesario introducir botones de destino dentro
+ de la cabina del elevador.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/buttonMatrix.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Matriz de botones para registro de llamadas de elevador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Criterios De Optimización en el Transporte Vertical
+Criterios de Optimización en el Transporte Vertical
 \end_layout
 
 \begin_layout Standard
@@ -939,6 +1143,15 @@ key "HAKONEN2004"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
+ los elevadores optimizando la función de costo.
+ La optimización más usual es minimizar el tiempo de espera de los pasajeros.
+ Se ha encontrado también que optimizando el tiempo de viaje de los pasajeros,
+ se reduce el número de paradas del elevador.
+ Lo cual hace que los elevadores viajen con más carga dentro de sí.
 \end_layout
 
 \begin_layout Standard
@@ -1000,7 +1213,7 @@ Técnicas De Control
 \begin_layout Standard
 La asignación de llamadas en una edificación de gran altura requiere de
  técnicas modernas de control que basándose en el estado del sistema tome
- la mejor decisión.
+ la mejor decisión tendiente a minimizar la función de costo.
  La asignación de llamadas a los ascensores ocupa gran parte del trabajo
  de compañías como MITSUBISHI, KONE, SCHINDLER.
  El control de este tipo de sistemas no es sencillo, presenta un comportamiento
@@ -1053,8 +1266,6 @@ Maniobra Universal Por Pulsadores.
 status collapsed
 
 \begin_layout Plain Layout
-
-\lang english
 Cuando el ascensor está desocupado, y es el primero en recibir la orden
  ira a atender la llamada.
  Si durante el funcionamiento se solicita el ascensor desde cualquier otra
@@ -1073,8 +1284,6 @@ Maniobra Duplex.
 status collapsed
 
 \begin_layout Plain Layout
-
-\lang english
 Cualquier llamada es atendida por el elevador que se encuentre libre; pero
  si están libre dos elevadores, acudirá a la llamada el que esté mas próximo
  al piso origen del llamado.
@@ -1093,8 +1302,6 @@ Maniobra Colectiva selectiva en los dos sentidos.
 status collapsed
 
 \begin_layout Plain Layout
-
-\lang english
 El elevador va a registrar únicamente los llamados que se generen en el
  sentido que va el ascensor.
  Es decir si el ascensor va hacia arriba sólo se registrarán los llamados
@@ -1203,7 +1410,7 @@ key "BRANDSTATTER2000"
 \end_layout
 
 \end_deeper
-\begin_layout Section
+\begin_layout Subsubsection
 Métodos De Control Tradicionales
 \end_layout
 
@@ -1269,7 +1476,7 @@ A continuación se describen brevemente los métodos básicos de control más
  empleados.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph
 Maniobra Universal Por Pulsadores
 \end_layout
 
@@ -1289,7 +1496,7 @@ key "MIRAVETE1996"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph
 Maniobra Duplex
 \end_layout
 
@@ -1308,7 +1515,7 @@ key "MIRAVETE1996"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph
 Maniobra Colectiva selectiva en los dos sentidos
 \end_layout
 
@@ -1330,153 +1537,98 @@ key "MIRAVETE1996"
 
 \end_layout
 
-\begin_layout Standard
-In a single elevator system the elevator control handles all the equipment.
- In the case of several elevators where each elevator is in its own shaft,
- the transportation capacity can be increased by a common group control
- that delivers the hall calls to the elevators.
- The first electrical controls were realized by relay techniques, the same
- kind of relays that were used in telephone exchanges.
- In the 1970's the principles of relay equipment were applied to electronic
- controls.
- In KONE, the first completely microprocessor-based control system was developed
- in the beginning of the 1980's,and it was first tested with a hybrid traffic
- simulator.
- With microprocessors, mathematical methods and sophisticated call allocation
- algorithms are used to optimize hall calls to the elevators.
- The rapid development of processor technology has made it possible to distribut
-e the "intelligence" from the machine room to the elevator components, even
- to the hall call buttons.
- In a modern group control, a huge amount of information is handled during
- the hall call allocation compared to the old relay controls.
- The first aim of this work is to describe new microprocessor-based hall
- call optimization methods that optimize passenger service level.
-\end_layout
-
-\begin_layout Standard
-A typical architecture of an elevator control system is shown in Figure
- 2.
- The control boards of an elevator group are usually situated in a machine
- room.
- The group control is the "brain" of the elevator system, deciding where
- the cars should go and stop.
- There can be one or several group controls in an elevator group.
- One of the group controls is the master that delivers the hall calls to
- the elevators, and the other group controls are backups.
- Other functions inside the car, e.g.
- registering and canceling of car calls, door control, and measurement of
- the car load, are handled by the elevator control.
- Using the latest microprocessor technology, part of the elevator control
- has been distributed among the elevator components.
- "Intelligent" elevator components communicate with each other through serial
- transmission using Control Area Network (CAN).
- Modern elevator controls provide built-in elevator monitoring devices (Chapman
- 1994) or remote building monitoring systems (Kawano et al.1994) to follow
- the elevator traffic.
- Typical control software for an elevator component includes an operating
- system, task-scheduling programs, input, output and communication programs,
- and programs for controlling and optimizing the function of the component.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/architectureEGCS.png
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\lang english
-EGCS Arquitectura Típica
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The group control allocates hall calls to the most suitable elevators by
- optimizing the cost function.
- The most usual optimization target in an elevator control is to minimize
- hall call times.
- It was, however, found that by optimizing passenger journey times the number
- of elevator stops is reduced, which increases the handling capacity (Barney
- et al.1985;Closs 1970).
- The same traffic can be handled with fewer elevators compared to a conventional
- system.
- In the M10 control system (Schröder 1990) special keypads at the landing
- floors are used.
- Passengers can dial their destinations already at the landing floors and
- no car calls inside the elevators are needed.
- With normal up- and - down hall call buttons, passenger arrival floors,
- times, and destination floors cannot be determined, but they can be forecast.
- In the TMS9000 control system the passenger traffic flow is forecast and
- the passenger waiting times are optimized.
- In this section, the background of the group control principles is given
- first.
- The TMS9000 control system is only briefly described since it is characterized
- in more detail in Publications V, VI and VII.
- The cost function in multiple target optimization is discussed and new
- routing methods in the call allocation algorithm are described (Publication
- IV).
-\end_layout
-
 \begin_layout Section
-Sistemas Multiagente
+Sistemas Multi Agente
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch NoChildDocument
-status collapsed
-
-\begin_layout Standard
-
-\lang english
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "thesisExample"
-options "alpha"
+Un agente es un componente de software que tiene autonomía y flexibilidad
+ en su funcionamiento sobre un medio ambiente en particular.
+ Este medio ambiente por lo general está habitado por otros agentes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
 
 \end_inset
 
-
+.
+ En un sistema multi agente (MAS), cada agente actúa individualmente o en
+ cooperación con otros agentes para conseguir los objetivos trazados.
+ 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "custom"
-width "2.5cm"
-
-\end_inset
-
-
+Flexible en el contexto MAS significa, que el agente es: 
 \end_layout
 
-\end_inset
+\begin_layout Itemize
 
+\series bold
+Reactivo
+\series default
+, reacciona al entorno en el cual se encuentra.
+\end_layout
 
+\begin_layout Itemize
+
+\series bold
+Pro-activo
+\series default
+, es capaz de cumplir su propio plan, tienen un carácter emprendedor.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Social
+\series default
+, es capaz de comunicarse con otros agentes a través de algún lenguaje común.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Racionalidad
+\series default
+, un agente puede razonar acerca de datos percibidos a fin de calcular una
+ solución óptima.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Adaptabilidad
+\series default
+, esta característica está relacionada con el aprendizaje que un agente
+ puede lograr y con su capacidad para cambiar su propio comportamiento basado
+ en este aprendizaje.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Movilidad
+\series default
+, es la capacidad de un agente para moverse a través de una red.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Veracidad
+\series default
+, un agente no puede comunicar información falsa de manera deliberada.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Benevolencia
+\series default
+, un agente está dispuesto a ayudar a otros agentes si esto no está en contra
+ de sus propios objetivos.
 \end_layout
 
 \end_body
