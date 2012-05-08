@@ -901,10 +901,6 @@ Tiempo apertura puerta ascensor
  en abrirse.
 \end_layout
 
-\begin_layout Paragraph
-Pasajero
-\end_layout
-
 \begin_layout Itemize
 
 \series bold
@@ -919,6 +915,96 @@ Tiempo de transferencia por pasajero
 
 \begin_layout Subsubsection
 Varibles Dependientes
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Densidad de arribo
+\series default
+ (
+\begin_inset Formula $\lambda(t)$
+\end_inset
+
+): Número de personas esperadas por unidad de tiempo, sigue un proceso de
+ Poisson 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SANDOR2006"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tasa de servicio
+\series default
+ (
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\mu(t)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+): Número de personas que pueden ser servidas por unidad de tiempo, sigue
+ un proceso de Poisson 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SANDOR2006"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tasa de utilización
+\series default
+ (
+\begin_inset Formula $\rho(t)=\frac{\lambda(t)}{\mu(t)}$
+\end_inset
+
+): Tasa que muestra el estado de utilización del sistema, se desea que este
+ vamos sea 
+\begin_inset Formula $\rho<1$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SANDOR2006"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -971,7 +1057,7 @@ Tiempo de transito entre dos pisos adyacentes
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
