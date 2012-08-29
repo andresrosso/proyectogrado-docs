@@ -448,7 +448,7 @@ Se presentan los conceptos principales que serán usados a los largo del
 \end_layout
 
 \begin_layout Itemize
-Tiempo de espera: es el tiempo comprendido entre la generación de la llamada
+Tiempo de espera:  es el tiempo comprendido entre la generación de la llamada
  de elevedor y el arribo de este al piso de la llamada.
 \end_layout
 
