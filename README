@@ -1,0 +1,36 @@
+#identificarme con github
+git config --global user.name "arosso@xxx" 
+git config --global user.email "andresrosso@gmail.com"
+
+#generar llave
+ssh-keygen
+->/home/arosso/.ssh/git.keys
+
+#se le da la llave a GITHUB -> 
+cat git.keys
+
+#crear el repositorio local vacio
+mkdir proyectogrado-docs
+cd proyectogrado-docs
+git init
+
+#conectar el repositorio local con github
+git remote add origin git@github.com:andresrosso/proyectogrado-docs.git
+
+#traer todo el contenido de GITHUB
+git pull origin master
+
+#poner el contenido local en GITHUB
+touch README
+git status
+git add README
+git status
+git commit -m "el commit local"
+git status
+git push origin master
+git status
+
+#conectarse a un proyecto en el repo de GITHUB
+git clone git@github.com:andresrosso/proyectogrado-docs.git
+
+
