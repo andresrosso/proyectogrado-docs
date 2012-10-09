@@ -1173,7 +1173,7 @@ en donde
 \end_inset
 
  los que salen) : Tiempo que dura la entrada y salida de pasajeros viene
- dado por la fourmula.
+ dado por la formula.
 \end_layout
 
 \begin_deeper
@@ -1446,23 +1446,21 @@ De acuerdo al análisis realizado y siguiendo los principios de diseño, se
 \end_layout
 
 \begin_layout Standard
-asd
+
+\lang english
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Esto parte del libro se escribe al final.
 \end_layout
 
-\begin_layout Standard
-asd
-\end_layout
+\end_inset
 
-\begin_layout Standard
-asd
-\end_layout
 
-\begin_layout Standard
-as
-\end_layout
-
-\begin_layout Standard
-d
 \end_layout
 
 \begin_layout Standard

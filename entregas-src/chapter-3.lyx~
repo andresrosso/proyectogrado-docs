@@ -351,7 +351,7 @@ Falta incluir la gráfica
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Modelo simulación
+Modelo simulación, flujo Banks [BANKS2000]
 \end_layout
 
 \end_inset
@@ -395,6 +395,7 @@ Se desea simular una edificación real en la cual el estudio de tráfico se
  correctamente a los usuarios.
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 Se busca medir el desempeño de diferentes estrategias de control para grupo
  de elevadores.
@@ -422,6 +423,7 @@ Se desean simular situaciónes de emergencia, como por ejemplo que un elevador
  quede fuera de servicio.
 \end_layout
 
+\end_deeper
 \begin_layout Subsection
 Análisis Sistémico
 \end_layout
@@ -1171,7 +1173,7 @@ en donde
 \end_inset
 
  los que salen) : Tiempo que dura la entrada y salida de pasajeros viene
- dado por la fourmula.
+ dado por la formula.
 \end_layout
 
 \begin_deeper
@@ -1811,7 +1813,7 @@ en donde
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1879,7 +1881,7 @@ reference "performanceCriteria_rt"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics

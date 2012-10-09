@@ -417,8 +417,6 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\lang english
 Tiempo de espera aceptado por tipo de edificación
 \end_layout
 
@@ -790,8 +788,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../Optimizacion/Proyecto/patronTrafico.png
-	scale 75
+	filename resources/patronTrafico.png
 
 \end_inset
 
@@ -1484,7 +1481,7 @@ Maniobra Universal Por Pulsadores
 Cuando el ascensor esta desocupado, y es el primero en recibir la orden
  irá a atender la llamada.
  Si durante el funcionamiento se solicita el ascensor desde cualquier otro
- piso la llamada será ignorada y el carro seguirá obedeciendo la orden que
+ piso la llamada será ignorada y el carro seguirá obedeciendo la órden que
  ha iniciado la llamada.
  
 \begin_inset CommandInset citation
