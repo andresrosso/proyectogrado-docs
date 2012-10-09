@@ -1628,5 +1628,97 @@ Benevolencia
  de sus propios objetivos.
 \end_layout
 
+\begin_layout Paragraph
+Conceptos Básicos
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Agente
+\series default
+, un agente es un sistema computacional autónomo que ejecuta acciones con
+ el fin de cumplir sus objetivos.
+ Está inmerso en un ambiente dado, del cual obtiene información mediante
+ y al cual puede modificar mediante sus acciones 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WEISS1999"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sistema Multiagente
+\series default
+, se define como una colección de agentes racionales y autónomos, insertos
+ en un ambiente en común, capaces de coordinar su conocimiento, objetivos,
+ habilidades y estrategias a fin de resolver un cierto problema
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WEISS1999"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Proactividad
+\series default
+, es la capacidad de tomar la iniciativa para realizar las acciones necesarias
+ para cumplir con los objetivos para los que son diseñados
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Capacidad de reacción
+\series default
+: es la capacidad de responder a los estímulos del ambiente con las respuestas
+ adecuadas y en el tiempo adecuado, de forma activa
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Habilidades sociales
+\series default
+: es la habilidad de interactuar con otros agentes, inclusive humanos cuando
+ es necesario para cumplir con sus objetivos.
+ Las dos habilidades básicas son las habilidades de cooperación y de negociación
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document

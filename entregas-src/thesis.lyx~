@@ -128,6 +128,11 @@ customHeadersFooters
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch chapter-5
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -173,7 +178,7 @@ ANDRES ENRIQUE ROSSO MATEUS
 \end_layout
 
 \begin_layout Date
-1 de Junio de 2012
+1 de Diciembre de 2012
 \end_layout
 
 \begin_layout Publishers
@@ -635,6 +640,25 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "chapter-4.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch chapter-5
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapter-5.lyx"
 
 \end_inset
 

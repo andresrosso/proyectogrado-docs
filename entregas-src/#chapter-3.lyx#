@@ -335,6 +335,12 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/modeloSimBANKS.png
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -579,12 +585,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-insertar la imagen correspondiente
-\end_layout
+\begin_inset Graphics
+	filename resources/procesoSimBANKS.png
+	scale 70
 
 \end_inset
 
@@ -595,7 +598,7 @@ insertar la imagen correspondiente
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
+Modelo simulación, flujo Banks [BANKS2000]
 \end_layout
 
 \end_inset
@@ -1173,7 +1176,7 @@ en donde
 \end_inset
 
  los que salen) : Tiempo que dura la entrada y salida de pasajeros viene
- dado por la fourmula.
+ dado por la formula.
 \end_layout
 
 \begin_deeper
@@ -1446,23 +1449,21 @@ De acuerdo al análisis realizado y siguiendo los principios de diseño, se
 \end_layout
 
 \begin_layout Standard
-asd
+
+\lang english
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Esto parte del libro se escribe al final.
 \end_layout
 
-\begin_layout Standard
-asd
-\end_layout
+\end_inset
 
-\begin_layout Standard
-asd
-\end_layout
 
-\begin_layout Standard
-as
-\end_layout
-
-\begin_layout Standard
-d
 \end_layout
 
 \begin_layout Standard
@@ -1813,7 +1814,7 @@ en donde
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1881,7 +1882,7 @@ reference "performanceCriteria_rt"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics

@@ -335,6 +335,12 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/modeloSimBANKS.png
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -579,12 +585,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-insertar la imagen correspondiente
-\end_layout
+\begin_inset Graphics
+	filename resources/procesoSimBANKS.png
+	scale 70
 
 \end_inset
 
@@ -595,7 +598,7 @@ insertar la imagen correspondiente
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
+Proceso simulación Banks [BANKS2000]
 \end_layout
 
 \end_inset
@@ -1059,11 +1062,12 @@ Tiempo de transito entre dos pisos adyacentes
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/probLeftBehindUser.png
+	scale 70
 
 \end_inset
 
@@ -1467,11 +1471,12 @@ Esto parte del libro se escribe al final.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
+	scale 70
 
 \end_inset
 
