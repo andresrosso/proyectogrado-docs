@@ -1,6 +1,11 @@
 #identificarme con github
 git config --global user.name "arosso@xxx" 
 git config --global user.email "andresrosso@gmail.com"
+git config --add http.proxy http://127.0.0.1:8080
+git config --replace-all http.proxy http://127.0.0.1:8080
+#tamano archivos a subir 500MB
+git config http.postBuffer 524288000
+
 
 #generar llave
 ssh-keygen
@@ -32,5 +37,8 @@ git status
 
 #conectarse a un proyecto en el repo de GITHUB
 git clone git@github.com:andresrosso/proyectogrado-docs.git
+
+
+
 
 
