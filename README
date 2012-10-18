@@ -6,7 +6,6 @@ git config --replace-all http.proxy http://127.0.0.1:8080
 #tamano archivos a subir 500MB
 git config http.postBuffer 524288000
 
-
 #generar llave
 ssh-keygen
 ->/home/arosso/.ssh/git.keys
