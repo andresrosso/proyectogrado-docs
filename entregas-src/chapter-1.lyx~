@@ -303,7 +303,7 @@ El incremento de este tipo de construcciones trae el problema de transportar
  Para el transporte en edificios de gran altura no existe un medio más adecuando
  que las cabinas de ascensor, pero su capacidad reducida, el alto flujo
  de pasajeros en horas pico y la considerable distancia que deben recorrer
- los ascensores hace que el sistema tienda a colapsar elevendo el tiempo
+ los ascensores hace que el sistema tienda a colapsar, elevando el tiempo
  promedio que una persona debe esperar para ser transportada o llegar a
  su destino.
 \end_layout
@@ -316,6 +316,18 @@ l son ineficientes para cubrir la necesidad de transporte de pasajeros.
  investigaciones tendientes a solventar esta creciente necesidad, la investigaci
 ón aislada sobre este campo es reducida y la información disponible de esta
  área es también escasa.
+\end_layout
+
+\begin_layout Standard
+El presente trabajo de grado tiene como finalidad ofrecer un nuevo mecanismo
+ de control para grupo de elevadores que mejore el rendimiento en el transporte
+ de pasajeros en edificaciones de gran altura comparado con otros mecanismos
+ de control convencionales.
+ Se ofrece además un entorno de simulación de código abierto -el único parametri
+zable en internet- para el fenómeno estudiado.
+ Lo cual permite que la comunidad académica investigue sobre nuevos algoritmos
+ de control para grupos de elevadores sin necesidad de tener que construir
+ para este fin un simulador.
 \end_layout
 
 \begin_layout Section
@@ -333,7 +345,7 @@ En un sistema de transporte vertical de un solo elevador, este se encarga
 
 \begin_layout Standard
 Debido a la importancia de transportar eficientemente las personas en edificacio
-nes de gran altura las grandes compañias líderes en esta área, han presentantado
+nes de gran altura las grandes compañías líderes en esta área, han presentado
  diversos algoritmos de control 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -343,15 +355,15 @@ key "HAKONEN-SIIKONEN-2008,SIIKONEN2004"
 
 que presentan una eficacia mayor medida en tiempo se servicio promedio de
  pasajeros.
- Estas compañias cuentan con los recursos financieros para investigación
+ Estas compañías cuentan con los recursos financieros para investigación
  bastante altos.
- Sus avances y nuevos algorítmos de control para grupo de elevadores son
+ Sus avances y nuevos algoritmos de control para grupo de elevadores son
  verificados en simuladores construidos
 \shape italic
  ad-hoc
 \shape default
- que reproducen con precisión el tráfico de psaajeros y que miden con exactitud
- los tiempos invertidos por los usuarios para movilizarce dentro de la edificaci
+ que reproducen con precisión el tráfico de pasajeros y que miden con exactitud
+ los tiempos invertidos por los usuarios para movilizarse dentro de la edificaci
 ón.
  Algunos de estos ambientes de simulación son OtisPlan de Otis Corporation
  
@@ -375,7 +387,7 @@ key "SIIKONEN_BTS2004"
 \begin_layout Standard
 Estas herramientas de simulación sofisticadas tienen en común que son propietari
 as, en el caso de BTS y OtisPlan su uso está restringido a personal de la
- compañia únicamente y para el caso de Elevate existe una licencia comercial
+ compañía únicamente y para el caso de Elevate existe una licencia comercial
  de usuario único con un costo de 2900 dolares 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -449,12 +461,12 @@ Esto parte del libro se escribe al final.
 \end_layout
 
 \begin_layout Section
-Definciones Principales
+Definiciones Principales
 \end_layout
 
 \begin_layout Standard
 Se presentan los conceptos principales que serán usados a los largo del
- libro, se recogen los conceptos que pueden ser interpretados ambieguamente.
+ libro, se recogen los conceptos que pueden ser interpretados ambiguamente.
 \end_layout
 
 \begin_layout Itemize
@@ -465,7 +477,7 @@ Tráfico vertical: Se entiende por tráfico en una edificación; el movimiento
 
 \begin_layout Itemize
 Tiempo de espera: es el tiempo comprendido entre la generación de la llamada
- de elevedor y el arribo de este al piso origen de la llamada.
+ de elevador y el arribo de este al piso origen de la llamada.
 \end_layout
 
 \begin_layout Itemize
@@ -476,7 +488,7 @@ Tiempo de viaje: es el tiempo comprendido desde que el pasajero entra al
 \begin_layout Itemize
 Tiempo total: es el tiempo que se comprende desde arribo del usuario al
  sistema hasta la llegada de este al piso destino, es la suma del tiempo
- de espera y el tiempo de viaje, es tambien llamado tiempo de servicio 
+ de espera y el tiempo de viaje, es también llamado tiempo de servicio 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "POWELL1992"
@@ -495,7 +507,7 @@ key "NAKAI1994"
 
 \begin_layout Itemize
 Tiempo de retorno de viaje (round trip time): Es el tiempo comprendido desde
- que un elevador recoje pasjeros en el primer piso (lobby), lleva los pasajeros
+ que un elevador recoge pasajeros en el primer piso (lobby), lleva los pasajeros
  a los pisos superiores y regresa a la primera planta (lobby) para volver
  a servir a los nuevos pasajeros.
 \end_layout
@@ -508,7 +520,7 @@ Capacidad del transporte del sistema: es el número de pasajeros que un grupo
 \begin_layout Itemize
 Patrón de tráfico: es la caracterización del comportamiento estocástico
  que se presenta en el arribo de pasajeros al sistema.
- Para este trabajo se consideran principalmente cuatro patrónes: subida
+ Para este trabajo se consideran principalmente cuatro patrones: subida
  -uppeak-, entre pisos -interfloor-, bajada -downpeak-.
 \end_layout
 
