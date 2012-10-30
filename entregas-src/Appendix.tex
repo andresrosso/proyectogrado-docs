@@ -1,0 +1,123 @@
+%% LyX 2.0.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,a4paper,english,intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn]{scrbook}
+\usepackage{lmodern}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{pdftitle={Your title},
+ pdfauthor={Your name},
+ pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% Linkfläche für Querverweise vergrößern und automatisch benenne
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\newlength{\abc}
+\settowidth{\abc}{\space}
+\AtBeginDocument{%
+\addto\extrasngerman{
+ \renewcommand{\equationautorefname}{\hspace{-\abc}}
+ \renewcommand{\sectionautorefname}{Kap.\negthinspace}
+ \renewcommand{\subsectionautorefname}{Kap.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}
+ \renewcommand{\figureautorefname}{Abb.\negthinspace}
+ \renewcommand{\tableautorefname}{Tab.\negthinspace}
+}
+}
+
+% für den Fall, dass jemand die Bezeichnung "Gleichung" haben will
+%\renewcommand{\eqref}[1]{Gleichung~(\negthinspace\autoref{#1})}
+
+% Setzt den Link für Sprünge zu Gleitabbildungen
+% auf den Anfang des Gelitobjekts und nicht aufs Ende
+\usepackage[figure]{hypcap}
+
+% Die Seiten des Inhaltsverzeichnisses werden römisch numeriert,
+% ein PDF-Lesezeichen für das Inhaltsverzeichnis wird hinzugefügt
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% make caption labels bold
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enable calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+%Vergrößert den Teil der Seite, in dem Gleitobjekte
+% unten angeordnet werden dürfen
+\renewcommand{\bottomfraction}{0.5}
+
+% Vermeidet, dass Gleitobjekte vor ihrem Abschnitt gedruckt werden
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\makeatother
+
+\begin{document}
+
+\lhead[\chaptername~\thechapter]{\rightmark}
+
+
+\rhead[\leftmark]{}
+
+
+\lfoot[\thepage]{}
+
+
+\cfoot{}
+
+
+\rfoot[]{\thepage}
+
+
+\chapter{Arquitectura Del Simulador}
+
+
+\section{Diagrama de clases}
+
+La siguiente imágen muestra el diagrama de clases del simulador, detallando
+las relaciones que existen entre las clases que usa el simulador.
+
+\begin{figure}[h]
+\includegraphics{resources/PIMClassModel}
+
+\caption{Diagrama de clases}
+
+
+\end{figure}
+
+
+
+\section{The next section}
+
+
+\end{document}

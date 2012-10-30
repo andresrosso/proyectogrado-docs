@@ -279,11 +279,52 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Apendix
+Arquitectura Del Simulador
 \end_layout
 
 \begin_layout Section
-Código fuente
+Diagrama de clases
+\end_layout
+
+\begin_layout Standard
+La siguiente imágen muestra el diagrama de clases del simulador, detallando
+ las relaciones que existen entre las clases que usa el simulador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/PIMClassModel.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de clases
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

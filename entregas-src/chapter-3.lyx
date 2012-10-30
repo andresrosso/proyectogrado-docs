@@ -1441,30 +1441,12 @@ Al final de cada simulación debe mostrarse un informe estadístico del desempe�
 \end_layout
 
 \begin_layout Subsection
-Módulos de Software del Simulador
+Componentes de Software del Simulador
 \end_layout
 
 \begin_layout Standard
 De acuerdo al análisis realizado y siguiendo los principios de diseño, se
  contemplan los siguientes módulos del simulador.
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang english
-Esto parte del libro se escribe al final.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1490,6 +1472,379 @@ status open
 
 \lang english
 Módulos del Simulador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Properties Manager
+\end_layout
+
+\begin_layout Standard
+Debido a que el simulador está diseñado para adaptarse a cualquier tipo
+ de edificación así como a los diferentes patrones de tráfico que se experimente
+n en la misma, es necesario que los parámetros de un sistema en particular
+ puedan ser ingresados en el sistema y el simulador se adapte a tales condicione
+s imitando de una forma cercana el sistema modelado.
+ Cuando se busca modelar un sistema es necesario reunir un número importante
+ de parámetros que lo representen, estos parámetros por lo general son difíciles
+ de identificar, para obtenerlos puede ser necesario un estudio muy riguroso
+ del mismo, así como contar con una logística apropiada, el sistema analizado
+ será traducido en datos que podrán ingresarse en el sistema, éste debe
+ permitir ingresar los datos de una manera fácil y ágil, además debe permitir
+ exportar estos datos para que sean compartidos con otros usuarios, permitiendo
+ así que un estudio pueda ser incluido en diferentes ordenadores, proporcionando
+ a la comunidad académica datos confiables.
+ Este módulo será el encargado de establecer las datos con los cuales se
+ ejecute la simulación, por nombrar algunos: 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Del Ascensor
+\end_layout
+
+\begin_layout Itemize
+Número De Pisos
+\end_layout
+
+\begin_layout Itemize
+Número De Ascensores
+\end_layout
+
+\begin_layout Itemize
+Piso Portal
+\end_layout
+
+\begin_layout Itemize
+Velocidad De Ascensor
+\end_layout
+
+\begin_layout Itemize
+Retardo Ingreso en Ascensor
+\end_layout
+
+\begin_layout Itemize
+Máximo Número de Pasajeros dentro del Ascensor 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+De la simulación
+\end_layout
+
+\begin_layout Itemize
+Tiempo de simulación
+\end_layout
+
+\begin_layout Itemize
+Factor de avance 
+\end_layout
+
+\begin_layout Itemize
+Número de fracciones de la simulación
+\end_layout
+
+\begin_layout Itemize
+Fuente de tráfico
+\end_layout
+
+\begin_layout Itemize
+Controlador
+\end_layout
+
+\begin_layout Itemize
+Base de datos
+\end_layout
+
+\begin_layout Subsubsection
+Traffic Generator
+\end_layout
+
+\begin_layout Standard
+Se entiende por tráfico en una edificación; el movimiento o tránsito de
+ personas dentro del edificio, este tráfico tiene dos componentes tasa de
+ arribo y probabilidad de destino, en donde:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tasa de Arribo
+\series default
+: Es el número de usuarios que llegan al sistema en determinado espacio
+ de tiempo.
+ La tasa de arribo en una edificación cambia de acuerdo a dos factores,
+ uno es el tiempo en el que se mide y otro es el piso en el que se realice
+ la correspondiente medición, este tráfico podemos representarlo como un
+ vector de dos dimensiones, en el cual la tasa de arribo ingresada es el
+ número de pasajeros que entran al sistema cada 5 minutos, se escogió un
+ espacio de tiempo de cinco minutos ya que es representativo para la simulación
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Probabilidad de destino
+\series default
+: Es la probabilidad que estándo en el piso Po el pasajero se dirija al
+ piso destino Pd, esta probabilida se puede representar como un vector de
+ tres dimensiones en donde los componentes son: <Po, Pd, Probabilidad>.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Se debe incluir el diagrama de secuencia de la generación de tráfico.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Simulation Model
+\end_layout
+
+\begin_layout Standard
+Este artefacto representa la edificación simulada con sus pisos, cabinas
+ de ascensor y sus dinámica de movimiento, pasajeros, llamadas.
+ Estas caracterísicas fueron cargadas del archivo de configuración correspondien
+te por el componenete properties manager.
+\end_layout
+
+\begin_layout Standard
+Este modelo de la simulación va a ser modificado por el modulo principal
+ que ya se explica a continuación y que es el Simulator.
+ A lo largo que toda la simulación este componente será una representación
+ de la edificación la cual servirá para conocer el estado de la simulación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/PIMmodelSimModel.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de clases simulation model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Building Simulator
+\end_layout
+
+\begin_layout Standard
+Este componente es el encargado de coordinar las tareas necesarias que se
+ ejecutan durante del ciclo de vida de la simulación lo hace por medio del
+ componente RoutineManager.
+ Es el componente centran de a simulación y tiene comunicación con todos
+ los demás componentes de la simulación.
+\end_layout
+
+\begin_layout Standard
+En la siguiente figura se presenta un diagrama de flujo detallando los pasos
+ que ocurren durante la simulación, la coordinación de estas tareas es responsab
+ilidad del componente central BuildingSimulator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/FlowDiagSimulation.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de flujo resumido simulación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Routine ManagerRoutine Manager
+\end_layout
+
+\begin_layout Standard
+Este componente gestiona en un solo hilo de ejecución las tareas: TrafficGenerat
+os, Elevator Group Controller (Rutina para asignar las llamadas) y Elevator
+ Controller (Rutina que ejecuta la dinámica de cada cabina de ascensor).
+ Se decide ejecutarlo en un solo hilo para no perder la sincronización entre
+ las tareas y no introducir error en la simulación por los tiempos de procesamie
+nto que tiene cada una de as tareas que en algunos casos pueden ser significante
+s.
+\end_layout
+
+\begin_layout Standard
+Este componente gestiona el inicio, ejecución y muerte de cada una de las
+ rutinas que se configuren.
+ Ya que la arquitectura lo permite se podría en cualquier momento introducir
+ una nueva rutina de manera fácil.
+\end_layout
+
+\begin_layout Subsubsection
+GUI Controller
+\end_layout
+
+\begin_layout Standard
+Este componente será el encargado de mantener un modelo visual 2d de edificación
+ simulada.
+ Además incorporará un componente tipo linea de comandos para poder introducir
+ llamadas al sistema de manera manual.
+ Este componente se ejecuta en un hilo separado del hilo de la simuación,
+ esto para mejorar el desempeño de la aplicación, ya que en este caso no
+ es tan crítico perder algo sincronía con la simulación es posible mantenerlo
+ en un hilo independiente.
+\end_layout
+
+\begin_layout Subsubsection
+Statistics Manager
+\end_layout
+
+\begin_layout Standard
+El fin de de la simulación es poder verificar el desempeño de los diferentes
+ tipos de controladores para grupo de ascensores en un ambiente similar
+ al ambiente real, para saber si determinado algoritmo de control presenta
+ una rendimiento superior en cuanto a los objetivos trazados (tiempo de
+ viaje, tiempo de espera, energía consumida).
+\end_layout
+
+\begin_layout Standard
+La verificación de esta tesis se hará mediante un estudio de los resultados
+ obtenidos durante la ejecución de la simulación, este estudió incluirá
+ el tiempo de espera de cada pasajero generado por el sistema, así como
+ la energía consumida por los ascensores medida respecto a la distancia
+ recorrida por los mismos.
+ Sería posible realizar este estudio manualmente, y mostrar las cifras que
+ avalen tales resultados, pero con el fin de automatizar este proceso y
+ de hacerlo más entendible y vistoso al usuario final, se creó el módulo
+ de reportes con el cual se generarán los reportes definidos una vez culminada
+ la simulación.
+ El Módulo de Reportes es el encargado de generar y visualizar los reportes
+ generados con los datos obtenidos de la simulación, este módulo contiene
+ 2 componentes.
+\end_layout
+
+\begin_layout Enumerate
+Motor Base De Datos: HsqlDB es una base de datos embebida en el software
+ , se escogió este motor por su alto desempeño de acceso y además por que
+ puede ser embebida en la aplicación, permitiendo así que el software pueda
+ ser ejecutado sin previa instalación de otros productos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Gráficas Estadísticas: JasperReports motor de reportes opensource desde
+ el cual se puede exportar el reporte a formatos PDF, EXCEL, HTML.
+\end_layout
+
+\begin_layout Subsection
+Modelo de Clases
+\end_layout
+
+\begin_layout Standard
+La siguiente imágen muestra el diagrama de clases del simulador, detallando
+ las relaciones que existen entre las clases que usa el simulador.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename resources/PIMClassModel.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama de clases
 \end_layout
 
 \end_inset
@@ -1805,7 +2160,7 @@ en donde
 \begin_inset Formula $T_{av}$
 \end_inset
 
-, es el promedio de tiempode espera y 
+, es el promedio de tiempo de espera y 
 \begin_inset Formula $F_{t}$
 \end_inset
 
