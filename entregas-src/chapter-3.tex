@@ -1,0 +1,814 @@
+%% LyX 2.0.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,a4paper,english,spanish,intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn]{scrbook}
+\usepackage{lmodern}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{pdftitle={Your title},
+ pdfauthor={Your name},
+ pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% increase link area for cross-references and autoname them
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\newlength{\abc}
+\settowidth{\abc}{\space}
+\AtBeginDocument{%
+\addto\extrasenglish{
+ \renewcommand{\equationautorefname}{\hspace{-\abc}}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Fig.\negthinspace}
+ \renewcommand{\tableautorefname}{Tab.\negthinspace}
+}
+}
+
+% in case somebody want to have the label "Gleichung"
+%\renewcommand{\eqref}[1]{Gleichung~(\negthinspace\autoref{#1})}
+
+% put the link to figure floats to the beginning
+% of the figure and not to its end
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% make caption labels bold
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enable calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoid that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\makeatother
+
+\begin{document}
+
+\lhead[\selectlanguage{english}%
+\chaptername~\thechapter\selectlanguage{spanish}
+]{\rightmark}
+
+
+\rhead[\selectlanguage{english}%
+\leftmark\selectlanguage{spanish}
+]{}
+
+
+\lfoot[\selectlanguage{english}%
+\thepage\selectlanguage{spanish}
+]{}
+
+
+\cfoot{}
+
+
+\rfoot[]{\thepage}
+
+
+\chapter{Simulador}
+
+Validar el desempeño del controlador y su eficiencia respecto a las
+técnicas tradicionales requiere manipular las condiciones del sistema
+y efectuar un gran número de pruebas. Realizar estas pruebas en una
+edificación real sería bastante complicado y costoso. Las grandes
+compañías cuentan con simuladores propios y por obvios motivos no
+son compartidos para fines académicos, ejemplo de estos simuladores
+son el Building Traffic Simulator, de la empresa finlandesa KONE \cite{SIIKONEN2001}.
+Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.
+
+Por esta razón es necesario desarrollar un simulador de edificios
+desde el cual se puedan cambiar las condiciones del sistema y medir
+con exactitud los tiempos registrados por los usuarios. 
+
+Para evitar la construcción del simulador se buscó en la comunidad
+académica opciones libre, pero no se encontró ningún ambiente de simulación.
+Se debió construir un simulador sencillo siguiendo el flujo descrito
+por Banks {[}BANKS2000{]} en el que partiendo de un sistema real se
+llega a un modelo por computador. 
+
+\begin{figure}[h]
+
+
+\includegraphics{resources/modeloSimBANKS}
+
+\caption{Modelo simulación, flujo Banks {[}BANKS2000{]}}
+
+
+\end{figure}
+
+
+Ya que no existen simuladores de código libre para poder verificar
+los algoritmos de control, se hace importante su construcción bajo
+código abierto. De tal manera que a traves de este problema se puedan
+estudiar técnicas de control inteligentes aplicadas a este campo en
+particular.
+
+
+\section{Diseño de la Simulación}
+
+El simulador a desarrollar permitirá tener un ambiente controlado
+que representa las características más importantes de una edificación
+y simplifica su representación, facilitando así, el mantenimiento,
+adaptación y reutilización.
+
+
+\subsection{Objetivos}
+\begin{itemize}
+\item Se desea simular una edificación real en la cual el estudio de tráfico
+se haya hecho previamente y el número de ascensores sea sufuciente
+para servir correctamente a los usuarios.
+
+\begin{itemize}
+\item Se busca medir el desempeño de diferentes estrategias de control para
+grupo de elevadores.
+\item Se desea medir el tiempo que toma una evacuación por medio de los
+elevadores. Esto depende de la naturaleza de la emergencia \cite{NATSAFCOUNCIL}.
+\item Se debe poder determinar si la configuación del sistema de ascensores
+es suficiente para servir la población del edificio.
+\item Se desean simular situaciónes de emergencia, como por ejemplo que
+un elevador quede fuera de servicio.
+\end{itemize}
+\end{itemize}
+
+\subsection{Análisis Sistémico}
+
+Un sistema puede verse como un objeto en el cual interactúan variables
+de diferentes clases para producir señales observables denominadas;
+salidas. Las señales externas también pueden afectar e influir en
+el comportamiento del sistema, pero estas señales son susceptibles
+de manipulación El sistema además, puede presentar perturbaciones
+que pueden ser clasificadas en observaciones mesurables y aquellas
+que solamente pueden observarse. Todas estas señales son fundamentales
+para poder determinar el modelo de un sistema.
+
+Para el desarrollo del presente estudio, se ha identificado el sistema
+edificio, éste constituye un ejemplo de los sistemas abiertos. Así
+mismo, se ha identificado el subsistema elevador. Un sistema abierto
+\textquotedblleft{}puede considerarse como un conjunto de partes en
+constante interacción constituyendo un todo sinérgico orientado hacia
+determinados propósitos y en permanente relación de interdependencia
+con el ambiente externo\textquotedblright{} \cite{INSUA2000}. 
+
+
+\subsection{Componentes del Sistema}
+
+Del análisis sistémico realizado de encontraron estos como componentes
+principales.
+\begin{itemize}
+\item \textbf{Edificio}: Espacio dentro del cual se movilizan personas u
+objetos, es el ente contenedor de los elevadores del sistema. 
+\item \textbf{Ascensor}: Es el objeto que se encarga de recorrer el edificio
+transportando a las personas entre sus diferentes pisos. 
+\item \textbf{Piso(s)}: Objeto componente del edificio, a través de los
+cuales se desplaza el elevador transportando a las personas. 
+\item \textbf{Pasajero}: Es el objeto a transportar entre las diferentes
+plantas o pisos de la edificación, presenta un comportamiento aleatorio
+en cuanto a la tasa de arribo. 
+\end{itemize}
+
+\subsection{Consideraciones de Diseño}
+
+Antes de diseñar el sistema se deben considerar algunas reglas básicas
+que condicionaran el diseño del simulador.
+\begin{itemize}
+\item Las llamadas generadas en los pisos son hechas a traves de una matriz
+de botones, esto permite que el sistema conozca con anterioridad el
+piso destino de cada pasajero antes de ser embarcado \cite{SIIKONEN2004}.
+\item Una vez las llamadas son asignadas no pueden ser reasignadas.
+\item Una vez el ascensor sirva todas sus llamadas y quede libre, regresara
+a su piso reposo.
+\item Los pasajeros que arriban al sistema, siguen un proceso de Poisson,
+sobre esto se detallará más adelante.
+\item La política del asignación de llamadas del sistema es de tipo colas
+FIFO, primera llamada que entra al sistema, primera llamada en ser
+atendida.
+\end{itemize}
+
+\subsection{Técnica de Simulación Escogida}
+
+Al tener eventos con separación entre ellos corta, el tiempo de ocio
+de sistema es bajo. Esto hace que el mejor método de simulación para
+este caso sea el diseño basado en \textquotedblleft{}Avance por Unidad
+de Tiempo\textquotedblright{} con comportamiento estocástico \cite{AVERILL2000}.
+
+El diagrama siguiente ilustra el flujo que por lo general sigue una
+simulación de este tipo.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{resources/procesoSimBANKS}
+
+\caption{Proceso simulación Banks {[}BANKS2000{]}}
+
+
+\end{figure}
+
+
+
+\subsection{Proceso General De La Simulación}
+
+La simulación como metodología de análisis de sistemas está basada
+en la construcción de un modelo que describe el comportamiento del
+sistema \cite{INSUA2000}, en este caso implementado en un ordenador. 
+
+Pese a la gran variedad de modelos de simulación existentes todos
+estos se adaptan al siguiente esquema simplificado de Schmeiser, para
+este trabajo se usará esta simplificación .
+\begin{enumerate}
+\item Obtener observaciones básicas de una fuente de números aleatorios.
+En la simulación de este trabajo es necesario generar los usuarios
+del sistema y comportamientos dentro de el, esta generación estará
+basáda en observaciones de la realidad identificada en otros trabajos
+académicos.
+\item Transformar las observaciones básicas de entradas al modelo, según
+las especificaciones del mismo. Es necesario por lo tanto asignar
+a estos datos aleatorios un significado real dentro de la simulaciòn,
+por ejemplo el momento de ingreso de un usuario al sistema según la
+variable temporal de la simulación, o el piso al que se dirije según
+el patrón de tráfico presente.
+\item Trasformar las entradas, a traves del modelo, en salidas. Esto se
+logra simulando de acuerdo a los datos de entrada y cuantificando
+las salidas medidas del sistema.
+\item Calcular estadísticas a partir de salidas, para estimar las medidas
+de comportamiento. Una vez corrida y finalizada la simulación es necesario
+medir estadísticamente el desempeño del sistema.
+\end{enumerate}
+
+\subsection{Variables de Simulación}
+
+
+\subsubsection{Variables Independientes}
+
+
+\paragraph*{Simulación}
+\begin{itemize}
+\item \textbf{Cronómetro de la simulación} ($t$): Tiempo actual de la simulación.
+\end{itemize}
+
+\paragraph{Edificio}
+\begin{itemize}
+\item \textbf{Número de pisos }($f$): Número de pisos de la edificación
+a simular.
+\item \textbf{Pisos portal} ($g_{i}=1$ si es portal, $0$ en otro caso.
+Para todo $i\:\epsilon\:0\leq i\leq f$ ): ): Pisos por los cuales
+están entrando nuevos usuarios al sistema.
+\item \textbf{Pisos reposo de ascensor} ($r_{j}$. Para todo $j\:\epsilon\:0\leq j\leq e$
+): Pisos a donde va cada ascensor $e$ una vez que no tenga lamadas
+de servicio.
+\item \textbf{Distancia entre pisos} ($d_{f}$): Distancia que hay entre
+2 pisos adyacentes.
+\item \textbf{Población en cada piso} ($P_{i}$, en dónde $i\in[0,f]$):
+Población que alberga cada piso.
+\end{itemize}
+
+\paragraph*{Sistema de Ascensores}
+\begin{itemize}
+\item \textbf{Número de elevadores} ($e$): Número de ascensores con los
+que se correrá la simulación.
+\item \textbf{Capacidad del elevador} ($CCi$, para todo $i\in[0,e]$):
+Cantidad máxima de pasajeros para el ascensor $i$.
+\item \textbf{Aceleración del elevador} ($A_{i}$, para todo $i\in[0,e]$):
+Aceleración de cada elevador.
+\item \textbf{Velocidad del ascensor} ($v_{i}$, para todo $i\in[0,e]$):
+Velocidad promedio con la que el ascensor $i$ recorre el edificio,
+medida en metros por segundo.
+\item \textbf{Tiempo de viaje entre dos pisos adyacentes} ($t_{fi}$, para
+todo $i\in[0,e]$): Tiempo que tarda un ascensor en llegar de un piso
+a otro adyacente cuando tiene que parar.
+\item \textbf{Tiempo cierre puerta ascensor} ($c_{i}$, para todo $i\in[0,e]$):
+Tiempo medido en segundos que dura la puerta del ascensor $i$ en
+cerrase.
+\item \textbf{Tiempo apertura puerta ascensor} ($o_{i}$, para todo $i\in[0,e]$):
+Tiempo medido en segundos que dura la puerta del ascensor $i$ en
+abrirse.
+\item \textbf{Tiempo de transferencia por pasajero} ($t_{p}$): Tiempo que
+dura un pasajero en entrar o salir del ascensor.
+\end{itemize}
+
+\subsubsection{Varibles Dependientes}
+\begin{itemize}
+\item \textbf{Densidad de arribo} ($\lambda(t)$): Número de personas esperadas
+por unidad de tiempo, sigue un proceso de Poisson \cite{SANDOR2006}.
+\item \textbf{Tasa de servicio} (\foreignlanguage{english}{$\mu(t)$}):
+Número de personas que pueden ser servidas por unidad de tiempo, sigue
+un proceso de Poisson \cite{SANDOR2006}.
+\item \textbf{Tasa de utilización} ($\rho(t)=\frac{\lambda(t)}{\mu(t)}$):
+Tasa que muestra el estado de utilización del sistema, se desea que
+este vamos sea $\rho<1$ \cite{SANDOR2006}.
+\item \textbf{Población de pasajeros del sistema} ($P$$=0.8CC$) : Promedio
+de de pasajeros cargados en cada viaje del sistema. Para evitar que
+queden pasajeros sin atender en la cola del sistema se asume que el
+factor de utilización es menor que el 100\% de la capacidad del sistema\cite{BARNEY2003},
+aunque en algunos sistemas lo pasajero son encolados en los sistemas
+de grupos de ascensor esto no se considera. Generalmente se toma un
+valor del 80\% como promedio de utilización de la capacidad del sistema,
+esto se puede ver en la gráfica.
+\item \textbf{Tiempo de transito entre dos pisos adyacentes} ($t_{ti}=\frac{d_{fi}}{v_{i}}$,
+para todo $i\in[0,e]$): Tiempo que tarda un ascensor en pasar por
+un piso adyacente cuando NO tiene que parar.
+\end{itemize}
+\begin{figure}[h]
+\includegraphics[scale=0.7]{resources/probLeftBehindUser}
+
+\caption{\selectlanguage{english}%
+Probabilidad de no recoger un pasajero \selectlanguage{spanish}
+}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Tiempo de viaje del pasajero ($TT_{i}$}, para todo\textbf{
+$i\in P$)} : Tiempo que dura un pasajero desde que toma el ascensor
+hasta que llega al piso destino.
+
+\begin{itemize}
+\item $TT_{i}=2H\frac{d_{f}}{v_{i}}+(S+1)(c_{i}+o_{i}+t_{fi}-t_{ti})+2Pt_{p}$,
+en donde:
+
+\begin{itemize}
+\item P : Cantidad de pasajeros en la cabina. 
+
+\begin{itemize}
+\item Queda por determinar la forma de estimar este dato, la estimación
+de BARNEY no es exacta. ?????????? BARNEY--PAG 127
+\end{itemize}
+\item S : Promedio de paradas que hace el ascensor en el viaje completo. 
+
+\begin{itemize}
+\item Queda por estimar este dato ???????? 
+\end{itemize}
+\item H : Promedio del piso más alto alcanzado.
+
+\begin{itemize}
+\item Queda por estimar este dato ???????? 
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\item \textbf{Tiempo de transferencia de pasajeros} ($C(i,j),$en donde
+$i$ es el número de pasajeros que entran al ascensor y $j$ los que
+salen) : Tiempo que dura la entrada y salida de pasajeros viene dado
+por la formula.
+
+\begin{itemize}
+\item $?????$
+\end{itemize}
+\end{itemize}
+
+\paragraph{Pasajero}
+\begin{itemize}
+\item \textbf{Numero de pasajeros que arriban en un tiempo t }($N(t)$ ):
+Número de pasajeros que arriban a la edifición en el tiempo t. Depende
+de la población en el edificio.
+\item \textbf{Número de pasajeros viajando en el tiempo t} ($Q(t)$): Total
+de personas que están dentro de alguna cabina y no han llegado a su
+piso destino. Depende de la población en el edificio.
+\item \textbf{Número de pasajeros sin atender en el tiempo t} ($P(t)$):
+Número de personas que esperan ascensor en el pasillo. Depende de
+la población en el edificio.
+\item \textbf{Número de pasajeros atendidos desde t=0 hasta un t actual}
+($R(t)$): Total de pasajeros que ya llegaron y se bajaron del ascensor
+en el tiempo t.
+\item \textbf{Tiempo de espera por pasajero atendido en el tiempo t} ($W{}_{k}(t)$,
+para todo $k\:\epsilon\: R(t)$ ): Tiempo de espera de los pasajeros
+que ya fueron atendidos.
+\item \textbf{Tiempo de viaje por pasajero atendido en el tiempo t} ($T{}_{k}(t)$,
+para todo $k\:\epsilon\: R(t)$ ): Tiempo de viaje de los pasajeros
+que ya fueron atendidos.
+\item \textbf{Tiempo de espera por pasajero sin atender} ($Q_{k}(t)$, para
+todo $k\:\epsilon\: P(t)$ ): Tiempo de espera por pasajero sin atender.
+\end{itemize}
+
+\subsection{Componentes del Simulador}
+
+Los componentes de la simulación discreta basada en avance de tiempo
+se majean como lo propone Averill para este tipo de sistemas a simular
+\cite{AVERILL2000}.
+\begin{itemize}
+\item \textbf{Estado de Sistema: }Son el conjunto de variables necesarias
+para describir el sistema en un tiempo particular.
+\item \textbf{Reloj de la Simulación}: Es la variable que da el tiempo actual
+de la simulación.
+\item \textbf{Lista de Eventos: }Lista que contiene el tiempo en el que
+cada tipo de evento va a ocurrir.
+\item \textbf{Rutina de Inicializaciòn: }Rutina programada para iniciar
+la simulación en el tiempo 0.
+\item \textbf{Rutina para Manejo del Tiempo: }Es un subprograma que determina
+el siguiente evento a ocurrir en la lista de eventos.
+\item \textbf{Ruta para Evento: }Rutina que actualiza el estado del sistema
+cuando un tipo de evento ocurre, hay una rutina para cada tipo de
+evento.
+\item \textbf{Rutinas de Librería: }Son el conjunto de subprogramas usados
+para generar observaciones de acuerdo a distribuiciones de probalidad.
+\item \textbf{Generador de Tráfico: }Este componente generará de manera
+aleatoria los pasajeros que arriban al sistema, la generación de pasajeros
+se hará usando el modelo de un proceso de Poisson y la aproximación
+por número de ocurrencias. Un modelo de Poisson es un proceso estocástico
+en dónde no se tiene certeza del momento en el que ocurrirán los eventos
+y estos eventos independientes.
+\item \textbf{Generador de Reportes: }Es un subprograma que mide el desempeño
+del sistema produciendo un reporte una vez la simulación termina.
+\item \textbf{Programa Principal: }Es un subprograma que invoca la rutina
+de tiempo para determinar el siguiente evento y transferir el control
+a la correspondiente rutina de evento y actualizar el estado del sistema
+apropiadamente. El programa principal verifica de igual manera la
+terminación de la simulación y llama la visualización del reporte
+estadístico.
+\end{itemize}
+
+\section{Implementación de la Simulación}
+
+
+\subsection{Principios de Diseño}
+\begin{itemize}
+\item El simulador debe ser parametrizable en los aspectos que tienen mayor
+relevancia en la simulación.
+\item La aplicación debe correr en cualquier sistema operativo, debe desarrollarse
+bajo un lenguaje portable.
+\item No se desarrollarán rutinas matemáticas o utilitarias si existe una
+libreía de código libre que se pueda usar.
+\item El simulador debe ser de código libre y abierto para la comunidad
+científica.
+\item Es de gran valor presentar la dinámica del sistema gráficamente, con
+esto cualquiera pdodria decir si el sistema es eficiente o no.
+\item Al final de cada simulación debe mostrarse un informe estadístico
+del desempeño del sistema.
+\end{itemize}
+
+\subsection{Componentes de Software del Simulador}
+
+De acuerdo al análisis realizado y siguiendo los principios de diseño,
+se contemplan los siguientes módulos del simulador.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{resources/componentsUML}
+
+\caption{\selectlanguage{english}%
+Módulos del Simulador\selectlanguage{spanish}
+}
+\end{figure}
+
+
+
+\subsubsection{Properties Manager}
+
+Debido a que el simulador está diseñado para adaptarse a cualquier
+tipo de edificación así como a los diferentes patrones de tráfico
+que se experimenten en la misma, es necesario que los parámetros de
+un sistema en particular puedan ser ingresados en el sistema y el
+simulador se adapte a tales condiciones imitando de una forma cercana
+el sistema modelado. Cuando se busca modelar un sistema es necesario
+reunir un número importante de parámetros que lo representen, estos
+parámetros por lo general son difíciles de identificar, para obtenerlos
+puede ser necesario un estudio muy riguroso del mismo, así como contar
+con una logística apropiada, el sistema analizado será traducido en
+datos que podrán ingresarse en el sistema, éste debe permitir ingresar
+los datos de una manera fácil y ágil, además debe permitir exportar
+estos datos para que sean compartidos con otros usuarios, permitiendo
+así que un estudio pueda ser incluido en diferentes ordenadores, proporcionando
+a la comunidad académica datos confiables. Este módulo será el encargado
+de establecer las datos con los cuales se ejecute la simulación, por
+nombrar algunos: 
+
+\textbf{Del Ascensor}
+\begin{itemize}
+\item Número De Pisos
+\item Número De Ascensores
+\item Piso Portal
+\item Velocidad De Ascensor
+\item Retardo Ingreso en Ascensor
+\item Máximo Número de Pasajeros dentro del Ascensor 
+\end{itemize}
+\textbf{De la simulación}
+\begin{itemize}
+\item Tiempo de simulación
+\item Factor de avance 
+\item Número de fracciones de la simulación
+\item Fuente de tráfico
+\item Controlador
+\item Base de datos
+\end{itemize}
+
+\subsubsection{Traffic Generator}
+
+Se entiende por tráfico en una edificación; el movimiento o tránsito
+de personas dentro del edificio, este tráfico tiene dos componentes
+tasa de arribo y probabilidad de destino, en donde:
+\begin{itemize}
+\item \textbf{Tasa de Arribo}: Es el número de usuarios que llegan al sistema
+en determinado espacio de tiempo. La tasa de arribo en una edificación
+cambia de acuerdo a dos factores, uno es el tiempo en el que se mide
+y otro es el piso en el que se realice la correspondiente medición,
+este tráfico podemos representarlo como un vector de dos dimensiones,
+en el cual la tasa de arribo ingresada es el número de pasajeros que
+entran al sistema cada 5 minutos, se escogió un espacio de tiempo
+de cinco minutos ya que es representativo para la simulación \cite{HAKONEN2003}.
+\item \textbf{Probabilidad de destino}: Es la probabilidad que estándo en
+el piso Po el pasajero se dirija al piso destino Pd, esta probabilida
+se puede representar como un vector de tres dimensiones en donde los
+componentes son: <Po, Pd, Probabilidad>.
+\end{itemize}
+
+
+
+\subsubsection{Simulation Model}
+
+Este artefacto representa la edificación simulada con sus pisos, cabinas
+de ascensor y sus dinámica de movimiento, pasajeros, llamadas. Estas
+caracterísicas fueron cargadas del archivo de configuración correspondiente
+por el componenete properties manager.
+
+Este modelo de la simulación va a ser modificado por el modulo principal
+que ya se explica a continuación y que es el Simulator. A lo largo
+que toda la simulación este componente será una representación de
+la edificación la cual servirá para conocer el estado de la simulación.
+
+\begin{figure}[h]
+\includegraphics{resources/PIMmodelSimModel}
+
+\caption{Diagrama de clases simulation model}
+
+
+\end{figure}
+
+
+
+\subsubsection{Building Simulator}
+
+Este componente es el encargado de coordinar las tareas necesarias
+que se ejecutan durante del ciclo de vida de la simulación lo hace
+por medio del componente RoutineManager. Es el componente centran
+de a simulación y tiene comunicación con todos los demás componentes
+de la simulación.
+
+En la siguiente figura se presenta un diagrama de flujo detallando
+los pasos que ocurren durante la simulación, la coordinación de estas
+tareas es responsabilidad del componente central BuildingSimulator.
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{resources/FlowDiagSimulation}
+
+\caption{Diagrama de flujo resumido simulación}
+\end{figure}
+
+
+
+\subsubsection{Routine ManagerRoutine Manager}
+
+Este componente gestiona en un solo hilo de ejecución las tareas:
+TrafficGeneratos, Elevator Group Controller (Rutina para asignar las
+llamadas) y Elevator Controller (Rutina que ejecuta la dinámica de
+cada cabina de ascensor). Se decide ejecutarlo en un solo hilo para
+no perder la sincronización entre las tareas y no introducir error
+en la simulación por los tiempos de procesamiento que tiene cada una
+de as tareas que en algunos casos pueden ser significantes.
+
+Este componente gestiona el inicio, ejecución y muerte de cada una
+de las rutinas que se configuren. Ya que la arquitectura lo permite
+se podría en cualquier momento introducir una nueva rutina de manera
+fácil.
+
+
+\subsubsection{GUI Controller}
+
+Este componente será el encargado de mantener un modelo visual 2d
+de edificación simulada. Además incorporará un componente tipo linea
+de comandos para poder introducir llamadas al sistema de manera manual.
+Este componente se ejecuta en un hilo separado del hilo de la simuación,
+esto para mejorar el desempeño de la aplicación, ya que en este caso
+no es tan crítico perder algo sincronía con la simulación es posible
+mantenerlo en un hilo independiente.
+
+
+\subsubsection{Statistics Manager}
+
+El fin de de la simulación es poder verificar el desempeño de los
+diferentes tipos de controladores para grupo de ascensores en un ambiente
+similar al ambiente real, para saber si determinado algoritmo de control
+presenta una rendimiento superior en cuanto a los objetivos trazados
+(tiempo de viaje, tiempo de espera, energía consumida).
+
+La verificación de esta tesis se hará mediante un estudio de los resultados
+obtenidos durante la ejecución de la simulación, este estudió incluirá
+el tiempo de espera de cada pasajero generado por el sistema, así
+como la energía consumida por los ascensores medida respecto a la
+distancia recorrida por los mismos. Sería posible realizar este estudio
+manualmente, y mostrar las cifras que avalen tales resultados, pero
+con el fin de automatizar este proceso y de hacerlo más entendible
+y vistoso al usuario final, se creó el módulo de reportes con el cual
+se generarán los reportes definidos una vez culminada la simulación.
+El Módulo de Reportes es el encargado de generar y visualizar los
+reportes generados con los datos obtenidos de la simulación, este
+módulo contiene 2 componentes.
+\begin{enumerate}
+\item Motor Base De Datos: HsqlDB es una base de datos embebida en el software
+, se escogió este motor por su alto desempeño de acceso y además por
+que puede ser embebida en la aplicación, permitiendo así que el software
+pueda ser ejecutado sin previa instalación de otros productos. 
+\item Gráficas Estadísticas: JasperReports motor de reportes opensource
+desde el cual se puede exportar el reporte a formatos PDF, EXCEL,
+HTML.
+\end{enumerate}
+
+\subsection{Modelo de Clases}
+
+La siguiente imágen muestra el diagrama de clases del simulador, detallando
+las relaciones que existen entre las clases que usa el simulador.
+
+\selectlanguage{english}%
+\begin{figure}[h]
+\includegraphics[scale=0.3]{resources/PIMClassModel}
+
+\caption{Diagrama de clases}
+\end{figure}
+
+
+\selectlanguage{spanish}%
+
+\subsection{Dinámica de Arribo de Pasajeros}
+
+Los usuarios arribaran al sistema siguiendo un proceso de Poisson,
+esto es aceptado en generalmente en las investigaciones de este tipo
+\cite{BARNEY2003}. La distribución de Poisson ha sido también usada
+para describir otros fenómenos como: la generación de particulas radioactivas
+o la cantidad de llamadas que son recibidas por una central telefónica.
+
+La probabilidad de tener n pasajeros en el intervalo de tiempo T para
+una tasa de arribo obtenida de la experiencia de $\lambda$(en llamadas
+por segundo) es:
+
+$p_{r}(n)=\frac{(\lambda T)^{n}}{n!}e^{-\lambda T}$
+
+
+\subsection{Diseño del Controlador de Grupo de Elevadores}
+\begin{itemize}
+\item El elevador no llevara a un pasajero dentro del ascensor en dirección
+contraria a la que él se dirige.
+\item La capacidad de cada ascensor son n personas, y si el cupo está lleno
+no atenderá llamadas.
+\item Un elevador viaja a una velocidad constante de n pisos por segundo.
+\item Atender cada piso toma $n$ segundos. Durante este tiempo entran y
+salen del ascensor $\alpha$ personas, por lo tanto el tiempo que
+el ascensor está detenido en cada piso es:$n+\alpha(\rho)$, en donde
+$\rho$ es un factor multiplicador.
+\item Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando
+una de las restricciones anteriormente mencionadas. 
+\end{itemize}
+
+\subsubsection{Controlador Convencional}
+
+El diseño de controladores convencionales en el campo de tráfico de
+pasajeros en edificaciones está orientado por reglas de tráfico fijas
+en las cuales no se tienen en cuenta la optimización del servicio.
+Esta aproximación no tiene en cuanta la naturaleza dinámica del problema
+que implica parámetros de operación cambiantes -por patrones de tráfico
+diferentes y fluctuaciones en el transcurrir normal de los mismos-. 
+
+En la actualidad se han normalizado un grupo de algoritmos para el
+control de elevadores, éstos se programan en microprocesadores y se
+convierten en soluciones generalizadas al problema del control de
+tráfico \cite{MIRAVETE1996}.A continuación se describen brevemente
+los principios básicos de los algoritmos más empleados.
+
+\textbullet{}\textbf{ Maniobra Universal Por Pulsadores}: Cuando el
+ascensor está desocupado, y es el primero en recibir la orden ira
+a atender la llamada. Si durante el funcionamiento se solicita el
+ascensor desde cualquier otra planta la llamada será ignorada y el
+carro seguirá obedeciendo la orden que ha iniciado la llamada.
+
+\textbullet{} \textbf{Maniobra Duplex}: Cualquier llamada es atendida
+por el elevador que se encuentre libre; pero si están libre dos elevadores,
+acudirá a la llamada el que esté mas próximo al piso origen del llamado.
+Solamente acude un elevador a cualquier llamado.
+
+\textbullet{} \textbf{Maniobra Colectiva selectiva en los dos sentidos}:
+El elevador va a registrar únicamente los llamados que se generen
+en el sentido que va el ascensor. Es decir si el ascensor va hacia
+arriba sólo se registrarán los llamados que se hagan en los pisos
+superiores, y si va hacia abajo sólo registrará los que se generen
+en pisos inferiores. El sentido se invierte cuando el elevador llega
+al último piso, ya sea por una llamada de piso o una llamada de ascensor.
+
+\textbf{Reglas Básicas}
+
+El control convencional usualmente atiende las llamadas hechas por
+los pasajeros siguiendo ciertas reglas básicas:
+
+\textbullet{} El elevador no llevara a un pasajero dentro del ascensor
+en dirección contraria a la que él se dirige.
+
+\textbullet{} La capacidad de cada ascensor son n personas, y si el
+cupo está lleno no atenderá llamadas.
+
+\textbullet{} Un elevador viaja a una velocidad constante de n pisos
+por segundo.
+
+\textbullet{} Atender cada piso toma n segundos. Durante este tiempo
+la persona entrara o saldrá del ascensor. Si el número de personas
+es mayor que n se necesitaran de n+2 segundos.
+
+\textbullet{} Un ascensor no ignorará ninguna llamada, a no ser que
+esté ejecutando una de las restricciones anteriormente mencionadas. 
+
+
+\subsection{Criterios De Desempeño}
+
+Para medir la eficiencia del sistema de control usado, usualmente
+se tienen criterios de desempeño orientados al servicio. Estos criterios
+búscan reducir la insatisfacción del cliente en cuanto al tiempo que
+invierte para movilizarse desde su piso origen hasta el piso destino.
+El criterio de desempeño más usado en cualquier tipo de edificación
+diurna va en busca de redurcir el tiempo de espera que el pasajero
+gasta desde que oprime el botón de llamada y el tiempo que el ascensor
+toma para llevar el pasajero a su piso destino \cite{HAKONEN-SIIKONEN-2008}. 
+
+Se tendrán en cuenta como criterios de optimización de servicio el
+``Tiempo de Espera'' y el ``Tiempo de Viaje''. 
+\begin{itemize}
+\item \textbf{Tiempo de Espera: }Uno de los factores que justifica como
+objetivo el tiempo de espera es que sicológicamente una pasajero pierde
+la paciencia después de esperar 60 segundo en promedio \cite{BARNEY2003}.
+\item \textbf{Tiempo de Viaje}: Es también comprobable que sicológicamente
+una persona espera a lo sumo que el tiempo desde que toma el ascensor
+hasta que llega a su piso destino no debe ser mayor a los 90 segundos
+\cite{BARNEY2003}.
+\item \textbf{Situación de emergencia}: por medio de estudios realizados
+se determinó que el el tiempo en el que se debe efectuar una evacuación
+completa de una edificación esta entre los 15 y 30 minutos \cite{HAKONEN2003}.
+\end{itemize}
+
+\subsubsection{Desempeño dado por el Tiempo De Espera}
+
+En un sistema de elevadores con buen desempeño se observa que el tiempo
+de espera sigue una distribución exponencial \cite{BARNEY2003}, de
+esta forma:
+
+$F_{t}=exp(-t/T_{av}),$en donde $T_{av}$, es el promedio de tiempo
+de espera y $F_{t}$ muestra las fracciones de tiempos de espera que
+que exceden el tiempo t.
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{resources/performanceCriteria_wt}
+
+\caption{\selectlanguage{english}%
+\label{performanceCriteria_wt}\foreignlanguage{spanish}{Criterio
+de desempeño <Tiempo de Espera>}\selectlanguage{spanish}
+}
+\end{figure}
+
+
+
+\subsubsection{Desempeño dado por el Tiempo De Viaje}
+
+Para el ``Tiempo de Viaje'' se usa una distribución Gamma. Los límites
+de esta se encuentran en la Figura \ref{performanceCriteria_rt}.
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{resources/performanceCriteria_rt}
+
+\caption{\selectlanguage{english}%
+\label{performanceCriteria_rt}\foreignlanguage{spanish}{Criterio
+de desempeño <Tiempo de Viaje>}\selectlanguage{spanish}
+}
+\end{figure}
+
+\end{document}

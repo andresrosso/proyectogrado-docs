@@ -78,7 +78,7 @@ customHeadersFooters
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -1458,7 +1458,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
-	scale 70
+	scale 60
 
 \end_inset
 
@@ -1749,6 +1749,62 @@ Este componente gestiona el inicio, ejecución y muerte de cada una de las
  rutinas que se configuren.
  Ya que la arquitectura lo permite se podría en cualquier momento introducir
  una nueva rutina de manera fácil.
+\end_layout
+
+\begin_layout Subsubsection
+GUI Controller
+\end_layout
+
+\begin_layout Standard
+Este componente será el encargado de mantener un modelo visual 2d de edificación
+ simulada.
+ Además incorporará un componente tipo linea de comandos para poder introducir
+ llamadas al sistema de manera manual.
+ Este componente se ejecuta en un hilo separado del hilo de la simuación,
+ esto para mejorar el desempeño de la aplicación, ya que en este caso no
+ es tan crítico perder algo sincronía con la simulación es posible mantenerlo
+ en un hilo independiente.
+\end_layout
+
+\begin_layout Subsubsection
+Statistics Manager
+\end_layout
+
+\begin_layout Standard
+El fin de de la simulación es poder verificar el desempeño de los diferentes
+ tipos de controladores para grupo de ascensores en un ambiente similar
+ al ambiente real, para saber si determinado algoritmo de control presenta
+ una rendimiento superior en cuanto a los objetivos trazados (tiempo de
+ viaje, tiempo de espera, energía consumida).
+\end_layout
+
+\begin_layout Standard
+La verificación de esta tesis se hará mediante un estudio de los resultados
+ obtenidos durante la ejecución de la simulación, este estudió incluirá
+ el tiempo de espera de cada pasajero generado por el sistema, así como
+ la energía consumida por los ascensores medida respecto a la distancia
+ recorrida por los mismos.
+ Sería posible realizar este estudio manualmente, y mostrar las cifras que
+ avalen tales resultados, pero con el fin de automatizar este proceso y
+ de hacerlo más entendible y vistoso al usuario final, se creó el módulo
+ de reportes con el cual se generarán los reportes definidos una vez culminada
+ la simulación.
+ El Módulo de Reportes es el encargado de generar y visualizar los reportes
+ generados con los datos obtenidos de la simulación, este módulo contiene
+ 2 componentes.
+\end_layout
+
+\begin_layout Enumerate
+Motor Base De Datos: HsqlDB es una base de datos embebida en el software
+ , se escogió este motor por su alto desempeño de acceso y además por que
+ puede ser embebida en la aplicación, permitiendo así que el software pueda
+ ser ejecutado sin previa instalación de otros productos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Gráficas Estadísticas: JasperReports motor de reportes opensource desde
+ el cual se puede exportar el reporte a formatos PDF, EXCEL, HTML.
 \end_layout
 
 \begin_layout Subsection
