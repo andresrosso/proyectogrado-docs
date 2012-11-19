@@ -72,16 +72,8 @@
 status open
 
 \begin_layout Plain Layout
-
-\lang english
-Short Paper Title
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\lang english
-optional, use only with long paper titles
+MODELO COOPERATIVO PARA CONTROLAR EFICIENTEMENTE EL TRÁFICO EN UNA EDIFICACIÓN
+ 
 \end_layout
 
 \end_inset
@@ -89,12 +81,11 @@ optional, use only with long paper titles
 
 \end_layout
 
-\end_inset
-
-
+\begin_layout Title
+MODELO COOPERATIVO PARA CONTROLAR EFICIENTEMENTE EL TRÁFICO EN UNA EDIFICACIÓN
 \end_layout
 
-\begin_layout Author
+\begin_layout Subtitle
 Andrés E.
  Rosso Mateus
 \end_layout
@@ -2147,7 +2138,7 @@ Proceso de Modelado
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2437,7 +2428,7 @@ Patrones de Tráfico
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2586,7 +2577,7 @@ key "SANDOR2006"
 \end_layout
 
 \begin_layout Subsection
-Controla de Grupos de Elevadores -EGCS-
+Controlador de Grupos de Elevadores -EGCS-
 \end_layout
 
 \begin_layout BeginFrame
@@ -2696,7 +2687,7 @@ Técnica Tradicional
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2751,7 +2742,7 @@ Tiempo De Espera: Promedio del tiempo de espera de los pasajeros para ser
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2805,7 +2796,7 @@ Tiempo de viaje: Tiempo que el pasajero dura dentro del ascensor hasta que
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2926,7 +2917,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -2956,7 +2947,48 @@ Componentes Simulador
 Diagrama de Clases
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename resources/PIMClassModel.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama de clases
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Controlador de Grupo de Elevadores
 \end_layout
 
@@ -3282,47 +3314,67 @@ Conversación asignar llamada
 \end_layout
 
 \begin_layout BeginFrame
-Controlador Propuesto 
+Cáculo de la Mejor Apuesta
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-Objetivo General
-\end_layout
-
-\begin_layout Verse
-Transportar eficientemente el tráfico generado en una edificación de gran
- altura.
+Tiempo de procesamiento y costo de energía estimado:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Reduciendo el tiempo de espera de los pasajeros.
-\end_layout
+\begin_inset Formula $c(t_{i})=(g*w_{g})+(v*w_{v})+(h*w_{h})$
+\end_inset
 
-\begin_layout Itemize
-Reduciendo el tiempo de viaje.
-\end_layout
+,
+\begin_inset Formula $g(tiempo-espera),\: v(tiempo-viaje),\: h(energia-consumida)\;$
+\end_inset
 
-\begin_layout Itemize
-Ahorrando la energía consumida por el sistema.
+están normalizados entre [0,1].
+ W es el peso dado a los criterios de decisión.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
+Minimizar c(t), el 
+\begin_inset Formula $Cmin=min(c(t_{i}));$
+\end_inset
 
-\series bold
-Objetivos Específicos
+
+\end_layout
+
+\begin_layout Itemize
+El problema es que cada elevador no puede conocer exactamente su c(t), ya
+ que depende de eventos futuros.
+\end_layout
+
+\begin_layout Itemize
+Para mejorar el estimado de c(t), se puede usar una red neuronal que posea
+ estas entradas normalizadas [0,1):
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Diseño de la estrategía de solución al problema de asignación del tráfico
- usado SMA y resolviendo los conflictos con técnicas de inteligencia artificial.
+u1: si el elevador debe cambiar de dirección para atender la llamada.
+\end_layout
+
+\begin_layout Itemize
+u2: numero de pasajeros en el elevador.
+\end_layout
+
+\begin_layout Itemize
+u3: tiempo de procesamiento estimado c(t).
+\end_layout
+
+\begin_layout Itemize
+u4: patrón de tráfico presente (UPPEAK, DOWNPEAK, INTERFLOOR).
 \end_layout
 
 \end_deeper
+\begin_layout BeginFrame
+Preguntas
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout
