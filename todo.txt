@@ -1,5 +1,4 @@
 *Exlicar por que cada 5min se genera trafico
 *Mirar el diagrama de flujo de la simulacion
 *Comprobar que la generacion de trafico, cumple con el trafico del paper. Prueba de hipotesis
-
-*16 de nov presentacin rofesor
+*Verificar simulador con casos de ejemplo predise;ados

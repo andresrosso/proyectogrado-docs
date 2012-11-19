@@ -1295,6 +1295,100 @@ Tiempo de espera por pasajero sin atender
 \end_layout
 
 \begin_layout Subsection
+Valores Comunes Para la Simulación
+\end_layout
+
+\begin_layout Standard
+Los valores comunes se toman de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SANDOR2006"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/commonSimCharacteristics.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Common ranges of elevator operating parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Valores Comunes Para la Simulación
+\end_layout
+
+\begin_layout Standard
+Los valores comunes se toman de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SANDOR2006"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/cabinDynamics.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Dinámica del ascensor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Componentes del Simulador
 \end_layout
 

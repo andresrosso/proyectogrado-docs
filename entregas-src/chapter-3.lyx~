@@ -1295,6 +1295,61 @@ Tiempo de espera por pasajero sin atender
 \end_layout
 
 \begin_layout Subsection
+Valores Comunes Para la Simulación
+\end_layout
+
+\begin_layout Standard
+Los valores comunes se toman de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SANDOR2006"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/commonSimCharacteristics.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Common ranges of elevator operating parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Componentes del Simulador
 \end_layout
 
@@ -1407,6 +1462,19 @@ Es un subprograma que invoca la rutina de tiempo para determinar el siguiente
 Implementación de la Simulación
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+parrafo de introduccion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Principios de Diseño
 \end_layout
@@ -1458,7 +1526,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -1647,7 +1715,7 @@ Este modelo de la simulación va a ser modificado por el modulo principal
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1701,7 +1769,7 @@ ilidad del componente central BuildingSimulator.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1822,7 +1890,7 @@ La siguiente imágen muestra el diagrama de clases del simulador, detallando
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 

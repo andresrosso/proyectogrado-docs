@@ -1295,6 +1295,25 @@ Tiempo de espera por pasajero sin atender
 \end_layout
 
 \begin_layout Subsection
+Valores Comunes Para la Simulación
+\end_layout
+
+\begin_layout Standard
+Los valores comunes se toman de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SANDOR2006"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
 Componentes del Simulador
 \end_layout
 
@@ -1660,7 +1679,7 @@ Este modelo de la simulación va a ser modificado por el modulo principal
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1714,7 +1733,7 @@ ilidad del componente central BuildingSimulator.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1835,7 +1854,7 @@ La siguiente imágen muestra el diagrama de clases del simulador, detallando
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
