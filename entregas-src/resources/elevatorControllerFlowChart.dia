@@ -499,12 +499,12 @@ call or passenger#</dia:string>
         <dia:point val="55.8365,-11.4732"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="55.8365,-12.1132;61.5415,-11.3407"/>
+        <dia:rectangle val="55.8365,-12.1325;62.0559,-11.302"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#ENTRY_PASSENGER#</dia:string>
+            <dia:string>#COMING_PASSENGER#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="sans" style="0" name="Helvetica"/>
