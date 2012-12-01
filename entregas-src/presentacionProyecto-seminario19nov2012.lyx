@@ -3319,7 +3319,7 @@ Conversación asignar llamada
 \end_layout
 
 \begin_layout BeginFrame
-Cáculo de la Mejor Apuesta
+Cálculo de la Mejor Apuesta
 \end_layout
 
 \begin_layout Itemize
@@ -3351,6 +3351,10 @@ Minimizar c(t), el
 \begin_layout Itemize
 El problema es que cada elevador no puede conocer exactamente su c(t), ya
  que depende de eventos futuros.
+\end_layout
+
+\begin_layout BeginFrame
+Cálculo de la Mejor Apuesta (2)
 \end_layout
 
 \begin_layout Itemize
