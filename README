@@ -37,6 +37,13 @@ git status
 #conectarse a un proyecto en el repo de GITHUB
 git clone git@github.com:andresrosso/proyectogrado-docs.git
 
+#ignore files -> create file named .gitignore 
+	#*.log
+	#*.class
+	#*.lck
+	#tmp/
+	#bin/
+
 
 
 
