@@ -44,6 +44,9 @@ git clone git@github.com:andresrosso/proyectogrado-docs.git
 	#tmp/
 	#bin/
 
+#Update ignoring local modifications
+git reset --hard HEAD
+git pull
 
 
 
