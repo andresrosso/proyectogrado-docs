@@ -918,6 +918,56 @@ Tiempo de transferencia por pasajero
 ): Tiempo que dura un pasajero en entrar o salir del ascensor.
 \end_layout
 
+\begin_layout Paragraph*
+Dinámica de la Cabina de Elevador
+\end_layout
+
+\begin_layout Standard
+Idealmente los valores de frenado y arranque de la cabina del elevador se
+ toma siguiendo el diagrama de velocidad de expuesto en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SANDOR2006"
+
+\end_inset
+
+, esto facilita la implementación de la simulación.
+ Para poder modelar esta dinámica se hace necesario involucrar las variables:
+ distancia entre pisos h, aceleración máxima y velocidad máxima.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/cabinDynamics.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Dinámica del ascensor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Varibles Dependientes
 \end_layout
@@ -1128,35 +1178,15 @@ P : Cantidad de pasajeros en la cabina.
  
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Queda por determinar la forma de estimar este dato, la estimación de BARNEY
- no es exacta.
- ?????????? BARNEY--PAG 127
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
 S : Promedio de paradas que hace el ascensor en el viaje completo.
  
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Queda por estimar este dato ???????? 
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
 H : Promedio del piso más alto alcanzado.
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Queda por estimar este dato ???????? 
-\end_layout
-
-\end_deeper
 \end_deeper
 \end_deeper
 \begin_layout Itemize
@@ -1176,13 +1206,15 @@ en donde
 \begin_inset Formula $j$
 \end_inset
 
- los que salen) : Tiempo que dura la entrada y salida de pasajeros viene
- dado por la formula.
+ los que salen.
+ La constante de entrada KI y salida de pasajeros KO) : Tiempo que dura
+ la entrada y salida de pasajeros viene dado por la formula.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $?????$
+C(i,j)=
+\begin_inset Formula $\sum_{i}KI\:+\:\sum_{i}KO$
 \end_inset
 
 
@@ -1299,7 +1331,8 @@ Valores Comunes Para la Simulación
 \end_layout
 
 \begin_layout Standard
-Los valores comunes se toman de 
+Para simular de una manera más cercana a la realidad, se toman como valores
+ comunes los expuestos por 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SANDOR2006"
@@ -1329,53 +1362,6 @@ status open
 
 \begin_layout Plain Layout
 Common ranges of elevator operating parameters
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Valores Comunes Para la Simulación
-\end_layout
-
-\begin_layout Standard
-Los valores comunes se toman de 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "SANDOR2006"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/cabinDynamics.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Dinámica del ascensor
 \end_layout
 
 \end_inset
@@ -1503,7 +1489,7 @@ Implementación de la Simulación
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 parrafo de introduccion
@@ -2332,21 +2318,14 @@ Tiempo de Viaje
 \end_inset
 
  se usa una distribución Gamma.
- Los límites de esta se encuentran en la Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "performanceCriteria_rt"
-
-\end_inset
-
-.
+ Los límites de esta se encuentran en la Figura.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
