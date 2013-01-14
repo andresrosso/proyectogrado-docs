@@ -129,7 +129,17 @@ customHeadersFooters
 \color #faf0e6
 \end_branch
 \branch chapter-5
-\selected 1
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch chapter-4
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch chapter-3
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -614,7 +624,7 @@ filename "chapter-2.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch chapter-2
+\begin_inset Branch chapter-3
 status open
 
 \begin_layout Standard
@@ -633,7 +643,7 @@ filename "chapter-3.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch chapter-2
+\begin_inset Branch chapter-4
 status open
 
 \begin_layout Standard
