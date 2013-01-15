@@ -296,58 +296,19 @@ key "STONE2000"
  
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/modeloSimBANKS.png
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang spanish
-Falta incluir la gráfica
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\lang spanish
-Modelo simulación, flujo Banks [BANKS2000]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Descripción General De Los Agentes
 \end_layout
 
 \begin_layout Standard
-De
+Debido a la complejidad del sistema simulado, se hace importante el modelado
+ de las entidades por medio de agentes.
+ Estos agentes interactúan entre ellos para cooperar y ofrecer un mejor
+ servicio.
+\end_layout
+
+\begin_layout Standard
+Hay agentes que simplemente ofrecen funcionalidad de dinámica 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1767,7 +1728,11 @@ Interacciones
 
 \begin_layout Standard
 Las diferentes interacciones entre los agentes se muestran en la siguiente
- figura 
+ figura.
+ De estas interecciones se detallará sobre 3 de ellas que importantes para
+ el control del grupo de elevadores y que internienen directamente sobre
+ el rendimiento en el objetivo de control, el cúal se recuenda que es reducir
+ el tiempo de espera y de viaje de los pasajeros así como la energía consumida.
 \end_layout
 
 \begin_layout Standard
@@ -1775,7 +1740,7 @@ Las diferentes interacciones entre los agentes se muestran en la siguiente
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1803,8 +1768,8 @@ Diagrama Interacciones
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="30" columns="4">
-<features booktabs="true" islongtable="true" longtabularalignment="center">
+<lyxtabular version="3" rows="31" columns="4">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="middle" width="1cm">
 <column alignment="left" valignment="middle" width="3cm">
 <column alignment="center" valignment="top" width="5cm">
@@ -1823,7 +1788,11 @@ ID
 \begin_inset Text
 
 \begin_layout Plain Layout
-NOMBRE
+NOM
+\end_layout
+
+\begin_layout Plain Layout
+BRE
 \end_layout
 
 \end_inset
@@ -1848,7 +1817,7 @@ DESCRIPCIÓN
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1857,7 +1826,7 @@ IN 1.
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1983,7 +1952,7 @@ Información del patrón de tráfico presente en la edificación (Subida, bajada
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2004,7 +1973,45 @@ Información del patrón de tráfico presente en la edificación (Subida, bajada
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2196,7 +2203,8 @@ OBTENER ASCENSOR PARA LLAMADA
 
 \begin_layout Plain Layout
 Elevador que pueda atender en mejor medida de acuerdo a los criterios de
- desempeño la llamada generada
+ desempeño la llamada generada.
+ La desición se toma usando reglas de desición difusas.
 \end_layout
 
 \end_inset
@@ -2431,8 +2439,7 @@ ESTIMAR TIEMPO DE ESPERA
 
 \begin_layout Plain Layout
 Pronóstico del tiempo que puede tardar el ascensor en llegar al piso origen
- de la llamada, este agente utiliza un estimador basado en redes neuronales
- 
+ de la llamada, este agente utiliza un estimador basado en redes neuronales.
 \end_layout
 
 \end_inset
@@ -2824,7 +2831,7 @@ ESTIMAR TIEMPO DE VIAJE
 \begin_layout Plain Layout
 Pronóstico del tiempo que tarda el pasajero en la cabina de ascensor desde
  el piso origen hasta el piso destino, este agente utiliza un estimador
- basado en redes neuronales
+ basado en redes neuronales.
 \end_layout
 
 \end_inset
@@ -2990,6 +2997,1109 @@ Pronóstico del tiempo que tarda el pasajero en la cabina de ascensor desde
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+ESTIMAR TIEMPO DE ESPERA y EL EL TIEMPO DE VIAJE
+\end_layout
+
+\begin_layout Standard
+El tiempo que un pasajero debe esperar desde el momento en que presiona
+ el botón para registrar la llamada hasta que el ascensor pasa a recogerlo
+ no es preciso.
+ No es posible conocerlo con anticipación ya depende de las futuras llamadas
+ que se hagan al ascensor y de los desplazamientos que deba hacer.
+ Debido a esta naturaleza de incertidumbre en la determinación del tiempo
+ de espera es necesario hacer una predicción teniendo como principal criterio
+ el tráfico que se está generando en la edificación.
+ 
+\end_layout
+
+\begin_layout Standard
+Este mismo caso ocurre con el tiempo de viaje que debe hacer un pasajero,
+ la naturaleza de éste es incierta pero se podría determinar un valor cercano
+ haciendo uso de un estimador basado en redes neuronales.
+ A continuación se presenta la arquitectura de red para los 2 casos.
+\end_layout
+
+\begin_layout Standard
+Las entradas en ambos casos se presentan de manera normalizada para que
+ la convergencia a la solución sea más rápida, las salidas de la red neuronal
+ son una estimación en cuento al tiempo que debe esperar o viajar un pasajero,
+ esta salida tambien está normalizada.
+\end_layout
+
+\begin_layout Standard
+Para el entrenamiento SUPERVISADO se usó la técnica de BACKPROPAGATION,
+ y consistió en minimizar el error a lo largo de 8000 iteraciones.
+ Debido a que una taza de aprendizaje muy pequeña haría lento el aprendizaje
+ y una taza muy alta haría oscilar mucho el error, por experimentación el
+ valor con mejor resultado fue usar una tasa de aprendizaje de 0.6.
+\end_layout
+
+\begin_layout Paragraph
+Arquitectura Red Estimador Tiempo de Viaje
+\end_layout
+
+\begin_layout Standard
+La red neurunal artificial encargada de estimar el tiempo de viaje que tarda
+ un pasajero desde que llega a recogerlo la cabina, hasta que llega a su
+ piso destino.
+ La red esta compuesta de 5 neuronas de entrada, 50 neuronas en la capa
+ oculta y 1 neurona de salida.
+ Las entradas son obtenidas mediante la comunicación con otros agentes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/AnnST.png
+	width 50page%
+	height 50page%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arquitectura ANN Tiempo de Espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pasajeros dentro del elevador
+\series default
+: es el número de pasajeros que se encuentran el elevador, esta entrada
+ se obtiene del agente controlador de cabina.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de entrada
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de ENTRADA, es decir
+ que está llegando a la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de salida
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de SALIDA, es decir
+ que abandonando la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de entre pisos
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de ENTRE PISOS, es
+ decir el porcentaje de la población en la edificación que se está moviendo
+ entre los pisos de la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Dirección del elevador
+\series default
+: esta la diracción en la que se dirige la cabina ARRIBA o ABAJO, esta entrada
+ se obtiene del agente controlador de cabina.
+\end_layout
+
+\begin_layout Paragraph
+Arquitectura Red Estimador Tiempo de Espera
+\end_layout
+
+\begin_layout Standard
+La red neurunal artificial está encargada de estimar el tiempo que un pasajero
+ debe esperar para que determinado ascensor llegue a recogerlo.
+ Esta compuesta de 6 neuronas de entrada, 50 neuronas en la capa oculta
+ y 5 neuronas de salida.
+ Las entradas son obetenidas mediante la comunicación con otros agentes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/AnnWT.png
+	width 50page%
+	height 50page%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arquitectura ANN Tiempo de Espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Posición del elevador:
+\series default
+ es el piso en el que se encuentra el elevador, esta entrada se obtiene
+ del agente controlador de cabina.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pasajeros dentro del elevador
+\series default
+: es el número de pasajeros que se encuentran el elevador, esta entrada
+ se obtiene del agente controlador de cabina.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de entrada
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de ENTRADA, es decir
+ que está llegando a la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de salida
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de SALIDA, es decir
+ que abandonando la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de entre pisos
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de ENTRE PISOS, es
+ decir el porcentaje de la población en la edificación que se está moviendo
+ entre los pisos de la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Dirección del elevador
+\series default
+: esta la diracción en la que se dirige la cabina ARRIBA o ABAJO, esta entrada
+ se obtiene del agente controlador de cabina.
+\end_layout
+
+\begin_layout Subsubsection
+OBTENER ASCENSOR PARA LLAMADA
+\end_layout
+
+\begin_layout Standard
+Determinar que ascensor puede atender en una mejor medida una llamada es
+ una decisión compleja.
+ Está sujeta a muchas variables del ambiente que cambian en el tiempo y
+ que tienen naturaleza estocástica.
+ Por esta razón no es posible calcular con algoritmo de optimización la
+ mejor opción de elevador para atender la llamada.
+\end_layout
+
+\begin_layout Standard
+Por en este trabajo se propone tomar la decisión usando redes neuraonales
+ (para estimar datos con incertidumbre) y reglas de inferencia difusas para
+ tener en cuenta los objetivos de control trazados.
+ Las reglas difusas se alimentan de datos que pueden ser calculados y otros
+ que simplemente son estimados estadísticamente o por medio de las redes
+ neuronales antes mencionadas.
+\end_layout
+
+\begin_layout Standard
+Este tipo de controlador permite que la solución se robusta y que el control
+ no se vea afectado ante el ruido que puedan presentar las varibles de control.
+\end_layout
+
+\begin_layout Paragraph
+Entradas Difusas Agente OBTENER ASCENSOR PARA LLAMADA
+\end_layout
+
+\begin_layout Standard
+Las entradas para el motor de inferencia difuso son tomadas como conjuntos
+ Gaussianos, y por cada una estas entradas se definen 5 conjuntos difusos.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Estimación Tiempo de Espera:
+\series default
+ Representa la estimación del tiempo que requiere un ascensor para viajar
+ desde su posición actual hasta el piso en el que se genera la llamada,
+ este datos se obtiene del agente estimador tiempo de espera.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Estimación Tiempo de Viaje:
+\series default
+ Representa la estimación del tiempo que requiere un pasajero para ser trasnport
+ado de su piso origen a su piso destino.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Porcentaje de Ocupación del Elevador:
+\series default
+ Porcentaje de ocupación de la cabina de ascensor, este dato se obtiene
+ del agente Cabina de Ascensor.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Paradas en Piso Origen
+\series default
+: Determina que tantas llamadas tiene el ascensor asignadas para el piso
+ origen de la llamada en cuestión.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Paradas en Piso Destino
+\series default
+: Determina que tantas llamadas tiene el ascensor asignadas para el piso
+ destino de la llamada en cuestión.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Salida Difusa Agente OBTENER ASCENSOR PARA LLAMADA
+\end_layout
+
+\begin_layout Standard
+La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
+ para la llamada, esta prioridad puede ser muy alta, alta, media, baja,
+ muy baja.
+\end_layout
+
+\begin_layout Paragraph
+Reglas de Inferencia Difusas Agente OBTENER ASCENSOR PARA LLAMADA
+\end_layout
+
+\begin_layout Standard
+Las reglas que determinan la prioridad de un ascensor para atender una llamada
+ se presentan en la siguiente tabla.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="24" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Regla de Inferencia
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Espera
+\begin_inset Quotes erd
+\end_inset
+
+ es MUY BAJO entonces la prioridad es MUY ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Espera
+\begin_inset Quotes erd
+\end_inset
+
+ es BAJO entonces la prioridad es ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Espera
+\begin_inset Quotes erd
+\end_inset
+
+ es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Espera
+\begin_inset Quotes erd
+\end_inset
+
+ es ALTO entonces la prioridad es BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Espera
+\begin_inset Quotes erd
+\end_inset
+
+ es MUY ALTO entonces la prioridad es MUY BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+ es MUY BAJO entonces la prioridad es MUY ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+ es BAJO entonces la prioridad es ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+ es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+ es ALTO entonces la prioridad es BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Estimación Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+ es MUY ALTO entonces la prioridad es MUY BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Porcentaje de Ocupación
+\begin_inset Quotes erd
+\end_inset
+
+ es BAJO entonces la prioridad es ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Porcentaje de Ocupación
+\begin_inset Quotes erd
+\end_inset
+
+ es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Porcentaje de Ocupación
+\begin_inset Quotes erd
+\end_inset
+
+ es ALTO entonces la prioridad es BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Origen
+\begin_inset Quotes erd
+\end_inset
+
+ es MUY BAJO entonces la prioridad es MUY BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Origen
+\begin_inset Quotes erd
+\end_inset
+
+ es BAJO entonces la prioridad es BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Origen
+\begin_inset Quotes erd
+\end_inset
+
+ es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Origen
+\begin_inset Quotes erd
+\end_inset
+
+ es ALTO entonces la prioridad es ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Origen
+\begin_inset Quotes erd
+\end_inset
+
+ es MUY ALTO entonces la prioridad es MUY ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Destino
+\begin_inset Quotes erd
+\end_inset
+
+ es MUY BAJO entonces la prioridad es MUY BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Destino
+\begin_inset Quotes erd
+\end_inset
+
+ es BAJO entonces la prioridad es BAJA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Destino
+\begin_inset Quotes erd
+\end_inset
+
+ es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Destino
+\begin_inset Quotes erd
+\end_inset
+
+ es ALTO entonces la prioridad es ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Quotes eld
+\end_inset
+
+Paradas en Piso Destino
+\begin_inset Quotes erd
+\end_inset
+
+ es MUY ALTO entonces la prioridad es MUY ALTA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tabla reglas de inferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 

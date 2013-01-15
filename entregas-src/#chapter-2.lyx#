@@ -1640,7 +1640,14 @@ Agente
 , un agente es un sistema computacional autónomo que ejecuta acciones con
  el fin de cumplir sus objetivos.
  Está inmerso en un ambiente dado, del cual obtiene información mediante
- y al cual puede modificar mediante sus acciones .
+ y al cual puede modificar mediante sus acciones 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WEISS1999"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -1651,7 +1658,15 @@ Sistema Multiagente
 \series default
 , se define como una colección de agentes racionales y autónomos, insertos
  en un ambiente en común, capaces de coordinar su conocimiento, objetivos,
- habilidades y estrategias a fin de resolver un cierto problema.
+ habilidades y estrategias a fin de resolver un cierto problema
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WEISS1999"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1660,7 +1675,15 @@ Sistema Multiagente
 Proactividad
 \series default
 , es la capacidad de tomar la iniciativa para realizar las acciones necesarias
- para cumplir con los objetivos para los que son diseñados.
+ para cumplir con los objetivos para los que son diseñados
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1668,14 +1691,215 @@ Proactividad
 \series bold
 Capacidad de reacción
 \series default
-: A partir de sus sensores, un agente debe estar en la capacidad de responder
- a los estímulos del ambiente con las respuestas adecuadas y en el tiempo
- adecuado, de forma activa.
- Habilidades sociales: Un agente inteligente debe ser capaz de interactuar
- con otros agentes, inclusive humanos cuando es necesario para cumplir con
- sus objetivos.
- Las dos habilidades básicas son las habilidades de cooperación y de negociación.
- Es mucho más complejo que el simple intercambio de bits.
+: es la capacidad de responder a los estímulos del ambiente con las respuestas
+ adecuadas y en el tiempo adecuado, de forma activa
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Habilidades sociales
+\series default
+: es la habilidad de interactuar con otros agentes, inclusive humanos cuando
+ es necesario para cumplir con sus objetivos.
+ Las dos habilidades básicas son las habilidades de cooperación y de negociación
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+LÓGICA DIFUSA
+\end_layout
+
+\begin_layout Paragraph*
+INTRODUCCIÓN 
+\end_layout
+
+\begin_layout Standard
+La mayoría de los fenómenos que encontramos cada día son imprecisos, es
+ decir, tienen implícito un cierto grado de difusidad en la descripción
+ de su naturaleza.
+ Esta imprecisión puede estar asociada con su forma, posición, momento,
+ color, textura, o incluso en la semántica que describe lo que son.
+ 
+\end_layout
+
+\begin_layout Standard
+En muchos casos el mismo concepto puede tener diferentes grados de imprecisión
+ en diferentes contextos o tiempo.
+ Un día cálido en invierno no es exactamente lo mismo que un día cálido
+ en primavera.
+ La definición exacta de cuando la temperatura va de templada a caliente
+ es imprecisa -no podemos identificar un punto simple de templado, así que
+ emigramos a un simple grado, la temperatura es ahora considerada caliente.
+ Este tipo de imprecisión o difusidad asociado continuamente a los fenómenos
+ es común en todos los campos de estudio: sociología, física, biología,
+ finanzas, ingeniería, oceanografía, psicología, etc 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CALVINO2003"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La idea de una lógica multi-valuada ha estado presente desde principios
+ del siglo XX.
+ Charles Sanders Pierce (1839-1914) fue uno de los primeros pensadores que
+ se interesaron en la vaguedad o incertidumbre, él no creía en la separación
+ entre verdad y falsedad y postuló que la incertidumbre era un grado entre
+ estos dos estados.
+ Pero fue Lukasiewicz, quien dio el primer paso hacia la definición formal
+ de la incertidumbre, al introducir en 1920 la idea de una lógica tri-valuada
+ basada en verdadero, posible y falso.
+ 
+\end_layout
+
+\begin_layout Standard
+En 1965, Lotfi Zadeh, profesor de la Universidad de California en Berkley,
+ presentó una publicación en donde formalmente definía la teoría de conjuntos
+ difusos a partir de la cual derivó la lógica difusa.
+ Zadeh extendió la clasificación lógico-Aristotélica del "Todo o Nada",
+ con una lógica que permite grados entre verdad y falsedad.
+ Esta generalización de la lógica clásica, hace que la pertenencia de un
+ objeto a un conjunto no se restrinja a 0 o 1, sino que pueda tomar valores
+ intermedios, permitiendo que los valores de verdad de una proposición sean
+ un número que pertenece al intervalo [0, 1], esta generalización hace posible
+ realizar razonamiento aproximado.
+ Permitiendo acercar la matemática al lenguaje impreciso del hombre, que
+ contiene términos vagos como “mucho”, “poco”, “tibio”, etc.
+ Usualmente estos términos no tienen cabida en la lógica y la matemática
+ convencional 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DRIANKOV1996"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+En la teoría convencional de conjuntos, un elemento es o no miembro.
+ En lógica Booleana algo es cierto o es falso.
+ La lógica Difusa infiere las proposiciones, fundamentándose en las teorías
+ de la lógica clásica.
+ Estas proposiciones son difusas y a su vez se representan por conjuntos
+ difusos.
+ Si se quiere llegar a un nivel de razonamiento aproximado, es necesario
+ emplear las reglas de inferencia modus ponens generalizado, modus tollens
+ generalizado y silogismo hipotético generalizado.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Estructura Básica De Un Controlador Difuso
+\end_layout
+
+\begin_layout Standard
+Un controlador basado en lógica difusa realiza tres acciones básicas.
+ La primera, corresponde al procedimiento denominado fuzificar, que implica
+ el asignar un valor lingüístico a una variable utilizando funciones de
+ membresía.
+ La fusisficación convierte el valor real de una variable de entrada a un
+ valor difuso, que podrá ser manipulado en el bloque de base de reglas de
+ inferencia.
+ 
+\end_layout
+
+\begin_layout Standard
+La segunda, corresponde a la inferencia lógica que consiste en definir las
+ reglas del tipo Si - Entonces para evaluar las variables lingüísticas.
+ La base de reglas almacena el conocimiento en forma de un conjunto de reglas,
+ que contienen el conocimiento heurístico y cualitativo en el que se basarán
+ las acciones de control.
+ El mecanismo de inferencia, se encarga de evaluar las reglas e infiere
+ una conclusión que se convertirá en la acción de control que se pasará
+ a través del módulo de defusificación.
+\end_layout
+
+\begin_layout Standard
+La tercera, se denomina defuzificar, que consiste en normalizar un valor
+ difuso a su equivalente en salida de control nítida.
+ El proceso de defusificación, convierte la variable difusa que se obtuvo
+ como salida en el bloque del mecanismo de inferencia, a un valor real.
+ Este valor real o nítido será la acción de control que se aplicará al proceso
+ de asignación de elevadores en el controlador propuesto.
+\end_layout
+
+\begin_layout Standard
+Básicamente, se debe ver el control difuso como un tomador de decisiones
+ artificial que opera en un sistema de lazo cerrado en tiempo real.
+ La siguiente figura muestra los componentes principales de un controlador
+ difuso, a saber: interfaz de fusificación, base de conocimiento, motor
+ de inferencia e interfaz de defusificación 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DRIANKOV1996"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzyProcess.png
+	width 40page%
+	height 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Proceso de un controlador difuso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
