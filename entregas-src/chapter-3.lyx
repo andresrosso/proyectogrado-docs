@@ -706,6 +706,18 @@ iento.
 Variables de Simulación
 \end_layout
 
+\begin_layout Standard
+El modelo de la realidad, en nuestro caso el edificio, es una representación
+ del sistema, sus componentes y la dinámica que este supone.
+ Este modelo puede tomar la forma de cualquier sistema real si se tienen
+ en cuenta las características comunes al sistema.
+ Las características identificadas pasan a ser parte del modelo computacional,
+ el cual puede ser manipulado según la necesidad de simlación.
+ En la siguiente sección se presentan las características del modelo identificad
+as, categorizadas según su naturaleza dinámica y los componentes a las que
+ pertenece.
+\end_layout
+
 \begin_layout Subsubsection
 Variables Independientes
 \end_layout

@@ -419,38 +419,6 @@ key "BANKS2000"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/modeloSimBANKS.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Modelo de simulación de BANKS
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Este modelo representa una versión simplificada del sistema real, permitiendo
  así, facilitar su estudio y análisis.
  Un edificio tiene características que varían en el tiempo, ejemplo de ellas
@@ -465,7 +433,7 @@ key "BANKS2000"
 
 \end_inset
 
-como se muestra en la figura 2.2.
+como se muestra en la figura 2.1.
 \end_layout
 
 \begin_layout Standard
@@ -498,6 +466,41 @@ Proceso de simulación de BANKS
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Pese a la gran variedad de modelos de simulación existentes todos estos
+ se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
+ se usará esta simplificación .
+\end_layout
+
+\begin_layout Enumerate
+Obtener observaciones básicas de una fuente de números aleatorios.
+ En la simulación de este trabajo es necesario generar los usuarios del
+ sistema y comportamientos dentro de el, esta generación estará basáda en
+ observaciones de la realidad identificada en otros trabajos académicos.
+\end_layout
+
+\begin_layout Enumerate
+Transformar las observaciones básicas de entradas al modelo, según las especific
+aciones del mismo.
+ Es necesario por lo tanto asignar a estos datos aleatorios un significado
+ real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
+ al sistema según la variable temporal de la simulación, o el piso al que
+ se dirije según el patrón de tráfico presente.
+\end_layout
+
+\begin_layout Enumerate
+Trasformar las entradas, a traves del modelo, en salidas.
+ Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
+ las salidas medidas del sistema.
+\end_layout
+
+\begin_layout Enumerate
+Calcular estadísticas a partir de salidas, para estimar las medidas de comportam
+iento.
+ Una vez corrida y finalizada la simulación es necesario medir estadísticamente
+ el desempeño del sistema.
 \end_layout
 
 \begin_layout Subsection
@@ -783,7 +786,7 @@ key "SIIKONEN1997"
 \end_layout
 
 \begin_layout Standard
-Debido a que existen diferentes tipos de edificios como son; hospitales,
+Debido a que existen diferentes tipos de edificios como son: hospitales,
  edificios de oficinas, universidades, edificios residenciales, se debe
  tener en cuenta que no es igual el tráfico existente dentro de ellos.
  Por ejemplo, en un edificio residencial existe un tráfico recurrente entre
@@ -1112,8 +1115,7 @@ Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
 Es común que los controladores para grupo de ascensor manejen los mismos
  criterios de optimización, los cuales recopilando todos los criterios vistos
  se pueden dividir en dos grupos: funcionamiento del sistema y servicio
- ofrecido al usuario.
- 
+ ofrecido al usuario, los cuales se explican a continuación 
 \end_layout
 
 \begin_layout Subsubsection

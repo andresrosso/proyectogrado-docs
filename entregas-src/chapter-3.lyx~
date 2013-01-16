@@ -470,11 +470,11 @@ Análisis Sistémico
 
 \begin_layout Standard
 Un sistema puede verse como un objeto en el cual interactúan variables de
- diferentes clases para producir señales observables denominadas; salidas.
+ diferentes clases para producir señales observables denominadas: salidas.
  Las señales externas también pueden afectar e influir en el comportamiento
- del sistema, pero estas señales son susceptibles de manipulación El sistema
- además, puede presentar perturbaciones que pueden ser clasificadas en observaci
-ones mesurables y aquellas que solamente pueden observarse.
+ del sistema, pero estas señales son susceptibles de manipulación.
+ El sistema además, puede presentar perturbaciones que pueden ser clasificadas
+ en observaciones mesurables y aquellas que solamente pueden observarse.
  Todas estas señales son fundamentales para poder determinar el modelo de
  un sistema.
 \end_layout
@@ -502,8 +502,8 @@ Componentes del Sistema
 \end_layout
 
 \begin_layout Standard
-Del análisis sistémico realizado de encontraron estos como componentes principal
-es.
+Del análisis sistémico realizado se encontraron los siguientes componentes
+ principales:
 \end_layout
 
 \begin_layout Itemize
@@ -553,7 +553,7 @@ Consideraciones de Diseño
 
 \begin_layout Standard
 Antes de diseñar el sistema se deben considerar algunas reglas básicas que
- condicionaran el diseño del simulador.
+ condicionaran el diseño del simulador: 
 \end_layout
 
 \begin_layout Itemize
@@ -607,102 +607,21 @@ key "AVERILL2000"
 .
 \end_layout
 
-\begin_layout Standard
-El diagrama siguiente ilustra el flujo que por lo general sigue una simulación
- de este tipo.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/procesoSimBANKS.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Proceso simulación Banks [BANKS2000]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Proceso General De La Simulación
-\end_layout
-
-\begin_layout Standard
-La simulación como metodología de análisis de sistemas está basada en la
- construcción de un modelo que describe el comportamiento del sistema 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "INSUA2000"
-
-\end_inset
-
-, en este caso implementado en un ordenador.
- 
-\end_layout
-
-\begin_layout Standard
-Pese a la gran variedad de modelos de simulación existentes todos estos
- se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
- se usará esta simplificación .
-\end_layout
-
-\begin_layout Enumerate
-Obtener observaciones básicas de una fuente de números aleatorios.
- En la simulación de este trabajo es necesario generar los usuarios del
- sistema y comportamientos dentro de el, esta generación estará basáda en
- observaciones de la realidad identificada en otros trabajos académicos.
-\end_layout
-
-\begin_layout Enumerate
-Transformar las observaciones básicas de entradas al modelo, según las especific
-aciones del mismo.
- Es necesario por lo tanto asignar a estos datos aleatorios un significado
- real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
- al sistema según la variable temporal de la simulación, o el piso al que
- se dirije según el patrón de tráfico presente.
-\end_layout
-
-\begin_layout Enumerate
-Trasformar las entradas, a traves del modelo, en salidas.
- Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
- las salidas medidas del sistema.
-\end_layout
-
-\begin_layout Enumerate
-Calcular estadísticas a partir de salidas, para estimar las medidas de comportam
-iento.
- Una vez corrida y finalizada la simulación es necesario medir estadísticamente
- el desempeño del sistema.
-\end_layout
-
 \begin_layout Subsection
 Variables de Simulación
+\end_layout
+
+\begin_layout Standard
+El modelo de la realidad, en nuestro caso el edificio, es una representación
+ del sistema, sus componentes y la dinámica que este supone.
+ Este modelo puede tomar la forma de cualquier sistema real si se tienen
+ en cuenta las características comunes al sistema.
+ Las características identificadas pasan a ser parte del modelo computacional,
+ el cual puede ser manipulado según la necesidad de simlación.
+ En la siguiente sección se presentan las características del modelo identificad
+as, categorizadas según su naturaleza dinámica y los componentes a las que
+ perteneces.
+ 
 \end_layout
 
 \begin_layout Subsubsection

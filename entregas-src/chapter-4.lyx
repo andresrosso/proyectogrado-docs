@@ -3142,6 +3142,47 @@ Dirección del elevador
  se obtiene del agente controlador de cabina.
 \end_layout
 
+\begin_layout Standard
+El entrenamiento de esta red neuronal se hace de manera supervisada, proveiendo
+ a la red de ejemplos de tiempos de viaje obtenidos en el simulador.
+ La evolución por épocas de la red neural con un coeficiente de aprendizaje
+ de 0.6 y un momentum de 0.1, se muestra a continuación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/rmse-tV.png
+	width 50page%
+	height 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Raiz del error cuadrático para el estimador Tiempo Viaje
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Arquitectura Red Estimador Tiempo de Espera
 \end_layout
@@ -3247,6 +3288,47 @@ Dirección del elevador
  se obtiene del agente controlador de cabina.
 \end_layout
 
+\begin_layout Standard
+Como en el caso anterior esta red neuronal en entrenada de manera supervisada
+ con ejemplos de tiempos de espera obtenidos en el simulador.
+ El coeficiente de aprendizaje de 0.6 y un momentum de 0.1, en la siguiente
+ figura se grafica la evolución en el aprendizaje.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/rmse-te.png
+	width 50page%
+	height 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Raiz del error cuadrático para el estimador Tiempo Espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 OBTENER ASCENSOR PARA LLAMADA
 \end_layout
@@ -3290,7 +3372,45 @@ Estimación Tiempo de Espera:
 \series default
  Representa la estimación del tiempo que requiere un ascensor para viajar
  desde su posición actual hasta el piso en el que se genera la llamada,
- este datos se obtiene del agente estimador tiempo de espera.
+ este datos se obtiene del agente estimador tiempo de espera.Esta entrada
+ está normalizada [0,1].
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzy-tespera.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Conjuntos Difusos Tiempo de Espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -3300,7 +3420,40 @@ Estimación Tiempo de Viaje:
 \series default
  Representa la estimación del tiempo que requiere un pasajero para ser trasnport
 ado de su piso origen a su piso destino.
+ Esta entrada está normalizada [0,1].
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzy-tviaje.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Conjuntos Difusos Tiempo de Viaje
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -3310,7 +3463,40 @@ Porcentaje de Ocupación del Elevador:
 \series default
  Porcentaje de ocupación de la cabina de ascensor, este dato se obtiene
  del agente Cabina de Ascensor.
+ Esta entrada está normalizada [0,1].
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzy-ocupacion.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Conjuntos Difusos Porcentaje de Ocupación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -3320,7 +3506,40 @@ Paradas en Piso Origen
 \series default
 : Determina que tantas llamadas tiene el ascensor asignadas para el piso
  origen de la llamada en cuestión.
+ Esta entrada está normalizada [0,1].
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzy-paradasPO.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Conjuntos Difusos Paradas en Piso Destino
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -3330,7 +3549,40 @@ Paradas en Piso Destino
 \series default
 : Determina que tantas llamadas tiene el ascensor asignadas para el piso
  destino de la llamada en cuestión.
+ Esta entrada está normalizada [0,1].
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzy-paradasPD.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Conjuntos Difusos Paradas en Piso Destino
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -3343,20 +3595,60 @@ La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
  muy baja.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzy-prioridad.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Salida Prioridad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Reglas de Inferencia Difusas Agente OBTENER ASCENSOR PARA LLAMADA
 \end_layout
 
 \begin_layout Standard
 Las reglas que determinan la prioridad de un ascensor para atender una llamada
- se presentan en la siguiente tabla.
+ son 23.
+ En estas reglas están plasmados los objetivos de control, cada una de estas
+ reglas tiene un peso asociado que puede ser modificado por el agente de
+ acuerdo al objetivo que tenga más importancia en el momento de la decisión.
+\end_layout
+
+\begin_layout Standard
+Estas reglas se toman de acuerdo a los factores que tiene más importancia
+ para cunplir con los objetivos de control.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular

@@ -143,6 +143,11 @@ customHeadersFooters
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch chapter-6
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -669,6 +674,25 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "chapter-5.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch chapter-6
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapter-6.lyx"
 
 \end_inset
 
