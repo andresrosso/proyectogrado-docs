@@ -43,7 +43,14 @@ git clone git@github.com:andresrosso/proyectogrado-docs.git
 	#*.lck
 	#tmp/
 	#bin/
+	
+#show differences
+git diff origin/master..HEAD --name-only
 
+#fetch downloads the latest from remote without trying to merge or rebase anything.
+git fetch --all
+#Then the git reset resets the master branch to what you just fetched.
+git reset --hard origin/master
 
 
 
