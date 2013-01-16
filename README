@@ -52,6 +52,10 @@ git fetch --all
 #Then the git reset resets the master branch to what you just fetched.
 git reset --hard origin/master
 
+#Update ignoring local modifications
+git reset --hard HEAD
+git pull
+
 
 
 

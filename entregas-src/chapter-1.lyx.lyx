@@ -4,30 +4,30 @@
 \begin_header
 \textclass scrbook
 \begin_preamble
-% Linkfläche für Querverweise vergrößern und automatisch benenne
+% increase link area for cross-references and autoname them
 \AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
 \newlength{\abc}
 \settowidth{\abc}{\space}
 \AtBeginDocument{%
-\addto\extrasngerman{
+\addto\extrasenglish{
  \renewcommand{\equationautorefname}{\hspace{-\abc}}
- \renewcommand{\sectionautorefname}{Kap.\negthinspace}
- \renewcommand{\subsectionautorefname}{Kap.\negthinspace}
- \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}
- \renewcommand{\figureautorefname}{Abb.\negthinspace}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Fig.\negthinspace}
  \renewcommand{\tableautorefname}{Tab.\negthinspace}
 }
 }
 
-% für den Fall, dass jemand die Bezeichnung "Gleichung" haben will
+% in case somebody want to have the label "Gleichung"
 %\renewcommand{\eqref}[1]{Gleichung~(\negthinspace\autoref{#1})}
 
-% Setzt den Link für Sprünge zu Gleitabbildungen
-% auf den Anfang des Gelitobjekts und nicht aufs Ende
+% put the link to figure floats to the beginning
+% of the figure and not to its end
 \usepackage[figure]{hypcap}
 
-% Die Seiten des Inhaltsverzeichnisses werden römisch numeriert,
-% ein PDF-Lesezeichen für das Inhaltsverzeichnis wird hinzugefügt
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
 \let\myTOC\tableofcontents
 \renewcommand\tableofcontents{%
   \frontmatter
@@ -46,11 +46,10 @@
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 
-%Vergrößert den Teil der Seite, in dem Gleitobjekte
-% unten angeordnet werden dürfen
+% increase the bottom float placement fraction
 \renewcommand{\bottomfraction}{0.5}
 
-% Vermeidet, dass Gleitobjekte vor ihrem Abschnitt gedruckt werden
+% avoid that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 \end_preamble
 \options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
@@ -60,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -138,6 +137,8 @@ customHeadersFooters
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -190,6 +191,8 @@ rightmark
 status collapsed
 
 \begin_layout Plain Layout
+
+\lang english
 Enable page headers and add the chapter to the header line.
 \end_layout
 
@@ -203,6 +206,8 @@ Enable page headers and add the chapter to the header line.
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -228,6 +233,8 @@ leftmark
 status open
 
 \begin_layout Plain Layout
+
+\lang english
 \begin_inset ERT
 status collapsed
 
@@ -279,11 +286,175 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Apendix
+Introducción
+\end_layout
+
+\begin_layout Standard
+El uso de las construcciones verticales experimenta un fenómeno de expansión
+ debido al gran precio del terreno y la densidad poblacional de las grandes
+ urbes.
+ Sin embargo este tipo de construcciones trae el problema de transportar
+ eficientemente el gran número de personas visitantes o residentes de la
+ edificación.
+\end_layout
+
+\begin_layout Standard
+Para el transporte en edificaciones de considerable altura como los rascacielos
+ no existe un medio más adecuando que las cabinas de ascensor, pero su capacidad
+ reducida, el alto flujo de pasajeros en horas pico y la considerable distancia
+ que deben recorrer los ascensores hace que el sistema tienda a colapsar,
+ elevando el tiempo promedio que una persona debe esperar para ser transportada
+ o llegar a su destino.
+\end_layout
+
+\begin_layout Standard
+Estos factores hacen que los sistemas de control tradicional resulten ineficient
+es para cubrir la necesidad de transporte de pasajeros.
+ Es por esto que grandes multinacionales constructoras de elevadores como
+ por ejemplo MITSUBISHI y OTIS entre otras, gastan millones de dólares en
+ investigaciones tendientes a solventar esta creciente necesidad, la investigaci
+ón aislada sobre este campo es reducida y la información disponible de esta
+ área es también escasa.
+\end_layout
+
+\begin_layout Standard
+El presente trabajo de grado tiene como finalidad ofrecer un nuevo mecanismo
+ de control para grupo de elevadores que mejore el rendimiento en el transporte
+ de pasajeros en edificaciones de gran altura comparado con otros mecanismos
+ de control convencionales.
+ Se ofrece además un entorno de simulación de código abierto -el único parametri
+zable en internet- para el fenómeno estudiado.
+ Lo cual permite que la comunidad académica investigue sobre nuevos algoritmos
+ de control para grupos de elevadores sin necesidad de tener que construir
+ para este fin un simulador.
 \end_layout
 
 \begin_layout Section
-Código fuente
+Definición del Problema
+\end_layout
+
+\begin_layout Standard
+En un sistema de transporte vertical de un solo elevador, este se encarga
+ de atender todas las llamadas que se generen en el sistema.
+ En el caso de varios elevadores el sistema de control debe tener en cuenta
+ las condiciones de todos los elevadores para asignar aquel que pueda atender
+ más eficientemente la llamada.
+ 
+\end_layout
+
+\begin_layout Standard
+Debido a la necesidad de mejorar la eficiencia en el trasporte de personas
+ sobre edificaciones de gran altura, compañías líderes en esta área, han
+ presentado diversos técnicas de control 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN-SIIKONEN-2008,SIIKONEN2004"
+
+\end_inset
+
+que muestran una significativa mejora en el tiempo promedio de servicio
+ a los pasajeros.
+ Sus avances y nuevos algoritmos de control para grupo de elevadores son
+ verificados en simuladores construidos
+\shape italic
+ ad-hoc
+\shape default
+ que reproducen con precisión el tráfico de pasajeros y que miden con exactitud
+ los tiempos invertidos por los usuarios para movilizarse dentro de la edificaci
+ón.
+ Ambientes de simulación como OtisPlan de Otis Corporation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OTISPLAN_Brochure"
+
+\end_inset
+
+, Building Traffic Simulator (BTS) de la empresa finlandesa KONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN_BTS2004"
+
+\end_inset
+
+, Elevate desarrollado por Peter Research ltd, se han logrado dado los altos
+ recursos fiancieros que las compañias invierten en la investigación.
+\end_layout
+
+\begin_layout Standard
+Estas herramientas de simulación sofisticadas tienen en común que son propietari
+as, en el caso de BTS y OtisPlan su uso está restringido a personal de la
+ compañía únicamente y para el caso de Elevate existe una licencia comercial
+ de usuario único con un costo de 2900 dolares 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ElevateLicence"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+Objetivos
+\end_layout
+
+\begin_layout Standard
+El trabajo presentado es un aporte a la academia en el estudio del tráfico
+ vertical, promueve además la investigación en esta área al ofrecer un simulador
+ de código abierto.
+ Lo objetivos planteados para siguiente trabajo se enuncian a continuación.
+\end_layout
+
+\begin_layout Subsection
+Objetivo General 
+\end_layout
+
+\begin_layout Standard
+Diseñar un método distribuido de control para asignar de manera eficiente
+ el tráfico de personas presente en una edificación, haciendo uso de técnicas
+ de inteligencia artificial (I.A.).
+\end_layout
+
+\begin_layout Subsection
+Objetivos Específicos 
+\end_layout
+
+\begin_layout Enumerate
+Modelar matemáticamente el problema de tráfico presentado en las edificaciones
+ de gran altura.
+\end_layout
+
+\begin_layout Enumerate
+Diseño del método distribuido de control para la asignación de ascensores,
+ haciendo uso de técnicas de control inteligente.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Evaluar la técnica de control desarrollada y comparar su eficiencia respecto
+ a una técnica tradicional en un ambiente simulado.
+ 
+\end_layout
+
+\begin_layout Section
+Contenido del Libro
+\end_layout
+
+\begin_layout Standard
+El libro está organizado ....
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Esto parte del libro se escribe al final.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -348,41 +519,6 @@ Patrón de tráfico: es la caracterización del comportamiento estocástico
  que se presenta en el arribo de pasajeros al sistema.
  Para este trabajo se consideran principalmente cuatro patrones: subida
  -uppeak-, entre pisos -interfloor-, bajada -downpeak-.
-\end_layout
-
-\begin_layout Section
-The next section
-\end_layout
-
-\begin_layout Standard
-\begin_inset Branch NoChildDocument
-status collapsed
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "biblio/Plasma"
-options "biblio/alpha"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "custom"
-width "2.5cm"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body

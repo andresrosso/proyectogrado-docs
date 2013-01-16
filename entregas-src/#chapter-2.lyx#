@@ -286,152 +286,104 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Marco Teórico 
+Marco Teórico
+\end_layout
+
+\begin_layout Standard
+En esta sección se hará una revisión de las técnicas de simulación existentes
+ y cuales han sido utilizadas en el presente trabajo.
+ Así mismo se realizará un recorrido por las técnicas de Inteligencia Artificial
+ y su uso en el control para grupos de elevadores.
+ 
 \end_layout
 
 \begin_layout Section
-Edificaciones de Gran altura
+Controladores
 \end_layout
 
 \begin_layout Standard
-Actualmente las edificaciones de gran altura enfrentan el problema de transporta
-r satisfactoriamente a los usuarios entre los pisos.
- Este transporte tiende a complicarse debido a la gran demanda que tiene
- el sistema y la considerable distancia que deben recorrer los ascensores.
- Entre los factores más importantes que impulsan el aumento de construcciones
- de gran altura están:
+A lo largo de la historia se han desarrollado diferentes métodos de control,
+ entre los principales se encuentran: 
+\end_layout
+
+\begin_layout Subsection
+Controlador Basado en Lógica Difusa (CBLD)
 \end_layout
 
 \begin_layout Standard
-• Escasez de terrenos disponibles.
+El control difuso puede tratar las imposiciones de los sistemas para dar
+ soluciones en condiciones más reales y menos ideales, además es posible
+ mejorar aún más el rendimiento, optimizando los conjuntos difusos y la
+ ponderación de las reglas.
+ 
+\end_layout
+
+\begin_layout Subsection
+Controlador Basado en Optimización Robusta (CBOR)
 \end_layout
 
 \begin_layout Standard
-• Alto precio de los terrenos.
+En los modelos de programación matemática aplicados a fenómenos reales se
+ suele suponer que los datos que intervienen son conocidos y constantes,
+ lo que permite abordar su planteamiento y resolución.
+ Sin embargo, esta hipótesis de constancia no suele ser cierta puesto que
+ normalmente los datos pueden ser erróneos o incompletos [CANOSMJ], para
+ lo cual la CBOR es muy buena opción ya que garantiza convergencia al óptimo,
+ además de ello es tolerante a pequeñas variaciones en las condiciones iniciales
+ de optimización, entra las desventajas se encuentra que la implementación
+ computacional de este algoritmo es muy compleja y el tiempo de ejecución
+ será muy pobre finalmente la eficiencia de la solución obtenida con este
+ método es alta, más es costoso su tiempo de ejecución.
+ 
+\end_layout
+
+\begin_layout Subsection
+Optimización Por Colonia De Hormigas (OCH)
 \end_layout
 
 \begin_layout Standard
-• Densidad poblacional.
+Los algoritmos de optimización por hormigas son buenos para resolver problemas
+ de optimización combinacionales.
+ Tienen gran velocidad de convergencia para encontrar la solución óptima.
+ Consiste en un mecanismo control basado en el mejor camino -menos costo-
+ que un enjambre de hormigas pueda encontrar.
+ Los resultados de la simulación muestran que la eficiencia del controlador
+ es mayor a los otros dos métodos presentados.
+ La principal desventaja es que al ser tan elevado el tiempo de respuesta
+ del algoritmo es difícil implementarlo en la realidad ya que la respuesta
+ debería ser casi inmediata.
+ 
+\end_layout
+
+\begin_layout Subsection
+Controlador Híbrido Para Grupo De Ascensores (CHGA)
 \end_layout
 
 \begin_layout Standard
-• Nuevas tendencias.
+Los sistemas de elevadores operan sobre un espacio altamente dimensional
+ tanto en espacio continuo como discreto.
+ El estado de este no es observable fácilmente, por lo tanto la solución
+ de control no puede usar técnicas de optimización tradicionales.
+ En esta subsección se presenta un método de control híbrido -Red Neuronal
+ y PSO-.
+ La convergencia a la solución óptima es lenta, sin embargo al usar una
+ red neuronal de base radial se obtiene un mejor resultado.
+ Tiene la ventaja que una vez entrenada la red neuronal el desempeño en
+ producción irá a ser mejor.
+ 
 \end_layout
 
-\begin_layout Standard
-Las edificaciones de gran altura existen gracias a la eficiencia de los
- sistemas de elevadores y no vice versa.
- En un contexto funcional el sistema de elevadores es la arteria principal
- del edificio.
+\begin_layout Subsection
+Control Mediante aprendizaje reforzado (CMAF).
  
 \end_layout
 
 \begin_layout Standard
-Fue después que Elijah Graves Otis inventó el sistema de gobierno de velocidad
- para elevadores y el sistema seguro de frenado para elevadores en el año
- de 1857 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BARNEY2003"
-
-\end_inset
-
-, que los sistemas de elevadores se convirtieron en una opción viable para
- transportar persona.
- Este fue un factor determinante para que la altura en las construcciones
- dejara de ser un factor limitante.
+Inspirado por el comportamiento psicológico de los individuos el aprendizaje
+ reforzado permite a una máquina aprender por medio de recompensas.
+ Este método pertenece a los métodos no supervisados, por lo tanto no se
+ hace necesario presentarle a la máquina la respuesta correcta.
  
-\end_layout
-
-\begin_layout Standard
-La primera construcción de gran altura que usaba el sistema de Otis fue
- instalada en la tienda Haughwout&Company en New York.
- Los sistemas de elevadores para este entonces funcionaban con bombas de
- agua presurizada y grandes motores, uno de estos sistemas fue presentado
- en la feria de exposición universal de París que debía mover la cabina
- del elevador sobre los 321 metros que constituyen la torre Eiffel.
-\end_layout
-
-\begin_layout Standard
-Para el año de 1880 Werner von Siemens introdujo la utilización de fuentes
- eléctricas para los sistemas de elevadores.
- El desarrollo de la energía eléctrica le proporcionó un nuevo ímpetu en
- el uso de construcciones de gran altura.
-\end_layout
-
-\begin_layout Standard
-A partir de entonces las construcciones eran cada vez más altas, y en países
- como Estados Unidos y Asia se marcaba una clara tendencia a preferir este
- tipo de edificaciones en ciudades con alta densidad poblacional.
- Un ejemplo de estas edificaciones son la torre Taipei 101 con una altura
- de 509 metros o la torre Burj Khalifa en Dubai con 828 metros de altura
- y 163 pisos, siendo hasta el momento la construcción habitable más alta
- del mundo 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "EMPORIS2012"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-La torre Taipei 101 cuenta con cincuenta elevadores de alta velocidad, con
- un costo aproximado de $85 millones de dolares.
- La velocidad de ascenso de estos elevadores de 16 m/s, es decir aproximadamente
- 60 km/h.
- Esto le permite mantener un servicio dentro de los límites de servicio
- considerados aceptables para el servicio de pasajeros de sistemas de elevadores
-, en la siguiente tabla se muestra el resultado de un estudio orientado
- al servicio 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "JOCHEMWIT"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/aceptanceInWT.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Tiempo de espera aceptado por tipo de edificación
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -454,7 +406,8 @@ key "BANKS2000"
 \begin_layout Standard
 El proceso de simulación comprende tres elementos fundamentales: Sistema
  real, Modelo, Ordenador.
- Estos elementos están conectados como se aprecia en la siguiente figura.
+ Estos elementos están conectados como se aprecia en la siguiente figura
+ 2.1.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -469,7 +422,7 @@ key "BANKS2000"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -512,14 +465,14 @@ key "BANKS2000"
 
 \end_inset
 
-.
+como se muestra en la figura 2.2.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -549,6 +502,14 @@ Proceso de simulación de BANKS
 
 \begin_layout Subsection
 Técnicas de Simulación
+\end_layout
+
+\begin_layout Standard
+De acuerdo a la naturaleza del sistema en estudio y los objetivos de la
+ simulación se hace necesario categorizar la simulación.
+ En la siguiente sección se explicaran las diferentes técnicas de simulación
+ enunciando sus ventajas.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -649,8 +610,8 @@ El sistema puede tener un comportamiento estocástico debido a que existen
  componentes aleatorios.
  Una de las variables aleatorias que podemos encontrar es la tasa de arribo
  en la cola de servicio, por lo general los sistemas a simular son estocásticos
- pero en alguna ocasiones como en algunos sistemas físicos los fenómenos
- simular son determinísticos, podríamos hablar de un circuito electrónico.
+ pero en algunas ocasiones, como en algunos sistemas físicos los fenómenos
+ a simular son determinísticos, podríamos hablar de un circuito electrónico.
 \end_layout
 
 \begin_layout Section
@@ -715,7 +676,7 @@ key "ElevateLicence"
 \end_layout
 
 \begin_layout Standard
-Los simuladores de tráfico vertical son útiles no solamente para verificar
+Los simuladores de tráfico vertical son útiles, no solamente para verificar
  algoritmos de control, estos también son usados para determinar el número
  de elevadores necesarios para servir en determinada edificación.
  Así mismo el simulador es útil para recrear situaciones de emergencia en
@@ -725,7 +686,7 @@ Los simuladores de tráfico vertical son útiles no solamente para verificar
  un componente fundamental de cualquier edificación.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Tráfico Vertical
 \end_layout
 
@@ -848,7 +809,7 @@ key "SIIKONEN2001"
 \series bold
 Entrada 
 \series default
--incoming-: se refiere al tramo horario coincidente con el acceso al edificio,
+(incoming): se refiere al tramo horario coincidente con el acceso al edificio,
  y por tanto se producen viajes de subida desde la planta baja.
  
 \end_layout
@@ -858,13 +819,9 @@ Entrada
 \series bold
 Bajada 
 \series default
--outgoing
-\series bold
--
-\series default
-: se refiere al tramo horario coincidente con el salida del edificio, y
- por tanto se producen viajes de bajada desde las diferentes plantas a los
- pisos más bajos.
+(outgoing): se refiere al tramo horario coincidente con el salida del edificio,
+ y por tanto se producen viajes de bajada desde las diferentes plantas a
+ los pisos más bajos.
 \end_layout
 
 \begin_layout Itemize
@@ -872,7 +829,7 @@ Bajada
 \series bold
 Entre pisos 
 \series default
--interfloor-: se refiere al resto de tramos horarios donde existe la probabilida
+(interfloor): se refiere al resto de tramos horarios donde existe la probabilida
 d de viajes entre plantas (este patrón sólo se produciría en edificios destinado
 s a uso profesional y en ese tramo horario específico).
 \end_layout
@@ -978,12 +935,7 @@ La investigación de nuevos modelos de control es poco tratada en nuestro
  Las técnicas de control no-tradicionales para asignar las llamadas de un
  grupo de elevadores, empezaron a aparecer en los años 90 y fueron desarrolladas
  por empresas privadas que contaban con la colaboración de centros de investigac
-ión y universidades.
- 
-\end_layout
-
-\begin_layout Standard
-Se pueden encontrar patentes registradas desde la época de los 80
+ión y universidades
 \begin_inset CommandInset citation
 LatexCommand cite
 key "MACDONALD1988,THANGAVELU1989"
@@ -991,7 +943,11 @@ key "MACDONALD1988,THANGAVELU1989"
 \end_inset
 
 .
- La colaboración universidad-empresas para esta materia ha sido muy activa.
+ 
+\end_layout
+
+\begin_layout Standard
+La colaboración universidad-empresas para esta materia ha sido muy activa.
  En España por ejemplo se realiza investigación orientada al mejor funcionamient
 o de estos sistemas mancomunadamente entre la Universidad de Sevilla y MAC
  PUAR S.A.
@@ -1025,7 +981,8 @@ key "SIIKONEN1998"
 
 \begin_layout Standard
 La arquitectura típica de un sistema de control para grupo de elevadores
- se presenta en la siguiente figura.
+ se presenta en la Figura No.
+ 2.4.
  El controlador de grupo de elevadores es el cerebro del sistema, este sistema
  asigna las llamadas a cada controlador de elevador optimizando la función
  de costo.
@@ -1153,8 +1110,10 @@ Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
 
 \begin_layout Standard
 Es común que los controladores para grupo de ascensor manejen los mismos
- criterios de optimización, recopilando todos los criterios vistos se pueden
- dividir en dos grupos.
+ criterios de optimización, los cuales recopilando todos los criterios vistos
+ se pueden dividir en dos grupos: funcionamiento del sistema y servicio
+ ofrecido al usuario.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1640,7 +1599,14 @@ Agente
 , un agente es un sistema computacional autónomo que ejecuta acciones con
  el fin de cumplir sus objetivos.
  Está inmerso en un ambiente dado, del cual obtiene información mediante
- y al cual puede modificar mediante sus acciones .
+ y al cual puede modificar mediante sus acciones 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WEISS1999"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -1651,7 +1617,15 @@ Sistema Multiagente
 \series default
 , se define como una colección de agentes racionales y autónomos, insertos
  en un ambiente en común, capaces de coordinar su conocimiento, objetivos,
- habilidades y estrategias a fin de resolver un cierto problema.
+ habilidades y estrategias a fin de resolver un cierto problema
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WEISS1999"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1660,7 +1634,15 @@ Sistema Multiagente
 Proactividad
 \series default
 , es la capacidad de tomar la iniciativa para realizar las acciones necesarias
- para cumplir con los objetivos para los que son diseñados.
+ para cumplir con los objetivos para los que son diseñados
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1668,14 +1650,198 @@ Proactividad
 \series bold
 Capacidad de reacción
 \series default
-: A partir de sus sensores, un agente debe estar en la capacidad de responder
- a los estímulos del ambiente con las respuestas adecuadas y en el tiempo
- adecuado, de forma activa.
- Habilidades sociales: Un agente inteligente debe ser capaz de interactuar
- con otros agentes, inclusive humanos cuando es necesario para cumplir con
- sus objetivos.
- Las dos habilidades básicas son las habilidades de cooperación y de negociación.
- Es mucho más complejo que el simple intercambio de bits.
+: es la capacidad de responder a los estímulos del ambiente con las respuestas
+ adecuadas y en el tiempo adecuado, de forma activa
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Habilidades sociales
+\series default
+: es la habilidad de interactuar con otros agentes, inclusive humanos cuando
+ es necesario para cumplir con sus objetivos.
+ Las dos habilidades básicas son las habilidades de cooperación y de negociación
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+LÓGICA DIFUSA
+\end_layout
+
+\begin_layout Paragraph*
+INTRODUCCIÓN 
+\end_layout
+
+\begin_layout Standard
+La mayoría de los fenómenos que encontramos cada día son imprecisos, es
+ decir, tienen implícito un cierto grado de difusidad en la descripción
+ de su naturaleza.
+ Esta imprecisión puede estar asociada con su forma, posición, momento,
+ color, textura, o incluso en la semántica que describe lo que son.
+ 
+\end_layout
+
+\begin_layout Standard
+En muchos casos el mismo concepto puede tener diferentes grados de imprecisión
+ en diferentes contextos o tiempo.
+ Un día cálido en invierno no es exactamente lo mismo que un día cálido
+ en primavera.
+ La definición exacta de cuando la temperatura va de templada a caliente
+ es imprecisa -no podemos identificar un punto simple de templado, así que
+ emigramos a un simple grado, la temperatura es ahora considerada caliente.
+ Este tipo de imprecisión o difusidad asociado continuamente a los fenómenos
+ es común en todos los campos de estudio: sociología, física, biología,
+ finanzas, ingeniería, oceanografía, psicología, etc 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CALVINO2003"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La idea de una lógica multi-valuada ha estado presente desde principios
+ del siglo XX.
+ Charles Sanders Pierce (1839-1914) fue uno de los primeros pensadores que
+ se interesaron en la vaguedad o incertidumbre, él no creía en la separación
+ entre verdad y falsedad y postuló que la incertidumbre era un grado entre
+ estos dos estados.
+ Pero fue Lukasiewicz, quien dio el primer paso hacia la definición formal
+ de la incertidumbre, al introducir en 1920 la idea de una lógica tri-valuada
+ basada en verdadero, posible y falso.
+ 
+\end_layout
+
+\begin_layout Standard
+En 1965, Lotfi Zadeh, profesor de la Universidad de California en Berkley,
+ presentó una publicación en donde formalmente definía la teoría de conjuntos
+ difusos a partir de la cual derivó la lógica difusa.
+ Zadeh extendió la clasificación lógico-Aristotélica del "Todo o Nada",
+ con una lógica que permite grados entre verdad y falsedad.
+ Esta generalización de la lógica clásica, hace que la pertenencia de un
+ objeto a un conjunto no se restrinja a 0 o 1, sino que pueda tomar valores
+ intermedios, permitiendo que los valores de verdad de una proposición sean
+ un número que pertenece al intervalo [0, 1], esta generalización hace posible
+ realizar razonamiento aproximado.
+ Permitiendo acercar la matemática al lenguaje impreciso del hombre, que
+ contiene términos vagos como “mucho”, “poco”, “tibio”, etc.
+ Usualmente estos términos no tienen cabida en la lógica y la matemática
+ convencional 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DRIANKOV1996"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Estructura Básica De Un Controlador Difuso
+\end_layout
+
+\begin_layout Standard
+Un controlador basado en lógica difusa realiza tres acciones básicas.
+ La primera, corresponde al procedimiento denominado fuzificar, que implica
+ el asignar un valor lingüístico a una variable utilizando funciones de
+ membresía.
+ La fusisficación convierte el valor real de una variable de entrada a un
+ valor difuso, que podrá ser manipulado en el bloque de base de reglas de
+ inferencia.
+ 
+\end_layout
+
+\begin_layout Standard
+La segunda, corresponde a la inferencia lógica que consiste en definir las
+ reglas del tipo Si - Entonces para evaluar las variables lingüísticas.
+ La base de reglas almacena el conocimiento en forma de un conjunto de reglas,
+ que contienen el conocimiento heurístico y cualitativo en el que se basarán
+ las acciones de control.
+ El mecanismo de inferencia, se encarga de evaluar las reglas e infiere
+ una conclusión que se convertirá en la acción de control que se pasará
+ a través del módulo de defusificación.
+\end_layout
+
+\begin_layout Standard
+La tercera, se denomina defuzificar, que consiste en normalizar un valor
+ difuso a su equivalente en salida de control nítida.
+ El proceso de defusificación, convierte la variable difusa que se obtuvo
+ como salida en el bloque del mecanismo de inferencia, a un valor real.
+ Este valor real o nítido será la acción de control que se aplicará al proceso
+ de asignación de elevadores en el controlador propuesto.
+\end_layout
+
+\begin_layout Standard
+Básicamente, se debe ver el control difuso como un tomador de decisiones
+ artificial que opera en un sistema de lazo cerrado en tiempo real.
+ La siguiente figura muestra los componentes principales de un controlador
+ difuso, a saber: interfaz de fusificación, base de conocimiento, motor
+ de inferencia e interfaz de defusificación 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DRIANKOV1996"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzyProcess.png
+	width 40page%
+	height 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Proceso de un controlador difuso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

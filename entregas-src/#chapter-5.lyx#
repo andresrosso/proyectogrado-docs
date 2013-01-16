@@ -296,58 +296,19 @@ key "STONE2000"
  
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/modeloSimBANKS.png
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang spanish
-Falta incluir la gráfica
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\lang spanish
-Modelo simulación, flujo Banks [BANKS2000]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Descripción General De Los Agentes
 \end_layout
 
 \begin_layout Standard
-De
+Debido a la complejidad del sistema simulado, se hace importante el modelado
+ de las entidades por medio de agentes.
+ Estos agentes interactúan entre ellos para cooperar y ofrecer un mejor
+ servicio.
+\end_layout
+
+\begin_layout Standard
+Hay agentes que simplemente ofrecen funcionalidad de dinámica 
 \end_layout
 
 \begin_layout Subsubsection
@@ -4142,10 +4103,6 @@ Tabla reglas de inferencia
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 

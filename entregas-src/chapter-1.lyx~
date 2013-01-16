@@ -298,8 +298,7 @@ El uso de las construcciones verticales experimenta un fenómeno de expansión
 
 \begin_layout Standard
 El incremento de este tipo de construcciones trae el problema de transportar
- eficientemente el gran número de personas visitantes o residente de la
- edificación.
+ eficientemente el gran número de residentes o visitantes de la edificación.
  Para el transporte en edificios de gran altura no existe un medio más adecuando
  que las cabinas de ascensor, pero su capacidad reducida, el alto flujo
  de pasajeros en horas pico y la considerable distancia que deben recorrer
@@ -323,11 +322,10 @@ El presente trabajo de grado tiene como finalidad ofrecer un nuevo mecanismo
  de control para grupo de elevadores que mejore el rendimiento en el transporte
  de pasajeros en edificaciones de gran altura comparado con otros mecanismos
  de control convencionales.
- Se ofrece además un entorno de simulación de código abierto -el único parametri
-zable en internet- para el fenómeno estudiado.
- Lo cual permite que la comunidad académica investigue sobre nuevos algoritmos
- de control para grupos de elevadores sin necesidad de tener que construir
- para este fin un simulador.
+ Se ofrece además un entorno de simulación de código abierto para el fenómeno
+ estudiado; lo cual permite que la comunidad académica investigue sobre
+ nuevos algoritmos de control para grupos de elevadores sin necesidad de
+ tener que construir para este fin un simulador.
 \end_layout
 
 \begin_layout Section
@@ -339,22 +337,21 @@ En un sistema de transporte vertical de un solo elevador, este se encarga
  de atender todas las llamadas que se generen en el sistema.
  En el caso de varios elevadores el sistema de control debe tener en cuenta
  las condiciones de todos los elevadores para asignar aquel que pueda atender
- en mejor medida la llamada.
+ más eficientemente la llamada.
  
 \end_layout
 
 \begin_layout Standard
-Debido a la importancia de transportar eficientemente las personas en edificacio
-nes de gran altura las grandes compañías líderes en esta área, han presentado
- diversos algoritmos de control 
+Debido a la necesidad de mejorar la eficiencia en el trasporte de personas
+ sobre edificaciones de gran altura, grandes compañías líderes en esta área,
+ han presentado diversos técnicas de control 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "HAKONEN-SIIKONEN-2008,SIIKONEN2004"
 
 \end_inset
 
-que presentan una eficacia mayor medida en tiempo se servicio promedio de
- pasajeros.
+que presentan mejora mayor medida en tiempo se servicio promedio de pasajeros.
  Estas compañías cuentan con los recursos financieros para investigación
  bastante altos.
  Sus avances y nuevos algoritmos de control para grupo de elevadores son
