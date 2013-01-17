@@ -60,30 +60,368 @@
 
 \begin_body
 
-\begin_layout Subsection
-
-\lang spanish
-Variables de Simulación
+\begin_layout Section
+Sistemas Multi Agente
 \end_layout
 
 \begin_layout Standard
+Un Sistema Multiagente (SMA) es un sistema compuesto por diversos agentes
+ que resuelve una tarea coordinado el funcionamiento de estos.
+ Un sistema multiagente se puede ver como una red de resolvedores de problemas
+ débilmente acoplados que trabajan juntos para resolver problemas que están
+ más allá de las capacidades individuales o conocimiento de cualquiera de
+ ellos , [Durfee and Lesser, 1989].
+ Cuando la tarea a resolver por el SMA es una tarea de toma de decisión,
+ en la que el sistema responde en su conjunto con una única decisión, al
+ sistema se le denomina Sistema de Decisión MultiAgente (SDMA).
+ En esta sección se presentarán los SMA que resuelven tareas que no son
+ de toma de decisión propiamente dicha y que se consideran relevantes para
+ el trabajo que se presenta en los próximos
+\end_layout
 
-\lang spanish
-El modelo de la realidad, en nuestro caso el edificio, es una representación
- del sistema, sus componentes y la dinámica que este supone.
- Este modelo puede tomar la forma de cualquier sistema real si se tienen
- en cuenta las características comunes al sistema.
- Las características identificadas pasan a ser parte del modelo computacional,
- el cual puede ser manipulado según la necesidad de simlación.
- En la siguiente sección se presentan las características del modelo identificad
-as, categorizadas según su naturaleza dinámica y los componentes a las que
- perteneces.
+\begin_layout Standard
+Un agente es un componente de software que tiene autonomía y flexibilidad
+ en su funcionamiento sobre un medio ambiente en particular.
+ Este medio ambiente por lo general está habitado por otros agentes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ En un sistema multi agente (MAS), cada agente actúa individualmente o en
+ cooperación con otros agentes para conseguir los objetivos trazados.
+ 
+\end_layout
+
+\begin_layout Standard
+Flexible en el contexto MAS significa, que el agente es: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Reactivo
+\series default
+, reacciona al entorno en el cual se encuentra.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pro-activo
+\series default
+, es capaz de cumplir su propio plan, tienen un carácter emprendedor.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Social
+\series default
+, es capaz de comunicarse con otros agentes a través de algún lenguaje común.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Racionalidad
+\series default
+, un agente puede razonar acerca de datos percibidos a fin de calcular una
+ solución óptima.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Adaptabilidad
+\series default
+, esta característica está relacionada con el aprendizaje que un agente
+ puede lograr y con su capacidad para cambiar su propio comportamiento basado
+ en este aprendizaje.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Movilidad
+\series default
+, es la capacidad de un agente para moverse a través de una red.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Veracidad
+\series default
+, un agente no puede comunicar información falsa de manera deliberada.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Benevolencia
+\series default
+, un agente está dispuesto a ayudar a otros agentes si esto no está en contra
+ de sus propios objetivos.
+\end_layout
+
+\begin_layout Paragraph
+Conceptos Básicos
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Agente
+\series default
+, un agente es un sistema computacional autónomo que ejecuta acciones con
+ el fin de cumplir sus objetivos.
+ Está inmerso en un ambiente dado, del cual obtiene información mediante
+ y al cual puede modificar mediante sus acciones 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WEISS1999"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sistema Multiagente
+\series default
+, se define como una colección de agentes racionales y autónomos, insertos
+ en un ambiente en común, capaces de coordinar su conocimiento, objetivos,
+ habilidades y estrategias a fin de resolver un cierto problema
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WEISS1999"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Proactividad
+\series default
+, es la capacidad de tomar la iniciativa para realizar las acciones necesarias
+ para cumplir con los objetivos para los que son diseñados
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Capacidad de reacción
+\series default
+: es la capacidad de responder a los estímulos del ambiente con las respuestas
+ adecuadas y en el tiempo adecuado, de forma activa
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Habilidades sociales
+\series default
+: es la habilidad de interactuar con otros agentes, inclusive humanos cuando
+ es necesario para cumplir con sus objetivos.
+ Las dos habilidades básicas son las habilidades de cooperación y de negociación
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WOOLDRIDGE1995"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
+LÓGICA DIFUSA
+\end_layout
+
+\begin_layout Paragraph*
+INTRODUCCIÓN 
+\end_layout
+
+\begin_layout Standard
+La mayoría de los fenómenos que encontramos cada día son imprecisos, es
+ decir, tienen implícito un cierto grado de difusidad en la descripción
+ de su naturaleza.
+ Esta imprecisión puede estar asociada con su forma, posición, momento,
+ color, textura, o incluso en la semántica que describe lo que son.
+ 
+\end_layout
+
+\begin_layout Standard
+En muchos casos el mismo concepto puede tener diferentes grados de imprecisión
+ en diferentes contextos o tiempo.
+ Un día cálido en invierno no es exactamente lo mismo que un día cálido
+ en primavera.
+ La definición exacta de cuando la temperatura va de templada a caliente
+ es imprecisa -no podemos identificar un punto simple de templado, así que
+ emigramos a un simple grado, la temperatura es ahora considerada caliente.
+ Este tipo de imprecisión o difusidad asociado continuamente a los fenómenos
+ es común en todos los campos de estudio: sociología, física, biología,
+ finanzas, ingeniería, oceanografía, psicología, etc 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CALVINO2003"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La idea de una lógica multi-valuada ha estado presente desde principios
+ del siglo XX.
+ Charles Sanders Pierce (1839-1914) fue uno de los primeros pensadores que
+ se interesaron en la vaguedad o incertidumbre, él no creía en la separación
+ entre verdad y falsedad y postuló que la incertidumbre era un grado entre
+ estos dos estados.
+ Pero fue Lukasiewicz, quien dio el primer paso hacia la definición formal
+ de la incertidumbre, al introducir en 1920 la idea de una lógica tri-valuada
+ basada en verdadero, posible y falso.
+ 
+\end_layout
+
+\begin_layout Standard
+En 1965, Lotfi Zadeh, profesor de la Universidad de California en Berkley,
+ presentó una publicación en donde formalmente definía la teoría de conjuntos
+ difusos a partir de la cual derivó la lógica difusa.
+ Zadeh extendió la clasificación lógico-Aristotélica del "Todo o Nada",
+ con una lógica que permite grados entre verdad y falsedad.
+ Esta generalización de la lógica clásica, hace que la pertenencia de un
+ objeto a un conjunto no se restrinja a 0 o 1, sino que pueda tomar valores
+ intermedios, permitiendo que los valores de verdad de una proposición sean
+ un número que pertenece al intervalo [0, 1], esta generalización hace posible
+ realizar razonamiento aproximado.
+ Permitiendo acercar la matemática al lenguaje impreciso del hombre, que
+ contiene términos vagos como “mucho”, “poco”, “tibio”, etc.
+ Usualmente estos términos no tienen cabida en la lógica y la matemática
+ convencional 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DRIANKOV1996"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Estructura Básica De Un Controlador Difuso
+\end_layout
+
+\begin_layout Standard
+Un controlador basado en lógica difusa realiza tres acciones básicas.
+ La primera, corresponde al procedimiento denominado fuzificar, que implica
+ el asignar un valor lingüístico a una variable utilizando funciones de
+ membresía.
+ La fusisficación convierte el valor real de una variable de entrada a un
+ valor difuso, que podrá ser manipulado en el bloque de base de reglas de
+ inferencia.
+ 
+\end_layout
+
+\begin_layout Standard
+La segunda, corresponde a la inferencia lógica que consiste en definir las
+ reglas del tipo Si - Entonces para evaluar las variables lingüísticas.
+ La base de reglas almacena el conocimiento en forma de un conjunto de reglas,
+ que contienen el conocimiento heurístico y cualitativo en el que se basarán
+ las acciones de control.
+ El mecanismo de inferencia, se encarga de evaluar las reglas e infiere
+ una conclusión que se convertirá en la acción de control que se pasará
+ a través del módulo de defusificación.
+\end_layout
+
+\begin_layout Standard
+La tercera, se denomina defuzificar, que consiste en normalizar un valor
+ difuso a su equivalente en salida de control nítida.
+ El proceso de defusificación, convierte la variable difusa que se obtuvo
+ como salida en el bloque del mecanismo de inferencia, a un valor real.
+ Este valor real o nítido será la acción de control que se aplicará al proceso
+ de asignación de elevadores en el controlador propuesto.
+\end_layout
+
+\begin_layout Standard
+Básicamente, se debe ver el control difuso como un tomador de decisiones
+ artificial que opera en un sistema de lazo cerrado en tiempo real.
+ La siguiente figura muestra los componentes principales de un controlador
+ difuso, a saber: interfaz de fusificación, base de conocimiento, motor
+ de inferencia e interfaz de defusificación 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DRIANKOV1996"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzyProcess.png
+	width 40page%
+	height 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
 
 \lang spanish
-Variables Independientes
+Proceso de un controlador difuso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

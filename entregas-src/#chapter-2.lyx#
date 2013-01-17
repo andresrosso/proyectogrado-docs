@@ -419,38 +419,6 @@ key "BANKS2000"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/modeloSimBANKS.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Modelo de simulación de BANKS
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Este modelo representa una versión simplificada del sistema real, permitiendo
  así, facilitar su estudio y análisis.
  Un edificio tiene características que varían en el tiempo, ejemplo de ellas
@@ -465,7 +433,7 @@ key "BANKS2000"
 
 \end_inset
 
-como se muestra en la figura 2.2.
+como se muestra en la figura 2.1.
 \end_layout
 
 \begin_layout Standard
@@ -498,6 +466,41 @@ Proceso de simulación de BANKS
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Pese a la gran variedad de modelos de simulación existentes todos estos
+ se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
+ se usará esta simplificación .
+\end_layout
+
+\begin_layout Enumerate
+Obtener observaciones básicas de una fuente de números aleatorios.
+ En la simulación de este trabajo es necesario generar los usuarios del
+ sistema y comportamientos dentro de el, esta generación estará basáda en
+ observaciones de la realidad identificada en otros trabajos académicos.
+\end_layout
+
+\begin_layout Enumerate
+Transformar las observaciones básicas de entradas al modelo, según las especific
+aciones del mismo.
+ Es necesario por lo tanto asignar a estos datos aleatorios un significado
+ real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
+ al sistema según la variable temporal de la simulación, o el piso al que
+ se dirije según el patrón de tráfico presente.
+\end_layout
+
+\begin_layout Enumerate
+Trasformar las entradas, a traves del modelo, en salidas.
+ Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
+ las salidas medidas del sistema.
+\end_layout
+
+\begin_layout Enumerate
+Calcular estadísticas a partir de salidas, para estimar las medidas de comportam
+iento.
+ Una vez corrida y finalizada la simulación es necesario medir estadísticamente
+ el desempeño del sistema.
 \end_layout
 
 \begin_layout Subsection
@@ -783,7 +786,7 @@ key "SIIKONEN1997"
 \end_layout
 
 \begin_layout Standard
-Debido a que existen diferentes tipos de edificios como son; hospitales,
+Debido a que existen diferentes tipos de edificios como son: hospitales,
  edificios de oficinas, universidades, edificios residenciales, se debe
  tener en cuenta que no es igual el tráfico existente dentro de ellos.
  Por ejemplo, en un edificio residencial existe un tráfico recurrente entre
@@ -1112,8 +1115,7 @@ Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
 Es común que los controladores para grupo de ascensor manejen los mismos
  criterios de optimización, los cuales recopilando todos los criterios vistos
  se pueden dividir en dos grupos: funcionamiento del sistema y servicio
- ofrecido al usuario.
- 
+ ofrecido al usuario, los cuales se explican a continuación 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1135,7 +1137,7 @@ Capacidad del grupo de ascensores (volumen de viajeros transportados): También
 Servicio ofrecido al usuario
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 Tiempo De Espera: Promedio del tiempo de espera de los pasajeros para ser
  atendidos.
  Representa el tiempo que un elevador necesita para viajar desde su posición
@@ -1143,13 +1145,13 @@ Tiempo De Espera: Promedio del tiempo de espera de los pasajeros para ser
  El objetivo es llevar este tiempo al mínimo.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 Tiempo de viaje: Tiempo que el pasajero dura dentro del ascensor hasta que
  llegue al piso objetivo.
  El objetivo es minimizar este tiempo.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 Tiempo de esperas muy largos: Minimizar el porcentaje de largas esperas
  por la llegada de un ascensor, es conocido que sicológicamente las personas
  pierden la paciencia pasados 3 minutos sin ser atendidas 
@@ -1174,7 +1176,7 @@ La asignación de llamadas en una edificación de gran altura requiere de
  de compañías como MITSUBISHI, KONE, SCHINDLER.
  El control de este tipo de sistemas no es sencillo, presenta un comportamiento
  dinámico, variante en el tiempo.
- Los factores que dificultan el control entre otros son:
+ Los factores que dificultan el control, entre otros son:
 \end_layout
 
 \begin_layout Itemize
@@ -1211,7 +1213,7 @@ key "MIRAVETE1996"
 
 \end_inset
 
-
+: 
 \end_layout
 
 \begin_deeper
@@ -1231,7 +1233,7 @@ Cuando el ascensor está desocupado, y es el primero en recibir la orden
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1275,7 +1277,7 @@ El elevador va a registrar únicamente los llamados que se generen en el
 
 \end_deeper
 \begin_layout Itemize
-Técnicas no tradicionales
+Técnicas no tradicionales: 
 \end_layout
 
 \begin_deeper
@@ -1511,6 +1513,20 @@ key "WOOLDRIDGE1995"
  En un sistema multi agente (MAS), cada agente actúa individualmente o en
  cooperación con otros agentes para conseguir los objetivos trazados.
  
+\end_layout
+
+\begin_layout Standard
+Un sistema multiagente se puede ver como una red de resolvedores de problemas
+ débilmente acoplados que trabajan juntos para resolver problemas que están
+ más allá de las capacidades individuales o conocimiento de cualquiera de
+ ellos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wooldridge1998"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard

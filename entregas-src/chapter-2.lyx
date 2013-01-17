@@ -1516,6 +1516,20 @@ key "WOOLDRIDGE1995"
 \end_layout
 
 \begin_layout Standard
+Un sistema multiagente se puede ver como una red de resolvedores de problemas
+ débilmente acoplados que trabajan juntos para resolver problemas que están
+ más allá de las capacidades individuales o conocimiento de cualquiera de
+ ellos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wooldridge1998"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 Flexible en el contexto MAS significa, que el agente es: 
 \end_layout
 
