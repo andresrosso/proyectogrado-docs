@@ -985,9 +985,10 @@ key "SANDOR2006"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1157,6 +1158,7 @@ Tiempo de transito entre dos pisos adyacentes
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1275,7 +1277,7 @@ Pasajero
 \begin_layout Itemize
 
 \series bold
-Numero de pasajeros que arriban en un tiempo t 
+Número de pasajeros que arriban en un tiempo t 
 \series default
 (
 \begin_inset Formula $N(t)$
@@ -1391,6 +1393,7 @@ key "SANDOR2006"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1591,6 +1594,7 @@ De acuerdo al análisis realizado y siguiendo los principios de diseño, se
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1598,7 +1602,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
-	scale 40
+	scale 55
 
 \end_inset
 
@@ -1839,9 +1843,10 @@ ilidad del componente central BuildingSimulator.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1960,16 +1965,17 @@ La siguiente imágen muestra el diagrama de clases del simulador, detallando
 
 \lang english
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 \lang english
 \begin_inset Graphics
 	filename resources/PIMClassModel.png
-	scale 30
+	scale 45
 
 \end_inset
 
@@ -2365,11 +2371,12 @@ Tiempo de Viaje
 \end_inset
 
  se usa una distribución Gamma.
- Los límites de esta se encuentran en la Figura.
+ Los límites de esta se encuentran en la Figura 3.11.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open

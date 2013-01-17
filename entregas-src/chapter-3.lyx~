@@ -470,7 +470,7 @@ Análisis Sistémico
 
 \begin_layout Standard
 Un sistema puede verse como un objeto en el cual interactúan variables de
- diferentes clases para producir señales observables denominadas: salidas.
+ diferentes clases para producir señales observables denominadas; salidas.
  Las señales externas también pueden afectar e influir en el comportamiento
  del sistema, pero estas señales son susceptibles de manipulación.
  El sistema además, puede presentar perturbaciones que pueden ser clasificadas
@@ -502,8 +502,8 @@ Componentes del Sistema
 \end_layout
 
 \begin_layout Standard
-Del análisis sistémico realizado se encontraron los siguientes componentes
- principales:
+Del análisis sistémico realizado se encontraron estos como componentes principal
+es:
 \end_layout
 
 \begin_layout Itemize
@@ -607,6 +607,101 @@ key "AVERILL2000"
 .
 \end_layout
 
+\begin_layout Standard
+En la figura No.
+ 3.2 diagrama siguiente ilustra el flujo que por lo general sigue una simulación
+ de este tipo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/procesoSimBANKS.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Proceso simulación Banks [BANKS2000]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proceso General De La Simulación
+\end_layout
+
+\begin_layout Standard
+La simulación como metodología de análisis de sistemas está basada en la
+ construcción de un modelo que describe el comportamiento del sistema 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "INSUA2000"
+
+\end_inset
+
+, en este caso implementado en un ordenador.
+ 
+\end_layout
+
+\begin_layout Standard
+Pese a la gran variedad de modelos de simulación existentes todos estos
+ se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
+ se usará esta simplificación .
+\end_layout
+
+\begin_layout Enumerate
+Obtener observaciones básicas de una fuente de números aleatorios.
+ En la simulación de este trabajo es necesario generar los usuarios del
+ sistema y comportamientos dentro de el, esta generación estará basáda en
+ observaciones de la realidad identificada en otros trabajos académicos.
+\end_layout
+
+\begin_layout Enumerate
+Transformar las observaciones básicas de entradas al modelo, según las especific
+aciones del mismo.
+ Es necesario por lo tanto asignar a estos datos aleatorios un significado
+ real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
+ al sistema según la variable temporal de la simulación, o el piso al que
+ se dirije según el patrón de tráfico presente.
+\end_layout
+
+\begin_layout Enumerate
+Trasformar las entradas, a traves del modelo, en salidas.
+ Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
+ las salidas medidas del sistema.
+\end_layout
+
+\begin_layout Enumerate
+Calcular estadísticas a partir de salidas, para estimar las medidas de comportam
+iento.
+ Una vez corrida y finalizada la simulación es necesario medir estadísticamente
+ el desempeño del sistema.
+\end_layout
+
 \begin_layout Subsection
 Variables de Simulación
 \end_layout
@@ -620,8 +715,7 @@ El modelo de la realidad, en nuestro caso el edificio, es una representación
  el cual puede ser manipulado según la necesidad de simlación.
  En la siguiente sección se presentan las características del modelo identificad
 as, categorizadas según su naturaleza dinámica y los componentes a las que
- perteneces.
- 
+ pertenece.
 \end_layout
 
 \begin_layout Subsubsection
@@ -891,9 +985,10 @@ key "SANDOR2006"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1063,6 +1158,7 @@ Tiempo de transito entre dos pisos adyacentes
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1181,7 +1277,7 @@ Pasajero
 \begin_layout Itemize
 
 \series bold
-Numero de pasajeros que arriban en un tiempo t 
+Número de pasajeros que arriban en un tiempo t 
 \series default
 (
 \begin_inset Formula $N(t)$
@@ -1297,6 +1393,7 @@ key "SANDOR2006"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1497,6 +1594,7 @@ De acuerdo al análisis realizado y siguiendo los principios de diseño, se
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1504,7 +1602,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
-	scale 40
+	scale 55
 
 \end_inset
 
@@ -1745,9 +1843,10 @@ ilidad del componente central BuildingSimulator.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1866,16 +1965,17 @@ La siguiente imágen muestra el diagrama de clases del simulador, detallando
 
 \lang english
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 \lang english
 \begin_inset Graphics
 	filename resources/PIMClassModel.png
-	scale 30
+	scale 45
 
 \end_inset
 
@@ -2271,7 +2371,7 @@ Tiempo de Viaje
 \end_inset
 
  se usa una distribución Gamma.
- Los límites de esta se encuentran en la Figura.
+ Los límites de esta se encuentran en la Figura 3.11.
 \end_layout
 
 \begin_layout Standard

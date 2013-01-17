@@ -298,95 +298,6 @@ En esta sección se hará una revisión de las técnicas de simulación existent
 \end_layout
 
 \begin_layout Section
-Controladores
-\end_layout
-
-\begin_layout Standard
-A lo largo de la historia se han desarrollado diferentes métodos de control,
- entre los principales se encuentran: 
-\end_layout
-
-\begin_layout Subsection
-Controlador Basado en Lógica Difusa (CBLD)
-\end_layout
-
-\begin_layout Standard
-El control difuso puede tratar las imposiciones de los sistemas para dar
- soluciones en condiciones más reales y menos ideales, además es posible
- mejorar aún más el rendimiento, optimizando los conjuntos difusos y la
- ponderación de las reglas.
- 
-\end_layout
-
-\begin_layout Subsection
-Controlador Basado en Optimización Robusta (CBOR)
-\end_layout
-
-\begin_layout Standard
-En los modelos de programación matemática aplicados a fenómenos reales se
- suele suponer que los datos que intervienen son conocidos y constantes,
- lo que permite abordar su planteamiento y resolución.
- Sin embargo, esta hipótesis de constancia no suele ser cierta puesto que
- normalmente los datos pueden ser erróneos o incompletos [CANOSMJ], para
- lo cual la CBOR es muy buena opción ya que garantiza convergencia al óptimo,
- además de ello es tolerante a pequeñas variaciones en las condiciones iniciales
- de optimización, entra las desventajas se encuentra que la implementación
- computacional de este algoritmo es muy compleja y el tiempo de ejecución
- será muy pobre finalmente la eficiencia de la solución obtenida con este
- método es alta, más es costoso su tiempo de ejecución.
- 
-\end_layout
-
-\begin_layout Subsection
-Optimización Por Colonia De Hormigas (OCH)
-\end_layout
-
-\begin_layout Standard
-Los algoritmos de optimización por hormigas son buenos para resolver problemas
- de optimización combinacionales.
- Tienen gran velocidad de convergencia para encontrar la solución óptima.
- Consiste en un mecanismo control basado en el mejor camino -menos costo-
- que un enjambre de hormigas pueda encontrar.
- Los resultados de la simulación muestran que la eficiencia del controlador
- es mayor a los otros dos métodos presentados.
- La principal desventaja es que al ser tan elevado el tiempo de respuesta
- del algoritmo es difícil implementarlo en la realidad ya que la respuesta
- debería ser casi inmediata.
- 
-\end_layout
-
-\begin_layout Subsection
-Controlador Híbrido Para Grupo De Ascensores (CHGA)
-\end_layout
-
-\begin_layout Standard
-Los sistemas de elevadores operan sobre un espacio altamente dimensional
- tanto en espacio continuo como discreto.
- El estado de este no es observable fácilmente, por lo tanto la solución
- de control no puede usar técnicas de optimización tradicionales.
- En esta subsección se presenta un método de control híbrido -Red Neuronal
- y PSO-.
- La convergencia a la solución óptima es lenta, sin embargo al usar una
- red neuronal de base radial se obtiene un mejor resultado.
- Tiene la ventaja que una vez entrenada la red neuronal el desempeño en
- producción irá a ser mejor.
- 
-\end_layout
-
-\begin_layout Subsection
-Control Mediante aprendizaje reforzado (CMAF).
- 
-\end_layout
-
-\begin_layout Standard
-Inspirado por el comportamiento psicológico de los individuos el aprendizaje
- reforzado permite a una máquina aprender por medio de recompensas.
- Este método pertenece a los métodos no supervisados, por lo tanto no se
- hace necesario presentarle a la máquina la respuesta correcta.
- 
-\end_layout
-
-\begin_layout Section
 Simulación
 \end_layout
 
@@ -438,13 +349,15 @@ como se muestra en la figura 2.1.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/procesoSimBANKS.png
+	scale 50
 
 \end_inset
 
@@ -468,41 +381,6 @@ Proceso de simulación de BANKS
 
 \end_layout
 
-\begin_layout Standard
-Pese a la gran variedad de modelos de simulación existentes todos estos
- se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
- se usará esta simplificación .
-\end_layout
-
-\begin_layout Enumerate
-Obtener observaciones básicas de una fuente de números aleatorios.
- En la simulación de este trabajo es necesario generar los usuarios del
- sistema y comportamientos dentro de el, esta generación estará basáda en
- observaciones de la realidad identificada en otros trabajos académicos.
-\end_layout
-
-\begin_layout Enumerate
-Transformar las observaciones básicas de entradas al modelo, según las especific
-aciones del mismo.
- Es necesario por lo tanto asignar a estos datos aleatorios un significado
- real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
- al sistema según la variable temporal de la simulación, o el piso al que
- se dirije según el patrón de tráfico presente.
-\end_layout
-
-\begin_layout Enumerate
-Trasformar las entradas, a traves del modelo, en salidas.
- Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
- las salidas medidas del sistema.
-\end_layout
-
-\begin_layout Enumerate
-Calcular estadísticas a partir de salidas, para estimar las medidas de comportam
-iento.
- Una vez corrida y finalizada la simulación es necesario medir estadísticamente
- el desempeño del sistema.
-\end_layout
-
 \begin_layout Subsection
 Técnicas de Simulación
 \end_layout
@@ -510,7 +388,7 @@ Técnicas de Simulación
 \begin_layout Standard
 De acuerdo a la naturaleza del sistema en estudio y los objetivos de la
  simulación se hace necesario categorizar la simulación.
- En la siguiente sección se explicaran las diferentes técnicas de simulación
+ En la siguiente sub-sección se explicaran las diferentes técnicas de simulación
  enunciando sus ventajas.
  
 \end_layout
@@ -1005,6 +883,7 @@ key "BARNEY2003"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1012,7 +891,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/architectureEGCS.png
-	scale 50
+	scale 70
 
 \end_inset
 
@@ -1051,6 +930,7 @@ key "SIIKONEN_BTS2004"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1434,10 +1314,13 @@ A continuación se describen brevemente los métodos básicos de control más
  empleados.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Enumerate
+
+\series bold
 Maniobra Universal Por Pulsadores
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 Cuando el ascensor esta desocupado, y es el primero en recibir la orden
  irá a atender la llamada.
@@ -1454,10 +1337,14 @@ key "MIRAVETE1996"
 
 \end_layout
 
-\begin_layout Paragraph
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
 Maniobra Duplex
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 Cualquier llamada es atendida por el elevador que se encuentre libre; pero
  si están libres dos elevadores, acudirá a la llamada el que esté mas próximo
@@ -1473,10 +1360,14 @@ key "MIRAVETE1996"
 
 \end_layout
 
-\begin_layout Paragraph
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
 Maniobra Colectiva selectiva en los dos sentidos
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 El elevador registra únicamente los llamados que se generen en el sentido
  que va el ascensor.
@@ -1495,6 +1386,135 @@ key "MIRAVETE1996"
 
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Controlador Basado en Lógica Difusa (CBLD)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+El control difuso puede tratar las imposiciones de los sistemas para dar
+ soluciones en condiciones más reales y menos ideales, además es posible
+ mejorar aún más el rendimiento, optimizando los conjuntos difusos y la
+ ponderación de las reglas
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KHIANG1996"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Controlador Basado en Optimización Robusta (CBOR)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+En los modelos de programación matemática aplicados a fenómenos reales se
+ suele suponer que los datos que intervienen son conocidos y constantes,
+ lo que permite abordar su planteamiento y resolución.
+ Sin embargo, esta hipótesis de constancia no suele ser cierta puesto que
+ normalmente los datos pueden ser erróneos o incompletos [CANOSMJ], para
+ lo cual la CBOR es muy buena opción ya que garantiza convergencia al óptimo,
+ además de ello es tolerante a pequeñas variaciones en las condiciones iniciales
+ de optimización, entra las desventajas se encuentra que la implementación
+ computacional de este algoritmo es muy compleja y el tiempo de ejecución
+ será muy pobre finalmente la eficiencia de la solución obtenida con este
+ método es alta, más es costoso su tiempo de ejecución.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Optimización Por Colonia De Hormigas (OCH)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Los algoritmos de optimización por hormigas son buenos para resolver problemas
+ de optimización combinacionales.
+ Tienen gran velocidad de convergencia para encontrar la solución óptima.
+ Consiste en un mecanismo control basado en el mejor camino -menos costo-
+ que un enjambre de hormigas pueda encontrar.
+ Los resultados de la simulación muestran que la eficiencia del controlador
+ es mayor a los otros dos métodos presentados.
+ La principal desventaja es que al ser tan elevado el tiempo de respuesta
+ del algoritmo es difícil implementarlo en la realidad ya que la respuesta
+ debería ser casi inmediata 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ZHANGTANG"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Controlador Híbrido Para Grupo De Ascensores (CHGA)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Los sistemas de elevadores operan sobre un espacio altamente dimensional
+ tanto en espacio continuo como discreto.
+ El estado de este no es observable fácilmente, por lo tanto la solución
+ de control no puede usar técnicas de optimización tradicionales.
+ En esta subsección se presenta un método de control híbrido -Red Neuronal
+ y PSO-.
+ La convergencia a la solución óptima es lenta, sin embargo al usar una
+ red neuronal de base radial se obtiene un mejor resultado.
+ Tiene la ventaja que una vez entrenada la red neuronal el desempeño en
+ producción irá a ser mejor
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JIANLIU2010"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Control Mediante aprendizaje reforzado (CMAF).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Inspirado por el comportamiento psicológico de los individuos el aprendizaje
+ reforzado permite a una máquina aprender por medio de recompensas.
+ Este método pertenece a los métodos no supervisados, por lo tanto no se
+ hace necesario presentarle a la máquina la respuesta correcta 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CRITES1998"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Sistemas Multi Agente
 \end_layout
@@ -1681,12 +1701,8 @@ key "WOOLDRIDGE1995"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Section
 LÓGICA DIFUSA
-\end_layout
-
-\begin_layout Paragraph*
-INTRODUCCIÓN 
 \end_layout
 
 \begin_layout Standard
@@ -1757,7 +1773,7 @@ key "DRIANKOV1996"
  
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Paragraph
 Estructura Básica De Un Controlador Difuso
 \end_layout
 

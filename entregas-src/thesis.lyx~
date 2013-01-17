@@ -143,6 +143,11 @@ customHeadersFooters
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch chapter-6
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -242,22 +247,11 @@ Pontificia Universidad Javeriana
 Maestría en Ingeniería de Sistemas
 \end_layout
 
-\begin_layout Publishers
-\begin_inset VSpace -3cm
-\end_inset
-
-
-\end_layout
-
 \begin_layout Lowertitleback
 
 \series bold
-Dean
+Director de tesis
 \series default
-
-\begin_inset VSpace smallskip
-\end_inset
-
 
 \begin_inset Newline newline
 \end_inset
@@ -265,42 +259,22 @@ Dean
 Prof.
  Dr.
  Julian Mauricio Angel
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
-
-\series bold
-Referees
-\series default
-
-\begin_inset VSpace smallskip
-\end_inset
-
-
+Jurados
 \begin_inset Newline newline
 \end_inset
 
 Prof.
  Dr.
  aaa bbb
-\begin_inset VSpace smallskip
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
 Prof.
  Dr.
  xxx yyy
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
@@ -309,18 +283,10 @@ Prof.
 Date of the graduation (optional)
 \series default
 
-\begin_inset VSpace smallskip
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
 xx.yy.zzzz
-\end_layout
-
-\begin_layout Dedication
-Dedication, cite from a famous person, or whatever you like (optional)
 \end_layout
 
 \begin_layout Standard
@@ -498,15 +464,8 @@ filename "Summary.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -669,6 +628,25 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "chapter-5.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch chapter-6
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "chapter-6.lyx"
 
 \end_inset
 

@@ -1562,6 +1562,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-te.png
+	width 60page%
 
 \end_inset
 
@@ -1587,6 +1588,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-te.png
+	width 60page%
 
 \end_inset
 
@@ -1681,6 +1683,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-ts.png
+	width 60page%
 
 \end_inset
 
@@ -1706,6 +1709,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-ts.png
+	width 60page%
 
 \end_inset
 
@@ -1799,6 +1803,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-ec.png
+	width 60page%
 
 \end_inset
 
@@ -1824,6 +1829,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-ec.png
+	width 60page%
 
 \end_inset
 

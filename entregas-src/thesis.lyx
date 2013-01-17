@@ -257,12 +257,8 @@ Maestría en Ingeniería de Sistemas
 \begin_layout Lowertitleback
 
 \series bold
-Dean
+Director de tesis
 \series default
-
-\begin_inset VSpace smallskip
-\end_inset
-
 
 \begin_inset Newline newline
 \end_inset
@@ -270,42 +266,22 @@ Dean
 Prof.
  Dr.
  Julian Mauricio Angel
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
-
-\series bold
-Referees
-\series default
-
-\begin_inset VSpace smallskip
-\end_inset
-
-
+Jurados
 \begin_inset Newline newline
 \end_inset
 
 Prof.
  Dr.
  aaa bbb
-\begin_inset VSpace smallskip
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
 Prof.
  Dr.
  xxx yyy
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
@@ -314,18 +290,10 @@ Prof.
 Date of the graduation (optional)
 \series default
 
-\begin_inset VSpace smallskip
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
 xx.yy.zzzz
-\end_layout
-
-\begin_layout Dedication
-Dedication, cite from a famous person, or whatever you like (optional)
 \end_layout
 
 \begin_layout Standard
@@ -511,7 +479,7 @@ filename "Summary.lyx"
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 

@@ -734,7 +734,7 @@ En el siguiente ejemplo se genera una llamada desde el piso 6 hasta el piso
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1102,8 +1102,8 @@ Ejemplo 2
 \end_layout
 
 \begin_layout Standard
-En el siguiente ejemplo se genera una llamada desde el piso 6 hasta el piso
- 12.
+En el siguiente ejemplo se genera una llamada desde el piso 11 hasta el
+ piso 17.
  El elevador 1 (transporta 2 pasajero) se encuentra en el piso 6 y tiene
  una parada en el piso 17.
  El elevador 2 (transporta 3 pasajeros) está en el piso 9 y tiene una parada
@@ -1516,7 +1516,7 @@ l.
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1562,7 +1562,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-te.png
-	width 60page%
+	width 30page%
 
 \end_inset
 
@@ -1588,7 +1588,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-te.png
-	width 60page%
+	width 30page%
 
 \end_inset
 

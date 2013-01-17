@@ -306,22 +306,36 @@ A lo largo de la historia se han desarrollado diferentes métodos de control,
  entre los principales se encuentran: 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
+
+\series bold
 Controlador Basado en Lógica Difusa (CBLD)
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 El control difuso puede tratar las imposiciones de los sistemas para dar
  soluciones en condiciones más reales y menos ideales, además es posible
  mejorar aún más el rendimiento, optimizando los conjuntos difusos y la
- ponderación de las reglas.
+ ponderación de las reglas
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KHIANG1996"
+
+\end_inset
+
+.
  
 \end_layout
 
-\begin_layout Subsection
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
 Controlador Basado en Optimización Robusta (CBOR)
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 En los modelos de programación matemática aplicados a fenómenos reales se
  suele suponer que los datos que intervienen son conocidos y constantes,
@@ -337,10 +351,14 @@ En los modelos de programación matemática aplicados a fenómenos reales se
  
 \end_layout
 
-\begin_layout Subsection
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
 Optimización Por Colonia De Hormigas (OCH)
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 Los algoritmos de optimización por hormigas son buenos para resolver problemas
  de optimización combinacionales.
@@ -351,14 +369,25 @@ Los algoritmos de optimización por hormigas son buenos para resolver problemas
  es mayor a los otros dos métodos presentados.
  La principal desventaja es que al ser tan elevado el tiempo de respuesta
  del algoritmo es difícil implementarlo en la realidad ya que la respuesta
- debería ser casi inmediata.
+ debería ser casi inmediata 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ZHANGTANG"
+
+\end_inset
+
+.
  
 \end_layout
 
-\begin_layout Subsection
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
 Controlador Híbrido Para Grupo De Ascensores (CHGA)
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 Los sistemas de elevadores operan sobre un espacio altamente dimensional
  tanto en espacio continuo como discreto.
@@ -369,23 +398,42 @@ Los sistemas de elevadores operan sobre un espacio altamente dimensional
  La convergencia a la solución óptima es lenta, sin embargo al usar una
  red neuronal de base radial se obtiene un mejor resultado.
  Tiene la ventaja que una vez entrenada la red neuronal el desempeño en
- producción irá a ser mejor.
+ producción irá a ser mejor
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JIANLIU2010"
+
+\end_inset
+
+.
  
 \end_layout
 
-\begin_layout Subsection
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
 Control Mediante aprendizaje reforzado (CMAF).
  
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 Inspirado por el comportamiento psicológico de los individuos el aprendizaje
  reforzado permite a una máquina aprender por medio de recompensas.
  Este método pertenece a los métodos no supervisados, por lo tanto no se
- hace necesario presentarle a la máquina la respuesta correcta.
+ hace necesario presentarle a la máquina la respuesta correcta 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CRITES1998"
+
+\end_inset
+
+.
  
 \end_layout
 
+\end_deeper
 \begin_layout Section
 Simulación
 \end_layout
@@ -419,38 +467,6 @@ key "BANKS2000"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/modeloSimBANKS.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Modelo de simulación de BANKS
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Este modelo representa una versión simplificada del sistema real, permitiendo
  así, facilitar su estudio y análisis.
  Un edificio tiene características que varían en el tiempo, ejemplo de ellas
@@ -465,18 +481,20 @@ key "BANKS2000"
 
 \end_inset
 
-como se muestra en la figura 2.2.
+como se muestra en la figura 2.1.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/procesoSimBANKS.png
+	scale 50
 
 \end_inset
 
@@ -507,7 +525,7 @@ Técnicas de Simulación
 \begin_layout Standard
 De acuerdo a la naturaleza del sistema en estudio y los objetivos de la
  simulación se hace necesario categorizar la simulación.
- En la siguiente sección se explicaran las diferentes técnicas de simulación
+ En la siguiente sub-sección se explicaran las diferentes técnicas de simulación
  enunciando sus ventajas.
  
 \end_layout
@@ -783,7 +801,7 @@ key "SIIKONEN1997"
 \end_layout
 
 \begin_layout Standard
-Debido a que existen diferentes tipos de edificios como son; hospitales,
+Debido a que existen diferentes tipos de edificios como son: hospitales,
  edificios de oficinas, universidades, edificios residenciales, se debe
  tener en cuenta que no es igual el tráfico existente dentro de ellos.
  Por ejemplo, en un edificio residencial existe un tráfico recurrente entre
@@ -1112,8 +1130,7 @@ Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
 Es común que los controladores para grupo de ascensor manejen los mismos
  criterios de optimización, los cuales recopilando todos los criterios vistos
  se pueden dividir en dos grupos: funcionamiento del sistema y servicio
- ofrecido al usuario.
- 
+ ofrecido al usuario, los cuales se explican a continuación 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1174,7 +1191,7 @@ La asignación de llamadas en una edificación de gran altura requiere de
  de compañías como MITSUBISHI, KONE, SCHINDLER.
  El control de este tipo de sistemas no es sencillo, presenta un comportamiento
  dinámico, variante en el tiempo.
- Los factores que dificultan el control entre otros son:
+ Los factores que dificultan el control, entre otros son:
 \end_layout
 
 \begin_layout Itemize
@@ -1211,7 +1228,7 @@ key "MIRAVETE1996"
 
 \end_inset
 
-
+: 
 \end_layout
 
 \begin_deeper
@@ -1231,7 +1248,7 @@ Cuando el ascensor está desocupado, y es el primero en recibir la orden
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1275,7 +1292,7 @@ El elevador va a registrar únicamente los llamados que se generen en el
 
 \end_deeper
 \begin_layout Itemize
-Técnicas no tradicionales
+Técnicas no tradicionales: 
 \end_layout
 
 \begin_deeper
