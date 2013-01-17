@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -284,8 +284,8 @@ Modelo Multi Agente
 \begin_layout Standard
 El uso de una arquitectura distribuida basada en Sistemas Multiagente para
  el problema de trafico de edificación trae ventajas como la tolerancia
- a errores debido a la independecia en las tareas básicas de los agentes.
- La separació de responsabilidades, el debil acoplamiento de los componentes
+ a errores debido a la independencia en las tareas básicas de los agentes.
+ La separación de responsabilidades, el débil acoplamiento de los componentes
  también se traducen en una ventaja para el diseño del sistema, ofreciendo
  una solución más escalable en el tiempo y adaptable computacionalmente.
 \end_layout
@@ -301,12 +301,12 @@ Descripción General De Los Agentes
 \end_layout
 
 \begin_layout Standard
-En este caso particular existen varios actores que interactuan con el medio,
+En este caso particular existen varios actores que interactúan con el medio,
  por ejemplo las cabinas de ascensor tienen como función transportar el
  tráfico entre las plantas de la edificación.
  Otro actor es el mecanismo encargado de determinar la asignación de las
  llamadas a las cabinas de ascensor.
- La identifiación de estos actores y el modelado bajo el paradigma de SMA
+ La identificación de estos actores y el modelado bajo el paradigma de SMA
  se detallan a continuación, como referencia se tomo la metodología de modelado
  MAS-COMMON KADS.
 \end_layout
@@ -342,7 +342,7 @@ Agente Asignador de llamadas
 \begin_deeper
 \begin_layout Standard
 Este agente tiene como función recibir de los agentes controladores de cabina
- las apuestas en terminos de características de servicio y de acuerdo a
+ las apuestas en términos de características de servicio y de acuerdo a
  una heurística asignar la llamada al elevador que de mejor manera pueda
  servirla.
 \end_layout
@@ -358,7 +358,7 @@ Agente Estimador Patrón de Tráfico
 \begin_layout Standard
 La función de este agente es medir las variables ambientales y determinar
  el tipo de tráfico presente en la edificación, esta información que provee
- el agente sirve como criterio de desición en el momento de la asignación
+ el agente sirve como criterio de decisión en el momento de la asignación
  de la llamada.
 \end_layout
 
@@ -373,7 +373,7 @@ Agente Estimador Tiempo Espera
 \begin_layout Standard
 Este agente tiene como función predecir el tiempo que tarda una cabina en
  llegar desde su piso origen hasta el piso en donde se encuentra la llamada,
- para hacer esta estimación utilza una red neuronal que es alimentada con
+ para hacer esta estimación utiliza una red neuronal que es alimentada con
  variables tomadas del ambiente.
 \end_layout
 
@@ -388,7 +388,7 @@ Agente Estimador Tiempo Viaje
 \begin_layout Standard
 La función de este agente es predecir el tiempo que tarda en llegar un pasajero
  desde su piso origen hasta su piso destino, para hacer esta estimación
- utilza una red neuronal que es alimentada con variables tomadas del ambiente.
+ utiliza una red neuronal que es alimentada con variables tomadas del ambiente.
 \end_layout
 
 \end_deeper
@@ -399,9 +399,9 @@ Interacciones
 \begin_layout Standard
 Las diferentes interacciones entre los agentes se muestran en la siguiente
  figura.
- De estas interecciones se detallará sobre 3 de ellas que importantes para
- el control del grupo de elevadores y que internienen directamente sobre
- el rendimiento en el objetivo de control, el cúal se recuenda que es reducir
+ De estas interacciones se detallará sobre 3 de ellas que importantes para
+ el control del grupo de elevadores y que intervienen directamente sobre
+ el rendimiento en el objetivo de control, el cual se recuerda que es reducir
  el tiempo de espera y de viaje de los pasajeros así como la energía consumida.
 \end_layout
 
@@ -465,11 +465,7 @@ ID
 \begin_inset Text
 
 \begin_layout Plain Layout
-NOM
-\end_layout
-
-\begin_layout Plain Layout
-BRE
+NOMBRE
 \end_layout
 
 \end_inset
@@ -1715,7 +1711,7 @@ El ambiente está compuesto por la edificación simulada, el cual es un sistema
 \begin_layout Standard
 Los agentes funcionan inmersos en un entorno que constituyen la entidades
  pasivas, y se comunican entre sí a través de protocolos de comunicaciones
- donde deben estar garantizadas las características de auntonomía de cada
+ donde deben estar garantizadas las características de autonomía de cada
  uno de ellos, en la tabla No.
  4.2 se muestra la descripción del ambiente.
  
@@ -1980,7 +1976,7 @@ Sensor de peso
 \begin_inset Text
 
 \begin_layout Plain Layout
-Determina el número de personas presentes en la cabina, basandose en el
+Determina el número de personas presentes en la cabina, basándose en el
  peso de estas
 \end_layout
 
@@ -2098,7 +2094,7 @@ Actuador de Cabina
 \begin_inset Text
 
 \begin_layout Plain Layout
-Hace que la cabina del ascensor se diriga en una dirección determinada (arriba,
+Hace que la cabina del ascensor se dirija en una dirección determinada (arriba,
  abajo)
 \end_layout
 
@@ -2246,7 +2242,7 @@ Actuador asignador de llamada
 \begin_inset Text
 
 \begin_layout Plain Layout
-Basandose en los criterios establecidos el actuador identifica una cabina
+Basándose en los criterios establecidos el actuador identifica una cabina
  de ascensor que pueda atender eficientemente la llamada 
 \end_layout
 
@@ -2267,7 +2263,7 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-* Tomar del medio ambiente y de los demas agentes la información requerida
+* Tomar del medio ambiente y de los demás agentes la información requerida
  para determinar la cabina ideal para atender la llamada.
 \end_layout
 
@@ -2379,7 +2375,7 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-* LLevar la estadística de las llamadas generadas para asi obtener el patrón
+* Llevar la estadística de las llamadas generadas para así obtener el patrón
  de tráfico 
 \end_layout
 
@@ -2497,7 +2493,7 @@ Generador de llamadas
 \begin_layout Plain Layout
 Determina el número de llamadas que estadísticamente se presentan en una
  edificación en determinado espacio de tiempo.
- Además determina su piso origen y piso detino para cada una de ellas 
+ Además determina su piso origen y piso destino para cada una de ellas 
 \end_layout
 
 \end_inset
@@ -2517,7 +2513,7 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-Replicar el comportamiento de tráfico presente en una edificación real basandose
+Replicar el comportamiento de tráfico presente en una edificación real basándose
  en información estadística sobre el flujo de usuarios en el edificio
 \end_layout
 
@@ -2711,7 +2707,7 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-* LLevar la estadística de llamadas para determinar el porcentaje de tráfico
+* Llevar la estadística de llamadas para determinar el porcentaje de tráfico
  de salida-entrada-entrepisos en el momento en el que se genera la llamada.
 \end_layout
 
@@ -2880,7 +2876,7 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-* LLevar la estadística de llamadas para determinar el porcentaje de tráfico
+* Llevar la estadística de llamadas para determinar el porcentaje de tráfico
  de salida-entrada-entrepisos en el momento en el que se genera la llamada.
 \end_layout
 
@@ -2911,15 +2907,16 @@ Meta
 \end_layout
 
 \begin_layout Subsection
-ESTIMAR TIEMPO DE ESPERA y EL TIEMPO DE VIAJE
+Estimar Tiempo De Espera Y El Tiempo De Viaje
 \end_layout
 
 \begin_layout Standard
 El tiempo que un pasajero debe esperar desde el momento en que presiona
  el botón para registrar la llamada hasta que el ascensor pasa a recogerlo
  no es preciso.
- No es posible conocerlo con anticipación ya depende de las futuras llamadas
- que se hagan al ascensor y de los desplazamientos que deba hacer.
+ No es posible conocerlo con anticipación ya que depende de las futuras
+ llamadas que se hagan al ascensor y de los desplazamientos que éste deba
+ hacer.
  Debido a esta naturaleza de incertidumbre en la determinación del tiempo
  de espera es necesario hacer una predicción teniendo como principal criterio
  el tráfico que se está generando en la edificación.
@@ -3233,7 +3230,7 @@ Raiz del error cuadrático para el estimador Tiempo Espera
 \end_layout
 
 \begin_layout Subsubsection
-OBTENER ASCENSOR PARA LLAMADA
+Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
@@ -3260,7 +3257,7 @@ Este tipo de controlador permite que la solución se robusta y que el control
 \end_layout
 
 \begin_layout Paragraph
-Entradas Difusas Agente OBTENER ASCENSOR PARA LLAMADA
+Entradas Difusas Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
@@ -3489,7 +3486,7 @@ Conjuntos Difusos Paradas en Piso Destino
 \end_layout
 
 \begin_layout Paragraph
-Salida Difusa Agente OBTENER ASCENSOR PARA LLAMADA
+Salida Difusa Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
@@ -3531,7 +3528,7 @@ Salida Prioridad
 \end_layout
 
 \begin_layout Paragraph
-Reglas de Inferencia Difusas Agente OBTENER ASCENSOR PARA LLAMADA
+Reglas de Inferencia Difusas Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
@@ -3551,7 +3548,7 @@ Estas reglas se toman de acuerdo a los factores que tiene más importancia
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3566,6 +3563,7 @@ status collapsed
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Id
 \end_layout
 
@@ -3577,6 +3575,7 @@ Id
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Regla de Inferencia
 \end_layout
 
@@ -3590,6 +3589,7 @@ Regla de Inferencia
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R1
 \end_layout
 
@@ -3599,6 +3599,8 @@ R1
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3620,6 +3622,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R2
 \end_layout
 
@@ -3629,6 +3632,8 @@ R2
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3650,6 +3655,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R3
 \end_layout
 
@@ -3659,6 +3665,8 @@ R3
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3680,6 +3688,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R4
 \end_layout
 
@@ -3689,6 +3698,8 @@ R4
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3710,6 +3721,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R5
 \end_layout
 
@@ -3719,6 +3731,8 @@ R5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3740,6 +3754,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R6
 \end_layout
 
@@ -3749,6 +3764,8 @@ R6
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3770,6 +3787,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R7
 \end_layout
 
@@ -3779,6 +3797,8 @@ R7
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3800,6 +3820,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R8
 \end_layout
 
@@ -3809,6 +3830,8 @@ R8
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3830,6 +3853,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R9
 \end_layout
 
@@ -3839,6 +3863,8 @@ R9
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3860,6 +3886,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R10
 \end_layout
 
@@ -3869,6 +3896,8 @@ R10
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3890,6 +3919,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R11
 \end_layout
 
@@ -3899,6 +3929,8 @@ R11
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3920,6 +3952,7 @@ Porcentaje de Ocupación
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R12
 \end_layout
 
@@ -3929,6 +3962,8 @@ R12
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3950,6 +3985,7 @@ Porcentaje de Ocupación
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R13
 \end_layout
 
@@ -3959,6 +3995,8 @@ R13
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3980,6 +4018,7 @@ Porcentaje de Ocupación
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R14
 \end_layout
 
@@ -3989,6 +4028,8 @@ R14
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4010,6 +4051,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R15
 \end_layout
 
@@ -4019,6 +4061,8 @@ R15
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4040,6 +4084,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R16
 \end_layout
 
@@ -4049,6 +4094,8 @@ R16
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4070,6 +4117,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R17
 \end_layout
 
@@ -4079,6 +4127,8 @@ R17
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4100,6 +4150,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R18
 \end_layout
 
@@ -4109,6 +4160,8 @@ R18
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4130,6 +4183,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R19
 \end_layout
 
@@ -4139,6 +4193,8 @@ R19
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4160,6 +4216,7 @@ Paradas en Piso Destino
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R20
 \end_layout
 
@@ -4169,6 +4226,8 @@ R20
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4190,6 +4249,7 @@ Paradas en Piso Destino
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R21
 \end_layout
 
@@ -4199,6 +4259,8 @@ R21
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4220,6 +4282,7 @@ Paradas en Piso Destino
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R22
 \end_layout
 
@@ -4229,6 +4292,8 @@ R22
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4250,6 +4315,7 @@ Paradas en Piso Destino
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R23
 \end_layout
 
@@ -4259,6 +4325,8 @@ R23
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset

@@ -438,7 +438,7 @@ La mayoría de las técnicas usadas tienen arquitectura centralizada.
 \end_layout
 
 \begin_layout Standard
-Las cabinas actuan como agentes inteligentes que cooperan para atender eficiente
+Las cabinas actúan como agentes inteligentes que cooperan para atender eficiente
 mente las llamadas de los usuarios.
  Existe además un agente intermediador, que resuelve los conflictos cuando
  hay varias cabinas compitiendo por la misma llamada.

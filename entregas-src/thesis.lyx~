@@ -4,6 +4,7 @@
 \begin_header
 \textclass scrbook
 \begin_preamble
+
 % increase link area for cross-references and autoname them
 \AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
 \newlength{\abc}
@@ -52,9 +53,12 @@
 % avoid that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 \end_preamble
-\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\options listtotoc, chapterprefix, tablecaptionabove, bibtotoc, parskip=full, headings=small, numbers=noenddot
 \use_default_options true
 \begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
@@ -159,7 +163,7 @@ customHeadersFooters
 \quotes_language english
 \papercolumns 1
 \papersides 2
-\paperpagestyle fancy
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -172,7 +176,7 @@ customHeadersFooters
 \begin_layout Subject
 TESIS DE MAESTRÍA
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Use the official terms and title page layout instead of this one!
@@ -184,7 +188,7 @@ Use the official terms and title page layout instead of this one!
 \end_layout
 
 \begin_layout Title
-Diseño y Desarrollo de un Controlador de Grupo Ascensor Inteligente Basado
+Diseño y Desarrollo de un Controlador de Grupo de Ascensor Inteligente Basado
  en Sistemas MultiAgente
 \end_layout
 
@@ -197,7 +201,7 @@ ANDRES ENRIQUE ROSSO MATEUS
 \end_layout
 
 \begin_layout Publishers
-\begin_inset Box Boxed
+\begin_inset Box Frameless
 position "t"
 hor_pos "c"
 has_inner_box 1
@@ -208,9 +212,11 @@ width "40col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename resources/logo-PUJ.png
 
@@ -247,7 +253,7 @@ Pontificia Universidad Javeriana
 Maestría en Ingeniería de Sistemas
 \end_layout
 
-\begin_layout Lowertitleback
+\begin_layout Standard
 
 \series bold
 Director de tesis
@@ -257,43 +263,35 @@ Director de tesis
 \end_inset
 
 Prof.
- Dr.
- Julian Mauricio Angel
-\begin_inset Newline newline
-\end_inset
+ Julian Mauricio Angel MsC
+\end_layout
 
-Jurados
-\begin_inset Newline newline
-\end_inset
-
-Prof.
- Dr.
- aaa bbb
-\begin_inset Newline newline
-\end_inset
-
-Prof.
- Dr.
- xxx yyy
-\begin_inset Newline newline
-\end_inset
-
+\begin_layout Standard
 
 \series bold
-Date of the graduation (optional)
+Asesor
 \series default
 
 \begin_inset Newline newline
 \end_inset
 
-xx.yy.zzzz
+Prof.
+ Dr.
+ Enrique Gonzalez PhD
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
 
+\series bold
+Grupo De Investigación TAKINA
+\end_layout
 
+\begin_layout Standard
+
+\series bold
+Modalidad Investigació
+\series default
+n
 \end_layout
 
 \begin_layout Left Header
@@ -458,6 +456,13 @@ filename "Summary.lyx"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 

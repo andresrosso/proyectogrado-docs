@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -734,9 +734,11 @@ En el siguiente ejemplo se genera una llamada desde el piso 6 hasta el piso
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename resources/egcs-ex1.png
 	scale 50
@@ -1121,6 +1123,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename resources/egcs-ex2.png
 	scale 50
@@ -1160,8 +1164,8 @@ El mecanismo de decisión inteligente, haría estos cálculos por cada elevador.
  Se presenta en este caso un hecho de empate en cuando a la mayoría de las
  características, se podría pensar que tanto el elevador 1 como el 3 tienen
  las misma posibilidades.
- Pero la regla 13 está hablando del porcentaje de ocuapación y ya que el
- elvador 3 tiene más pasajeros, la evaluación de la regla permite el elevador
+ Pero la regla 13 está hablando del porcentaje de ocupación y ya que el
+ elevador 3 tiene más pasajeros, la evaluación de la regla permite el elevador
  1 que está menos ocupado se quede con la llamada.
 \end_layout
 
@@ -1487,7 +1491,7 @@ Resultados de la Simulación
 
 \begin_layout Standard
 Los resultados de la simulación revelan que haciendo uso de sistemas multiagente
- y usando la lógica de asiganación basada en redes neuronales y lógica difusa
+ y usando la lógica de asignación basada en redes neuronales y lógica difusa
  se obtiene un mayor rendimiento en el sistema.
 \end_layout
 
@@ -1503,12 +1507,12 @@ Tiempo de Espera
 
 \begin_layout Standard
 Como se puede constatar en los reportes estadísticos, el control convencional
- tuvo una media de espera de 148 seg, mientras que el controlador covencional
+ tuvo una media de espera de 148 seg, mientras que el controlador convencional
  tuvo una media de 108 segundos.
  Esto representa una mejora en el servicio prestado (27% menor), hay que
  notar que la varianza es mucho mayor en usando el control convencional,
  cerca de un 25%.
- Estto muestra una dispeción mayor en los resultados del controlador covvenciona
+ Esto muestra una dispersión mayor en los resultados del controlador convenciona
 l.
 \end_layout
 
@@ -1516,7 +1520,7 @@ l.
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1562,7 +1566,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-te.png
-	width 30page%
+	width 40page%
 
 \end_inset
 
@@ -1588,7 +1592,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-te.png
-	width 30page%
+	width 40page%
 
 \end_inset
 
@@ -1627,10 +1631,11 @@ Tiempo de Viaje
 \end_layout
 
 \begin_layout Standard
-De acuerdo al tiempo de viaje de un pasajero, -desde que se sube al ascesnor
+De acuerdo al tiempo de viaje de un pasajero, -desde que se sube al ascensor
  y hasta que se baja- se evidencia una reducción en los tiempo de servicio
  de un 25%.
- Esto muestra una disperción mayor en los resultados del controlador covencional.
+ Esto muestra una dispersión mayor en los resultados del controlador convenciona
+l.
 \end_layout
 
 \begin_layout Standard
@@ -1683,7 +1688,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-ts.png
-	width 60page%
+	width 40page%
 
 \end_inset
 
@@ -1709,7 +1714,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-ts.png
-	width 60page%
+	width 40page%
 
 \end_inset
 
@@ -1750,7 +1755,7 @@ Energía Consumida
 \begin_layout Standard
 La energía consumida también logró ser reducida en cerca de un 10%, esta
  mejora a pesar de ser significativa si le permitirá a un edificio de gran
- altura ahorra millones de dolares en el cosumo de energía.
+ altura ahorra millones de dolares en el consumo de energía.
 \end_layout
 
 \begin_layout Standard
@@ -1803,7 +1808,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-ec.png
-	width 60page%
+	width 40page%
 
 \end_inset
 
@@ -1829,7 +1834,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-ec.png
-	width 60page%
+	width 40page%
 
 \end_inset
 

@@ -290,21 +290,86 @@ Introducción
 \end_layout
 
 \begin_layout Standard
-El uso de las construcciones verticales experimenta un fenómeno de expansión
- debido al gran precio del terreno y la densidad poblacional de las grandes
- urbes.
+Actualmente las edificaciones de gran altura enfrentan el problema de transporta
+r satisfactoriamente a los usuarios entre los pisos.
+ Este transporte tiende a complicarse debido a la gran demanda que tiene
+ el sistema y la considerable distancia que deben recorrer los ascensores.
+ Entre los factores más importantes que impulsan el aumento de construcciones
+ de gran altura están:
+\end_layout
+
+\begin_layout Standard
+• Escasez de terrenos disponibles.
+\end_layout
+
+\begin_layout Standard
+• Alto precio de los terrenos.
+\end_layout
+
+\begin_layout Standard
+• Densidad poblacional.
+\end_layout
+
+\begin_layout Standard
+• Nuevas tendencias.
+\end_layout
+
+\begin_layout Standard
+Las edificaciones de gran altura existen gracias a la eficiencia de los
+ sistemas de elevadores y no viceversa.
+ En un contexto funcional el sistema de elevadores es la arteria principal
+ del edificio.
  
 \end_layout
 
 \begin_layout Standard
-El incremento de este tipo de construcciones trae el problema de transportar
- eficientemente el gran número de residentes o visitantes de la edificación.
- Para el transporte en edificios de gran altura no existe un medio más adecuando
- que las cabinas de ascensor, pero su capacidad reducida, el alto flujo
- de pasajeros en horas pico y la considerable distancia que deben recorrer
- los ascensores hace que el sistema tienda a colapsar, elevando el tiempo
- promedio que una persona debe esperar para ser transportada o llegar a
- su destino.
+Fue después que Elijah Graves Otis inventó el sistema de gobierno de velocidad
+ para elevadores y el sistema seguro de frenado para elevadores en el año
+ de 1857 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, que los sistemas de elevadores se convirtieron en una opción viable para
+ transportar personal.
+ Este fue un factor determinante para que la altura en las construcciones
+ dejara de ser un factor limitante.
+ 
+\end_layout
+
+\begin_layout Standard
+La primera construcción de gran altura que usaba el sistema de Otis fue
+ instalada en la tienda Haughwout&Company en New York.
+ Los sistemas de elevadores para este entonces funcionaban con bombas de
+ agua presurizada y grandes motores, uno de estos sistemas fue presentado
+ en la feria de exposición universal de París que debía mover la cabina
+ del elevador sobre los 321 metros que constituyen la torre Eiffel.
+\end_layout
+
+\begin_layout Standard
+Para el año de 1880 Werner von Siemens introdujo la utilización de fuentes
+ eléctricas para los sistemas de elevadores.
+ El desarrollo de la energía eléctrica le proporcionó un nuevo ímpetu en
+ el uso de construcciones de gran altura.
+\end_layout
+
+\begin_layout Standard
+A partir de entonces las construcciones eran cada vez más altas, y en países
+ como Estados Unidos y Asia se marcaba una clara tendencia a preferir este
+ tipo de edificaciones en ciudades con alta densidad poblacional.
+ Un ejemplo de estas edificaciones son la torre Taipei 101 con una altura
+ de 509 metros o la torre Burj Khalifa en Dubai con 828 metros de altura
+ y 163 pisos, siendo hasta el momento la construcción habitable más alta
+ del mundo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EMPORIS2012"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -333,66 +398,53 @@ Definición del Problema
 \end_layout
 
 \begin_layout Standard
-En un sistema de transporte vertical de un solo elevador, este se encarga
- de atender todas las llamadas que se generen en el sistema.
- En el caso de varios elevadores el sistema de control debe tener en cuenta
- las condiciones de todos los elevadores para asignar aquel que pueda atender
- más eficientemente la llamada.
+Se ha observado que el servicio prestado por los elevadores, en la mayoría
+ de los casos es deficiente.
+ Bajo condiciones de alto tráfico las personas tienen que esperar mucho
+ tiempo para ser atendidas.
+ En edificios pequeños no implican mayores inconvenientes, sin embargo,
+ en una construcción de gran altura, el transporte de los pasajeros debe
+ hacerse de una manera ágil, eficiente y por qué no decirlo; de una manera
+ inteligente, en donde se economice tanto el tiempo del pasajero, como la
+ energía que usa el elevador.
  
 \end_layout
 
 \begin_layout Standard
-Debido a la necesidad de mejorar la eficiencia en el trasporte de personas
- sobre edificaciones de gran altura, grandes compañías líderes en esta área,
- han presentado diversos técnicas de control 
+Los sistemas de control tradicional son ineficientes para cubrir esta necesidad
+ debido a que su diseño solo contempla reglas simples de control como la
+ dirección en la que dirige el ascensor, o el número de pasajeros 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "HAKONEN-SIIKONEN-2008,SIIKONEN2004"
-
-\end_inset
-
-que presentan mejora mayor medida en tiempo se servicio promedio de pasajeros.
- Estas compañías cuentan con los recursos financieros para investigación
- bastante altos.
- Sus avances y nuevos algoritmos de control para grupo de elevadores son
- verificados en simuladores construidos
-\shape italic
- ad-hoc
-\shape default
- que reproducen con precisión el tráfico de pasajeros y que miden con exactitud
- los tiempos invertidos por los usuarios para movilizarse dentro de la edificaci
-ón.
- Algunos de estos ambientes de simulación son OtisPlan de Otis Corporation
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "OTISPLAN_Brochure"
-
-\end_inset
-
-, Building Traffic Simulator (BTS) de la empresa finlandesa KONE 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "SIIKONEN_BTS2004"
-
-\end_inset
-
-, Elevate desarrollado por Peter Research ltd.
- 
-\end_layout
-
-\begin_layout Standard
-Estas herramientas de simulación sofisticadas tienen en común que son propietari
-as, en el caso de BTS y OtisPlan su uso está restringido a personal de la
- compañía únicamente y para el caso de Elevate existe una licencia comercial
- de usuario único con un costo de 2900 dolares 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ElevateLicence"
+key "MIRAVETE1996"
 
 \end_inset
 
 .
+ La creciente necesidad hizo que nuevas técnicas más complejas empezaran
+ a ser aplicadas a este problema.
+ A partir del desarrollo de la inteligencia artificial han ido apareciendo
+ controladores basados en técnicas inteligentes que aumentan considerablemente
+ la efectividad en la asignación de llamadas.
+ 
+\end_layout
+
+\begin_layout Standard
+La mayoría de las técnicas usadas tienen arquitectura centralizada.
+ Se propone replantear el problema desde la perspectiva distribuida en donde
+ cada una de las cabinas compita por la llamada teniendo en cuenta el estado
+ de las demás cabinas y el de sí misma.
+ 
+\end_layout
+
+\begin_layout Standard
+Las cabinas actuan como agentes inteligentes que cooperan para atender eficiente
+mente las llamadas de los usuarios.
+ Existe además un agente intermediador, que resuelve los conflictos cuando
+ hay varias cabinas compitiendo por la misma llamada.
+ Este agente conciliador decide a favor de aquella cabina que tenga más
+ posibilidad de atender la llamada de acuerdo a los objetivos de control.
+ 
 \end_layout
 
 \begin_layout Section
@@ -434,91 +486,6 @@ Diseño del método distribuido de control para la asignación de ascensores,
 \begin_layout Enumerate
 Evaluar la técnica de control desarrollada y comparar su eficiencia respecto
  a una técnica tradicional en un ambiente simulado.
- 
-\end_layout
-
-\begin_layout Section
-Contenido del Libro
-\end_layout
-
-\begin_layout Standard
-El libro está organizado ....
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang english
-Esto parte del libro se escribe al final.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Definiciones Principales
-\end_layout
-
-\begin_layout Standard
-Se presentan los conceptos principales que serán usados a los largo del
- libro, se recogen los conceptos que pueden ser interpretados ambiguamente.
-\end_layout
-
-\begin_layout Itemize
-Tráfico vertical: Se entiende por tráfico en una edificación; el movimiento
- o tránsito de personas dentro del edificio, este tráfico tiene dos componentes
- tasa de arribo y probabilidad de destino.
-\end_layout
-
-\begin_layout Itemize
-Tiempo de espera: es el tiempo comprendido entre la generación de la llamada
- de elevador y el arribo de este al piso origen de la llamada.
-\end_layout
-
-\begin_layout Itemize
-Tiempo de viaje: es el tiempo comprendido desde que el pasajero entra al
- elevador hasta que llega a su piso destino.
-\end_layout
-
-\begin_layout Itemize
-Tiempo total: es el tiempo que se comprende desde arribo del usuario al
- sistema hasta la llegada de este al piso destino, es la suma del tiempo
- de espera y el tiempo de viaje, es también llamado tiempo de servicio 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "POWELL1992"
-
-\end_inset
-
- o tiempo a destino 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "NAKAI1994"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Tiempo de retorno de viaje (round trip time): Es el tiempo comprendido desde
- que un elevador recoge pasajeros en el primer piso (lobby), lleva los pasajeros
- a los pisos superiores y regresa a la primera planta (lobby) para volver
- a servir a los nuevos pasajeros.
-\end_layout
-
-\begin_layout Itemize
-Capacidad del transporte del sistema: es el número de pasajeros que un grupo
- de elevadores puede transportar en una fracción de tiempo de cinco minutos.
-\end_layout
-
-\begin_layout Itemize
-Patrón de tráfico: es la caracterización del comportamiento estocástico
- que se presenta en el arribo de pasajeros al sistema.
- Para este trabajo se consideran principalmente cuatro patrones: subida
- -uppeak-, entre pisos -interfloor-, bajada -downpeak-.
 \end_layout
 
 \end_body

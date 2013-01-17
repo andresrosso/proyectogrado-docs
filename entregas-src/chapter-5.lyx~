@@ -737,6 +737,8 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename resources/egcs-ex1.png
 	scale 50
@@ -1102,8 +1104,8 @@ Ejemplo 2
 \end_layout
 
 \begin_layout Standard
-En el siguiente ejemplo se genera una llamada desde el piso 6 hasta el piso
- 12.
+En el siguiente ejemplo se genera una llamada desde el piso 11 hasta el
+ piso 17.
  El elevador 1 (transporta 2 pasajero) se encuentra en el piso 6 y tiene
  una parada en el piso 17.
  El elevador 2 (transporta 3 pasajeros) está en el piso 9 y tiene una parada
@@ -1121,6 +1123,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename resources/egcs-ex2.png
 	scale 50
@@ -1562,7 +1566,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-te.png
-	width 60page%
+	width 40page%
 
 \end_inset
 
@@ -1588,7 +1592,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-te.png
-	width 60page%
+	width 40page%
 
 \end_inset
 
@@ -1683,7 +1687,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-ts.png
-	width 60page%
+	width 40page%
 
 \end_inset
 
@@ -1709,7 +1713,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-ts.png
-	width 60page%
+	width 40page%
 
 \end_inset
 
@@ -1803,7 +1807,7 @@ AI
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-ec.png
-	width 60page%
+	width 40page%
 
 \end_inset
 
@@ -1829,7 +1833,7 @@ Convencional
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-ec.png
-	width 60page%
+	width 40page%
 
 \end_inset
 

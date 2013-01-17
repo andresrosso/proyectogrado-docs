@@ -477,7 +477,7 @@ Pese a la gran variedad de modelos de simulación existentes todos estos
 \begin_layout Enumerate
 Obtener observaciones básicas de una fuente de números aleatorios.
  En la simulación de este trabajo es necesario generar los usuarios del
- sistema y comportamientos dentro de el, esta generación estará basáda en
+ sistema y comportamientos dentro de el, esta generación estará basada en
  observaciones de la realidad identificada en otros trabajos académicos.
 \end_layout
 
@@ -485,13 +485,13 @@ Obtener observaciones básicas de una fuente de números aleatorios.
 Transformar las observaciones básicas de entradas al modelo, según las especific
 aciones del mismo.
  Es necesario por lo tanto asignar a estos datos aleatorios un significado
- real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
+ real dentro de la simulación, por ejemplo el momento de ingreso de un usuario
  al sistema según la variable temporal de la simulación, o el piso al que
- se dirije según el patrón de tráfico presente.
+ se dirige según el patrón de tráfico presente.
 \end_layout
 
 \begin_layout Enumerate
-Trasformar las entradas, a traves del modelo, en salidas.
+Trasformar las entradas, a través del modelo, en salidas.
  Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
  las salidas medidas del sistema.
 \end_layout
@@ -1442,7 +1442,7 @@ Maniobra Universal Por Pulsadores
 Cuando el ascensor esta desocupado, y es el primero en recibir la orden
  irá a atender la llamada.
  Si durante el funcionamiento se solicita el ascensor desde cualquier otro
- piso la llamada será ignorada y el carro seguirá obedeciendo la órden que
+ piso la llamada será ignorada y el carro seguirá obedeciendo la orden que
  ha iniciado la llamada.
  
 \begin_inset CommandInset citation
@@ -1647,7 +1647,7 @@ key "WEISS1999"
 \begin_layout Itemize
 
 \series bold
-Proactividad
+Pro actividad
 \series default
 , es la capacidad de tomar la iniciativa para realizar las acciones necesarias
  para cumplir con los objetivos para los que son diseñados
@@ -1696,7 +1696,7 @@ key "WOOLDRIDGE1995"
 \end_layout
 
 \begin_layout Subsubsection
-LÓGICA DIFUSA
+Lógica Difusa
 \end_layout
 
 \begin_layout Paragraph*
@@ -1777,10 +1777,10 @@ Estructura Básica De Un Controlador Difuso
 
 \begin_layout Standard
 Un controlador basado en lógica difusa realiza tres acciones básicas.
- La primera, corresponde al procedimiento denominado fuzificar, que implica
+ La primera, corresponde al procedimiento denominado fusificar, que implica
  el asignar un valor lingüístico a una variable utilizando funciones de
  membresía.
- La fusisficación convierte el valor real de una variable de entrada a un
+ La fusificación convierte el valor real de una variable de entrada a un
  valor difuso, que podrá ser manipulado en el bloque de base de reglas de
  inferencia.
  
@@ -1798,7 +1798,7 @@ La segunda, corresponde a la inferencia lógica que consiste en definir las
 \end_layout
 
 \begin_layout Standard
-La tercera, se denomina defuzificar, que consiste en normalizar un valor
+La tercera, se denomina defusificar, que consiste en normalizar un valor
  difuso a su equivalente en salida de control nítida.
  El proceso de defusificación, convierte la variable difusa que se obtuvo
  como salida en el bloque del mecanismo de inferencia, a un valor real.

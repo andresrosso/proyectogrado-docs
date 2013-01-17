@@ -2910,16 +2910,17 @@ Meta
 
 \end_layout
 
-\begin_layout Subsubsection
-ESTIMAR TIEMPO DE ESPERA y EN EL TIEMPO DE VIAJE
+\begin_layout Subsection
+Estimar Tiempo De Espera Y El Tiempo De Viaje
 \end_layout
 
 \begin_layout Standard
 El tiempo que un pasajero debe esperar desde el momento en que presiona
  el botón para registrar la llamada hasta que el ascensor pasa a recogerlo
  no es preciso.
- No es posible conocerlo con anticipación ya depende de las futuras llamadas
- que se hagan al ascensor y de los desplazamientos que deba hacer.
+ No es posible conocerlo con anticipación ya que depende de las futuras
+ llamadas que se hagan al ascensor y de los desplazamientos que éste deba
+ hacer.
  Debido a esta naturaleza de incertidumbre en la determinación del tiempo
  de espera es necesario hacer una predicción teniendo como principal criterio
  el tráfico que se está generando en la edificación.
@@ -3233,7 +3234,7 @@ Raiz del error cuadrático para el estimador Tiempo Espera
 \end_layout
 
 \begin_layout Subsubsection
-OBTENER ASCENSOR PARA LLAMADA
+Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
@@ -3260,7 +3261,7 @@ Este tipo de controlador permite que la solución se robusta y que el control
 \end_layout
 
 \begin_layout Paragraph
-Entradas Difusas Agente OBTENER ASCENSOR PARA LLAMADA
+Entradas Difusas Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
@@ -3489,7 +3490,7 @@ Conjuntos Difusos Paradas en Piso Destino
 \end_layout
 
 \begin_layout Paragraph
-Salida Difusa Agente OBTENER ASCENSOR PARA LLAMADA
+Salida Difusa Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
@@ -3531,7 +3532,7 @@ Salida Prioridad
 \end_layout
 
 \begin_layout Paragraph
-Reglas de Inferencia Difusas Agente OBTENER ASCENSOR PARA LLAMADA
+Reglas de Inferencia Difusas Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
@@ -3551,7 +3552,7 @@ Estas reglas se toman de acuerdo a los factores que tiene más importancia
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3566,6 +3567,7 @@ status collapsed
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Id
 \end_layout
 
@@ -3577,6 +3579,7 @@ Id
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Regla de Inferencia
 \end_layout
 
@@ -3590,6 +3593,7 @@ Regla de Inferencia
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R1
 \end_layout
 
@@ -3599,6 +3603,8 @@ R1
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3620,6 +3626,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R2
 \end_layout
 
@@ -3629,6 +3636,8 @@ R2
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3650,6 +3659,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R3
 \end_layout
 
@@ -3659,6 +3669,8 @@ R3
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3680,6 +3692,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R4
 \end_layout
 
@@ -3689,6 +3702,8 @@ R4
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3710,6 +3725,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R5
 \end_layout
 
@@ -3719,6 +3735,8 @@ R5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3740,6 +3758,7 @@ Estimación Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R6
 \end_layout
 
@@ -3749,6 +3768,8 @@ R6
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3770,6 +3791,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R7
 \end_layout
 
@@ -3779,6 +3801,8 @@ R7
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3800,6 +3824,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R8
 \end_layout
 
@@ -3809,6 +3834,8 @@ R8
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3830,6 +3857,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R9
 \end_layout
 
@@ -3839,6 +3867,8 @@ R9
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3860,6 +3890,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R10
 \end_layout
 
@@ -3869,6 +3900,8 @@ R10
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3890,6 +3923,7 @@ Estimación Tiempo de Viaje
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R11
 \end_layout
 
@@ -3899,6 +3933,8 @@ R11
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3920,6 +3956,7 @@ Porcentaje de Ocupación
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R12
 \end_layout
 
@@ -3929,6 +3966,8 @@ R12
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3950,6 +3989,7 @@ Porcentaje de Ocupación
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R13
 \end_layout
 
@@ -3959,6 +3999,8 @@ R13
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -3980,6 +4022,7 @@ Porcentaje de Ocupación
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R14
 \end_layout
 
@@ -3989,6 +4032,8 @@ R14
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4010,6 +4055,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R15
 \end_layout
 
@@ -4019,6 +4065,8 @@ R15
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4040,6 +4088,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R16
 \end_layout
 
@@ -4049,6 +4098,8 @@ R16
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4070,6 +4121,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R17
 \end_layout
 
@@ -4079,6 +4131,8 @@ R17
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4100,6 +4154,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R18
 \end_layout
 
@@ -4109,6 +4164,8 @@ R18
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4130,6 +4187,7 @@ Paradas en Piso Origen
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R19
 \end_layout
 
@@ -4139,6 +4197,8 @@ R19
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4160,6 +4220,7 @@ Paradas en Piso Destino
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R20
 \end_layout
 
@@ -4169,6 +4230,8 @@ R20
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4190,6 +4253,7 @@ Paradas en Piso Destino
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R21
 \end_layout
 
@@ -4199,6 +4263,8 @@ R21
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4220,6 +4286,7 @@ Paradas en Piso Destino
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R22
 \end_layout
 
@@ -4229,6 +4296,8 @@ R22
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
@@ -4250,6 +4319,7 @@ Paradas en Piso Destino
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 R23
 \end_layout
 
@@ -4259,6 +4329,8 @@ R23
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Si 
 \begin_inset Quotes eld
 \end_inset
