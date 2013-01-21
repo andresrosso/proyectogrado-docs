@@ -1,0 +1,37 @@
+1. Aunque el trabajo realizado en el desarrollo del simulador fue excelente, el documento no puede estar centrado en el simulador, 
+ya que este no es el objetivo principal ni objetivos secundarios de su trabajo de grado. Adicionalmente, hace falta una validación del simulador, 
+que permita mostrar que el simulador si corresponde a lo que se puede encontrar en un mundo real, y esto no lo vi en ninguna parte del documento 
+a pesar que se lo pedí en repetidas ocasiones.
+
+2. Después de la exposición realizada en el seminario, Enrique le realizó varios comentarios acerca del uso de la red neuronal y la lógica difusa, 
+y no se ve como se dan respuestas a esos comentarios. Ya que muy probablemente Enrique sea el evaluador.
+
+3. En la decisión de utilizar redes neuronales no hay una decisión soportada científicamente, 
+como se evidencia en el documento se muestra como si usted HUBIERA decidido que fuese así y ya. Así mismo, 
+la justificación de porqué se está utilizando esa topología de red neuronal está muy mal fundamentada y 
+no se muestra que se haya hecho experimentos con otras topologías para seleccionar la mejor.
+
+4.   El modelo multi agente expuesto en el documento está incompleto, ya que hace falta mostrar cómo se van a manejar los conflictos, 
+las asignaciones de roles, asignación de tareas, etc.
+
+5.   No hay un diseño de experimentos, lo cual permite soportar que lo realizado en verdad sea significativo.
+
+
+---------------------------------------------------------------------------------------------------------------
+
+TAREAS
+------
+
+1. Validación del simulador
+
+2. Sustentar red neuronal y lógica difusa
+
+3. Soportar cientificamente el uso de redes neuronales para estimar TE y TV. Sustentar topología y mostrar experimentación con otras topologías.
+
+4. Hacer el modelo multi agente más riguroso, manejo de conflictos, asiganción de roles, asignación de tareas.
+
+5. Diseño de experimentos.
+
+
+
+

@@ -286,7 +286,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Simulador
+Simulador de Edificación
 \end_layout
 
 \begin_layout Standard
@@ -382,16 +382,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/modeloSimBANKS.png
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Falta incluir la gráfica
-\end_layout
+	scale 50
 
 \end_inset
 
@@ -1161,7 +1152,7 @@ Tiempo de transito entre dos pisos adyacentes
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1394,11 +1385,12 @@ key "SANDOR2006"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/commonSimCharacteristics.png
+	scale 50
 
 \end_inset
 
@@ -1966,14 +1958,14 @@ La siguiente imagen muestra el diagrama de clases del simulador, detallando
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \lang english
 \begin_inset Graphics
 	filename resources/PIMClassModel.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -2375,7 +2367,7 @@ Tiempo de Viaje
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics

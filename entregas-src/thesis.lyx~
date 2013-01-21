@@ -53,16 +53,13 @@
 % avoid that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 \end_preamble
-\options listtotoc, chapterprefix, tablecaptionabove, bibtotoc, parskip=full, headings=small, numbers=noenddot
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
 \use_default_options true
 \begin_modules
-theorems-ams
-eqs-within-sections
-figs-within-sections
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -81,8 +78,8 @@ customHeadersFooters
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
-\paperfontsize 12
+\float_placement H
+\paperfontsize 11
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
@@ -96,7 +93,7 @@ customHeadersFooters
 \pdf_pdfusetitle true
 \pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
 \papersize a4paper
-\use_geometry false
+\use_geometry true
 \use_amsmath 2
 \use_esint 1
 \use_mhchem 1
@@ -118,12 +115,12 @@ customHeadersFooters
 \color #55aaff
 \end_branch
 \branch Summary
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #7f7f7f
 \end_branch
 \branch Acknowledgments
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #ffff00
 \end_branch
@@ -156,6 +153,13 @@ customHeadersFooters
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
 \secnumdepth 3
 \tocdepth 2
 \paragraph_separation skip
@@ -163,7 +167,7 @@ customHeadersFooters
 \quotes_language english
 \papercolumns 1
 \papersides 2
-\paperpagestyle default
+\paperpagestyle fancy
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -439,12 +443,12 @@ The summary should not have page headers.
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Branch Summary
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset CommandInset include
@@ -734,7 +738,7 @@ Acknowledgments
 
 \begin_layout Standard
 \begin_inset Branch Acknowledgments
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset CommandInset include

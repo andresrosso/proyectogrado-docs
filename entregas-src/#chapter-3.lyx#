@@ -286,7 +286,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Simulador
+Building Simulator
 \end_layout
 
 \begin_layout Standard
@@ -318,7 +318,7 @@ key "HAKONEN-SIIKONEN-2008,SIIKONEN2004"
 
 \end_inset
 
- inviertiendo recursos financieros para investigación.
+ invirtiendo recursos financieros para investigación.
  Sus avances y nuevos algoritmos de control para grupo de elevadores son
  verificados en simuladores construidos
 \shape italic
@@ -382,16 +382,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/modeloSimBANKS.png
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Falta incluir la gráfica
-\end_layout
+	scale 50
 
 \end_inset
 
@@ -432,7 +423,7 @@ El simulador a desarrollar permitió tener un ambiente controlado que represent�
 \begin_layout Itemize
 El objetivo general de la simulación es simular una edificación real en
  la cual el estudio de tráfico se haya hecho previamente y el número de
- ascensores sea sufuciente para servir correctamente a los usuarios.
+ ascensores sea suficiente para servir correctamente a los usuarios.
 \end_layout
 
 \begin_deeper
@@ -454,12 +445,12 @@ key "NATSAFCOUNCIL"
 \end_layout
 
 \begin_layout Itemize
-Se debe poder determinar si la configuación del sistema de ascensores es
+Se debe poder determinar si la configuración del sistema de ascensores es
  suficiente para servir la población del edificio.
 \end_layout
 
 \begin_layout Itemize
-Se desean simular situaciónes de emergencia, como por ejemplo que un elevador
+Se desean simular situaciones de emergencia, como por ejemplo que un elevador
  quede fuera de servicio.
 \end_layout
 
@@ -474,7 +465,7 @@ Un sistema puede verse como un objeto en el cual interactúan variables de
  Las señales externas también pueden afectar e influir en el comportamiento
  del sistema, pero estas señales son susceptibles de manipulación.
  El sistema además, puede presentar perturbaciones que pueden ser clasificadas
- en observaciones mesurables y aquellas que solamente pueden observarse.
+ en observaciones mensurables y aquellas que solamente pueden observarse.
  Todas estas señales son fundamentales para poder determinar el modelo de
  un sistema.
 \end_layout
@@ -557,7 +548,7 @@ Antes de diseñar el sistema se deben considerar algunas reglas básicas que
 \end_layout
 
 \begin_layout Itemize
-Las llamadas generadas en los pisos son hechas a traves de una matriz de
+Las llamadas generadas en los pisos son hechas a través de una matriz de
  botones, esto permite que el sistema conozca con anterioridad el piso destino
  de cada pasajero antes de ser embarcado 
 \begin_inset CommandInset citation
@@ -608,7 +599,8 @@ key "AVERILL2000"
 \end_layout
 
 \begin_layout Standard
-El diagrama siguiente ilustra el flujo que por lo general sigue una simulación
+En la figura No.
+ 3.2 diagrama siguiente ilustra el flujo que por lo general sigue una simulación
  de este tipo.
 \end_layout
 
@@ -675,7 +667,7 @@ Pese a la gran variedad de modelos de simulación existentes todos estos
 \begin_layout Enumerate
 Obtener observaciones básicas de una fuente de números aleatorios.
  En la simulación de este trabajo es necesario generar los usuarios del
- sistema y comportamientos dentro de el, esta generación estará basáda en
+ sistema y comportamientos dentro de el, esta generación estará basada en
  observaciones de la realidad identificada en otros trabajos académicos.
 \end_layout
 
@@ -683,13 +675,13 @@ Obtener observaciones básicas de una fuente de números aleatorios.
 Transformar las observaciones básicas de entradas al modelo, según las especific
 aciones del mismo.
  Es necesario por lo tanto asignar a estos datos aleatorios un significado
- real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
+ real dentro de la simulación, por ejemplo el momento de ingreso de un usuario
  al sistema según la variable temporal de la simulación, o el piso al que
- se dirije según el patrón de tráfico presente.
+ se dirige según el patrón de tráfico presente.
 \end_layout
 
 \begin_layout Enumerate
-Trasformar las entradas, a traves del modelo, en salidas.
+Trasformar las entradas, a través del modelo, en salidas.
  Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
  las salidas medidas del sistema.
 \end_layout
@@ -703,6 +695,18 @@ iento.
 
 \begin_layout Subsection
 Variables de Simulación
+\end_layout
+
+\begin_layout Standard
+El modelo de la realidad, en nuestro caso el edificio, es una representación
+ del sistema, sus componentes y la dinámica que este supone.
+ Este modelo puede tomar la forma de cualquier sistema real si se tienen
+ en cuenta las características comunes al sistema.
+ Las características identificadas pasan a ser parte del modelo computacional,
+ el cual puede ser manipulado según la necesidad de simulación.
+ En la siguiente sección se presentan las características del modelo identificad
+as, categorizadas según su naturaleza dinámica y los componentes a las que
+ pertenece.
 \end_layout
 
 \begin_layout Subsubsection
@@ -780,7 +784,7 @@ Pisos reposo de ascensor
 \begin_inset Formula $e$
 \end_inset
 
- una vez que no tenga lamadas de servicio.
+ una vez que no tenga llamadas de servicio.
 \end_layout
 
 \begin_layout Itemize
@@ -972,9 +976,10 @@ key "SANDOR2006"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1003,7 +1008,7 @@ Dinámica del ascensor
 \end_layout
 
 \begin_layout Subsubsection
-Varibles Dependientes
+Variables Dependientes
 \end_layout
 
 \begin_layout Itemize
@@ -1144,6 +1149,7 @@ Tiempo de transito entre dos pisos adyacentes
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1162,8 +1168,6 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\lang english
 Probabilidad de no recoger un pasajero 
 \end_layout
 
@@ -1262,13 +1266,13 @@ Pasajero
 \begin_layout Itemize
 
 \series bold
-Numero de pasajeros que arriban en un tiempo t 
+Número de pasajeros que arriban en un tiempo t 
 \series default
 (
 \begin_inset Formula $N(t)$
 \end_inset
 
- ): Número de pasajeros que arriban a la edifición en el tiempo t.
+ ): Número de pasajeros que arriban a la edificación en el tiempo t.
  Depende de la población en el edificio.
 \end_layout
 
@@ -1378,6 +1382,7 @@ key "SANDOR2006"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1395,7 +1400,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Common ranges of elevator operating parameters
+Rangos cumunes de operación en edificaciones
 \end_layout
 
 \end_inset
@@ -1414,7 +1419,7 @@ Componentes del Simulador
 
 \begin_layout Standard
 Los componentes de la simulación discreta basada en avance de tiempo se
- majean como lo propone Averill para este tipo de sistemas a simular 
+ maneja como lo propone Averill para este tipo de sistemas a simular 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "AVERILL2000"
@@ -1452,7 +1457,7 @@ Lista que contiene el tiempo en el que cada tipo de evento va a ocurrir.
 \begin_layout Itemize
 
 \series bold
-Rutina de Inicializaciòn: 
+Rutina de Inicialización: 
 \series default
 Rutina programada para iniciar la simulación en el tiempo 0.
 \end_layout
@@ -1481,7 +1486,7 @@ Rutina que actualiza el estado del sistema cuando un tipo de evento ocurre,
 Rutinas de Librería: 
 \series default
 Son el conjunto de subprogramas usados para generar observaciones de acuerdo
- a distribuiciones de probalidad.
+ a distribuciones de probabilidad.
 \end_layout
 
 \begin_layout Itemize
@@ -1522,16 +1527,18 @@ Implementación de la Simulación
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-parrafo de introduccion
+El desarrollo de un sistema complejo como es un simulador requiere rigurosidad
+ durante el ciclo completo.
+ Para hacer que el sistema sea escalable y manejar la complejidad del mismo,
+ se hace un diseño basado en componentes para iterar más fácilmente e ir
+ incorporando funcionalidades sin perder el control del proyecto.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Standard
+Bajo la premisa que el simulador debe ser adaptable y que cumpla con los
+ requisitos no funcionales de calidad, se deben seguir los principios de
+ diseño que se listan a continuación.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -1549,7 +1556,7 @@ La aplicación debe correr en cualquier sistema operativo, debe desarrollarse
 \end_layout
 
 \begin_layout Itemize
-No se desarrollarán rutinas matemáticas o utilitarias si existe una libreía
+No se desarrollarán rutinas matemáticas o utilitarias si existe una librería
  de código libre que se pueda usar.
 \end_layout
 
@@ -1559,7 +1566,7 @@ El simulador debe ser de código libre y abierto para la comunidad científica.
 
 \begin_layout Itemize
 Es de gran valor presentar la dinámica del sistema gráficamente, con esto
- cualquiera pdodria decir si el sistema es eficiente o no.
+ cualquiera podría determinar si el sistema es eficiente o no.
 \end_layout
 
 \begin_layout Itemize
@@ -1578,6 +1585,7 @@ De acuerdo al análisis realizado y siguiendo los principios de diseño, se
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1585,7 +1593,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
-	scale 40
+	scale 55
 
 \end_inset
 
@@ -1596,8 +1604,6 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\lang english
 Módulos del Simulador
 \end_layout
 
@@ -1735,8 +1741,8 @@ key "HAKONEN2003"
 Probabilidad de destino
 \series default
 : Es la probabilidad que estándo en el piso Po el pasajero se dirija al
- piso destino Pd, esta probabilida se puede representar como un vector de
- tres dimensiones en donde los componentes son: <Po, Pd, Probabilidad>.
+ piso destino Pd, esta probabilidad se puede representar como un vector
+ de tres dimensiones en donde los componentes son: <Po, Pd, Probabilidad>.
 \end_layout
 
 \begin_layout Standard
@@ -1759,8 +1765,8 @@ Simulation Model
 \begin_layout Standard
 Este artefacto representa la edificación simulada con sus pisos, cabinas
  de ascensor y sus dinámica de movimiento, pasajeros, llamadas.
- Estas caracterísicas fueron cargadas del archivo de configuración correspondien
-te por el componenete properties manager.
+ Estas características fueron cargadas del archivo de configuración correspondie
+nte por el componente properties manager.
 \end_layout
 
 \begin_layout Standard
@@ -1826,9 +1832,10 @@ ilidad del componente central BuildingSimulator.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1858,12 +1865,12 @@ Diagrama de flujo resumido simulación
 \end_layout
 
 \begin_layout Subsubsection
-Routine ManagerRoutine Manager
+Routine Manager
 \end_layout
 
 \begin_layout Standard
 Este componente gestiona en un solo hilo de ejecución las tareas: TrafficGenerat
-os, Elevator Group Controller (Rutina para asignar las llamadas) y Elevator
+or, Elevator Group Controller (Rutina para asignar las llamadas) y Elevator
  Controller (Rutina que ejecuta la dinámica de cada cabina de ascensor).
  Se decide ejecutarlo en un solo hilo para no perder la sincronización entre
  las tareas y no introducir error en la simulación por los tiempos de procesamie
@@ -1887,7 +1894,7 @@ Este componente será el encargado de mantener un modelo visual 2d de edificaci�
  simulada.
  Además incorporará un componente tipo linea de comandos para poder introducir
  llamadas al sistema de manera manual.
- Este componente se ejecuta en un hilo separado del hilo de la simuación,
+ Este componente se ejecuta en un hilo separado del hilo de la simulación,
  esto para mejorar el desempeño de la aplicación, ya que en este caso no
  es tan crítico perder algo sincronía con la simulación es posible mantenerlo
  en un hilo independiente.
@@ -1939,7 +1946,7 @@ Modelo de Clases
 \end_layout
 
 \begin_layout Standard
-La siguiente imágen muestra el diagrama de clases del simulador, detallando
+La siguiente imagen muestra el diagrama de clases del simulador, detallando
  las relaciones que existen entre las clases que usa el simulador.
 \end_layout
 
@@ -1947,16 +1954,17 @@ La siguiente imágen muestra el diagrama de clases del simulador, detallando
 
 \lang english
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 \lang english
 \begin_inset Graphics
 	filename resources/PIMClassModel.png
-	scale 30
+	scale 45
 
 \end_inset
 
@@ -1969,8 +1977,6 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\lang english
 Diagrama de clases
 \end_layout
 
@@ -1999,7 +2005,7 @@ key "BARNEY2003"
 
 .
  La distribución de Poisson ha sido también usada para describir otros fenómenos
- como: la generación de particulas radioactivas o la cantidad de llamadas
+ como: la generación de partículas radioactivas o la cantidad de llamadas
  que son recibidas por una central telefónica.
 \end_layout
 
@@ -2174,11 +2180,11 @@ Criterios De Desempeño
 \begin_layout Standard
 Para medir la eficiencia del sistema de control usado, usualmente se tienen
  criterios de desempeño orientados al servicio.
- Estos criterios búscan reducir la insatisfacción del cliente en cuanto
+ Estos criterios buscan reducir la insatisfacción del cliente en cuanto
  al tiempo que invierte para movilizarse desde su piso origen hasta el piso
  destino.
  El criterio de desempeño más usado en cualquier tipo de edificación diurna
- va en busca de redurcir el tiempo de espera que el pasajero gasta desde
+ va en busca de reducir el tiempo de espera que el pasajero gasta desde
  que oprime el botón de llamada y el tiempo que el ascensor toma para llevar
  el pasajero a su piso destino 
 \begin_inset CommandInset citation
@@ -2352,14 +2358,15 @@ Tiempo de Viaje
 \end_inset
 
  se usa una distribución Gamma.
- Los límites de esta se encuentran en la Figura.
+ Los límites de esta se encuentran en la Figura 3.11.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2397,6 +2404,34 @@ Criterio de desempeño <Tiempo de Viaje>
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Verificación y Validación del Simulador
+\end_layout
+
+\begin_layout Standard
+Cuando se estudia un sistema mediante un modelo, prototipo o simulador hay
+ que comprobar que conduce a resultados correctos.
+ Esto requiere dos procesos:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Verificación
+\series default
+: Hace referencia a la correctitud de la implementación.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Validación
+\series default
+: hace referencia a los errores que se cometen como consecuencia de la represent
+atividad de las suposiciones que se hacen para establecer su correspondencia
+ con el sistema.
 \end_layout
 
 \end_body

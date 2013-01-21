@@ -78,7 +78,7 @@ customHeadersFooters
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -308,7 +308,7 @@ key "AVERILL2000"
 \end_layout
 
 \begin_layout Subsection
-Parámetros de la Simulación
+Protocolo de Experimentación
 \end_layout
 
 \begin_layout Standard
@@ -318,10 +318,101 @@ Para verificar el asigandor de llamada basado en inteligencia artificial
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+Variables Independientes
+\end_layout
+
+\begin_layout Itemize
+Pisos
+\end_layout
+
+\begin_layout Itemize
+Elevadores
+\end_layout
+
+\begin_layout Itemize
+Capacidad Elevadores
+\end_layout
+
+\begin_layout Itemize
+Aceleración 
+\end_layout
+
+\begin_layout Itemize
+Velocidad
+\end_layout
+
+\begin_layout Itemize
+Tiempo Abrir puerta 
+\end_layout
+
+\begin_layout Itemize
+Tiempo Cerrar puerta 
+\end_layout
+
+\begin_layout Itemize
+Tiempo transferencia de pasajeros 
+\end_layout
+
+\begin_layout Itemize
+Distancia entre pisos 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Variables Dependientes
+\end_layout
+
+\begin_layout Itemize
+Promedio de tiempo de espera
+\end_layout
+
+\begin_layout Itemize
+Promedio de tiempo de servicio
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Variables Interviniente
+\end_layout
+
+\begin_layout Itemize
+Algoritmo de control para asignar llamada EGCS
+\end_layout
+
+\begin_layout Itemize
+Algoritmo de control para asignar llamada EGCS
+\end_layout
+
+\begin_layout Itemize
+Tiempo de avance de la simulación Modelo de tráfico de entradas.
+\end_layout
+
+\begin_layout Subsubsection
+Caracterización de las Variables
+\end_layout
+
+\begin_layout Standard
+Es necesario verificar el correcto funcionamiento del simulador antes de
+ proceder a comparar el controlador propuesto respecto al convencional.
+ Para la validación se toman datos del estudio de KONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2001"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -638,6 +729,107 @@ Parámetros de la simulación
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Experimento Verificación del Simulador
+\end_layout
+
+\begin_layout Standard
+Se verifica la generación de tráfico de acuerdo a la plantilla de tráfico
+ tomada de la edificación de oficinas Tour Paris, la cual está expuesta
+ en el trabajo de la empresa finlandesa KONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2001"
+
+\end_inset
+
+.
+ En la siguiente gráfica se encuentra discriminado el (a) tráfico de entrada
+ , (b) tráfico de salida, (c) tráfico entre pisos, (d) tráfico total.
+\end_layout
+
+\begin_layout Standard
+Este mismo patrón de tráfico se ingreso al simulador propuesto y los resultados
+ en cuanto a generación de pasajeros son muy similares.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/templateSiikonen.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Plantilla de tráfico Tou Europe
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuación se presentan las gráficas generadas por el simulador, hay
+ que tener en cuenta que la simulación en ambos casos se ejecuta durante
+ 12 horas, en las gráficas del simualdor propuesto el tiempo se mide en
+ minutos, es decir que la simulación completa dura 720 minutos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/templateAROSSO.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Plantilla de tráfico Tou Europe en el simulador propuesto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Plain Layout
 
 \end_layout
@@ -648,12 +840,16 @@ Parámetros de la simulación
 \end_layout
 
 \begin_layout Subsection
-Asignador de LLamada EGCS Basado en IA
+Experimento EGCS Basado en IA comparado con EGCS Convencional
+\end_layout
+
+\begin_layout Subsubsection
+Experimentación Numérica
 \end_layout
 
 \begin_layout Standard
-El ASIGNADOR DE LLAMADAS escoje entre los ascesores que compiten por ésta,
- aquel que pueda prestar un mejor servicio.
+El AGENTE ARBITRO DEL SISTEMA escoje entre los ascesores que compiten por
+ ésta, aquel que pueda prestar un mejor servicio.
  Esta decisión la toma con base en 5 criterios de decisión que són para
  él las entradas del motor de inferencia difuso.
  Recordemos brevemente las entradas.
@@ -712,7 +908,7 @@ Todas estas entradas son normalizadas a un valor entre [0,1].
  presentan los siguientes ejemplos.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Ejemplo 1
 \end_layout
 
@@ -1099,7 +1295,7 @@ Elevador 3
 \end_layout
 
 \end_deeper
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Ejemplo 2
 \end_layout
 
@@ -1120,7 +1316,7 @@ En el siguiente ejemplo se genera una llamada desde el piso 11 hasta el
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -1485,8 +1681,8 @@ Elevador 3
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Resultados de la Simulación
+\begin_layout Subsubsection
+Experimentación en el Simulador
 \end_layout
 
 \begin_layout Standard
@@ -1501,7 +1697,7 @@ Ya que el simulador cuenta con reporteadores estadísticos, los datos de
 o.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Tiempo de Espera
 \end_layout
 
@@ -1517,7 +1713,14 @@ l.
 \end_layout
 
 \begin_layout Standard
+En la siguiente gráfica se muestra el tiempo de espera por cada una de las
+ llamadas, en el eje horizontal se encuentra secuencialmente cada llamada
+ y en el eje vertical su tiempo de espera.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -1626,7 +1829,123 @@ Comparación Tiempo de Espera
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
+En ésta gráfica se se muestra el tiempo de espera propmedio según el minutos
+ de simulación, en el eje horizotal está el tiempo de simulación en minutos
+ y en el eje vertical el tiempo de espera promedio para ese momento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Resultado Tiempo de Espera
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/wtHoutIA.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Convencional
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/wtHourConv.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Comparación Tiempo de Espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
 Tiempo de Viaje
 \end_layout
 
@@ -1639,7 +1958,14 @@ l.
 \end_layout
 
 \begin_layout Standard
+En la siguiente gráfica se muestra el tiempo de viaje por cada una de las
+ llamadas, en el eje horizontal se encuentra secuencialmente cada llamada
+ y en el eje vertical su tiempo de viaje.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -1748,7 +2074,7 @@ Comparación Tiempo de Viaje
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Energía Consumida
 \end_layout
 
@@ -1760,6 +2086,7 @@ La energía consumida también logró ser reducida en cerca de un 10%, esta
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed

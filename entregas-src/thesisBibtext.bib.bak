@@ -19,6 +19,14 @@
   timestamp = {2011.12.01}
 }
 
+@ELECTRONIC{BORIS,
+  author = {BORIS},
+  title = {Platform for multiagent systems (MAS) development \& deployment.},
+  url = {http://www.scm.tees.ac.uk/isg/website/index.php},
+  owner = {arosso},
+  timestamp = {2013.01.17}
+}
+
 @ARTICLE{MANHEW2003,
   author = {Manhew Brand and Daniel Nikovski},
   title = {Optimal parking of elevator cars in supervisery group control},
@@ -55,6 +63,23 @@
   journal = {JORNADAS ASEPUMA.},
   owner = {arosso},
   timestamp = {2011.12.01}
+}
+
+@ARTICLE{IGLESIAS2009,
+  author = {Carlos A. Iglesias , Mercedes Garijo , Jose C. Gonzalez and Juan
+	R. Velasco},
+  title = {Analysis and Design of Multiagent Systems using MAS-CommonKADS},
+  journal = {Dep. de Ingenieria de Sistemas Telematicos},
+  owner = {arosso},
+  timestamp = {2013.01.17}
+}
+
+@ELECTRONIC{JFuzzyLogic,
+  author = {Pablo Cingolani},
+  title = {A Robust and Flexible Fuzzy-Logic Inference System Language Implementation},
+  url = {jfuzzylogic.sourceforge.neT},
+  owner = {arosso},
+  timestamp = {2013.01.17}
 }
 
 @ARTICLE{NATSAFCOUNCIL,
@@ -168,6 +193,14 @@
   timestamp = {2011.12.02}
 }
 
+@ELECTRONIC{JADE,
+  author = {JADE},
+  title = {A FIPA-ACL compliant, JAVA based software agents middleware.},
+  url = {http://jade.tilab.com/},
+  owner = {arosso},
+  timestamp = {2013.01.17}
+}
+
 @ARTICLE{JIANLIU2010,
   author = {Jian Liu,Chengdong WU,Xin Wang,Weize Wang, and Ting Zhang},
   title = {A Hybrid Control for Elevator Group System},
@@ -175,6 +208,14 @@
   year = {2010},
   owner = {arosso},
   timestamp = {2011.12.02}
+}
+
+@ELECTRONIC{JOONE,
+  author = {JOONE},
+  title = {an Object Oriented Neural Engine},
+  url = {http://sourceforge.net/projects/joone/},
+  owner = {arosso},
+  timestamp = {2013.01.17}
 }
 
 @BOOK{AVERILL2000,
@@ -314,7 +355,7 @@
   timestamp = {2012.04.17}
 }
 
-@ARTICLE{,
+@ARTICLE{Wooldridge1998,
   author = {Nicholas R. Jennings, Katia Sycara, and Michael Wooldridge.},
   title = {A roadmap to cigent research and development. Autonomous Agents and
 	Multi Agent Systems},

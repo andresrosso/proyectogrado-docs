@@ -477,7 +477,7 @@ Pese a la gran variedad de modelos de simulación existentes todos estos
 \begin_layout Enumerate
 Obtener observaciones básicas de una fuente de números aleatorios.
  En la simulación de este trabajo es necesario generar los usuarios del
- sistema y comportamientos dentro de el, esta generación estará basáda en
+ sistema y comportamientos dentro de el, esta generación estará basada en
  observaciones de la realidad identificada en otros trabajos académicos.
 \end_layout
 
@@ -485,13 +485,13 @@ Obtener observaciones básicas de una fuente de números aleatorios.
 Transformar las observaciones básicas de entradas al modelo, según las especific
 aciones del mismo.
  Es necesario por lo tanto asignar a estos datos aleatorios un significado
- real dentro de la simulaciòn, por ejemplo el momento de ingreso de un usuario
+ real dentro de la simulación, por ejemplo el momento de ingreso de un usuario
  al sistema según la variable temporal de la simulación, o el piso al que
- se dirije según el patrón de tráfico presente.
+ se dirige según el patrón de tráfico presente.
 \end_layout
 
 \begin_layout Enumerate
-Trasformar las entradas, a traves del modelo, en salidas.
+Trasformar las entradas, a través del modelo, en salidas.
  Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
  las salidas medidas del sistema.
 \end_layout
@@ -1442,7 +1442,7 @@ Maniobra Universal Por Pulsadores
 Cuando el ascensor esta desocupado, y es el primero en recibir la orden
  irá a atender la llamada.
  Si durante el funcionamiento se solicita el ascensor desde cualquier otro
- piso la llamada será ignorada y el carro seguirá obedeciendo la órden que
+ piso la llamada será ignorada y el carro seguirá obedeciendo la orden que
  ha iniciado la llamada.
  
 \begin_inset CommandInset citation
@@ -1647,7 +1647,7 @@ key "WEISS1999"
 \begin_layout Itemize
 
 \series bold
-Proactividad
+Pro actividad
 \series default
 , es la capacidad de tomar la iniciativa para realizar las acciones necesarias
  para cumplir con los objetivos para los que son diseñados
@@ -1695,8 +1695,8 @@ key "WOOLDRIDGE1995"
 .
 \end_layout
 
-\begin_layout Subsubsection
-LÓGICA DIFUSA
+\begin_layout Section
+Lógica Difusa
 \end_layout
 
 \begin_layout Paragraph*
@@ -1777,10 +1777,10 @@ Estructura Básica De Un Controlador Difuso
 
 \begin_layout Standard
 Un controlador basado en lógica difusa realiza tres acciones básicas.
- La primera, corresponde al procedimiento denominado fuzificar, que implica
+ La primera, corresponde al procedimiento denominado fusificar, que implica
  el asignar un valor lingüístico a una variable utilizando funciones de
  membresía.
- La fusisficación convierte el valor real de una variable de entrada a un
+ La fusificación convierte el valor real de una variable de entrada a un
  valor difuso, que podrá ser manipulado en el bloque de base de reglas de
  inferencia.
  
@@ -1798,7 +1798,7 @@ La segunda, corresponde a la inferencia lógica que consiste en definir las
 \end_layout
 
 \begin_layout Standard
-La tercera, se denomina defuzificar, que consiste en normalizar un valor
+La tercera, se denomina defusificar, que consiste en normalizar un valor
  difuso a su equivalente en salida de control nítida.
  El proceso de defusificación, convierte la variable difusa que se obtuvo
  como salida en el bloque del mecanismo de inferencia, a un valor real.
@@ -1826,7 +1826,7 @@ key "DRIANKOV1996"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1858,6 +1858,166 @@ Proceso de un controlador difuso
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Redes Neuronales Artificiales
+\end_layout
+
+\begin_layout Standard
+En el cerebro humano hay aproximadamente cien mil millones de neuronas (
+\begin_inset Formula $10^{11}$
+\end_inset
+
+células nerviosas), cada cécula conectada con sus vecinos por medio de conexione
+s sinápticas, se estima que en un cerebro adulto hay 
+\begin_inset Formula $10^{14}$
+\end_inset
+
+ sinápsis.
+ Las señales se propagan entre neuronas mediante una reaccón electroquímica:
+ a nivel de la sinapsis, la neurona que genera la señal emite unos neurotransmis
+ores que activan los receptores de la neurona que recibe la señal.
+\end_layout
+
+\begin_layout Standard
+En 1943, McCulloch y Pitts propusieron un modelo matemático sencillo del
+ funcionamiento de las neuronas: la neurona dispara un potencial de acción
+ cuando la combinación lineal de sus entradas supera un umbral, estye tipo
+ de redes se conocen bajo el nombre de perceptron.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Función Discriminantes Lineal
+\end_layout
+
+\begin_layout Standard
+Consideremos el problema de clasificar un conjunto de datos
+\begin_inset Formula $X\subset R^{d}$
+\end_inset
+
+ en dos clases (X es simplemente un conjunto de puntos en 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $R^{d}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Se llama función discriminante a una función
+\begin_inset Formula $y:X\rightarrow R$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x\subset X$
+\end_inset
+
+, se asigna a la clase 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+si 
+\begin_inset Formula $y(x)>0$
+\end_inset
+
+ y a la clase 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+si 
+\begin_inset Formula $y(x)<0$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+La definición más común que toma la función discriminante es 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y(x)=\sum_{i=1}^{d}w_{i}x_{i}+w_{0}=w^{T}x+w0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El vector w de dimensión d se llama vector de pesos, el parámetro 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ (que cumple 
+\begin_inset Formula $w_{0}<0$
+\end_inset
+
+) se llama el sesgo (bias), o umbral (threshold), en referencia al modelo
+ biológico de McCulloch y Pitts: cuando la suma ponderada de las señales
+ que recibe la neurona supera el umbral, se dispara una señal por el axón
+ de la neurona.
+\end_layout
+
+\begin_layout Paragraph
+Aprendizaje
+\end_layout
+
+\begin_layout Standard
+Partiendo de un conjunto de pesos sinápticos aleatorio, el proceso de aprendizaj
+e busca un conjunto de pesos que permitan a la red mapear correctamente
+ un vector de entrada a un vector de salida.
+ Durante el proceso de aprendizaje se va refinando iterativamente la solución
+ hasta alcanzar el nivel de exactitud deseado.
+ Los diferentes tipos de aprendizaje se numera
+\end_layout
+
+\begin_layout Standard
+Aprendizaje supervisado.
+ Se presenta a la red un conjunto de patrones de entrada junto con la salida
+ esperada.
+ Los pesos se van modificando de manera proporcional al error que se produce
+ entre la salida real de la red y la salida esperada.
+ • Aprendizaje no supervisado.
+ Se presenta ala red un conjunto de patrones de entrada.
+ No hay información disponible sobre la salida esperada.
+ El proceso de entrenamiento en este caso deberá ajustar sus pesos en base
+ a la correlación existente entre los datos de entrada.
+ • Aprendizaje por refuerzo.
+ Este tipo de aprendizaje se ubica entre medio de los dos anteriores.
+ Se le presenta a la red un conjunto de patrones de entrada y se le indica
+ a la red si la salida obtenida es o no correcta.
+ Sin embargo, no se le proporciona el valor de la salida esperada.
+ Este tipo de aprendizaje es muy útil en aquellos casos en que se desconoce
+ cual es la salida exacta que debe proporcionar la red.
 \end_layout
 
 \end_body

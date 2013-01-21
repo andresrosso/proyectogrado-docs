@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -278,7 +278,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Conclusiones y Trabajo Futuro
+Conclusions and Future Work
 \end_layout
 
 \begin_layout Section
@@ -289,14 +289,14 @@ Conclusiones
 El presente trabajo mostró una propuesta para simular sistemas dinámicos
  usado agentes.
  Este forma de representación hace más natural el modelado de la realidad
- y presenta ventajas en la arquitectura como el bajo acomplamiento entre
+ y presenta ventajas en la arquitectura como el bajo acoplamiento entre
  los componentes del sistema.
 \end_layout
 
 \begin_layout Standard
 Se logró demostrar que haciendo uso de técnicas inteligentes es posible
  mejorar el desempeño en el control para grupo de elevadores.
- La comninación de técnicas como: redes neuronales para la predicción de
+ La comunicación de técnicas como: redes neuronales para la predicción de
  variables con bastante incertidumbre y lógica difusa para combinar objetivos
  de control así como para priorizar estos mismos, hacen que los modelos
  de control híbridos para este tipo de problemas tenga un gran potencial.
@@ -305,7 +305,7 @@ Se logró demostrar que haciendo uso de técnicas inteligentes es posible
 \begin_layout Standard
 Se ofrece un entorno de simulación abierto, parametrizable y a la altura
  de los entornos empresariales para el problema de tráfico vertical.
- Este simulador permitirá a los investigadores centrarce en resolver el
+ Este simulador permitirá a los investigadores centrarse en resolver el
  problema de asignación de llamadas, un problema que debido a su naturaleza
  dinámica, incierta es candidata a tratarse con técnicas de inteligencia
  computacional.
@@ -320,13 +320,13 @@ El simulador puede extenderse para usarlo en tareas de planificación de
  edificaciones gran altura, para determinar que configuración de elevadores
  se debe tener (número de éstos, velocidad, capacidad, arquitectura, etc).
  Además de tareas de planificación es posible que se use para medir tiempos
- de evaciación, simulación de emergencias, etc.
+ de evacuación, simulación de emergencias, etc.
 \end_layout
 
 \begin_layout Standard
 El controlador desarrollado puede ser mejorado optimizando los parámetros
  de los conjuntos difusos, así como los pesos de las reglas aplicadas.
- Este algorimo de optimización permitiría alcanzar un mejor resultado en
+ Este algoritmo de optimización permitiría alcanzar un mejor resultado en
  cuento a la eficiencia del controlador de acuerdo a los objetivos trazados.
 \end_layout
 

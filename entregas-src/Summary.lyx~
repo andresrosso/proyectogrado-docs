@@ -113,7 +113,52 @@ adds table of contents entry
 \end_layout
 
 \begin_layout Standard
-Abstract/Summary text
+Existen muchos problemas de decisión que pueden ser tratados por sistemas
+ construidos según muy distintos paradigmas.
+ En esta categoría de problemas entran la búsqueda heurística, la clasificación,
+ la regresión, la optimización, la satisfacción de restricciones, el control,
+ el diagnóstico y muchos otros.
+ Asimismo, los paradigmas que se pueden emplear para la construcción de
+ este tipo de sistemas son muy variados: redes de neuronas, algoritmos genéticos
+, árboles de decisión, programación lógica inductiva, inferencia bayesiana,
+ razonamiento basado en casos, razonamiento borroso, sistemas clasificadores,
+ etc.
+ El foco de atención de este trabajo lo componen este tipo de problemas,
+ que se prestan a ser tratados utilizando diversos paradigmas.
+ El hecho de disponer de diversos sistemas, construidos todos ellos con
+ la finalidad de resolver la misma tarea, plantea inevitablemente las siguientes
+ preguntas: ¿es posible obtener un funcionamiento colectivo más satisfactorio
+ que el funcionamiento que se obtiene de los sistemas de manera individual?
+ En ese caso, ¿bajo qué condiciones y requisitos es esto posible?, ¿qué
+ y cuánto se puede esperar del sistema complejo que integra a los individuales,
+ en relación con lo que se obtiene de los individuales? Todas estas preguntas
+ motivan el presente trabajo, y obtienen respuesta en él.
+ En el capítulo 2 se presenta una perspectiva de los sistemas multiagente
+ de toma de decisiones.
+ Se presenta una clasificación de los mismos, y los más relevantes.
+ En el capítulo 3 se detallan los objetivos que persigue el presente trabajo.
+ Se citan los objetivos finales, así como los objetivos intermedios requeridos
+ para la consecución de los primeros.
+ En el capítulo 4 se presenta un modelo del dominio de problemas, un modelo
+ de SDMA, un modelo de agente de un SDMA, un algoritmo de toma de decisiones
+ distribuidas, y métodos para aprendizaje local y distribuido en SDMA.
+ En el capítulo 5 se presentan los motivos que fundamentan el interés del
+ estudio de los juegos, y de las damas en particular.
+ Se presenta también una perspectiva del estado de la cuestión de las damas
+ por ordenador, y una aplicación del modelo propuesto a este juego.
+ Se describe el SDMA construido, y se detallan los experimentos con él realizado
+s y los resultados obtenidos.
+ En el capítulo 6 se presenta el problema de la evaluación predictiva de
+ la carcinogénesis de compuestos químicos, así como los métodos de pruebas
+ biológicas que actualmente se emplean para la evaluación del carácter carcinogé
+nico de las sustancias, por parte del Instituto Nacional de las Ciencias
+ de la Salud Medioambientales (del inglés NIEHS).
+ Se presenta la aplicación EICAP (Environmentally Induced CAncer Prevention),
+ y los resultados de los experimentos realizados.
+ En el capítulo 7, se presentan las conclusiones a las que se llega a la
+ luz de lo expuesto en este trabajo.
+ En el capítulo 8 se presentan interesantes vías de investigación que se
+ presentan a raíz del presente trabajo.
 \end_layout
 
 \end_body

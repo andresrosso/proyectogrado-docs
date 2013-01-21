@@ -59,7 +59,7 @@
 customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -78,7 +78,7 @@ customHeadersFooters
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -278,14 +278,14 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Modelo Multi Agente
+Modelo de Sistema Multi Agente
 \end_layout
 
 \begin_layout Standard
 El uso de una arquitectura distribuida basada en Sistemas Multiagente para
  el problema de trafico de edificación trae ventajas como la tolerancia
- a errores debido a la independecia en las tareas básicas de los agentes.
- La separació de responsabilidades, el debil acoplamiento de los componentes
+ a errores debido a la independencia en las tareas básicas de los agentes.
+ La separación de responsabilidades, el débil acoplamiento de los componentes
  también se traducen en una ventaja para el diseño del sistema, ofreciendo
  una solución más escalable en el tiempo y adaptable computacionalmente.
 \end_layout
@@ -301,21 +301,35 @@ Descripción General De Los Agentes
 \end_layout
 
 \begin_layout Standard
-En este caso particular existen varios actores que interactuan con el medio,
+En este caso particular existen varios actores que interactúan con el medio,
  por ejemplo las cabinas de ascensor tienen como función transportar el
  tráfico entre las plantas de la edificación.
  Otro actor es el mecanismo encargado de determinar la asignación de las
  llamadas a las cabinas de ascensor.
- La identifiación de estos actores y el modelado bajo el paradigma de SMA
- se detallan a continuación, como referencia se tomo la metodología de modelado
- MAS-COMMON KADS.
+ La identificación de estos actores y el modelado bajo el paradigma de SMA
+ se detallan a continuación.
+\end_layout
+
+\begin_layout Standard
+Los roles están dados por los objetivos de los agentes.
+ El paradigma es analítico tomando como base la realidad diferenciandose
+ al modelo de AOPOA que es más deductivo en donde los agentes no son evidentes
+ y son descubiertos recursivamente bajo el paradigma organizacional.
+ De acuerdo a éste acercamiento de modelado de agentes se identifican 5
+ agentes, que son abstracciones de las entidades que existen en la realidad
+ en un sistema de grupo de elevadores.
+ En el modelo de éste trabajo se hizo una descomposición de metas y submetas
+ que intrínsecamente le dán los roles a los agentes, los cuales son invariables
+ en el tiempo.
 \end_layout
 
 \begin_layout Standard
 El objetivo general del sistema multiagente es el de servir eficientemente
  los usuarios del sistema, dado esto algunos agentes tienen tareas de estimación
-, otros de movilización de pasajeros, otro es el que se encarga de asignar
- las llamadas de servicio de los usuarios.
+, otros de movilización de pasajeros, otro es el que se encarga de resolver
+ los conflictos generados entre los agentes cuando se compite por una llamada
+ de elevador, tal como lo haría un ábritro en problemas de la vida real.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -336,15 +350,16 @@ Este agente es el encargado de ejecutar las acciones de control con el fin
 \begin_layout Itemize
 
 \series bold
-Agente Asignador de llamadas
+Agente Arbitro del Sistema
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
-Este agente tiene como función recibir de los agentes controladores de cabina
- las apuestas en terminos de características de servicio y de acuerdo a
- una heurística asignar la llamada al elevador que de mejor manera pueda
- servirla.
+La función de este agente es la servir de conciliador cuando se generan
+ conflictos entre los agentes controladores de cabina que están compitiendo
+ por servir una llamada, así mismo mantiene un monitoreo sobre el estado
+ de servicio de los agentes, para que dado el caso si hay llamadas que no
+ pueden ser servidas por un agente cabina éstas sean reasignadas.
 \end_layout
 
 \end_deeper
@@ -358,7 +373,7 @@ Agente Estimador Patrón de Tráfico
 \begin_layout Standard
 La función de este agente es medir las variables ambientales y determinar
  el tipo de tráfico presente en la edificación, esta información que provee
- el agente sirve como criterio de desición en el momento de la asignación
+ el agente sirve como criterio de decisión en el momento de la asignación
  de la llamada.
 \end_layout
 
@@ -373,7 +388,7 @@ Agente Estimador Tiempo Espera
 \begin_layout Standard
 Este agente tiene como función predecir el tiempo que tarda una cabina en
  llegar desde su piso origen hasta el piso en donde se encuentra la llamada,
- para hacer esta estimación utilza una red neuronal que es alimentada con
+ para hacer esta estimación utiliza una red neuronal que es alimentada con
  variables tomadas del ambiente.
 \end_layout
 
@@ -381,14 +396,14 @@ Este agente tiene como función predecir el tiempo que tarda una cabina en
 \begin_layout Itemize
 
 \series bold
-Agente Estimador Tiempo Viaje 
+Agente Estimador Tiempo Viaje
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 La función de este agente es predecir el tiempo que tarda en llegar un pasajero
  desde su piso origen hasta su piso destino, para hacer esta estimación
- utilza una red neuronal que es alimentada con variables tomadas del ambiente.
+ utiliza una red neuronal que es alimentada con variables tomadas del ambiente.
 \end_layout
 
 \end_deeper
@@ -399,9 +414,9 @@ Interacciones
 \begin_layout Standard
 Las diferentes interacciones entre los agentes se muestran en la siguiente
  figura.
- De estas interecciones se detallará sobre 3 de ellas que importantes para
- el control del grupo de elevadores y que internienen directamente sobre
- el rendimiento en el objetivo de control, el cúal se recuenda que es reducir
+ De estas interacciones se detallará sobre 3 de ellas que importantes para
+ el control del grupo de elevadores y que intervienen directamente sobre
+ el rendimiento en el objetivo de control, el cual se recuerda que es reducir
  el tiempo de espera y de viaje de los pasajeros así como la energía consumida.
 \end_layout
 
@@ -410,7 +425,7 @@ Las diferentes interacciones entre los agentes se muestran en la siguiente
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -434,6 +449,12 @@ Diagrama Interacciones
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En la siguiente tabla se explican las interacciones entre los agentes a
+ excepción de los mecanísmos cooperativos, éstos se explicarán más adelante
+ en la sección de cooperación.
 \end_layout
 
 \begin_layout Standard
@@ -465,11 +486,7 @@ ID
 \begin_inset Text
 
 \begin_layout Plain Layout
-NOM
-\end_layout
-
-\begin_layout Plain Layout
-BRE
+NOMBRE
 \end_layout
 
 \end_inset
@@ -1715,7 +1732,7 @@ El ambiente está compuesto por la edificación simulada, el cual es un sistema
 \begin_layout Standard
 Los agentes funcionan inmersos en un entorno que constituyen la entidades
  pasivas, y se comunican entre sí a través de protocolos de comunicaciones
- donde deben estar garantizadas las características de auntonomía de cada
+ donde deben estar garantizadas las características de autonomía de cada
  uno de ellos, en la tabla No.
  4.2 se muestra la descripción del ambiente.
  
@@ -1726,7 +1743,7 @@ Los agentes funcionan inmersos en un entorno que constituyen la entidades
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1923,7 +1940,7 @@ Descripción Detallada de Agentes
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="3">
+<lyxtabular version="3" rows="8" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -1933,7 +1950,11 @@ Descripción Detallada de Agentes
 \begin_inset Text
 
 \begin_layout Plain Layout
-Nombre 
+
+\series bold
+Nombre
+\series default
+ 
 \end_layout
 
 \end_inset
@@ -1942,6 +1963,8 @@ Nombre
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Agente Controlador de Cabina
 \end_layout
 
@@ -1962,6 +1985,8 @@ Agente Controlador de Cabina
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Sensores
 \end_layout
 
@@ -1980,7 +2005,7 @@ Sensor de peso
 \begin_inset Text
 
 \begin_layout Plain Layout
-Determina el número de personas presentes en la cabina, basandose en el
+Determina el número de personas presentes en la cabina, basándose en el
  peso de estas
 \end_layout
 
@@ -2046,10 +2071,42 @@ Detecta si el ascensor a llegado a un piso
 </cell>
 </row>
 <row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sensor de Llamada
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Detecta que se genera una llamada en el sistema con con piso origen (po)
+ y un piso destino (pd)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Actuadores
 \end_layout
 
@@ -2098,7 +2155,7 @@ Actuador de Cabina
 \begin_inset Text
 
 \begin_layout Plain Layout
-Hace que la cabina del ascensor se diriga en una dirección determinada (arriba,
+Hace que la cabina del ascensor se dirija en una dirección determinada (arriba,
  abajo)
 \end_layout
 
@@ -2110,6 +2167,8 @@ Hace que la cabina del ascensor se diriga en una dirección determinada (arriba,
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Meta
 \end_layout
 
@@ -2121,6 +2180,21 @@ Meta
 \begin_layout Plain Layout
 * Movilizar a un pasajero de un piso origen a un piso destino en el menor
  tiempo posible.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Submetas
+\end_layout
+
+\begin_layout Plain Layout
+* Notificar los estados en los que se encuetra una llamada: aceptada, recogida,
+ despachada.
+\end_layout
+
+\begin_layout Plain Layout
+* Enviar la oferta para competir por la llamada generada.
 \end_layout
 
 \begin_layout Plain Layout
@@ -2137,6 +2211,14 @@ Meta
 \begin_layout Plain Layout
 * Activar el freno de la cabina en determinado lugar para detenerse.
  
+\end_layout
+
+\begin_layout Plain Layout
+* Participar en la apuesta para obetener una llamada generada en el 
+\end_layout
+
+\begin_layout Plain Layout
+sistema.
 \end_layout
 
 \end_inset
@@ -2170,6 +2252,8 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Nombre 
 \end_layout
 
@@ -2179,7 +2263,9 @@ Nombre
 \begin_inset Text
 
 \begin_layout Plain Layout
-Agente Asignador de llamadas
+
+\series bold
+Agente Arbitro del Sistema
 \end_layout
 
 \end_inset
@@ -2199,6 +2285,8 @@ Agente Asignador de llamadas
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Sensores
 \end_layout
 
@@ -2228,6 +2316,8 @@ Determina en que piso se esta generando la llamada
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Actuadores
 \end_layout
 
@@ -2246,7 +2336,7 @@ Actuador asignador de llamada
 \begin_inset Text
 
 \begin_layout Plain Layout
-Basandose en los criterios establecidos el actuador identifica una cabina
+Basándose en los criterios establecidos el actuador identifica una cabina
  de ascensor que pueda atender eficientemente la llamada 
 \end_layout
 
@@ -2258,6 +2348,8 @@ Basandose en los criterios establecidos el actuador identifica una cabina
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Meta
 \end_layout
 
@@ -2267,12 +2359,19 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-* Tomar del medio ambiente y de los demas agentes la información requerida
- para determinar la cabina ideal para atender la llamada.
+* Solucionar los conflictos entre las los agentes controladores de cabina
+ para asignar la llamada, este flujo de asignación utiliza en protocolo
+ contract-net.
 \end_layout
 
 \begin_layout Plain Layout
-*Recibir las ofertas de las cabinas disponibles para atender la llamada.
+* Identificar cuales agentes cabina no está en servicio para no tenerlos
+ en cuenta en la asiganción.
+\end_layout
+
+\begin_layout Plain Layout
+* Reasignar las llamadas pertenecientes a un agente cabina que cambia a
+ estado fuera de servicio.
 \end_layout
 
 \begin_layout Plain Layout
@@ -2301,7 +2400,7 @@ Meta
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
+<lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="4cm">
@@ -2311,6 +2410,8 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Nombre 
 \end_layout
 
@@ -2320,6 +2421,8 @@ Nombre
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Agente Estimador Patrón de Tráfico
 \end_layout
 
@@ -2340,6 +2443,8 @@ Agente Estimador Patrón de Tráfico
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Actuadores
 \end_layout
 
@@ -2349,7 +2454,7 @@ Actuadores
 \begin_inset Text
 
 \begin_layout Plain Layout
-Actuador Patrón de tráfico
+Registrador en BDD.
 \end_layout
 
 \end_inset
@@ -2358,8 +2463,41 @@ Actuador Patrón de tráfico
 \begin_inset Text
 
 \begin_layout Plain Layout
-Se encarga de enviar un mensaje indicando el tipo de tráfico presente en
- la edificación (Subida, bajada y entre pisos) 
+Se encarga de registrar en la BDD la llamada generada para así determinar
+ el patrón de tráfico presente en el sistema (Subida, bajada y entre pisos)
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Recursos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Base de datos estadíticos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Recurso de base de datos propia del agente en donde registra las llamadas
+ que ingresan al sistema
 \end_layout
 
 \end_inset
@@ -2370,6 +2508,8 @@ Se encarga de enviar un mensaje indicando el tipo de tráfico presente en
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Meta
 \end_layout
 
@@ -2379,146 +2519,22 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-* LLevar la estadística de las llamadas generadas para asi obtener el patrón
- de tráfico 
-\end_layout
-
-\begin_layout Plain Layout
 * Identificar el tipo de tráfico que se esta presentando en la edificación
- (Subida, bajada y entre pisos).
+ (subida, bajada y entre pisos).
 \end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
 
+\series bold
+Tareas
 \end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
-<features tabularvalignment="middle" tabularwidth="10cm">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="4cm">
-<column alignment="center" valignment="top" width="5cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-Nombre 
+* Registrar las llamadas generadas en el sistema.
 \end_layout
 
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="5cm">
-\begin_inset Text
-
 \begin_layout Plain Layout
-Agente Generador de Tráfico
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Sensores
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Sensor Cronómetro
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Identifica la hora o espacio de tiempo de la simulación 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Actuadores
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Generador de llamadas
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Determina el número de llamadas que estadísticamente se presentan en una
- edificación en determinado espacio de tiempo.
- Además determina su piso origen y piso detino para cada una de ellas 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Meta
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="10cm">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Replicar el comportamiento de tráfico presente en una edificación real basandose
- en información estadística sobre el flujo de usuarios en el edificio
+* Obtener las llamadas para generar estadísticas.
 \end_layout
 
 \end_inset
@@ -2552,6 +2568,8 @@ Replicar el comportamiento de tráfico presente en una edificación real basando
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Nombre 
 \end_layout
 
@@ -2561,7 +2579,9 @@ Nombre
 \begin_inset Text
 
 \begin_layout Plain Layout
-Agente Estimador Tiempo de Espera
+
+\series bold
+Agente De Servidcio Estimador Tiempo de Espera
 \end_layout
 
 \end_inset
@@ -2581,6 +2601,8 @@ Agente Estimador Tiempo de Espera
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Sensores
 \end_layout
 
@@ -2671,6 +2693,8 @@ Determina la dirección del elevador en el momento en el que se genera la
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Actuadores
 \end_layout
 
@@ -2702,6 +2726,8 @@ Se encarga de estimar el tiempo que debe esperar un pasajero desde el momento
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Meta
 \end_layout
 
@@ -2711,7 +2737,7 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-* LLevar la estadística de llamadas para determinar el porcentaje de tráfico
+* Llevar la estadística de llamadas para determinar el porcentaje de tráfico
  de salida-entrada-entrepisos en el momento en el que se genera la llamada.
 \end_layout
 
@@ -2752,6 +2778,8 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Nombre 
 \end_layout
 
@@ -2761,6 +2789,8 @@ Nombre
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Agente Estimador Tiempo de Servicio 
 \end_layout
 
@@ -2841,6 +2871,8 @@ Determina la dirección del elevador en el momento en el que se genera la
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Actuadores
 \end_layout
 
@@ -2871,6 +2903,8 @@ Se encarga de estimar el tiempo que debe esperar un pasajero desde que es
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Meta
 \end_layout
 
@@ -2880,7 +2914,7 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
-* LLevar la estadística de llamadas para determinar el porcentaje de tráfico
+* Llevar la estadística de llamadas para determinar el porcentaje de tráfico
  de salida-entrada-entrepisos en el momento en el que se genera la llamada.
 \end_layout
 
@@ -2911,6 +2945,171 @@ Meta
 \end_layout
 
 \begin_layout Subsection
+Cooperación
+\end_layout
+
+\begin_layout Standard
+Es el proceso por el que ciertos agentes participantes generan deberes mutuament
+e dependientes en actividades conjuntas, en este caso la cooperación tiene
+ como fin servir las llamadas generadas en el sistema, cada uno de los agentes
+ tiene la intención de atender cada llamada pero solo uno de éstos lo hace
+ más eficientemente que los otros.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Resolución del Conflictos
+\end_layout
+
+\begin_layout Standard
+De acuerdo al modelo multiagente se presenta un coflicto por objetivos antagónic
+os entre los agentes Contraladores de Cabina.
+ Este conflicto ocurre cuando los agente de cabina compiten por una llamada
+ registrada.
+\end_layout
+
+\begin_layout Standard
+Para solucionar éste conflicto se plantea un mecanísmo de subasta en donde
+ los agentes que compiten por la llamada envían información relevante para
+ que el Arbitro tome la decisión de asignar la llamada a aquel que la pueda
+ atender en mejor medidad de acuerdo a los objetivos de control.
+ Se utiliza el protocolo contract-net extendido basado en las siguientes
+ interacciones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/InteraccionesDiagFlujo.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama flujo vínculos cooperativos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+
+\series bold
+Ejemplo 1 (Sin conflictos)
+\end_layout
+
+\begin_layout Standard
+Tomemos el caso en dónde llega una llamada al sistema, esta llamada la recibe
+ el árbitro del sitema y éste le envía a cada uno de los agentes controladores
+ de cabina las características de la llamada.
+ 
+\end_layout
+
+\begin_layout Standard
+En éste ejemplo solo un ascensor está en servicio, por lo tanto el árbitro
+ solo recibe una oferta de aquella cabina que está disponible.
+ Ya que no hay más oferentes para llamada el árbitro la asigna al único
+ agente de cabina que se interesó en la llamada y le notifica que es el
+ ganador de la llamada.
+\end_layout
+
+\begin_layout Standard
+El agente cabina incluye la llamada en su lista de llamadas y notifica al
+ árbitro que la va a atender.
+ Una vez la cabina llegue al sitio origen de llamada, notifica al árbitro
+ que ya la recogio.
+ Cuando deje al pasajero en su piso destino, notifica nuevamente al árbitro
+ que el pasajero fue servido.
+\end_layout
+
+\begin_layout Paragraph*
+
+\series bold
+Ejemplo 2 (Conflictos)
+\end_layout
+
+\begin_layout Standard
+En este segundo ejemplo todos los agentes están disponibles para atender
+ la llamada.
+ La llamada la recibe el árbitro del sitema y éste le envía a cada uno de
+ los agentes controladores de cabina las características de la llamada.
+ 
+\end_layout
+
+\begin_layout Standard
+Ya que hay más agentes de cabina pujando por la llamada, cada uno de éstos
+ calcula el tiempo de espera, el tiempo de viaje, su porcentaje de ocupación,
+ las otras llamadas que tenga en el piso origen y destino de la llamada.
+ Con éstos datos el árbitro decide de acuerdo a los obejtivos de control
+ cúal de los ascensores será el ganador de la subasta por la llamada, aquel
+ que haya hecho la mejor oferta será el que se quede con la llamada.
+\end_layout
+
+\begin_layout Standard
+Decidido quien atenderá la llamada, le notifica al agente cabina ganador.
+\end_layout
+
+\begin_layout Standard
+El agente cabina incluye la llamada en su lista de llamadas y notifica al
+ árbitro que la va a atender.
+ Una vez la cabina llegue al sitio origen de llamada, notifica al árbitro
+ que ya la recogio.
+ Cuando deje al pasajero en su piso destino, notifica nuevamente al árbitro
+ que el pasajero fue servido.
+\end_layout
+
+\begin_layout Subsection
+Inferencia en los Agentes Controladores de Cabina
+\end_layout
+
+\begin_layout Standard
+Los agentes cabina deben hacer la oferta por la llamada generada, esta oferta
+ contiene datos que pueden ser calculados como el porcentaje de ocupación,
+ las paradas en piso origen y destino.
+ Pero otras características de la oferta son apenas estimadas, estas son
+ el tiempo de espera que vá a tener el pasajero y el tiempo de viaje.
+ 
+\end_layout
+
+\begin_layout Standard
+El mecanismo por el cúal se estiman estos tiempos es por medio de redes
+ neuronales, ya es conocido que las redes neuronales tiene la característica
+ de predecir una salida de acuerdo a unas entradas, o para decirlo en otros
+ términos de mapear unas entradas a una salida, en éste caso se deben predecir
+ los tiempo de acuerdo a unas características temporales 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "VALLURU1995"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
 Estimar Tiempo De Espera Y El Tiempo De Viaje
 \end_layout
 
@@ -2939,14 +3138,8 @@ Las entradas en ambos casos se presentan de manera normalizada para que
  la convergencia a la solución sea más rápida, las salidas de la red neuronal
  son una estimación en cuento al tiempo que debe esperar o viajar un pasajero,
  esta salida tambien está normalizada.
-\end_layout
-
-\begin_layout Standard
-Para el entrenamiento SUPERVISADO se usó la técnica de BACKPROPAGATION,
- y consistió en minimizar el error a lo largo de 8000 iteraciones.
- Debido a que una taza de aprendizaje muy pequeña haría lento el aprendizaje
- y una taza muy alta haría oscilar mucho el error, por experimentación el
- valor con mejor resultado fue usar una tasa de aprendizaje de 0.6.
+ Despues de explicar la topología de las redes, sus entradas, salidas se
+ ahodará en el entrenamiento de éstas.
 \end_layout
 
 \begin_layout Paragraph
@@ -2964,6 +3157,7 @@ La red neurunal artificial encargada de estimar el tiempo de viaje que tarda
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3046,6 +3240,24 @@ Dirección del elevador
  se obtiene del agente controlador de cabina.
 \end_layout
 
+\begin_layout Paragraph
+Aprendizaje y Entrenamiento
+\end_layout
+
+\begin_layout Standard
+La red neuronal mapea una serie de entradas en una serie de salidas.
+ Este mapeo no lineal se se hace a traves de una superficie multidemensional,
+ el objetivo de la fase de aprendizaje y entrenamiento es moldear esta superfici
+e de acuerdo a la respuesta requerida 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "VALLURU1995"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 El entrenamiento de esta red neuronal se hace de manera supervisada, proveiendo
  a la red de ejemplos de tiempos de viaje obtenidos en el simulador.
@@ -3055,13 +3267,14 @@ El entrenamiento de esta red neuronal se hace de manera supervisada, proveiendo
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename resources/rmse-tV.png
+	filename resources/rmse-tv.png
 	width 50page%
 	height 50page%
 
@@ -3101,6 +3314,7 @@ La red neurunal artificial está encargada de estimar el tiempo que un pasajero
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3201,6 +3415,7 @@ Como en el caso anterior esta red neuronal en entrenada de manera supervisada
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3233,8 +3448,1055 @@ Raiz del error cuadrático para el estimador Tiempo Espera
 
 \end_layout
 
-\begin_layout Subsubsection
-Obtener Ascensor Para Llamada
+\begin_layout Paragraph*
+Entrenamiento de las Redes Neuronales Artificiales
+\end_layout
+
+\begin_layout Standard
+Para el entrenamiento SUPERVISADO se usó la técnica de BACKPROPAGATION,
+ y consistió en minimizar el error a lo largo de 8000 iteraciones.
+ Debido a que una taza de aprendizaje muy pequeña haría lento el aprendizaje
+ y una taza muy alta haría oscilar mucho el error, por experimentación el
+ valor con mejor resultado fue usar una tasa de aprendizaje de 0.6 y de momentum
+ de 0.1.
+\end_layout
+
+\begin_layout Standard
+A las redes neuronales se les presentaron 7378 ejemplos, éstos se obtuvieron
+ midiendo en el simulador cuanto duraba un pasajero esperando que el ascesor
+ llegara a recogerlo (para estimar el tiempo de espera) y cuanto duraba
+ este mismo pasajero desde que el ascensor lo recogía hasta que llegaba
+ a su destino (para estimar el tiempo de viaje).
+ Este tiempo se registraba en la base datos, se normalizaban las entradas
+ y se le presentaba a la red neuronal.
+ Se utilizó el framework JOONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JOONE"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+El número de iteraciones, el valor de la taza de aprendizaje y la configuración
+ de la red neuronal son valores que se obtuvieron luego de varios ciclos
+ de experimentación cambiando estos elementos hasta encontrar el valor que
+ hacia converger el error a 0.
+\end_layout
+
+\begin_layout Standard
+En las siguiente tablas se muestra un resumen de las múltiples configuraciones
+ probadas y los resultados en términos del error cuadrático medio, para
+ el predictor de tiempo de espera y el tiempo de viaje.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Entradas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+# Neuronas Oculta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Tasa de Aprendizaje
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Momentum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+MSE 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Sin normalizar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+3.42
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.64
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.52
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.35
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.19
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Entrenamiento ANN predictora tiempo de espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Entradas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+# Neuronas Oculta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Tasa de Aprendizaje
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+Momentum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+MSE 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Sin normalizar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+2.53
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.38
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.27
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.04
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Normalizadas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.01
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Entrenamiento ANN predictora tiempo de espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Inferencia en el Agente Arbitro del Sistema
 \end_layout
 
 \begin_layout Standard
@@ -3247,8 +4509,8 @@ Determinar que ascensor puede atender en una mejor medida una llamada es
 \end_layout
 
 \begin_layout Standard
-Por en este trabajo se propone tomar la decisión usando redes neuraonales
- (para estimar datos con incertidumbre) y reglas de inferencia difusas para
+Por en este trabajo se propone tomar la decisión usando redes neurOnales
+ para estimar datos con incertidumbre y reglas de inferencia difusas para
  tener en cuenta los objetivos de control trazados.
  Las reglas difusas se alimentan de datos que pueden ser calculados y otros
  que simplemente son estimados estadísticamente o por medio de las redes
@@ -3258,6 +4520,35 @@ Por en este trabajo se propone tomar la decisión usando redes neuraonales
 \begin_layout Standard
 Este tipo de controlador permite que la solución se robusta y que el control
  no se vea afectado ante el ruido que puedan presentar las varibles de control.
+\end_layout
+
+\begin_layout Standard
+Los conjuntos de entrada se obtuvieron analizando que factores pueden determinar
+ que una llamada sea atendida rápidamente o con una demora mayor, asi mismo
+ se incoporan conjuntos difusos con el fin de involucrar el tiempo que pueda
+ tardar un pasajeron dentro de un elevador y la energía que el sistema pueda
+ consumir.
+\end_layout
+
+\begin_layout Standard
+En la fase de desarrollo se probó usando otras entradas pero no tuvieron
+ efecto sobre los objetivos de control.
+ Lo que realmente tuvo un efecto importante sobre el controlador fue haber
+ ponderado las reglas de inferencia para que aquellas que tuvieran una mayor
+ participación en la eficiencia del sistema fuesen tenidas más en cuenta.
+\end_layout
+
+\begin_layout Standard
+En los siguientes párrafos se prensentan las entradas del sistema, las salidas
+ y las reglas de inferencia con sus pesos asignados.
+ En el desarrollo de este componente se uso la librería JFuzzyLogic 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JFuzzyLogic"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -3283,6 +4574,7 @@ Estimación Tiempo de Espera:
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3330,6 +4622,7 @@ ado de su piso origen a su piso destino.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3373,6 +4666,7 @@ Porcentaje de Ocupación del Elevador:
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3416,6 +4710,7 @@ Paradas en Piso Origen
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3459,6 +4754,7 @@ Paradas en Piso Destino
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3501,6 +4797,7 @@ La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3550,15 +4847,17 @@ Estas reglas se toman de acuerdo a los factores que tiene más importancia
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="24" columns="2">
+<lyxtabular version="3" rows="24" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="0pt">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
@@ -3573,7 +4872,7 @@ Id
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3581,6 +4880,15 @@ Id
 \series bold
 \size footnotesize
 Regla de Inferencia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Peso
 \end_layout
 
 \end_inset
@@ -3599,7 +4907,7 @@ R1
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3614,6 +4922,15 @@ Estimación Tiempo de Espera
 \end_inset
 
  es MUY BAJO entonces la prioridad es MUY ALTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
 \end_layout
 
 \end_inset
@@ -3632,7 +4949,7 @@ R2
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3647,6 +4964,15 @@ Estimación Tiempo de Espera
 \end_inset
 
  es BAJO entonces la prioridad es ALTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
 \end_layout
 
 \end_inset
@@ -3665,7 +4991,7 @@ R3
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3680,6 +5006,15 @@ Estimación Tiempo de Espera
 \end_inset
 
  es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
 \end_layout
 
 \end_inset
@@ -3698,7 +5033,7 @@ R4
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3713,6 +5048,15 @@ Estimación Tiempo de Espera
 \end_inset
 
  es ALTO entonces la prioridad es BAJA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
 \end_layout
 
 \end_inset
@@ -3731,7 +5075,7 @@ R5
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3750,6 +5094,15 @@ Estimación Tiempo de Espera
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -3764,7 +5117,7 @@ R6
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3783,6 +5136,15 @@ Estimación Tiempo de Viaje
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -3797,7 +5159,7 @@ R7
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3812,6 +5174,15 @@ Estimación Tiempo de Viaje
 \end_inset
 
  es BAJO entonces la prioridad es ALTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
 \end_layout
 
 \end_inset
@@ -3830,7 +5201,7 @@ R8
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3845,6 +5216,15 @@ Estimación Tiempo de Viaje
 \end_inset
 
  es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
 \end_layout
 
 \end_inset
@@ -3863,7 +5243,7 @@ R9
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3878,6 +5258,15 @@ Estimación Tiempo de Viaje
 \end_inset
 
  es ALTO entonces la prioridad es BAJA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
 \end_layout
 
 \end_inset
@@ -3896,7 +5285,7 @@ R10
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3915,6 +5304,15 @@ Estimación Tiempo de Viaje
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -3929,7 +5327,7 @@ R11
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3948,6 +5346,15 @@ Porcentaje de Ocupación
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -3962,7 +5369,7 @@ R12
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3977,6 +5384,15 @@ Porcentaje de Ocupación
 \end_inset
 
  es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
 \end_layout
 
 \end_inset
@@ -3995,7 +5411,7 @@ R13
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4014,6 +5430,15 @@ Porcentaje de Ocupación
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -4028,7 +5453,7 @@ R14
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4043,6 +5468,15 @@ Paradas en Piso Origen
 \end_inset
 
  es MUY BAJO entonces la prioridad es MUY BAJA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
 \end_layout
 
 \end_inset
@@ -4061,7 +5495,7 @@ R15
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4076,6 +5510,15 @@ Paradas en Piso Origen
 \end_inset
 
  es BAJO entonces la prioridad es BAJA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
 \end_layout
 
 \end_inset
@@ -4094,7 +5537,7 @@ R16
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4109,6 +5552,15 @@ Paradas en Piso Origen
 \end_inset
 
  es MEDIO entonces la prioridad es MEDIA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
 \end_layout
 
 \end_inset
@@ -4127,7 +5579,7 @@ R17
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4142,6 +5594,15 @@ Paradas en Piso Origen
 \end_inset
 
  es ALTO entonces la prioridad es ALTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
 \end_layout
 
 \end_inset
@@ -4160,7 +5621,7 @@ R18
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4179,6 +5640,15 @@ Paradas en Piso Origen
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -4193,7 +5663,7 @@ R19
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4212,6 +5682,15 @@ Paradas en Piso Destino
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -4226,7 +5705,7 @@ R20
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4245,6 +5724,15 @@ Paradas en Piso Destino
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -4259,7 +5747,7 @@ R21
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4278,6 +5766,15 @@ Paradas en Piso Destino
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -4292,7 +5789,7 @@ R22
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4311,6 +5808,15 @@ Paradas en Piso Destino
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
@@ -4325,7 +5831,7 @@ R23
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4340,6 +5846,15 @@ Paradas en Piso Destino
 \end_inset
 
  es MUY ALTO entonces la prioridad es MUY ALTA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7
 \end_layout
 
 \end_inset

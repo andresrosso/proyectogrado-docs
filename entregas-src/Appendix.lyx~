@@ -279,15 +279,277 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Apendix
+Apendice
 \end_layout
 
 \begin_layout Section
-Código fuente
+Definiciones Principales
+\end_layout
+
+\begin_layout Standard
+Se presentan los conceptos principales que serán usados a los largo del
+ libro, se recogen los conceptos que pueden ser interpretados ambiguamente.
+\end_layout
+
+\begin_layout Itemize
+Tráfico vertical: Se entiende por tráfico en una edificación; el movimiento
+ o tránsito de personas dentro del edificio, este tráfico tiene dos componentes
+ tasa de arribo y probabilidad de destino.
+\end_layout
+
+\begin_layout Itemize
+Tiempo de espera: es el tiempo comprendido entre la generación de la llamada
+ de elevador y el arribo de este al piso origen de la llamada.
+\end_layout
+
+\begin_layout Itemize
+Tiempo de viaje: es el tiempo comprendido desde que el pasajero entra al
+ elevador hasta que llega a su piso destino.
+\end_layout
+
+\begin_layout Itemize
+Tiempo total: es el tiempo que se comprende desde arribo del usuario al
+ sistema hasta la llegada de este al piso destino, es la suma del tiempo
+ de espera y el tiempo de viaje, es también llamado tiempo de servicio 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "POWELL1992"
+
+\end_inset
+
+ o tiempo a destino 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NAKAI1994"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Tiempo de retorno de viaje (round trip time): Es el tiempo comprendido desde
+ que un elevador recoge pasajeros en el primer piso (lobby), lleva los pasajeros
+ a los pisos superiores y regresa a la primera planta (lobby) para volver
+ a servir a los nuevos pasajeros.
+\end_layout
+
+\begin_layout Itemize
+Capacidad del transporte del sistema: es el número de pasajeros que un grupo
+ de elevadores puede transportar en una fracción de tiempo de cinco minutos.
+\end_layout
+
+\begin_layout Itemize
+Patrón de tráfico: es la caracterización del comportamiento estocástico
+ que se presenta en el arribo de pasajeros al sistema.
+ Para este trabajo se consideran principalmente cuatro patrones: subida
+ -uppeak-, entre pisos -interfloor-, bajada -downpeak-.
 \end_layout
 
 \begin_layout Section
-The next section
+Tomas de Pantalla Simulador
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/simulador1.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Simulador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/simulador2.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Simulador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/simulador3.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Simulador
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/ai-ec.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Reporte PDF energía consumida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/ai-te.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Reporte PDF Tiempo de Espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/ai-ts.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Reporte Tiempo de Servicio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
