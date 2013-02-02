@@ -78,7 +78,7 @@ customHeadersFooters
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -425,12 +425,12 @@ Las diferentes interacciones entre los agentes se muestran en la siguiente
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/InteraccionesAgentes.png
-	scale 70
+	scale 50
 
 \end_inset
 
@@ -462,11 +462,11 @@ En la siguiente tabla se explican las interacciones entre los agentes a
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="31" columns="4">
+<lyxtabular version="3" rows="21" columns="4">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="middle" width="1cm">
 <column alignment="left" valignment="middle" width="3cm">
@@ -515,7 +515,7 @@ DESCRIPCIÓN
 \begin_inset Text
 
 \begin_layout Plain Layout
-IN 1.
+IN 1.2.2
 \end_layout
 
 \end_inset
@@ -705,406 +705,12 @@ Información del patrón de tráfico presente en la edificación (Subida, bajada
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IN.
- 2
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-OBTENER NUM.
- PASAJEROS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.Número de pasajeros viajando en el ascensor 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Información del número de pasajeros que estan viajando en la cabina de ascensor
- 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2.Tiempo en el que se encuentra la simulación 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IN.
- 3
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-OBTENER POSICIÓN 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.
- Tiempo en el que se encuentra la simulación 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Información acerca del piso en el que se encuentra el elevador 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2.
- Identificador del elevador al que se le calcula la posición 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-IN.
- 4
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-OBTENER ASCENSOR PARA LLAMADA
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.
- Estado del elevador 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Elevador que pueda atender en mejor medida de acuerdo a los criterios de
- desempeño la llamada generada.
- La desición se toma usando reglas de desición difusas.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2.
- Estimado de tiempo para atender la llamada 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.
- Estimado de tiempo para servir la llamada 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4.Tiempo en el que se encuentra la simulación 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5.
- Peso de la llamada 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6.
- Capacidad ocupada del elevador 
-\end_layout
-
-\end_inset
-</cell>
-<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 IN.
- 5
+ 1.3
 \end_layout
 
 \end_inset
@@ -1495,7 +1101,7 @@ Pronóstico del tiempo que puede tardar el ascensor en llegar al piso origen
 
 \begin_layout Plain Layout
 IN.
- 6
+ 1.5
 \end_layout
 
 \end_inset
@@ -1743,7 +1349,7 @@ Los agentes funcionan inmersos en un entorno que constituyen la entidades
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2979,13 +2585,10 @@ Para solucionar éste conflicto se plantea un mecanísmo de subasta en donde
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3081,7 +2684,7 @@ El agente cabina incluye la llamada en su lista de llamadas y notifica al
 \end_layout
 
 \begin_layout Subsection
-Inferencia en los Agentes
+Inferencia en los Agentes Controladores de Cabina
 \end_layout
 
 \begin_layout Standard
@@ -3090,11 +2693,22 @@ Los agentes cabina deben hacer la oferta por la llamada generada, esta oferta
  las paradas en piso origen y destino.
  Pero otras características de la oferta son apenas estimadas, estas son
  el tiempo de espera que vá a tener el pasajero y el tiempo de viaje.
- El mecanismo por el cúal se estiman estos tiempo es por medio de redes
+ 
+\end_layout
+
+\begin_layout Standard
+El mecanismo por el cúal se estiman estos tiempos es por medio de redes
  neuronales, ya es conocido que las redes neuronales tiene la característica
  de predecir una salida de acuerdo a unas entradas, o para decirlo en otros
  términos de mapear unas entradas a una salida, en éste caso se deben predecir
- los tiempo de acuerdo a unas características temporales.
+ los tiempo de acuerdo a unas características temporales 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "VALLURU1995"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3145,9 +2759,10 @@ La red neurunal artificial encargada de estimar el tiempo de viaje que tarda
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3227,7 +2842,7 @@ Dirección del elevador
  se obtiene del agente controlador de cabina.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph
 Aprendizaje y Entrenamiento
 \end_layout
 
@@ -3246,10 +2861,6 @@ key "VALLURU1995"
 \end_layout
 
 \begin_layout Standard
-Apren
-\end_layout
-
-\begin_layout Standard
 El entrenamiento de esta red neuronal se hace de manera supervisada, proveiendo
  a la red de ejemplos de tiempos de viaje obtenidos en el simulador.
  La evolución por épocas de la red neural con un coeficiente de aprendizaje
@@ -3258,13 +2869,14 @@ El entrenamiento de esta red neuronal se hace de manera supervisada, proveiendo
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename resources/rmse-tV.png
+	filename resources/rmse-tv.png
 	width 50page%
 	height 50page%
 
@@ -3304,6 +2916,7 @@ La red neurunal artificial está encargada de estimar el tiempo que un pasajero
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3404,6 +3017,7 @@ Como en el caso anterior esta red neuronal en entrenada de manera supervisada
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -4483,8 +4097,8 @@ Entrenamiento ANN predictora tiempo de espera
 
 \end_layout
 
-\begin_layout Subsubsection
-Obtener Ascensor Para Llamada
+\begin_layout Subsection
+Inferencia en el Agente Arbitro del Sistema
 \end_layout
 
 \begin_layout Standard
@@ -4562,6 +4176,7 @@ Estimación Tiempo de Espera:
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -4609,6 +4224,7 @@ ado de su piso origen a su piso destino.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -4652,6 +4268,7 @@ Porcentaje de Ocupación del Elevador:
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -4695,6 +4312,7 @@ Paradas en Piso Origen
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -4738,6 +4356,7 @@ Paradas en Piso Destino
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -4780,9 +4399,10 @@ La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4829,9 +4449,10 @@ Estas reglas se toman de acuerdo a los factores que tiene más importancia
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular

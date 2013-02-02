@@ -762,7 +762,7 @@ Este mismo patrón de tráfico se ingreso al simulador propuesto y los resultado
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -806,7 +806,7 @@ A continuación se presentan las gráficas generadas por el simulador, hay
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -848,7 +848,7 @@ Experimentación Numérica
 \end_layout
 
 \begin_layout Standard
-El AGENTE ARBITRO DEL SISTEMA escoje entre los ascesores que compiten por
+El AGENTE ARBITRO DEL SISTEMA escoge entre los ascesores que compiten por
  ésta, aquel que pueda prestar un mejor servicio.
  Esta decisión la toma con base en 5 criterios de decisión que són para
  él las entradas del motor de inferencia difuso.
@@ -1715,7 +1715,7 @@ l.
 \begin_layout Standard
 En la siguiente gráfica se muestra el tiempo de espera por cada una de las
  llamadas, en el eje horizontal se encuentra secuencialmente cada llamada
- y en el eje vertical su tiempo espera.
+ y en el eje vertical su tiempo de espera.
 \end_layout
 
 \begin_layout Standard
@@ -1958,11 +1958,17 @@ l.
 \end_layout
 
 \begin_layout Standard
+En la siguiente gráfica se muestra el tiempo de viaje por cada una de las
+ llamadas, en el eje horizontal se encuentra secuencialmente cada llamada
+ y en el eje vertical su tiempo de viaje.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2083,7 +2089,7 @@ La energía consumida también logró ser reducida en cerca de un 10%, esta
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2107,7 +2113,7 @@ status collapsed
 \begin_layout Plain Layout
 
 \series bold
-Resultado Tiempo de Espera
+Resultado Energía Consumida
 \end_layout
 
 \end_inset
