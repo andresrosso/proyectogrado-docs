@@ -2425,7 +2425,6 @@ Tráfico Vertical
 \begin_layout Standard
 
 \family roman
-\size scriptsize
 Se entiende por tráfico en una edificación; el movimiento o tránsito de
  personas dentro del edificio, este tráfico tiene dos componentes tasa de
  arribo y probabilidad de destino, en donde:
@@ -2434,9 +2433,11 @@ Se entiende por tráfico en una edificación; el movimiento o tránsito de
 \begin_layout Itemize
 
 \family roman
-\size scriptsize
-Tasa de Arribo: Es el número de usuarios que llegan al sistema en determinado
- espacio de tiempo.
+\series bold
+Tasa de Arribo
+\series default
+: Es el número de usuarios que llegan al sistema en determinado espacio
+ de tiempo.
  La tasa de arribo en una edificación cambia de acuerdo a dos factores,
  uno es el tiempo en el que se mide y otro es el piso.
 \end_layout
@@ -2444,9 +2445,10 @@ Tasa de Arribo: Es el número de usuarios que llegan al sistema en determinado
 \begin_layout Itemize
 
 \family roman
-\size scriptsize
-Probabilidad Destino: Es la probabilidad que tiene un pasajero de dirigirse
- del piso 
+\series bold
+Probabilidad Destino
+\series default
+: Es la probabilidad que tiene un pasajero de dirigirse del piso 
 \begin_inset Formula $p_{o}$
 \end_inset
 
@@ -2458,10 +2460,8 @@ Probabilidad Destino: Es la probabilidad que tiene un pasajero de dirigirse
  
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-Patrones de Tráfico
+\begin_layout BeginFrame
+Patrón de Tráfico
 \end_layout
 
 \begin_layout Standard
@@ -2472,7 +2472,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../TesisMaestria/patronTrafico.png
+	filename resources/patronTrafico.png
 	scale 50
 
 \end_inset
@@ -2770,7 +2770,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../TesisMaestria/control-convencional.png
+	filename resources/controladorConvencional.png
 	scale 50
 
 \end_inset
@@ -3199,7 +3199,7 @@ Inferencia en el Árbitro (2)
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3697,6 +3697,112 @@ Estimación Tiempo de Viaje
 
 \begin_layout Plain Layout
 Tabla reglas de inferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+RNA para Estimación Tiempo de Viaje
+\end_layout
+
+\begin_layout Standard
+Debido a la incertidumbre en la determinación del tiempo de espera es necesario
+ hacer una predicción teniendo como principal criterio el tráfico que se
+ está generando en la edificación.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Posición del elevador:
+\series default
+ es el piso en el que se encuentra el elevador, esta entrada se obtiene
+ del agente controlador de cabina.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pasajeros dentro del elevador
+\series default
+: es el número de pasajeros que se encuentran el elevador, esta entrada
+ se obtiene del agente controlador de cabina.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de entrada
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de ENTRADA, es decir
+ que está llegando a la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de salida
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de SALIDA, es decir
+ que abandonando la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de entre pisos
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de ENTRE PISOS, es
+ decir el porcentaje de la población en la edificación que se está moviendo
+ entre los pisos de la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout BeginFrame
+Entrenamiento
+\end_layout
+
+\begin_layout Standard
+La red esta compuesta de 5 neuronas de entrada, 50 neuronas en la capa oculta
+ y 1 neurona de salida.
+ Se usó un coeficiente de aprendizaje de 0.6 y un momentum de 0.1, encontrado
+ por experimentación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/rmse-tv.png
+	width 50page%
+	height 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Raiz del error cuadrático para el estimador Tiempo Viaje
 \end_layout
 
 \end_inset

@@ -31,7 +31,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 10
 \spacing single
 \use_hyperref false
 \papersize default
@@ -68,6 +68,10 @@
 \begin_body
 
 \begin_layout Title
+Diseño y Desarrollo de un Controlador de Grupo de Ascensor Inteligente Basado
+ en Sistemas MultiAgente
+\lang english
+
 \begin_inset Argument
 status open
 
@@ -215,7 +219,7 @@ optional, but mostly needed
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -238,7 +242,7 @@ status open
 
 %
 \backslash
-pgfdeclareimage[height=0.5cm]{institution-logo}{resources/logo-PUJ.png}
+gfdeclareimage[height=0.5cm]{institution-logo}{resources/logo-PUJ.png}
 \end_layout
 
 \begin_layout Plain Layout
@@ -261,7 +265,7 @@ pgfuseimage{institution-logo}}
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1069,11 +1073,11 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="5">
 <features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0pt">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1088,7 +1092,7 @@ Item
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1101,7 +1105,7 @@ Elevate
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1114,7 +1118,7 @@ ALTS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1127,7 +1131,7 @@ Plan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1155,7 +1159,7 @@ License
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1168,7 +1172,7 @@ Comercial [Peters R.]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1181,7 +1185,7 @@ N/A [KONE]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1194,7 +1198,7 @@ N/A [OTIS]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1222,7 +1226,7 @@ Operating system
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1235,7 +1239,7 @@ Windows
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1248,7 +1252,7 @@ Windows
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1261,7 +1265,7 @@ Windows
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1289,7 +1293,7 @@ Language programming
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1302,7 +1306,7 @@ Visual C++
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1315,7 +1319,7 @@ Standard C++
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1328,7 +1332,7 @@ Borland C++ Builder 6
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1356,7 +1360,7 @@ Number of floors
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1369,7 +1373,7 @@ Number of floors
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1382,7 +1386,7 @@ No limit
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1395,7 +1399,7 @@ No limit
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1423,7 +1427,7 @@ Interfloor distance
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1436,7 +1440,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1449,7 +1453,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1462,7 +1466,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1490,7 +1494,7 @@ Special traffic flows
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1503,7 +1507,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1516,7 +1520,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1529,7 +1533,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1544,7 +1548,7 @@ Yes
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1557,7 +1561,7 @@ Floor populations
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1570,7 +1574,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1583,7 +1587,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1596,7 +1600,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1611,7 +1615,7 @@ Yes
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1624,7 +1628,7 @@ Passengers transfer times
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1637,7 +1641,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1650,7 +1654,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1663,7 +1667,7 @@ Yes
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1806,6 +1810,10 @@ Elevator Configuration
 
 \begin_layout Plain Layout
 
+\family roman
+\shape italic
+\size tiny
+Yes
 \end_layout
 
 \end_inset
@@ -1815,6 +1823,10 @@ Elevator Configuration
 
 \begin_layout Plain Layout
 
+\family roman
+\shape italic
+\size tiny
+Yes
 \end_layout
 
 \end_inset
@@ -1824,6 +1836,10 @@ Elevator Configuration
 
 \begin_layout Plain Layout
 
+\family roman
+\shape italic
+\size tiny
+Yes
 \end_layout
 
 \end_inset
@@ -1833,6 +1849,10 @@ Elevator Configuration
 
 \begin_layout Plain Layout
 
+\family roman
+\shape italic
+\size tiny
+Yes
 \end_layout
 
 \end_inset
@@ -2405,7 +2425,6 @@ Tráfico Vertical
 \begin_layout Standard
 
 \family roman
-\size scriptsize
 Se entiende por tráfico en una edificación; el movimiento o tránsito de
  personas dentro del edificio, este tráfico tiene dos componentes tasa de
  arribo y probabilidad de destino, en donde:
@@ -2414,9 +2433,11 @@ Se entiende por tráfico en una edificación; el movimiento o tránsito de
 \begin_layout Itemize
 
 \family roman
-\size scriptsize
-Tasa de Arribo: Es el número de usuarios que llegan al sistema en determinado
- espacio de tiempo.
+\series bold
+Tasa de Arribo
+\series default
+: Es el número de usuarios que llegan al sistema en determinado espacio
+ de tiempo.
  La tasa de arribo en una edificación cambia de acuerdo a dos factores,
  uno es el tiempo en el que se mide y otro es el piso.
 \end_layout
@@ -2424,9 +2445,10 @@ Tasa de Arribo: Es el número de usuarios que llegan al sistema en determinado
 \begin_layout Itemize
 
 \family roman
-\size scriptsize
-Probabilidad Destino: Es la probabilidad que tiene un pasajero de dirigirse
- del piso 
+\series bold
+Probabilidad Destino
+\series default
+: Es la probabilidad que tiene un pasajero de dirigirse del piso 
 \begin_inset Formula $p_{o}$
 \end_inset
 
@@ -2438,10 +2460,8 @@ Probabilidad Destino: Es la probabilidad que tiene un pasajero de dirigirse
  
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-Patrones de Tráfico
+\begin_layout BeginFrame
+Patrón de Tráfico
 \end_layout
 
 \begin_layout Standard
@@ -2452,7 +2472,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../TesisMaestria/patronTrafico.png
+	filename resources/patronTrafico.png
 	scale 50
 
 \end_inset
@@ -2469,7 +2489,7 @@ status open
 Patrón de tráfico 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "SIIKONEN1990"
+key "SIIKONEN1997"
 
 \end_inset
 
@@ -2750,7 +2770,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../TesisMaestria/control-convencional.png
+	filename resources/controladorConvencional.png
 	scale 50
 
 \end_inset
@@ -3179,7 +3199,7 @@ Inferencia en el Árbitro (2)
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3622,7 +3642,7 @@ Estimación Tiempo de Viaje
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3634,7 +3654,7 @@ R10
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3677,6 +3697,112 @@ Estimación Tiempo de Viaje
 
 \begin_layout Plain Layout
 Tabla reglas de inferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+RNA para Estimación Tiempo de Viaje
+\end_layout
+
+\begin_layout Standard
+Debido a la incertidumbre en la determinación del tiempo de espera es necesario
+ hacer una predicción teniendo como principal criterio el tráfico que se
+ está generando en la edificación.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Posición del elevador:
+\series default
+ es el piso en el que se encuentra el elevador, esta entrada se obtiene
+ del agente controlador de cabina.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pasajeros dentro del elevador
+\series default
+: es el número de pasajeros que se encuentran el elevador, esta entrada
+ se obtiene del agente controlador de cabina.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de entrada
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de ENTRADA, es decir
+ que está llegando a la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de salida
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de SALIDA, es decir
+ que abandonando la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+% Tráfico de entrada de entre pisos
+\series default
+: es el porcentaje de tráfico que cumple con un patrón de ENTRE PISOS, es
+ decir el porcentaje de la población en la edificación que se está moviendo
+ entre los pisos de la edificación.
+ Se obtiene del agente Estimador Patrón de Tráfico.
+\end_layout
+
+\begin_layout BeginFrame
+Entrenamiento
+\end_layout
+
+\begin_layout Standard
+La red esta compuesta de 5 neuronas de entrada, 50 neuronas en la capa oculta
+ y 1 neurona de salida.
+ Se usó un coeficiente de aprendizaje de 0.6 y un momentum de 0.1, encontrado
+ por experimentación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/rmse-tv.png
+	width 50page%
+	height 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Raiz del error cuadrático para el estimador Tiempo Viaje
 \end_layout
 
 \end_inset
@@ -3824,6 +3950,7 @@ PD
 \begin_layout Plain Layout
 
 \series bold
+\size tiny
 Prioridad
 \end_layout
 
@@ -4523,51 +4650,44 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
+<lyxtabular version="3" rows="2" columns="2">
 <features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-Resultado Tiempo de Espera
+\size tiny
+Resultado Tiempo de Espera IA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Resultado Tiempo de Espera Convencional
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-AI
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-te.png
-	width 15page%
+	width 35page%
 
 \end_inset
 
@@ -4576,26 +4696,13 @@ AI
 
 \end_inset
 </cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-Convencional
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-te.png
-	width 15page%
+	width 35page%
 
 \end_inset
 
@@ -4642,51 +4749,44 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
+<lyxtabular version="3" rows="2" columns="2">
 <features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-Resultado Tiempo de Espera
+\size tiny
+Resultado Tiempo de Servicio IA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size tiny
+Resultado Tiempo de Servicio Convencional
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-AI
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-ts.png
-	width 15page%
+	width 35page%
 
 \end_inset
 
@@ -4695,26 +4795,13 @@ AI
 
 \end_inset
 </cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-Convencional
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-ts.png
-	width 20page%
+	width 35page%
 
 \end_inset
 
@@ -4763,40 +4850,42 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="2">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-Resultado AI
+\size tiny
+Resultado Energía Consumida AI
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-Resultado Tiempo de Espera A
+\size tiny
+Resultado Energía Consumida Convencional
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/ai-ec.png
-	width 15page%
+	width 35page%
 
 \end_inset
 
@@ -4805,13 +4894,13 @@ Resultado Tiempo de Espera A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/conv-ec.png
-	width 15page%
+	width 35page%
 
 \end_inset
 
