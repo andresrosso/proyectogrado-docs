@@ -296,7 +296,7 @@ Para verificar el desempeño del controlador desarrollado se tomo una edificaci�
 La torre simulada tiene una altura de 40 pisos, se usaron 4 ascensores y
  la población de la edificación se estableció en 3350 personas, con 3 distribuci
 ones de tráfico presentes (ENTRADA, SALIDA, ENTREPISOS) y discretizada la
- entrada de pasajeros en segmentos de tiemp de 300 segundos.
+ entrada de pasajeros en segmentos de tiempo de 300 segundos.
  Los pasajeros arriban siguiendo un proceso de Poisson 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -304,91 +304,369 @@ key "AVERILL2000"
 
 \end_inset
 
-, como se explicó en capítulos anteriores.
+, como se explicó en el capítulo 3.
+\end_layout
+
+\begin_layout Subsection
+Verificación del Simulador
 \end_layout
 
 \begin_layout Subsection
 Protocolo de Experimentación
 \end_layout
 
-\begin_layout Standard
-Para verificar el asigandor de llamada basado en inteligencia artificial
- y comparar su rendimiento respecto al controlador convencional se parametrizó
- el simulador de acuerdo a los siguientes valores.
+\begin_layout Subsubsection
+Propósito 
 \end_layout
 
 \begin_layout Standard
+Se ha observado que el control convencional para la asignación de cabinas
+ de ascensor no tiene en cuenta los objetivos de control inherentes en el
+ problema de tráfico vertical “
+\shape italic
+Reducir tiempo de espera, tiempo de servicio y energía consumida
+\shape default
+”, si no que da prioridad a la cabina de ascensor que se encuentre más cerca
+ para asistir la llamada.
+ 
+\end_layout
+
+\begin_layout Standard
+Se desea verificar que el controlador propuesto presente un mayor rendimiento
+ en cuanto a los objetivos de control respecto al control convencional.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Materiales
+\end_layout
+
+\begin_layout Paragraph
 
 \series bold
-Variables Independientes
+Variables Independientes 
 \end_layout
 
 \begin_layout Itemize
-Pisos
+
+\series bold
+Controlador para grupo de elevadores 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Controlador convencional orientado por la distancia de la cabina.
 \end_layout
 
 \begin_layout Itemize
-Elevadores
+Controlador basado en inteligencia artificial, orientado a cumplir los 3
+ objetivos de control del tráfico vertical.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Número de pisos de la edificación 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dominio [ 10, 200 ) pisos
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Número de ascensores del grupo de elevadores a controlar.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dominio [ 2, 20 ) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Capacidad de cada uno de los elevadores.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dominio [ 4, 20 ) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Tráfico en la edificación.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Alto tráfico de entrada.
 \end_layout
 
 \begin_layout Itemize
-Capacidad Elevadores
+Alto tráfico de salida.
+ 
 \end_layout
 
 \begin_layout Itemize
-Aceleración 
+Tráfico mixto.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+
+\series bold
+Variables Dependientes 
 \end_layout
 
 \begin_layout Itemize
-Velocidad
+
+\series bold
+Tiempo de espera promedio:
+\series default
+ es el tiempo que que debe esperar un pasajero para ser atendido por una
+ cabina, ésta variable se debe reducir.
 \end_layout
 
 \begin_layout Itemize
-Tiempo Abrir puerta 
+
+\series bold
+Tiempo de servicio promedio
+\series default
+: es el tiempo que que debe tarda un pasajero desde que arriba al sistema
+ hasta que llega al piso destino, ésta variable se debe reducir.
 \end_layout
 
 \begin_layout Itemize
-Tiempo Cerrar puerta 
+
+\series bold
+Energía consumida promedio:
+\series default
+ es la distancia promedio medida en pisos que debe recorrer una cabina de
+ ascensor, entre más pisos (distancia) recorra más energía consume el sistema,
+ por lo tanto se desea reducir esta variable.
+\end_layout
+
+\begin_layout Paragraph*
+Variables Intervinientes
 \end_layout
 
 \begin_layout Itemize
-Tiempo transferencia de pasajeros 
+
+\series bold
+Tiempo de procesamiento:
+\series default
+ debido a los cálculo que debe realizar cada uno de los controladores se
+ está incluyendo un tiempo adicional en el tiempo de la simulación.
+ Para eliminar el impacto se maneja un cronómetro de simulación independiente
+ que ignora el tiempo de procesamiento.
+ Por lo tanto esta latencia no afecta el resultado de la simulación.
 \end_layout
 
-\begin_layout Itemize
-Distancia entre pisos 
+\begin_layout Subsubsection
+Métodos
+\end_layout
+
+\begin_layout Standard
+Se harán 4 grupos de simulaciones variando las variables independientes.
+ El cambio en las variables se hará de manera gradual para verificar el
+ comportamiento de los controladores en todos estos escenarios.
+ 
+\end_layout
+
+\begin_layout Standard
+Se tomarán como resultados las variables dependientes, estas varibles serán
+ comparadas entre los 2 controladores.
+\end_layout
+
+\begin_layout Standard
+Las demás entradas que no varían durante las simulaciones se detallan en
+ la siguiente tabla de constantes de la simulación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Constante
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Velocidad cabina de ascensor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 m/s
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tiempo cabina abrir/cerrar puerta 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 seg
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Altura entre pisos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 mts
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Factor de aceleración de la simulación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100X (1 segundo = 10 ms en simulación)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Constantes de la simulación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Scenario 1 
 \end_layout
 
 \begin_layout Standard
 
-\series bold
-Variables Dependientes
-\end_layout
-
-\begin_layout Itemize
-Promedio de tiempo de espera
-\end_layout
-
-\begin_layout Itemize
-Promedio de tiempo de servicio
+\shape italic
+Variando el número de pisos con (Alto tráfico de entrada, Tráfico mixto
+ Entrada-Salida y Tráfico entre pisos).
+ 
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Variables Interviniente
+Se correrán 14 simulaciones variando el número de pisos de la edificación.
+ Se parte de 40 pisos como base y se llegará hasta los 100 pisos.
+ Se aumentará la variable independiente número de pisos de 10 en 10 y se
+ medirán las variables dependientes para saber como afecta el desempeño
+ de cada controlador al modificar el número de pisos.
+ 
 \end_layout
 
-\begin_layout Itemize
-Algoritmo de control para asignar llamada EGCS
-\end_layout
-
-\begin_layout Itemize
-Algoritmo de control para asignar llamada EGCS
-\end_layout
-
-\begin_layout Itemize
-Tiempo de avance de la simulación Modelo de tráfico de entradas.
+\begin_layout Standard
+Las constantes para la simulación se enumeran en la siguiente tabla.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1992,7 +2270,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-Resultado Tiempo de Espera
+Resultado Tiempo de Servicio
 \end_layout
 
 \end_inset

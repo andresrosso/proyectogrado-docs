@@ -2588,11 +2588,7 @@ Para solucionar éste conflicto se plantea un mecanísmo de subasta en donde
 placement H
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2876,7 +2872,7 @@ El entrenamiento de esta red neuronal se hace de manera supervisada, proveiendo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2923,7 +2919,7 @@ La red neurunal artificial está encargada de estimar el tiempo que un pasajero
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3024,7 +3020,7 @@ Como en el caso anterior esta red neuronal en entrenada de manera supervisada
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3104,7 +3100,7 @@ En las siguiente tablas se muestra un resumen de las múltiples configuraciones
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3605,7 +3601,7 @@ Entrenamiento ANN predictora tiempo de espera
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -4088,7 +4084,7 @@ Normalizadas
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Entrenamiento ANN predictora tiempo de espera
+Entrenamiento ANN predictora tiempo de viaje
 \end_layout
 
 \end_inset
@@ -4183,7 +4179,7 @@ Estimación Tiempo de Espera:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4406,7 +4402,7 @@ La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4456,7 +4452,7 @@ Estas reglas se toman de acuerdo a los factores que tiene más importancia
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular

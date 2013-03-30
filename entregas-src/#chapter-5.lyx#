@@ -78,7 +78,7 @@ customHeadersFooters
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -296,7 +296,7 @@ Para verificar el desempeño del controlador desarrollado se tomo una edificaci�
 La torre simulada tiene una altura de 40 pisos, se usaron 4 ascensores y
  la población de la edificación se estableció en 3350 personas, con 3 distribuci
 ones de tráfico presentes (ENTRADA, SALIDA, ENTREPISOS) y discretizada la
- entrada de pasajeros en segmentos de tiemp de 300 segundos.
+ entrada de pasajeros en segmentos de tiempo de 300 segundos.
  Los pasajeros arriban siguiendo un proceso de Poisson 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -304,101 +304,196 @@ key "AVERILL2000"
 
 \end_inset
 
-, como se explicó en capítulos anteriores.
+, como se explicó en el capítulo 3.
+\end_layout
+
+\begin_layout Subsection
+Verificación del Simulador
 \end_layout
 
 \begin_layout Subsection
 Protocolo de Experimentación
 \end_layout
 
-\begin_layout Standard
-Para verificar el asigandor de llamada basado en inteligencia artificial
- y comparar su rendimiento respecto al controlador convencional se parametrizó
- el simulador de acuerdo a los siguientes valores.
+\begin_layout Subsubsection
+Propósito 
 \end_layout
 
 \begin_layout Standard
+Se ha observado que el control convencional para la asignación de cabinas
+ de ascensor no tiene en cuenta los objetivos de control inherentes en el
+ problema de tráfico vertical “
+\shape italic
+Reducir tiempo de espera, tiempo de servicio y energía consumida
+\shape default
+”, si no que da prioridad a la cabina de ascensor que se encuentre más cerca
+ para asistir la llamada.
+ 
+\end_layout
+
+\begin_layout Standard
+Se desea verificar que el controlador propuesto presente un mayor rendimiento
+ en cuanto a los objetivos de control respecto al control convencional.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Materiales
+\end_layout
+
+\begin_layout Paragraph
 
 \series bold
-Variables Independientes
+Variables Independientes 
 \end_layout
 
 \begin_layout Itemize
-Pisos
-\end_layout
-
-\begin_layout Itemize
-Elevadores
-\end_layout
-
-\begin_layout Itemize
-Capacidad Elevadores
-\end_layout
-
-\begin_layout Itemize
-Aceleración 
-\end_layout
-
-\begin_layout Itemize
-Velocidad
-\end_layout
-
-\begin_layout Itemize
-Tiempo Abrir puerta 
-\end_layout
-
-\begin_layout Itemize
-Tiempo Cerrar puerta 
-\end_layout
-
-\begin_layout Itemize
-Tiempo transferencia de pasajeros 
-\end_layout
-
-\begin_layout Itemize
-Distancia entre pisos 
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-Variables Dependientes
+Controlador para grupo de elevadores 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Controlador convencional orientado por la distancia de la cabina.
 \end_layout
 
 \begin_layout Itemize
-Promedio de tiempo de espera
+Controlador basado en inteligencia artificial, orientado a cumplir los 3
+ objetivos de control del tráfico vertical.
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-Promedio de tiempo de servicio
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-Variables Interviniente
+Número de pisos de la edificación 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dominio [ 10, 200 ) pisos
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Número de ascensores del grupo de elevadores a controlar.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dominio [ 2, 20 ) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Capacidad de cada uno de los elevadores.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dominio [ 4, 20 ) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Tráfico en la edificación.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Alto tráfico de entrada.
 \end_layout
 
 \begin_layout Itemize
-Algoritmo de control para asignar llamada EGCS
+Alto tráfico de salida.
+ 
 \end_layout
 
 \begin_layout Itemize
-Algoritmo de control para asignar llamada EGCS
+Tráfico mixto.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+
+\series bold
+Variables Dependientes 
 \end_layout
 
 \begin_layout Itemize
-Tiempo de avance de la simulación Modelo de tráfico de entradas.
+
+\series bold
+Tiempo de espera promedio:
+\series default
+ es el tiempo que que debe esperar un pasajero para ser atendido por una
+ cabina, ésta variable se debe reducir.
 \end_layout
 
-\begin_layout Subsection
-Experimento Verificación del Simulador
+\begin_layout Itemize
+
+\series bold
+Tiempo de servicio promedio
+\series default
+: es el tiempo que que debe tarda un pasajero desde que arriba al sistema
+ hasta que llega al piso destino, ésta variable se debe reducir.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Energía consumida promedio:
+\series default
+ es la distancia promedio medida en pisos que debe recorrer una cabina de
+ ascensor, entre más pisos (distancia) recorra más energía consume el sistema,
+ por lo tanto se desea reducir esta variable.
+\end_layout
+
+\begin_layout Paragraph*
+Variables Intervinientes
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de procesamiento:
+\series default
+ debido a los cálculo que debe realizar cada uno de los controladores se
+ está incluyendo un tiempo adicional en el tiempo de la simulación.
+ Para eliminar el impacto se maneja un cronómetro de simulación independiente
+ que ignora el tiempo de procesamiento.
+ Por lo tanto esta latencia no afecta el resultado de la simulación.
+\end_layout
+
+\begin_layout Subsubsection
+Métodos
 \end_layout
 
 \begin_layout Standard
-Es necesario verificar el correcto funcionamiento del simulador antes de
- proceder a comparar el controlador propuesto respecto al convencional.
- Para la validación se toman datos del estudio de KONE 
+Se harán 4 grupos de simulaciones variando las variables independientes.
+ El cambio en las variables se hará de manera gradual para verificar el
+ comportamiento de los controladores en todos estos escenarios.
+ 
+\end_layout
+
+\begin_layout Standard
+Se tomarán como resultados las variables dependientes, estas varibles serán
+ comparadas entre los 2 controladores.
+\end_layout
+
+\begin_layout Standard
+Las demás entradas que no varían durante las simulaciones se detallan en
+ la siguiente tabla de constantes de la simulación 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SIIKONEN2001"
@@ -408,8 +503,896 @@ key "SIIKONEN2001"
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Constante
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Velocidad cabina de ascensor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 m/s
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aceleración cabina ascensor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2m/s^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tiempo cabina abrir puerta 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 seg
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tiempo cabina cerrar puerta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 segundo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tiempo transferencia de pasajeros
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 segundo x pasajero
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Altura entre pisos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 mts
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modelo arribo de pasajeros
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Poisson
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Factor de aceleración de la simulación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100X (1 segundo = 10 ms en simulación)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Constantes de la simulación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Scenario 1 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Variando el número de pisos con (Alto tráfico de entrada, Tráfico mixto
+ Entrada-Salida y Tráfico entre pisos).
+ 
+\end_layout
+
+\begin_layout Standard
+Se correrán 14 simulaciones variando el número de pisos de la edificación.
+ Se parte de 40 pisos como base y se llegará hasta los 100 pisos.
+ Se aumentará la variable independiente número de pisos de 10 en 10 y se
+ medirán las variables dependientes para saber como afecta el desempeño
+ de cada controlador al modificar el número de pisos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pisos 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TE (Conv)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TE (CI)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TC (Conv)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+140 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+122 seg 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60 seg 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45 seg 82 seg 101 seg 113 seg 121 seg 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+154 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+129 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+75 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+54 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 220 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+167 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+253 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+291 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+97 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+274 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+219 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+115 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+293 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+234 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+127 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+308 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+265 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+133 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Simulación escenario 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Caracterización de las Variables
+\end_layout
+
+\begin_layout Standard
+Es necesario verificar el correcto funcionamiento del simulador antes de
+ proceder a comparar el controlador propuesto respecto al convencional.
+ Para la validación se toman datos del estudio de KONE
+\end_layout
+
+\begin_layout Subsection
+Experimento Verificación del Simulador
 \end_layout
 
 \begin_layout Standard
@@ -428,19 +1411,20 @@ key "SIIKONEN2001"
 \end_layout
 
 \begin_layout Standard
-Este mismo patrón de tráfico se ingreso al simulador propues y los resultados
- en cuanto a generación de pasajeros es identico.
+Este mismo patrón de tráfico se ingreso al simulador propuesto y los resultados
+ en cuanto a generación de pasajeros son muy similares.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/templateSiikonen.png
+	scale 70
 
 \end_inset
 
@@ -482,12 +1466,9 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/templateAROSSO.png
+	scale 70
 
 \end_inset
 
@@ -515,41 +1496,17 @@ Plantilla de tráfico Tou Europe en el simulador propuesto
 
 \end_layout
 
-\begin_layout Subsubsection
-Comparación de Resultados del Experimento
-\end_layout
-
-\begin_layout Standard
-Se verifica la generación de tráfico de acuerdo a la plantilla de tráfico
- tomada de la edificación de oficinas Tour Paris, la cual está expuesta
- en el trabajo de la empresa finlandesa KONE [SIIKONEN2001].
- En la siguiente gráfica se encuentra discriminado el (a) tráfico de entrada
- , (b) tráfico de salida, (c) tráfico entre pisos, (d) tráfico total.
-\end_layout
-
-\begin_layout Standard
-Este mismo patrón de tráfico se ingreso al simulador propues y los resultados
- en cuanto a generación de pasajeros es identico.
-\end_layout
-
-\begin_layout Standard
-A continuación se presentan las gráficas generadas por el simulador, hay
- que tener en cuenta que la simulación en ambos casos se ejecuta durante
- 12 horas, en las gráficas del simualdor propuesto el tiempo se mide en
- minutos, es decir que la simulación completa dura 720 minutos.
-\end_layout
-
-\begin_layout Standard
-
-\end_layout
-
 \begin_layout Subsection
-Asignador de LLamada EGCS Basado en IA
+Experimento EGCS Basado en IA comparado con EGCS Convencional
+\end_layout
+
+\begin_layout Subsubsection
+Experimentación Numérica
 \end_layout
 
 \begin_layout Standard
-El ASIGNADOR DE LLAMADAS escoje entre los ascesores que compiten por ésta,
- aquel que pueda prestar un mejor servicio.
+El AGENTE ARBITRO DEL SISTEMA escoge entre los ascesores que compiten por
+ ésta, aquel que pueda prestar un mejor servicio.
  Esta decisión la toma con base en 5 criterios de decisión que són para
  él las entradas del motor de inferencia difuso.
  Recordemos brevemente las entradas.
@@ -608,7 +1565,7 @@ Todas estas entradas son normalizadas a un valor entre [0,1].
  presentan los siguientes ejemplos.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Ejemplo 1
 \end_layout
 
@@ -995,7 +1952,7 @@ Elevador 3
 \end_layout
 
 \end_deeper
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Ejemplo 2
 \end_layout
 
@@ -1016,7 +1973,7 @@ En el siguiente ejemplo se genera una llamada desde el piso 11 hasta el
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -1381,8 +2338,8 @@ Elevador 3
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Resultados de la Simulación
+\begin_layout Subsubsection
+Experimentación en el Simulador
 \end_layout
 
 \begin_layout Standard
@@ -1397,7 +2354,7 @@ Ya que el simulador cuenta con reporteadores estadísticos, los datos de
 o.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Tiempo de Espera
 \end_layout
 
@@ -1413,10 +2370,17 @@ l.
 \end_layout
 
 \begin_layout Standard
+En la siguiente gráfica se muestra el tiempo de espera por cada una de las
+ llamadas, en el eje horizontal se encuentra secuencialmente cada llamada
+ y en el eje vertical su tiempo de espera.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1522,7 +2486,123 @@ Comparación Tiempo de Espera
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
+En ésta gráfica se se muestra el tiempo de espera propmedio según el minutos
+ de simulación, en el eje horizotal está el tiempo de simulación en minutos
+ y en el eje vertical el tiempo de espera promedio para ese momento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Resultado Tiempo de Espera
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/wtHoutIA.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Convencional
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/wtHourConv.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Comparación Tiempo de Espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
 Tiempo de Viaje
 \end_layout
 
@@ -1535,7 +2615,14 @@ l.
 \end_layout
 
 \begin_layout Standard
+En la siguiente gráfica se muestra el tiempo de viaje por cada una de las
+ llamadas, en el eje horizontal se encuentra secuencialmente cada llamada
+ y en el eje vertical su tiempo de viaje.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -1562,7 +2649,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-Resultado Tiempo de Espera
+Resultado Tiempo de Servicio
 \end_layout
 
 \end_inset
@@ -1644,7 +2731,7 @@ Comparación Tiempo de Viaje
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Energía Consumida
 \end_layout
 
@@ -1656,6 +2743,7 @@ La energía consumida también logró ser reducida en cerca de un 10%, esta
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -1682,7 +2770,7 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-Resultado Tiempo de Espera
+Resultado Energía Consumida
 \end_layout
 
 \end_inset
