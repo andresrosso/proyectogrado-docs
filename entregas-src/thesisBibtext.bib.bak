@@ -100,6 +100,15 @@
   timestamp = {2011.12.03}
 }
 
+@BOOK{,
+  title = {Estadistica para administracion y economia},
+  publisher = {CENGAGE Learning},
+  year = {2008},
+  author = {David Ray Anderson,Dennis J. Sweeney},
+  owner = {andres},
+  timestamp = {2013.03.31}
+}
+
 @BOOK{INSUA2000,
   title = {Simulacion Metodos y Aplicaciones},
   publisher = {AlfaOmega},
@@ -436,6 +445,15 @@
   author = {Parker E. R.},
   owner = {arosso},
   timestamp = {2011.12.02}
+}
+
+@BOOK{VALLURU1995,
+  title = {C++ Neural Networks and Fuzzy Logic},
+  year = {1995},
+  editor = {M\&T Books},
+  author = {Valluru B. Rao},
+  owner = {arosso},
+  timestamp = {2013.01.19}
 }
 
 @ELECTRONIC{ElevateLicence,

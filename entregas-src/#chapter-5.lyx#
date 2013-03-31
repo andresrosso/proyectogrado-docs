@@ -328,7 +328,7 @@ credibilidad en el modelo
 \begin_layout Subsection
 
 \series bold
-Validació 
+Validación 
 \series default
 del Generador de Tráfico
 \end_layout
@@ -345,10 +345,76 @@ n de Poisson.
 \begin_layout Standard
 En la siguiente tabla se muestran el número de pasajeros generados por simulació
 n.
+ 
+\end_layout
+
+\begin_layout Standard
+En las primeras dos columnas está el parámetro lamda de la distribución
+ de Poisson y la hora del día para la cual se van a generar los pasajeros.
+\end_layout
+
+\begin_layout Standard
+En la tabla no se incluyen todos los segmentos del día, si no que se toman
+ muestras cada hora de la cantidad de pasajeros generados, por lo tanto
+ los datos a verificar son aquellos de las horas (7,8,9,10,11,12,13,14,15,16,17,
+18,19).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/tablaSimsPosisson.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Muestras de generacíón de pasajeros
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Prueba de bonda de ajuste Chi-Cuadrado 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
+\end_layout
+
+\begin_layout Standard
+A los datos de los pasajeros generados se les aplicó la prueba de bonda
+ de ajuste 
 \end_layout
 
 \begin_layout Subsection
@@ -1119,6 +1185,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 10%
 \end_layout
 
@@ -1217,6 +1285,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 11%
 \end_layout
 
@@ -1315,6 +1385,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 11%
 \end_layout
 
@@ -1514,6 +1586,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+10%
 \end_layout
 
 \end_inset
@@ -1602,7 +1676,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-37989
+39289
 \end_layout
 
 \end_inset
@@ -1612,6 +1686,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -1709,6 +1785,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 13%
 \end_layout
 
