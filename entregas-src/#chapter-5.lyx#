@@ -362,11 +362,12 @@ En la tabla no se incluyen todos los segmentos del día, si no que se toman
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/tablaSimsPosisson.png
+	scale 50
 
 \end_inset
 
@@ -535,9 +536,42 @@ Prueba chi-cuadrado en excel
 
 \end_layout
 
-\begin_layout Subsubsection
-Prueba de bonda de ajuste Chi-Cuadrado 
-\begin_inset Formula $\chi^{2}$
+\begin_layout Standard
+Adicionalmente se puede observar gráficamente que en el histograma las frecuenci
+as observadas no difieren mucho de las esperadas para la distribución de
+ Poisson, esta gráfica se obtuvo usando el software estadísto R, en el cual
+ además se verificó la disrtibución de los datos con los mismo resultados
+ obetenido en excel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/rPoiss-7am-21.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Prueba chi-cuadrado en R
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
