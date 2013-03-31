@@ -340,16 +340,14 @@ Es necesario validar que el simulador esté generando el tráfico de pasajero
  tomó el número de pasajeros generados en cada uno de los intervalos de
  tiempo medidos y se verificó si estos valores aleatorios siguen una distribució
 n de Poisson.
+ Fue necesario tomar un número frande de simulaciones para que la prueba
+ de bondad no incurriera en errores.
 \end_layout
 
 \begin_layout Standard
 En la siguiente tabla se muestran el número de pasajeros generados por simulació
 n.
- 
-\end_layout
-
-\begin_layout Standard
-En las primeras dos columnas está el parámetro lamda de la distribución
+ En las primeras dos columnas está el parámetro lamda de la distribución
  de Poisson y la hora del día para la cual se van a generar los pasajeros.
 \end_layout
 
@@ -365,10 +363,6 @@ En la tabla no se incluyen todos los segmentos del día, si no que se toman
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -437,6 +431,16 @@ Ha
 \series default
 : La cantidad de clientes que llegan al sistema durante intervalos de 15
  minutos no tiene una distribución de Poisson de probabilidades.
+\end_layout
+
+\begin_layout Standard
+La hipótesis nula de la prueba Chi-cuadrado postula una distribución de
+ probabilidad totalmente especificada como el modelo matemático de la población
+ que ha generado la muestra, en nuestro caso la distribución de Poisson.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Subsection

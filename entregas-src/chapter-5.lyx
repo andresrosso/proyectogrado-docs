@@ -437,9 +437,109 @@ Ha
 La hipótesis nula de la prueba Chi-cuadrado postula una distribución de
  probabilidad totalmente especificada como el modelo matemático de la población
  que ha generado la muestra, en nuestro caso la distribución de Poisson.
+ Rechazaremos la hipotesis nula en el caso que haya una probabilidad mayor
+ al 5% que los datos no se distribuyan Poisson.
 \end_layout
 
 \begin_layout Standard
+Si existe concordancia perfecta entre las frecuencias observadas y las esperadas
+ de la distribución chi-cuadrado el estadístico tomará un valor cercano
+ a 0; por el contrario, si existe una gran discrepancias entre estas frecuencias
+ el estadístico tomará un valor grande y, en consecuencia, se rechazará
+ la hipótesis nula.
+\end_layout
+
+\begin_layout Standard
+En la siguiente imágen se compara las frecuencia observadas y esperadas
+ para demostrar que los datos se distribuyen de acuerdo a Posisson, para
+ un valor de lamda igual a 20 con una muestra de 100 datos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/testChiExcel1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Prueba chi-cuadrado en excel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente debemos calcular la probabilidad de equivocarnos si rechazamos
+ la hipótesis nula, este valor se conoce como P-Valor, en la siguiente tabla
+ se muestran los P-Valores para todos los intervalos de generación de pasajeros
+ tomados en nuestra muestra.
+ Como se puede observar la probabilidad de equivocarnos en la prueba es
+ inferior en todos los casos al 5%, por lo que se concluye con un alto grado
+ de certeza que los datos se distribuyen Poisson.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/tablaSimsPosisson2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Prueba chi-cuadrado en excel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Prueba de bonda de ajuste Chi-Cuadrado 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
 
 \end_layout
 

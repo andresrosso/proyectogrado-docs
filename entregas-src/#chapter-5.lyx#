@@ -340,16 +340,14 @@ Es necesario validar que el simulador esté generando el tráfico de pasajero
  tomó el número de pasajeros generados en cada uno de los intervalos de
  tiempo medidos y se verificó si estos valores aleatorios siguen una distribució
 n de Poisson.
+ Fue necesario tomar un número frande de simulaciones para que la prueba
+ de bondad no incurriera en errores.
 \end_layout
 
 \begin_layout Standard
 En la siguiente tabla se muestran el número de pasajeros generados por simulació
 n.
- 
-\end_layout
-
-\begin_layout Standard
-En las primeras dos columnas está el parámetro lamda de la distribución
+ En las primeras dos columnas está el parámetro lamda de la distribución
  de Poisson y la hora del día para la cual se van a generar los pasajeros.
 \end_layout
 
@@ -365,10 +363,6 @@ En la tabla no se incluyen todos los segmentos del día, si no que se toman
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -409,12 +403,144 @@ Prueba de bonda de ajuste Chi-Cuadrado
 \end_layout
 
 \begin_layout Standard
+El primer paso para comprobar que el número de pasajeros generados sigue
+ una distribución de Poisson, es generar la hipótesis nula y alternativa
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RAY2008"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ho
+\series default
+: La cantidad de pasajeros que llegan al sistema durante intervalos de 15
+ minutos tiene una distribución de Poisson de probabilidades.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ha
+\series default
+: La cantidad de clientes que llegan al sistema durante intervalos de 15
+ minutos no tiene una distribución de Poisson de probabilidades.
+\end_layout
+
+\begin_layout Standard
+La hipótesis nula de la prueba Chi-cuadrado postula una distribución de
+ probabilidad totalmente especificada como el modelo matemático de la población
+ que ha generado la muestra, en nuestro caso la distribución de Poisson.
+ Rechazaremos la hipotesis nula en el caso que haya una probabilidad mayor
+ al 5% que los datos no se distribuyan Poisson.
+\end_layout
+
+\begin_layout Standard
+Si existe concordancia perfecta entre las frecuencias observadas y las esperadas
+ de la distribución chi-cuadrado el estadístico tomará un valor cercano
+ a 0; por el contrario, si existe una gran discrepancias entre estas frecuencias
+ el estadístico tomará un valor grande y, en consecuencia, se rechazará
+ la hipótesis nula.
+\end_layout
+
+\begin_layout Standard
+En la siguiente imágen se compara las frecuencia observadas y esperadas
+ para demostrar que los datos se distribuyen de acuerdo a Posisson, para
+ un valor de lamda igual a 20 con una muestra de 100 datos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/testChiExcel1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Prueba chi-cuadrado en excel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-A los datos de los pasajeros generados se les aplicó la prueba de bonda
- de ajuste 
+Finalmente debemos calcular la probabilidad de equivocarnos si rechazamos
+ la hipótesis nula, este valor se conoce como P-Valor, en la siguiente tabla
+ se muestran los P-Valores para todos los intervalos de generación de pasajeros
+ tomados en nuestra muestra.
+ Como se puede observar la probabilidad de equivocarnos en la prueba es
+ inferior en todos los casos al 5%, por lo que se concluye con un alto grado
+ de certeza que los datos se distribuyen Poisson.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/tablaSimsPosisson2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Prueba chi-cuadrado en excel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Prueba de bonda de ajuste Chi-Cuadrado 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
