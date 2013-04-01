@@ -3255,6 +3255,21 @@ Constantes de la simulación
 
 \begin_layout Standard
 Los resultados de las 14 simulaciones son los siguientes.
+ El mayor número de pasajeros según los resultados no genera un mejor comportami
+ento en el controlador inteligente, por el contrario los tiempo de espera
+ y servicio suben considerablemente en los dos controladores pero de manera
+ proporcional, lo que origina que los porcentajes de eficiencia se mantengan
+ igual que con escenarios anteriores.
+\end_layout
+
+\begin_layout Standard
+Este comportamiento se debe a que la configuración de la edificación en
+ cuento a pisos, ascensores está diseñada para esta población.
+ Si aumenta la población el número de cabinas y la capacidad de éstas deberían
+ aumentar.
+ En el último escenario se va a tratar este tipo de configuración, con un
+ número mayor de pasajero y una configuración del sistema más adecuada para
+ atender la creciente demanda.
 \end_layout
 
 \begin_layout Standard
@@ -3265,8 +3280,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="9">
+<lyxtabular version="3" rows="8" columns="10">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -3365,13 +3381,24 @@ E (Conv)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
 E (CI)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Dif
 \end_layout
 
 \end_inset
@@ -3393,7 +3420,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
+142 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+121 seg 
 \end_layout
 
 \end_inset
@@ -3403,6 +3439,26 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+13%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+59 seg 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47 seg 
 \end_layout
 
 \end_inset
@@ -3412,6 +3468,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+18%
 \end_layout
 
 \end_inset
@@ -3420,7 +3478,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+40719
 \end_layout
 
 \end_inset
@@ -3429,25 +3487,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+38717
 \end_layout
 
 \end_inset
@@ -3457,6 +3497,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -3497,6 +3539,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -3514,7 +3558,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-63 seg
+53 seg
 \end_layout
 
 \end_inset
@@ -3524,6 +3568,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+17%
 \end_layout
 
 \end_inset
@@ -3532,7 +3578,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-30852
+39852
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38926
 \end_layout
 
 \end_inset
@@ -3541,7 +3596,9 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-23326
+
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -3563,7 +3620,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
+186 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+173 seg
 \end_layout
 
 \end_inset
@@ -3573,6 +3639,26 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+10%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+69 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+57 seg
 \end_layout
 
 \end_inset
@@ -3582,6 +3668,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+13%
 \end_layout
 
 \end_inset
@@ -3590,7 +3678,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+39993
 \end_layout
 
 \end_inset
@@ -3599,25 +3687,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+35073
 \end_layout
 
 \end_inset
@@ -3627,6 +3697,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+12%
 \end_layout
 
 \end_inset
@@ -3648,7 +3720,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
+203 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+181 seg
 \end_layout
 
 \end_inset
@@ -3658,6 +3739,26 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+10%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+72 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+61 seg
 \end_layout
 
 \end_inset
@@ -3667,6 +3768,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+13%
 \end_layout
 
 \end_inset
@@ -3675,7 +3778,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+43793
 \end_layout
 
 \end_inset
@@ -3684,25 +3787,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+38175
 \end_layout
 
 \end_inset
@@ -3712,6 +3797,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+12%
 \end_layout
 
 \end_inset
@@ -3742,7 +3829,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+185 seg
 \end_layout
 
 \end_inset
@@ -3752,6 +3839,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -3769,7 +3858,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+65 seg
 \end_layout
 
 \end_inset
@@ -3779,6 +3868,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+16%
 \end_layout
 
 \end_inset
@@ -3787,7 +3878,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-28653
+45653
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40055
 \end_layout
 
 \end_inset
@@ -3797,6 +3897,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+12%
 \end_layout
 
 \end_inset
@@ -3818,7 +3920,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
+253 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+215 seg
 \end_layout
 
 \end_inset
@@ -3828,6 +3939,26 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+11%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+86 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+75 seg
 \end_layout
 
 \end_inset
@@ -3837,6 +3968,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+16%
 \end_layout
 
 \end_inset
@@ -3845,7 +3978,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+46153
 \end_layout
 
 \end_inset
@@ -3854,25 +3987,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+39655
 \end_layout
 
 \end_inset
@@ -3882,6 +3997,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+13%
 \end_layout
 
 \end_inset
@@ -3903,7 +4020,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-*323 seg
+323 seg
 \end_layout
 
 \end_inset
@@ -3912,34 +4029,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-214 seg
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-99
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-84 seg
+286 seg
 \end_layout
 
 \end_inset
@@ -3949,6 +4039,8 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\series bold
+13%
 \end_layout
 
 \end_inset
@@ -3957,7 +4049,45 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-29995
+99 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+91 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+8%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47015
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41697
 \end_layout
 
 \end_inset
@@ -3966,7 +4096,9 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-23697
+
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -4025,7 +4157,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
+<lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
@@ -4067,27 +4199,7 @@ Pisos de la edificación
 \begin_inset Text
 
 \begin_layout Plain Layout
-40
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Capacidad de la cabina
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-8 personas
+60
 \end_layout
 
 \end_inset
@@ -4098,7 +4210,7 @@ Capacidad de la cabina
 \begin_inset Text
 
 \begin_layout Plain Layout
-Población
+Capacidad de la cabina
 \end_layout
 
 \end_inset
@@ -4107,7 +4219,7 @@ Población
 \begin_inset Text
 
 \begin_layout Plain Layout
-4000
+10 personas
 \end_layout
 
 \end_inset
@@ -4149,8 +4261,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="10">
+<lyxtabular version="3" rows="8" columns="11">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -4169,6 +4282,15 @@ status open
 
 \series bold
 Cabinas 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Población
 \end_layout
 
 \end_inset
@@ -4289,7 +4411,25 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+2000
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+142 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+121 seg 
 \end_layout
 
 \end_inset
@@ -4299,6 +4439,26 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+13%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+59 seg 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47 seg 
 \end_layout
 
 \end_inset
@@ -4308,6 +4468,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+18%
 \end_layout
 
 \end_inset
@@ -4316,7 +4478,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+40719
 \end_layout
 
 \end_inset
@@ -4325,34 +4487,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+38717
 \end_layout
 
 \end_inset
@@ -4362,6 +4497,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -4383,7 +4520,25 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+3000
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+178 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+158 seg
 \end_layout
 
 \end_inset
@@ -4393,6 +4548,26 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+11%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+53 seg
 \end_layout
 
 \end_inset
@@ -4402,6 +4577,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+17%
 \end_layout
 
 \end_inset
@@ -4410,7 +4587,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+39852
 \end_layout
 
 \end_inset
@@ -4419,34 +4596,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+38926
 \end_layout
 
 \end_inset
@@ -4456,6 +4606,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -4477,7 +4629,25 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+4000
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+190 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+173 seg
 \end_layout
 
 \end_inset
@@ -4487,6 +4657,26 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+10%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+75 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+57 seg
 \end_layout
 
 \end_inset
@@ -4496,6 +4686,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+13%
 \end_layout
 
 \end_inset
@@ -4504,7 +4696,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+58226
 \end_layout
 
 \end_inset
@@ -4513,34 +4705,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+35073
 \end_layout
 
 \end_inset
@@ -4550,6 +4715,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+12%
 \end_layout
 
 \end_inset
@@ -4571,7 +4738,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5000
 \end_layout
 
 \end_inset
@@ -4589,7 +4756,18 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+181 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+10%
 \end_layout
 
 \end_inset
@@ -4607,7 +4785,18 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+61 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+13%
 \end_layout
 
 \end_inset
@@ -4625,16 +4814,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+38175
 \end_layout
 
 \end_inset
@@ -4644,6 +4824,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+12%
 \end_layout
 
 \end_inset
@@ -4665,7 +4847,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6000
 \end_layout
 
 \end_inset
@@ -4683,7 +4865,18 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+185 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -4701,7 +4894,18 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+65 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+16%
 \end_layout
 
 \end_inset
@@ -4719,16 +4923,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+40055
 \end_layout
 
 \end_inset
@@ -4738,6 +4933,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+12%
 \end_layout
 
 \end_inset
@@ -4759,7 +4956,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+7000
 \end_layout
 
 \end_inset
@@ -4777,7 +4974,18 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+215 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+11%
 \end_layout
 
 \end_inset
@@ -4795,7 +5003,18 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+75 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+16%
 \end_layout
 
 \end_inset
@@ -4813,16 +5032,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+39655
 \end_layout
 
 \end_inset
@@ -4832,6 +5042,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+13%
 \end_layout
 
 \end_inset
@@ -4853,7 +5065,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+8000
 \end_layout
 
 \end_inset
@@ -4871,7 +5083,18 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+286 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+13%
 \end_layout
 
 \end_inset
@@ -4889,7 +5112,18 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+91 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+8%
 \end_layout
 
 \end_inset
@@ -4907,16 +5141,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+41697
 \end_layout
 
 \end_inset
@@ -4926,6 +5151,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+11%
 \end_layout
 
 \end_inset
