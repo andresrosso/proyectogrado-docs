@@ -4073,8 +4073,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="9">
+<lyxtabular version="3" rows="8" columns="10">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -4173,13 +4174,24 @@ E (Conv)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
 E (CI)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Dif
 \end_layout
 
 \end_inset
@@ -4193,6 +4205,15 @@ E (CI)
 
 \series bold
 2000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4345,11 +4366,20 @@ E (CI)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 23326
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4363,6 +4393,15 @@ E (CI)
 
 \series bold
 3000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4515,6 +4554,15 @@ E (CI)
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -4541,7 +4589,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+207 seg
 \end_layout
 
 \end_inset
@@ -4568,7 +4616,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+78 seg
 \end_layout
 
 \end_inset
@@ -4587,6 +4635,15 @@ E (CI)
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28653
 \end_layout
 
 \end_inset
@@ -4685,6 +4742,15 @@ E (CI)
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -4711,7 +4777,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
+*323 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+214 seg
 \end_layout
 
 \end_inset
@@ -4729,7 +4804,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
+99
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+84 seg
 \end_layout
 
 \end_inset
@@ -4747,7 +4831,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+29995
 \end_layout
 
 \end_inset
@@ -4756,16 +4840,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+23697
 \end_layout
 
 \end_inset

@@ -821,8 +821,8 @@ Variables Dependientes
 \series bold
 Tiempo de espera promedio:
 \series default
- es el tiempo que que debe esperar un pasajero para ser atendido por una
- cabina, ésta variable se debe reducir.
+ es la media aritmética del tiempo que debe esperar un pasajero para ser
+ atendido por una cabina, ésta variable se debe reducir.
 \end_layout
 
 \begin_layout Itemize
@@ -830,8 +830,8 @@ Tiempo de espera promedio:
 \series bold
 Tiempo de servicio promedio
 \series default
-: es el tiempo que que debe tarda un pasajero desde que arriba al sistema
- hasta que llega al piso destino, ésta variable se debe reducir.
+: es la media aritmética del tiempo que tarda un pasajero desde que arriba
+ al sistema hasta que llega al piso destino, ésta variable se debe reducir.
 \end_layout
 
 \begin_layout Itemize
@@ -839,7 +839,7 @@ Tiempo de servicio promedio
 \series bold
 Energía consumida promedio:
 \series default
- es la distancia promedio medida en pisos que debe recorrer una cabina de
+ es la distancia medida en pisos que deben recorrer todas las cabinas de
  ascensor, entre más pisos (distancia) recorra más energía consume el sistema,
  por lo tanto se desea reducir esta variable.
 \end_layout
@@ -853,8 +853,9 @@ Variables Intervinientes
 \series bold
 Tiempo de procesamiento:
 \series default
- debido a los cálculo que debe realizar cada uno de los controladores se
- está incluyendo un tiempo adicional en el tiempo de la simulación.
+ debido a los cálculos que deben realizar cada uno de los controladores,
+ se está incluyendo un tiempo adicional de procesamiento en el tiempo de
+ la simulación.
  Para eliminar el impacto se maneja un cronómetro de simulación independiente
  que ignora el tiempo de procesamiento.
  Por lo tanto esta latencia no afecta el resultado de la simulación.
