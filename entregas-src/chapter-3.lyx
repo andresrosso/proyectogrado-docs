@@ -672,9 +672,9 @@ avance por eventos
 \begin_layout Standard
 La escogencia de la técnica de simulación estocástica y no determinística
  responde a la naturaleza misma del problema.
- Ya que la generación de pasajeros no se puede llevar a cabo de manera determiní
-stica, si no que debe basarse en una función de probabilidad que modele
- éste tipo de problemas.
+ Ya que la generación de pasajeros, no se puede llevar a cabo de manera
+ determinística, si no que debe basarse en una función de probabilidad que
+ modele éste tipo de problemas de tráfico.
 \end_layout
 
 \begin_layout Subsection
@@ -1421,7 +1421,7 @@ key "SANDOR2006"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2052,7 +2052,7 @@ La probabilidad de tener n pasajeros en el intervalo de tiempo T para una
 \begin_inset Formula $\lambda$
 \end_inset
 
-(en llamadas por segundo) es:
+(en llamadas por intervalo de tiempo) es:
 \end_layout
 
 \begin_layout Standard
@@ -2341,7 +2341,7 @@ en donde
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2403,7 +2403,7 @@ Tiempo de Viaje
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
