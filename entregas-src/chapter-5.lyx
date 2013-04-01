@@ -4135,18 +4135,24 @@ Escenario 4
 \begin_layout Standard
 
 \shape italic
-Variando la cantidad de cabinas de elevador.
+Variando la cantidad de cabinas de elevador y la población.
 \end_layout
 
 \begin_layout Standard
-Se toma otro escenario en donde la población de la edificación aumente.
- Esto indica que el número de pasajeros a mover por eol sistema de transporte
- vertical va a ser mayor.
+El mayor número de cabinas de ascensor para atender los pasajeros y el aumento
+ de la población, son condiciones que favorecen al controlador inteligente.
+ Se observa un 30% de mejora en el tiempo de espera de pasajeros, un 20%
+ en el tiempo de servicio, y el consumo de energía tambien se reduce en
+ un 26%.
 \end_layout
 
 \begin_layout Standard
-Se aumenta la población en 500 pasajeros y se hacen 14 simulaciones partiendo
- de un apoblación base de 2000 usuarios.
+Esto se debe a que el controlador inteligente al tener mayor candidad de
+ llamadas puede agrupar las mismas de una mejor manera que el convencional
+ y al tener varias cabinas disponibles las opciones de optimización también
+ mejoran considerablemente.
+ Una mayor demanda y un mayor número de cabinas son condiciones apropiadas
+ para que la optimización en el control inteligente sea más acertada.
 \end_layout
 
 \begin_layout Standard
@@ -4290,6 +4296,8 @@ Cabinas
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Población
 \end_layout
 
@@ -4411,6 +4419,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 2000
 \end_layout
 
@@ -4487,7 +4497,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-38717
+36234
 \end_layout
 
 \end_inset
@@ -4520,6 +4530,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 3000
 \end_layout
 
@@ -4538,7 +4550,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-158 seg
+145 seg
 \end_layout
 
 \end_inset
@@ -4549,7 +4561,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-11%
+19%
 \end_layout
 
 \end_inset
@@ -4558,7 +4570,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-64 seg
+97 seg
 \end_layout
 
 \end_inset
@@ -4567,7 +4579,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-53 seg
+81 seg
 \end_layout
 
 \end_inset
@@ -4587,7 +4599,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-39852
+45852
 \end_layout
 
 \end_inset
@@ -4596,7 +4608,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-38926
+38975
 \end_layout
 
 \end_inset
@@ -4607,7 +4619,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-11%
+15%
 \end_layout
 
 \end_inset
@@ -4629,6 +4641,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 4000
 \end_layout
 
@@ -4638,7 +4652,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-190 seg
+259 seg
 \end_layout
 
 \end_inset
@@ -4647,7 +4661,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-173 seg
+188 seg
 \end_layout
 
 \end_inset
@@ -4658,7 +4672,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-10%
+27%
 \end_layout
 
 \end_inset
@@ -4667,7 +4681,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-75 seg
+118 seg
 \end_layout
 
 \end_inset
@@ -4676,7 +4690,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-57 seg
+103 seg
 \end_layout
 
 \end_inset
@@ -4696,7 +4710,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-58226
+51768
 \end_layout
 
 \end_inset
@@ -4705,7 +4719,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-35073
+41932
 \end_layout
 
 \end_inset
@@ -4716,7 +4730,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-12%
+19%
 \end_layout
 
 \end_inset
@@ -4738,6 +4752,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 5000
 \end_layout
 
@@ -4756,7 +4772,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-181 seg
+212 seg
 \end_layout
 
 \end_inset
@@ -4767,7 +4783,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-10%
+30%
 \end_layout
 
 \end_inset
@@ -4785,7 +4801,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-61 seg
+96 seg
 \end_layout
 
 \end_inset
@@ -4796,7 +4812,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-13%
+20%
 \end_layout
 
 \end_inset
@@ -4805,7 +4821,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-56890
+54159
 \end_layout
 
 \end_inset
@@ -4814,7 +4830,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-38175
+40077
 \end_layout
 
 \end_inset
@@ -4825,7 +4841,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-12%
+26%
 \end_layout
 
 \end_inset
@@ -4847,6 +4863,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 6000
 \end_layout
 
@@ -4876,7 +4894,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-11%
+28%
 \end_layout
 
 \end_inset
@@ -4894,7 +4912,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-65 seg
+109 seg
 \end_layout
 
 \end_inset
@@ -4905,7 +4923,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-16%
+18%
 \end_layout
 
 \end_inset
@@ -4923,7 +4941,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-40055
+45055
 \end_layout
 
 \end_inset
@@ -4934,7 +4952,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-12%
+22%
 \end_layout
 
 \end_inset
@@ -4956,6 +4974,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 7000
 \end_layout
 
@@ -4965,7 +4985,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+357 seg
 \end_layout
 
 \end_inset
@@ -4974,36 +4994,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-215 seg
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-11%
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-75 seg
+255 seg
 \end_layout
 
 \end_inset
@@ -5014,7 +5005,25 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-16%
+29%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+148 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+119 seg
 \end_layout
 
 \end_inset
@@ -5024,6 +5033,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+19%
 \end_layout
 
 \end_inset
@@ -5032,7 +5043,16 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-39655
+58723
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45803
 \end_layout
 
 \end_inset
@@ -5043,7 +5063,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-13%
+22%
 \end_layout
 
 \end_inset
@@ -5065,6 +5085,8 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 8000
 \end_layout
 
@@ -5074,7 +5096,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+370 seg
 \end_layout
 
 \end_inset
@@ -5083,36 +5105,7 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-286 seg
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-13%
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-91 seg
+273 seg
 \end_layout
 
 \end_inset
@@ -5123,7 +5116,25 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-8%
+27%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+154 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+124 seg
 \end_layout
 
 \end_inset
@@ -5133,6 +5144,8 @@ Dif
 
 \begin_layout Plain Layout
 
+\series bold
+20%
 \end_layout
 
 \end_inset
@@ -5141,7 +5154,16 @@ Dif
 \begin_inset Text
 
 \begin_layout Plain Layout
-41697
+59504
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+44697
 \end_layout
 
 \end_inset
@@ -5152,7 +5174,7 @@ Dif
 \begin_layout Plain Layout
 
 \series bold
-11%
+25%
 \end_layout
 
 \end_inset
