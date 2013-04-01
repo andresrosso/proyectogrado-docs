@@ -598,49 +598,6 @@ key "AVERILL2000"
 .
 \end_layout
 
-\begin_layout Standard
-En la figura No.
- 3.2 diagrama siguiente ilustra el flujo que por lo general sigue una simulación
- de este tipo.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/procesoSimBANKS.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Proceso simulación Banks [BANKS2000]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Proceso General De La Simulación
 \end_layout
@@ -1385,11 +1342,12 @@ key "SANDOR2006"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/commonSimCharacteristics.png
+	scale 50
 
 \end_inset
 
@@ -1957,14 +1915,14 @@ La siguiente imagen muestra el diagrama de clases del simulador, detallando
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \lang english
 \begin_inset Graphics
 	filename resources/PIMClassModel.png
-	scale 45
+	scale 40
 
 \end_inset
 

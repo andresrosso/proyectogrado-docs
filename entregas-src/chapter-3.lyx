@@ -596,49 +596,85 @@ key "AVERILL2000"
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
-En la figura No.
- 3.2 diagrama siguiente ilustra el flujo que por lo general sigue una simulación
- de este tipo.
+Se puede entender mejor la razón por la cual se escoge esta técnica de 
+\begin_inset Quotes eld
+\end_inset
+
+avance por unidad de tiempo
+\begin_inset Quotes erd
+\end_inset
+
+ si se piensa que los eventos generados durante la simulación de una edificación
+ ocurren con una altísima frecuencia.
+ Los eventos que más se repiten son por ejemplo 
+\begin_inset Quotes eld
+\end_inset
+
+mover cabina
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+abrir puerta de cabina
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+cerrar puerta
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+recoger pasajero
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+despachar pasajero
+\begin_inset Quotes erd
+\end_inset
+
+, etc.
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/procesoSimBANKS.png
-	scale 70
-
+Si se usara por ejemplo una técnica de basada en 
+\begin_inset Quotes eld
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Proceso simulación Banks [BANKS2000]
-\end_layout
-
+avance por eventos
+\begin_inset Quotes erd
 \end_inset
 
-
+, sería necesario manejar una lista doblemente enlazada de eventos e ir
+ introduciendo entre dos eventos ya almacenados uno nuevo que genere alguna
+ de las rutinas del simulador.
+ Éste proceso es costoso computacionalmente además de frecuente.
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+\begin_layout Standard
+La escogencia de la técnica de simulación estocástica y no determinística
+ responde a la naturaleza misma del problema.
+ Ya que la generación de pasajeros no se puede llevar a cabo de manera determiní
+stica, si no que debe basarse en una función de probabilidad que modele
+ éste tipo de problemas.
 \end_layout
 
 \begin_layout Subsection

@@ -286,7 +286,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Building Simulator
+Simulador de Edificación
 \end_layout
 
 \begin_layout Standard
@@ -596,49 +596,79 @@ key "AVERILL2000"
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
-En la figura No.
- 3.2 diagrama siguiente ilustra el flujo que por lo general sigue una simulación
- de este tipo.
+Se puede entender mejor la razón por la cual se escoge esta técnica de 
+\begin_inset Quotes eld
+\end_inset
+
+avance por unidad de tiempo
+\begin_inset Quotes erd
+\end_inset
+
+ si se piensa que los eventos generados durante la simulación de una edificación
+ ocurren con una altísima frecuencia.
+ Los eventos que más se repiten son por ejemplo 
+\begin_inset Quotes eld
+\end_inset
+
+mover cabina
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+abrir puerta de cabina
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+cerrar puerta
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+recoger pasajero
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+despachar pasajero
+\begin_inset Quotes erd
+\end_inset
+
+, etc.
+ Si se usara por ejemplo una técnica de basada en 
+\begin_inset Quotes eld
+\end_inset
+
+avance por eventos
+\begin_inset Quotes erd
+\end_inset
+
+, sería necesario manejar una lista doblemente enlazada de eventos e ir
+ introduciendo entre dos eventos ya almacenados uno nuevo que genere alguna
+ de las rutinas del simulador.
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/procesoSimBANKS.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Proceso simulación Banks [BANKS2000]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+Éste proceso es costoso computacionalmente y además es de una frecuencia
+ altísima.
+ La escogencia de la t
 \end_layout
 
 \begin_layout Subsection
@@ -1152,7 +1182,7 @@ Tiempo de transito entre dos pisos adyacentes
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1385,11 +1415,12 @@ key "SANDOR2006"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/commonSimCharacteristics.png
+	scale 50
 
 \end_inset
 
@@ -1957,14 +1988,14 @@ La siguiente imagen muestra el diagrama de clases del simulador, detallando
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \lang english
 \begin_inset Graphics
 	filename resources/PIMClassModel.png
-	scale 45
+	scale 40
 
 \end_inset
 
@@ -2404,34 +2435,6 @@ Criterio de desempeño <Tiempo de Viaje>
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Verificación y Validación del Simulador
-\end_layout
-
-\begin_layout Standard
-Cuando se estudia un sistema mediante un modelo, prototipo o simulador hay
- que comprobar que conduce a resultados correctos.
- Esto requiere dos procesos:
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Verificación
-\series default
-: Hace referencia a la correctitud de la implementación.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Validación
-\series default
-: hace referencia a los errores que se cometen como consecuencia de la represent
-atividad de las suposiciones que se hacen para establecer su correspondencia
- con el sistema.
 \end_layout
 
 \end_body
