@@ -293,10 +293,10 @@ Para verificar el desempeño del controlador desarrollado se tomo una edificaci�
 \end_layout
 
 \begin_layout Standard
-La torre simulada tiene una altura de 40 pisos, se usaron 4 ascensores y
- la población de la edificación se estableció en 3350 personas, con 3 distribuci
-ones de tráfico presentes (ENTRADA, SALIDA, ENTREPISOS) y discretizada la
- entrada de pasajeros en segmentos de tiempo de 300 segundos.
+La torre simulada tiene una altura de 40 pisos, 4 ascensores y la población
+ de la edificación se estableció en 2000 personas, con 3 distribuciones
+ de tráfico presentes (ENTRADA, SALIDA, ENTREPISOS) y discretizada la entrada
+ de pasajeros en segmentos de tiempo de 300 segundos.
  Los pasajeros arriban siguiendo un proceso de Poisson 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -334,14 +334,14 @@ del Generador de Tráfico
 \end_layout
 
 \begin_layout Standard
-Es necesario validar que el simulador esté generando el tráfico de pasajero
+Es necesario validar que el simulador esté generando el tráfico de pasajeros
  basado en un proceso de Poisson.
  Para hacer esta validación se corrieron 100 simulaciones en las que se
  tomó el número de pasajeros generados en cada uno de los intervalos de
  tiempo medidos y se verificó si estos valores aleatorios siguen una distribució
 n de Poisson.
- Fue necesario tomar un número frande de simulaciones para que la prueba
- de bondad no incurriera en errores.
+ Fue necesario tomar un número grande de simulaciones para que la prueba
+ de bondad de ajuste no incurriera en errores.
 \end_layout
 
 \begin_layout Standard
@@ -396,7 +396,7 @@ Muestras de generacíón de pasajeros
 \end_layout
 
 \begin_layout Subsubsection
-Prueba de bonda de ajuste Chi-Cuadrado 
+Prueba de bondad de ajuste Chi-Cuadrado 
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
@@ -414,6 +414,7 @@ key "RAY2008"
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -438,16 +439,52 @@ Ha
 La hipótesis nula de la prueba Chi-cuadrado postula una distribución de
  probabilidad totalmente especificada como el modelo matemático de la población
  que ha generado la muestra, en nuestro caso la distribución de Poisson.
- Rechazaremos la hipotesis nula en el caso que haya una probabilidad mayor
- al 5% que los datos no se distribuyan Poisson.
+ 
+\end_layout
+
+\begin_layout Standard
+Rechazaremos la hipotesis nula en el caso que haya una probabilidad mayor
+ al 5% que los datos no se distribuyan Poisson, el margen de error tipo
+ I se establece es 0.05.
+ 
+\end_layout
+
+\begin_layout Standard
+Estas hipótesis se deben plantear para cada una de las pruebas de bondad
+ de ajuste sobre cada uno de los lamdas usados para generar el tráfico,
+ por lo tanto las hipótesis quedarían.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ho
+\series default
+:
+\begin_inset Formula $X_{i}\sim Poisson(\lambda_{i}),\;\lambda_{i}=...=\lambda_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+H
+\series default
+a:
+\begin_inset Formula $X_{i}\sim Poisson(\lambda_{i}),\;\sum(\lambda_{i}-\overline{\lambda})^{2}>0.05$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Si existe concordancia perfecta entre las frecuencias observadas y las esperadas
  de la distribución chi-cuadrado el estadístico tomará un valor cercano
  a 0; por el contrario, si existe una gran discrepancias entre estas frecuencias
- el estadístico tomará un valor grande y, en consecuencia, se rechazará
- la hipótesis nula.
+ el estadístico tomará un valor grande, en consecuencia, se rechazará la
+ hipótesis nula si es mayor a 0.05.
 \end_layout
 
 \begin_layout Standard
@@ -460,12 +497,12 @@ En la siguiente imágen se compara las frecuencia observadas y esperadas
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/testChiExcel1.png
-	scale 50
+	scale 60
 
 \end_inset
 
@@ -495,19 +532,23 @@ Prueba chi-cuadrado en excel
 
 \begin_layout Standard
 Finalmente debemos calcular la probabilidad de equivocarnos si rechazamos
- la hipótesis nula, este valor se conoce como P-Valor, en la siguiente tabla
- se muestran los P-Valores para todos los intervalos de generación de pasajeros
- tomados en nuestra muestra.
+ la hipótesis nula, este valor se conoce como P-Valor.
+\end_layout
+
+\begin_layout Standard
+En la siguiente tabla se muestran los P-Valores para todos los intervalos
+ de generación de pasajeros tomados en nuestra muestra.
  Como se puede observar la probabilidad de equivocarnos en la prueba es
  inferior en todos los casos al 5%, por lo que se concluye con un alto grado
  de certeza que los datos se distribuyen Poisson.
+ Los P-Valores fueron calculados usando el paquete estadístico R.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -539,9 +580,7 @@ Prueba chi-cuadrado en excel
 \begin_layout Standard
 Adicionalmente se puede observar gráficamente que en el histograma las frecuenci
 as observadas no difieren mucho de las esperadas para la distribución de
- Poisson, esta gráfica se obtuvo usando el software estadísto R, en el cual
- además se verificó la disrtibución de los datos con los mismo resultados
- obetenido en excel.
+ Poisson, esta gráfica se obtuvo usando el software estadísto R.
 \end_layout
 
 \begin_layout Standard
@@ -638,7 +677,7 @@ Número de pisos de la edificación
 
 \begin_deeper
 \begin_layout Itemize
-Dominio [ 10, 200 ) pisos
+Dominio [ 10, 200 ] pisos.
 \end_layout
 
 \end_deeper
@@ -651,7 +690,7 @@ Número de ascensores del grupo de elevadores a controlar.
 
 \begin_deeper
 \begin_layout Itemize
-Dominio [ 2, 20 ) 
+Dominio [ 2, 20 ] elevadores.
 \end_layout
 
 \end_deeper
@@ -664,7 +703,22 @@ Capacidad de cada uno de los elevadores.
 
 \begin_deeper
 \begin_layout Itemize
-Dominio [ 4, 20 ) 
+Dominio [ 4, 20 ] personas.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Población de la edificación.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dominio [ 2000, 5000 ] personas.
+ 
 \end_layout
 
 \end_deeper
@@ -3217,16 +3271,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-142 seg
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-121 seg 
 \end_layout
 
 \end_inset
@@ -3236,8 +3281,6 @@ E (CI)
 
 \begin_layout Plain Layout
 
-\series bold
-13%
 \end_layout
 
 \end_inset
@@ -3246,7 +3289,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-59 seg 
+
 \end_layout
 
 \end_inset
@@ -3255,7 +3298,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-47 seg 
+
 \end_layout
 
 \end_inset
@@ -3264,7 +3307,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-18%
+
 \end_layout
 
 \end_inset
@@ -3273,7 +3316,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-5946
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -3282,7 +3334,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-5284 
+
 \end_layout
 
 \end_inset
@@ -3304,7 +3356,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
+178 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+158 seg
 \end_layout
 
 \end_inset
@@ -3322,7 +3383,16 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
+64 seg
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+63 seg
 \end_layout
 
 \end_inset
@@ -3340,25 +3410,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+30852
 \end_layout
 
 \end_inset
@@ -3367,7 +3419,7 @@ E (CI)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+23326
 \end_layout
 
 \end_inset

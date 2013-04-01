@@ -287,7 +287,23 @@ Introducción
 
 \begin_layout Standard
 Para verificar el desempeño del controlador desarrollado se tomo una edificación
- real y los parámetros de ésta se ingresaron en la simulación.
+ real y los parámetros de ésta se ingresaron en la simulación, se tomó el
+ estudio de tráfico de la empresa finlandesa KONE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SIIKONEN2001"
+
+\end_inset
+
+ en la torre de oficinas 
+\begin_inset Quotes eld
+\end_inset
+
+Tour Europe
+\begin_inset Quotes erd
+\end_inset
+
+.
  Los detalles de cómo se ingresaron y el proceso de simulación que se muestra
  como ejemplo de presentan en el apendice del libro.
 \end_layout
@@ -305,6 +321,83 @@ key "AVERILL2000"
 \end_inset
 
 , como se explicó en el capítulo 3.
+\end_layout
+
+\begin_layout Standard
+En la siguiente gráfica se encuentra discriminado el (a) tráfico de entrada
+ , (b) tráfico de salida, (c) tráfico entre pisos, (d) tráfico total.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/templateSiikonen.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Plantilla de tráfico Tou Europe
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Estas mismas gráficas se generaron en el simulador propuesto en dónde gráficamen
+te se verifica la concordancia pero por rigurosidad se comprobará usando
+ pruebas estadísticas apropiadas para el caso.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/templateAROSSO.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Plantilla de tráfico Tou Europe en el simulador propuesto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -541,13 +634,14 @@ En la siguiente tabla se muestran los P-Valores para todos los intervalos
  Como se puede observar la probabilidad de equivocarnos en la prueba es
  inferior en todos los casos al 5%, por lo que se concluye con un alto grado
  de certeza que los datos se distribuyen Poisson.
+ Los P-Valores fueron calculados usando el paquete estadístico R.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -579,9 +673,7 @@ Prueba chi-cuadrado en excel
 \begin_layout Standard
 Adicionalmente se puede observar gráficamente que en el histograma las frecuenci
 as observadas no difieren mucho de las esperadas para la distribución de
- Poisson, esta gráfica se obtuvo usando el software estadísto R, en el cual
- además se verificó la disrtibución de los datos con los mismo resultados
- obetenido en excel.
+ Poisson, esta gráfica se obtuvo usando el software estadísto R.
 \end_layout
 
 \begin_layout Standard
@@ -3867,111 +3959,6 @@ Simulación escenario 2
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Experimento Verificación del Simulador
-\end_layout
-
-\begin_layout Standard
-Se verifica la generación de tráfico de acuerdo a la plantilla de tráfico
- tomada de la edificación de oficinas Tour Paris, la cual está expuesta
- en el trabajo de la empresa finlandesa KONE 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "SIIKONEN2001"
-
-\end_inset
-
-.
- En la siguiente gráfica se encuentra discriminado el (a) tráfico de entrada
- , (b) tráfico de salida, (c) tráfico entre pisos, (d) tráfico total.
-\end_layout
-
-\begin_layout Standard
-Este mismo patrón de tráfico se ingreso al simulador propuesto y los resultados
- en cuanto a generación de pasajeros son muy similares.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/templateSiikonen.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Plantilla de tráfico Tou Europe
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-A continuación se presentan las gráficas generadas por el simulador, hay
- que tener en cuenta que la simulación en ambos casos se ejecuta durante
- 12 horas, en las gráficas del simualdor propuesto el tiempo se mide en
- minutos, es decir que la simulación completa dura 720 minutos.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/templateAROSSO.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Plantilla de tráfico Tou Europe en el simulador propuesto
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
