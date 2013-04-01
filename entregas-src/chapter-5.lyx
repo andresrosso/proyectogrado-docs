@@ -293,10 +293,10 @@ Para verificar el desempeño del controlador desarrollado se tomo una edificaci�
 \end_layout
 
 \begin_layout Standard
-La torre simulada tiene una altura de 40 pisos, se usaron 4 ascensores y
- la población de la edificación se estableció en 3350 personas, con 3 distribuci
-ones de tráfico presentes (ENTRADA, SALIDA, ENTREPISOS) y discretizada la
- entrada de pasajeros en segmentos de tiempo de 300 segundos.
+La torre simulada tiene una altura de 40 pisos, 4 ascensores y la población
+ de la edificación se estableció en 2000 personas, con 3 distribuciones
+ de tráfico presentes (ENTRADA, SALIDA, ENTREPISOS) y discretizada la entrada
+ de pasajeros en segmentos de tiempo de 300 segundos.
  Los pasajeros arriban siguiendo un proceso de Poisson 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -334,14 +334,14 @@ del Generador de Tráfico
 \end_layout
 
 \begin_layout Standard
-Es necesario validar que el simulador esté generando el tráfico de pasajero
+Es necesario validar que el simulador esté generando el tráfico de pasajeros
  basado en un proceso de Poisson.
  Para hacer esta validación se corrieron 100 simulaciones en las que se
  tomó el número de pasajeros generados en cada uno de los intervalos de
  tiempo medidos y se verificó si estos valores aleatorios siguen una distribució
 n de Poisson.
- Fue necesario tomar un número frande de simulaciones para que la prueba
- de bondad no incurriera en errores.
+ Fue necesario tomar un número grande de simulaciones para que la prueba
+ de bondad de ajuste no incurriera en errores.
 \end_layout
 
 \begin_layout Standard
@@ -362,7 +362,7 @@ En la tabla no se incluyen todos los segmentos del día, si no que se toman
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -396,7 +396,7 @@ Muestras de generacíón de pasajeros
 \end_layout
 
 \begin_layout Subsubsection
-Prueba de bonda de ajuste Chi-Cuadrado 
+Prueba de bondad de ajuste Chi-Cuadrado 
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
@@ -414,6 +414,7 @@ key "RAY2008"
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -438,16 +439,52 @@ Ha
 La hipótesis nula de la prueba Chi-cuadrado postula una distribución de
  probabilidad totalmente especificada como el modelo matemático de la población
  que ha generado la muestra, en nuestro caso la distribución de Poisson.
- Rechazaremos la hipotesis nula en el caso que haya una probabilidad mayor
- al 5% que los datos no se distribuyan Poisson.
+ 
+\end_layout
+
+\begin_layout Standard
+Rechazaremos la hipotesis nula en el caso que haya una probabilidad mayor
+ al 5% que los datos no se distribuyan Poisson, el margen de error tipo
+ I se establece es 0.05.
+ 
+\end_layout
+
+\begin_layout Standard
+Estas hipótesis se deben plantear para cada una de las pruebas de bondad
+ de ajuste sobre cada uno de los lamdas usados para generar el tráfico,
+ por lo tanto las hipótesis quedarían.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ho
+\series default
+:
+\begin_inset Formula $X_{i}\sim Poisson(\lambda_{i}),\;\lambda_{i}=...=\lambda_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+H
+\series default
+a:
+\begin_inset Formula $X_{i}\sim Poisson(\lambda_{i}),\;\sum(\lambda_{i}-\overline{\lambda})^{2}>0.05$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Si existe concordancia perfecta entre las frecuencias observadas y las esperadas
  de la distribución chi-cuadrado el estadístico tomará un valor cercano
  a 0; por el contrario, si existe una gran discrepancias entre estas frecuencias
- el estadístico tomará un valor grande y, en consecuencia, se rechazará
- la hipótesis nula.
+ el estadístico tomará un valor grande, en consecuencia, se rechazará la
+ hipótesis nula si es mayor a 0.05.
 \end_layout
 
 \begin_layout Standard
@@ -460,12 +497,12 @@ En la siguiente imágen se compara las frecuencia observadas y esperadas
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/testChiExcel1.png
-	scale 50
+	scale 60
 
 \end_inset
 
@@ -495,9 +532,12 @@ Prueba chi-cuadrado en excel
 
 \begin_layout Standard
 Finalmente debemos calcular la probabilidad de equivocarnos si rechazamos
- la hipótesis nula, este valor se conoce como P-Valor, en la siguiente tabla
- se muestran los P-Valores para todos los intervalos de generación de pasajeros
- tomados en nuestra muestra.
+ la hipótesis nula, este valor se conoce como P-Valor.
+\end_layout
+
+\begin_layout Standard
+En la siguiente tabla se muestran los P-Valores para todos los intervalos
+ de generación de pasajeros tomados en nuestra muestra.
  Como se puede observar la probabilidad de equivocarnos en la prueba es
  inferior en todos los casos al 5%, por lo que se concluye con un alto grado
  de certeza que los datos se distribuyen Poisson.
@@ -553,7 +593,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/rPoiss-7am-21.png
-	scale 20
+	scale 30
 
 \end_inset
 
@@ -638,7 +678,7 @@ Número de pisos de la edificación
 
 \begin_deeper
 \begin_layout Itemize
-Dominio [ 10, 200 ) pisos
+Dominio [ 10, 200 ] pisos.
 \end_layout
 
 \end_deeper
@@ -651,7 +691,7 @@ Número de ascensores del grupo de elevadores a controlar.
 
 \begin_deeper
 \begin_layout Itemize
-Dominio [ 2, 20 ) 
+Dominio [ 2, 20 ] elevadores.
 \end_layout
 
 \end_deeper
@@ -664,7 +704,22 @@ Capacidad de cada uno de los elevadores.
 
 \begin_deeper
 \begin_layout Itemize
-Dominio [ 4, 20 ) 
+Dominio [ 4, 20 ] personas.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Población de la edificación.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dominio [ 2000, 5000 ] personas.
+ 
 \end_layout
 
 \end_deeper
@@ -1021,7 +1076,7 @@ Los valores de las demás variables que no se modifican se detallan en la
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2962,22 +3017,26 @@ Escenario 3
 \begin_layout Standard
 
 \shape italic
-Variando el número máximo de pasajeros por cabina de ascensor.
+Variando la población de la edificación.
  
 \end_layout
 
 \begin_layout Standard
-Se llevó a cabo la simulación modificando la capacidad de las cabinas de
- ascensor.
- Se toma como valor inicial 8 personas, se aumentó el número de pasajeros
- hasta llegar a 20.
+Se toma otro escenario en donde la población de la edificación aumente.
+ Esto indica que el número de pasajeros a mover por eol sistema de transporte
+ vertical va a ser mayor.
+\end_layout
+
+\begin_layout Standard
+Se aumenta la población en 500 pasajeros y se hacen 14 simulaciones partiendo
+ de un apoblación base de 2000 usuarios.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3034,7 +3093,7 @@ Pisos de la edificación
 \begin_inset Text
 
 \begin_layout Plain Layout
-Población de la edificación
+Capacidad de la cabina
 \end_layout
 
 \end_inset
@@ -3043,7 +3102,7 @@ Población de la edificación
 \begin_inset Text
 
 \begin_layout Plain Layout
-2000 personas -igualmente distribuidas en todos los pisos-
+8 personas
 \end_layout
 
 \end_inset
@@ -3081,7 +3140,7 @@ Los resultados de las 14 simulaciones son los siguientes.
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3103,7 +3162,7 @@ status collapsed
 \begin_layout Plain Layout
 
 \series bold
-Capacidad 
+Población 
 \end_layout
 
 \end_inset
@@ -3204,94 +3263,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-142 seg
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-121 seg 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-13%
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-59 seg 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-47 seg 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-18%
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5946
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5284 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-10
+2000
 \end_layout
 
 \end_inset
@@ -3376,7 +3348,92 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-12
+2500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+178 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+158 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+63 seg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30852
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23326
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+3000
 \end_layout
 
 \end_inset
@@ -3461,7 +3518,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-14
+3500
 \end_layout
 
 \end_inset
@@ -3546,7 +3603,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-16
+4000
 \end_layout
 
 \end_inset
@@ -3631,7 +3688,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-18
+4500
 \end_layout
 
 \end_inset
@@ -3716,7 +3773,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-20
+5000
 \end_layout
 
 \end_inset
@@ -3816,16 +3873,6 @@ Simulación escenario 2
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-Caracterización de las Variables
-\end_layout
-
-\begin_layout Standard
-Es necesario verificar el correcto funcionamiento del simulador antes de
- proceder a comparar el controlador propuesto respecto al convencional.
- Para la validación se toman datos del estudio de KONE
 \end_layout
 
 \begin_layout Subsection

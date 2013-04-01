@@ -367,6 +367,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/tablaSimsPosisson.png
+	scale 50
 
 \end_inset
 
@@ -552,7 +553,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/rPoiss-7am-21.png
-	scale 50
+	scale 30
 
 \end_inset
 
@@ -1020,7 +1021,7 @@ Los valores de las demás variables que no se modifican se detallan en la
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2961,22 +2962,26 @@ Escenario 3
 \begin_layout Standard
 
 \shape italic
-Variando el número máximo de pasajeros por cabina de ascensor.
+Variando la población de la edificación.
  
 \end_layout
 
 \begin_layout Standard
-Se llevó a cabo la simulación modificando la capacidad de las cabinas de
- ascensor.
- Se toma como valor inicial 8 personas, se aumentó el número de pasajeros
- hasta llegar a 20.
+Se toma otro escenario en donde la población de la edificación aumente.
+ Esto indica que el número de pasajeros a mover por eol sistema de transporte
+ vertical va a ser mayor.
+\end_layout
+
+\begin_layout Standard
+Se aumenta la población en 500 pasajeros y se hacen 14 simulaciones partiendo
+ de un apoblación base de 2000 usuarios.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3033,7 +3038,7 @@ Pisos de la edificación
 \begin_inset Text
 
 \begin_layout Plain Layout
-Población de la edificación
+Capacidad de la cabina
 \end_layout
 
 \end_inset
@@ -3042,7 +3047,7 @@ Población de la edificación
 \begin_inset Text
 
 \begin_layout Plain Layout
-2000 personas -igualmente distribuidas en todos los pisos-
+8 personas
 \end_layout
 
 \end_inset
@@ -3080,7 +3085,7 @@ Los resultados de las 14 simulaciones son los siguientes.
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3102,7 +3107,7 @@ status collapsed
 \begin_layout Plain Layout
 
 \series bold
-Capacidad 
+Población 
 \end_layout
 
 \end_inset
@@ -3203,7 +3208,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-8
+2000
 \end_layout
 
 \end_inset
@@ -3290,7 +3295,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-10
+2500
 \end_layout
 
 \end_inset
@@ -3375,7 +3380,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-12
+3000
 \end_layout
 
 \end_inset
@@ -3460,7 +3465,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-14
+3500
 \end_layout
 
 \end_inset
@@ -3545,7 +3550,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-16
+4000
 \end_layout
 
 \end_inset
@@ -3630,7 +3635,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-18
+4500
 \end_layout
 
 \end_inset
@@ -3715,7 +3720,7 @@ E (CI)
 \begin_layout Plain Layout
 
 \series bold
-20
+5000
 \end_layout
 
 \end_inset
@@ -3815,16 +3820,6 @@ Simulación escenario 2
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-Caracterización de las Variables
-\end_layout
-
-\begin_layout Standard
-Es necesario verificar el correcto funcionamiento del simulador antes de
- proceder a comparar el controlador propuesto respecto al convencional.
- Para la validación se toman datos del estudio de KONE
 \end_layout
 
 \begin_layout Subsection
