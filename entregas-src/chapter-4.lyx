@@ -2915,12 +2915,11 @@ Arquitectura Red Estimador Tiempo de Viaje
 \end_layout
 
 \begin_layout Standard
-La red neurunal artificial encargada de estimar el tiempo de viaje que tarda
- un pasajero desde que llega a recogerlo la cabina, hasta que llega a su
- piso destino.
- La red esta compuesta de 5 neuronas de entrada, 50 neuronas en la capa
- oculta y 1 neurona de salida.
- Las entradas son obtenidas mediante la comunicación con otros agentes.
+Mediante la observación y múltiples pruebas se determinó que la mejor configurac
+ión de la red neuronal artificial es tener 5 neuronas en la capa de entrada,
+ 50 neuronas en la capa oculta y 1 neurona de salida.
+ A continuación se explicará cuales son las entradas de la red neuronal
+ y su salida.
 \end_layout
 
 \begin_layout Standard
@@ -2959,6 +2958,13 @@ Arquitectura ANN Tiempo de Espera
 
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+Entradas
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 
 \series bold
@@ -3008,6 +3014,23 @@ Dirección del elevador
  se obtiene del agente controlador de cabina.
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Salida
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Tiempo de viaje:
+\series default
+ Valor estimado del tiempo de viaje, se normaliza a un valor entre 0 y 1.
+\end_layout
+
+\end_deeper
 \begin_layout Paragraph
 Aprendizaje y Entrenamiento
 \end_layout
@@ -3027,10 +3050,13 @@ key "VALLURU1995"
 \end_layout
 
 \begin_layout Standard
-El entrenamiento de esta red neuronal se hace de manera supervisada, proveiendo
- a la red de ejemplos de tiempos de viaje obtenidos en el simulador.
- La evolución por épocas de la red neural con un coeficiente de aprendizaje
+El entrenamiento de esta red neuronal se hace de manera supervisada, proveyendo
+ a la red de ejemplos de tiempos de viaje obtenidos en el simulador usando
+ un controlador convencional.
+ La evolución por épocas de la red neuronal con un coeficiente de aprendizaje
  de 0.6 y un momentum de 0.1, se muestra a continuación.
+ Éstos parámetros de entrenamiento se encontraron que eran los más apropiados
+ para el entrenamiento por medio de la experimentación.
 \end_layout
 
 \begin_layout Standard
@@ -3073,49 +3099,21 @@ Arquitectura Red Estimador Tiempo de Espera
 \end_layout
 
 \begin_layout Standard
-La red neurunal artificial está encargada de estimar el tiempo que un pasajero
- debe esperar para que determinado ascensor llegue a recogerlo.
- Esta compuesta de 6 neuronas de entrada, 50 neuronas en la capa oculta
- y 5 neuronas de salida.
- Las entradas son obetenidas mediante la comunicación con otros agentes.
+Ésta red neuronal artificial está encargada de estimar el tiempo que un
+ pasajero debe esperar desde que registra la llamada hasta que una cabina
+ de ascensor llegue a recogerlo.
+ Se determina por experimentación que la red debe estar compuesta de 6 neuronas
+ de entrada, 50 neuronas en la capa oculta y 5 neuronas de salida.
+ A continuación se detallan las entradas.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
+\begin_layout Itemize
 
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/AnnWT.png
-	width 50page%
-	height 50page%
-	keepAspectRatio
-
-\end_inset
-
-
+\series bold
+Entradas
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Arquitectura ANN Tiempo de Espera
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
+\begin_deeper
 \begin_layout Itemize
 
 \series bold
@@ -3174,11 +3172,31 @@ Dirección del elevador
  se obtiene del agente controlador de cabina.
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Salida
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Tiempo de espera:
+\series default
+ Valor estimado del tiempo de espera, se normaliza a un valor entre 0 y
+ 1.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 Como en el caso anterior esta red neuronal en entrenada de manera supervisada
- con ejemplos de tiempos de espera obtenidos en el simulador.
- El coeficiente de aprendizaje de 0.6 y un momentum de 0.1, en la siguiente
- figura se grafica la evolución en el aprendizaje.
+ con ejemplos obtenidos a partir de simulaciones hechas usando el controlador
+ convencional.
+ Los parámetros de entrenamiento: coeficiente de aprendizaje de 0.6 y momentum
+ de 0.1, se obtienen por experimentación.
+ En la siguiente figura se grafica la evolución en el aprendizaje.
 \end_layout
 
 \begin_layout Standard
@@ -3224,9 +3242,8 @@ Entrenamiento de las Redes Neuronales Artificiales
 Para el entrenamiento SUPERVISADO se usó la técnica de BACKPROPAGATION,
  y consistió en minimizar el error a lo largo de 8000 iteraciones.
  Debido a que una taza de aprendizaje muy pequeña haría lento el aprendizaje
- y una taza muy alta haría oscilar mucho el error, por experimentación el
- valor con mejor resultado fue usar una tasa de aprendizaje de 0.6 y de momentum
- de 0.1.
+ y una taza muy alta haría oscilar mucho el error,  el valor con mejor resultado
+ fue usar una tasa de aprendizaje de 0.6 y de momentum de 0.1.
 \end_layout
 
 \begin_layout Standard

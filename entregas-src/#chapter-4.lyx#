@@ -2871,10 +2871,10 @@ Para nuestro problema se usará una red neuronal para que dadas ciertas condicio
 es de tráfico pueda estimar -basada en la experiencia- cuanto tiempo tardará
  en llegar un ascensor al piso en el que se generó una llamada y cuanto
  tiempo puede transcurrir para que éste pasajero llegue a su piso destino.
- Esta estimación como se puede observar tiene una muy buena aproximación
+ Esta estimación como se puede observar tiene una muy buena aproximación,
  lo que le permitirá al motor de inferencia contar con más información para
  así decidir con claridad cúal de las cabinas es más apropiada para ser
- enviada al piso en el que el pasa
+ enviada al piso en el que el pasajero aguarda.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2904,7 +2904,7 @@ Este mismo caso ocurre con el tiempo de viaje que debe hacer un pasajero,
 \begin_layout Standard
 Las entradas en ambos casos se presentan de manera normalizada para que
  la convergencia a la solución sea más rápida, las salidas de la red neuronal
- son una estimación en cuento al tiempo que debe esperar o viajar un pasajero,
+ son una estimación en cuanto al tiempo que debe esperar o viajar un pasajero,
  esta salida tambien está normalizada.
  Despues de explicar la topología de las redes, sus entradas, salidas se
  ahodará en el entrenamiento de éstas.
@@ -2915,12 +2915,11 @@ Arquitectura Red Estimador Tiempo de Viaje
 \end_layout
 
 \begin_layout Standard
-La red neurunal artificial encargada de estimar el tiempo de viaje que tarda
- un pasajero desde que llega a recogerlo la cabina, hasta que llega a su
- piso destino.
- La red esta compuesta de 5 neuronas de entrada, 50 neuronas en la capa
- oculta y 1 neurona de salida.
- Las entradas son obtenidas mediante la comunicación con otros agentes.
+Mediante la observación y múltiples pruebas se determinó que la mejor configurac
+ión de la red neuronal artificial es tener 5 neuronas en la capa de entrada,
+ 50 neuronas en la capa oculta y 1 neurona de salida.
+ A continuación se explicará cuales son las entradas de la red neuronal
+ y su salida.
 \end_layout
 
 \begin_layout Standard
@@ -3027,10 +3026,13 @@ key "VALLURU1995"
 \end_layout
 
 \begin_layout Standard
-El entrenamiento de esta red neuronal se hace de manera supervisada, proveiendo
- a la red de ejemplos de tiempos de viaje obtenidos en el simulador.
- La evolución por épocas de la red neural con un coeficiente de aprendizaje
+El entrenamiento de esta red neuronal se hace de manera supervisada, proveyendo
+ a la red de ejemplos de tiempos de viaje obtenidos en el simulador usando
+ un controlador convencional.
+ La evolución por épocas de la red neuronal con un coeficiente de aprendizaje
  de 0.6 y un momentum de 0.1, se muestra a continuación.
+ Éstos paráse encontraron que eran los más apropiados para el entrenamiento
+ por medio de la experimentación.
 \end_layout
 
 \begin_layout Standard
