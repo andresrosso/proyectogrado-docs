@@ -278,7 +278,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Conclusions and Future Work
+Conclusiones y Trabajo Futuro
 \end_layout
 
 \begin_layout Section
@@ -286,17 +286,17 @@ Conclusiones
 \end_layout
 
 \begin_layout Standard
-El presente trabajo mostró una propuesta para simular sistemas dinámicos
- usado agentes.
- Este forma de representación hace más natural el modelado de la realidad
- y presenta ventajas en la arquitectura como el bajo acoplamiento entre
- los componentes del sistema.
+Se logró demostrar que haciendo uso de técnicas inteligentes en el problema
+ de asignación de tráfico en edificaciones de gran altura es posible mejorar
+ el desempeño en el control para grupo de elevadores.
+ En promedio después de correr la simulación alrededor de 68 veces variando
+ los parámetros se observa una mejora en promedio del tiempo de espera 17%,
+ tiempo de viaje 14% y energía consumida 16%.
+ 
 \end_layout
 
 \begin_layout Standard
-Se logró demostrar que haciendo uso de técnicas inteligentes es posible
- mejorar el desempeño en el control para grupo de elevadores.
- La comunicación de técnicas como: redes neuronales para la predicción de
+La combinación de técnicas como: redes neuronales para la predicción de
  variables con bastante incertidumbre y lógica difusa para combinar objetivos
  de control así como para priorizar estos mismos, hacen que los modelos
  de control híbridos para este tipo de problemas tenga un gran potencial.
@@ -307,8 +307,7 @@ Se ofrece un entorno de simulación abierto, parametrizable y a la altura
  de los entornos empresariales para el problema de tráfico vertical.
  Este simulador permitirá a los investigadores centrarse en resolver el
  problema de asignación de llamadas, un problema que debido a su naturaleza
- dinámica, incierta es candidata a tratarse con técnicas de inteligencia
- computacional.
+ dinámica es candidata a tratarse con técnicas de inteligencia computacional.
 \end_layout
 
 \begin_layout Section
@@ -317,10 +316,10 @@ Trabajo Futuro
 
 \begin_layout Standard
 El simulador puede extenderse para usarlo en tareas de planificación de
- edificaciones gran altura, para determinar que configuración de elevadores
- se debe tener (número de éstos, velocidad, capacidad, arquitectura, etc).
- Además de tareas de planificación es posible que se use para medir tiempos
- de evacuación, simulación de emergencias, etc.
+ edificaciones gran altura, para determinar qué configuración de elevadores
+ se debe tener (número de éstos, velocidad, capacidad, arquitectura, etc)
+ y tambien para medir tiempos de evacuación, simulación de emergencias,
+ etc.
 \end_layout
 
 \begin_layout Standard

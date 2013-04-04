@@ -305,7 +305,7 @@ Tour Europe
 
 .
  Los detalles de cómo se ingresaron y el proceso de simulación que se muestra
- como ejemplo de presentan en el apendice del libro.
+ como ejemplo de presentan en el apéndice del libro.
 \end_layout
 
 \begin_layout Standard
@@ -348,7 +348,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Plantilla de tráfico Tou Europe
+Plantilla de tráfico Tour Europe
 \end_layout
 
 \end_inset
@@ -387,7 +387,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Plantilla de tráfico Tou Europe en el simulador propuesto
+Plantilla de tráfico Tour Europe en el simulador propuesto
 \end_layout
 
 \end_inset
@@ -471,7 +471,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Muestras de generacíón de pasajeros
+Muestras de generación de pasajeros
 \end_layout
 
 \end_inset
@@ -535,7 +535,7 @@ Ha
 \end_layout
 
 \begin_layout Standard
-Rechazaremos la hipotesis nula en el caso que haya una probabilidad mayor
+Rechazaremos la hipótesis nula en el caso que haya una probabilidad mayor
  al 5% que los datos no se distribuyan Poisson, el margen de error tipo
  I se establece es 0.05.
  
@@ -580,8 +580,8 @@ Si existe concordancia perfecta entre las frecuencias observadas y las esperadas
 \end_layout
 
 \begin_layout Standard
-En la siguiente imágen se comparan las frecuencia observadas y esperadas
- para demostrar que los datos se distribuyen de acuerdo a Posisson, para
+En la siguiente imagen se comparan las frecuencia observadas y esperadas
+ para demostrar que los datos se distribuyen de acuerdo a Poisson, para
  un valor de lamda igual a 20 con una muestra de 100 datos.
 \end_layout
 
@@ -672,7 +672,7 @@ Prueba chi-cuadrado en excel
 \begin_layout Standard
 Adicionalmente se puede observar gráficamente que en el histograma las frecuenci
 as observadas no difieren mucho de las esperadas para la distribución de
- Poisson, esta gráfica se obtuvo usando el software estadísto R.
+ Poisson, esta gráfica se obtuvo usando el software estadístico R.
 \end_layout
 
 \begin_layout Standard
@@ -719,7 +719,7 @@ Se ha observado que el control convencional para la asignación de cabinas
 \shape italic
 Reducir tiempo de espera, tiempo de servicio y energía consumida
 \shape default
-”, si no que dá prioridad a la cabina de ascensor que se encuentre más cerca
+”, si no que da prioridad a la cabina de ascensor que se encuentre más cerca
  para asistir la llamada.
  
 \end_layout
@@ -866,11 +866,9 @@ Métodos
 \end_layout
 
 \begin_layout Standard
-Se harán 5 grupos de simulaciones variando las variables independientes.
+Se harán 4 grupos de simulaciones variando las variables independientes.
  El cambio en las variables se hará de manera gradual para verificar el
- comportamiento de los controladores en todos estos escenarios, en el último
- escenario se tomarán las condiciones que permitieron un mejor comportamiento
- del controlador propuesto.
+ comportamiento de los controladores en todos estos escenarios.
 \end_layout
 
 \begin_layout Standard
@@ -880,8 +878,8 @@ Las variables dependientes se medirán para comprobar la eficiencia de los
 \end_layout
 
 \begin_layout Standard
-Las demás entradas que no varían durante las simulaciones se detallan en
- la siguiente tabla de constantes de la simulación.
+Las entradas que no varían durante las simulaciones se detallan en la siguiente
+ tabla de constantes.
 \end_layout
 
 \begin_layout Standard
@@ -1238,7 +1236,7 @@ Los resultados de las 14 simulaciones son los siguientes.
 
 \begin_layout Standard
 Al parecer el solo aumentar el número de pisos sin tocar la población no
- cambia mucho los resultados obtenidos, es quizas en el tiempo de espera
+ cambia mucho los resultados obtenidos, es quizás en el tiempo de espera
  en dónde la modificación de ésta variable tiene mayor efecto.
 \end_layout
 
@@ -3130,7 +3128,7 @@ Se toma otro escenario en donde la población de la edificación aumente.
 
 \begin_layout Standard
 Se aumenta la población en 500 pasajeros y se hacen 14 simulaciones partiendo
- de un apoblación base de 2000 usuarios.
+ de una población base de 2000 usuarios.
 \end_layout
 
 \begin_layout Standard
@@ -4142,24 +4140,17 @@ Variando la cantidad de cabinas de elevador y la población.
 El mayor número de cabinas de ascensor para atender los pasajeros y el aumento
  de la población, son condiciones que favorecen al controlador inteligente.
  Se observa un 30% de mejora en el tiempo de espera de pasajeros, un 20%
- en el tiempo de servicio, y el consumo de energía tambien se reduce en
+ en el tiempo de servicio, y el consumo de energía también se reduce en
  un 26%.
 \end_layout
 
 \begin_layout Standard
-Esto se debe a que el controlador inteligente al tener mayor candidad de
+Esto se debe a que el controlador inteligente al tener mayor cantidad de
  llamadas puede agrupar las mismas de una mejor manera que el convencional
- y al tener varias cabinas dispo
-\end_layout
-
-\begin_layout Standard
-Este comportamiento se debe a que la configuración de la edificación en
- cuento a pisos, ascensores está diseñada para esta población.
- Si aumenta la población el número de cabinas y la capacidad de éstas deberían
- aumentar.
- En el último escenario se va a tratar este tipo de configuración, con un
- número mayor de pasajero y una configuración del sistema más adecuada para
- atender la creciente demanda.
+ y al tener varias cabinas disponibles las opciones de optimización también
+ mejoran considerablemente.
+ Una mayor demanda y un mayor número de cabinas son condiciones apropiadas
+ para que la optimización en el control inteligente sea más acertada.
 \end_layout
 
 \begin_layout Standard
@@ -5211,18 +5202,22 @@ Simulación escenario 4
 
 \end_layout
 
-\begin_layout Subsection
-Experimento EGCS Basado en IA comparado con EGCS Convencional
-\end_layout
-
 \begin_layout Subsubsection
 Experimentación Numérica
 \end_layout
 
 \begin_layout Standard
-El AGENTE ARBITRO DEL SISTEMA escoge entre los ascesores que compiten por
- ésta, aquel que pueda prestar un mejor servicio.
- Esta decisión la toma con base en 5 criterios de decisión que són para
+Se presenta a continuación una experimentación numérica para ver didácticamente
+ cómo funciona el sistema de inferencia en el controlador inteligente y
+ su comparación con el controlador convencional.
+ Se recuerda brevemente el mecanismo de inferencia del controlador propuesta.
+\end_layout
+
+\begin_layout Standard
+Se genera una nueva llamada en el sistema.
+ Esta nueva llamada es procesada por el AGENTE ARBITRO DEL SISTEMA que escoge
+ entre los ascensores que compiten, aquel que pueda prestar un mejor servicio.
+ Esta decisión la toma con base en 5 criterios de decisión que son para
  él las entradas del motor de inferencia difuso.
  Recordemos brevemente las entradas.
 \end_layout
@@ -5233,8 +5228,8 @@ El AGENTE ARBITRO DEL SISTEMA escoge entre los ascesores que compiten por
 Estimación del tiempo de espera
 \series default
  (TE): este valor es entregado por el agente estimador W, él cual cuenta
- con una red neuronal ya entrenada que predice con certeza cuando se demorará
- en llegar el ascesor hasta el piso en donde aguarda el usuario.
+ con una red neuronal ya entrenada que predice cuando se demorará en llegar
+ el ascensor hasta el piso en donde aguarda el usuario.
 \end_layout
 
 \begin_layout Enumerate
@@ -5243,8 +5238,8 @@ Estimación del tiempo de espera
 Estimación del tiempo de viaje
 \series default
  (TV): este valor es pronosticado por el agente estimador S, el cual usa
- una red neuronal entrenada para determinar de manera cercana cuando tiempo
- puede tardar un psajero en llegar desde su piso origen hasta su piso destino.
+ una red neuronal entrenada para determinar cuando tiempo puede tardar un
+ pasajero en llegar desde su piso origen hasta su piso destino.
 \end_layout
 
 \begin_layout Enumerate
@@ -5253,7 +5248,7 @@ Estimación del tiempo de viaje
 Porcentaje de ocupación del elevador
 \series default
  (%O): calculo del número de pasajeros sobre la capacidad del elevador.
- Entre más vacio esté más posibilidades tiene de atender el llamado.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -5275,9 +5270,8 @@ Paradas piso destino
 \end_layout
 
 \begin_layout Standard
-Todas estas entradas son normalizadas a un valor entre [0,1].
- Para tener una visión más clara de lo que hace el Agente asignador, se
- presentan los siguientes ejemplos.
+Todas las entradas son normalizadas a un valor entre [0,1].
+ A continuación se presentan 2 ejemplo reales.
 \end_layout
 
 \begin_layout Paragraph
@@ -6053,519 +6047,5 @@ Elevador 3
 \end_layout
 
 \end_deeper
-\begin_layout Subsubsection
-Experimentación en el Simulador
-\end_layout
-
-\begin_layout Standard
-Los resultados de la simulación revelan que haciendo uso de sistemas multiagente
- y usando la lógica de asignación basada en redes neuronales y lógica difusa
- se obtiene un mayor rendimiento en el sistema.
-\end_layout
-
-\begin_layout Standard
-Ya que el simulador cuenta con reporteadores estadísticos, los datos de
- desempeño arrojados por el simulador se presentan en forma de cuadro comparativ
-o.
-\end_layout
-
-\begin_layout Paragraph
-Tiempo de Espera
-\end_layout
-
-\begin_layout Standard
-Como se puede constatar en los reportes estadísticos, el control convencional
- tuvo una media de espera de 148 seg, mientras que el controlador convencional
- tuvo una media de 108 segundos.
- Esto representa una mejora en el servicio prestado (27% menor), hay que
- notar que la varianza es mucho mayor en usando el control convencional,
- cerca de un 25%.
- Esto muestra una dispersión mayor en los resultados del controlador convenciona
-l.
-\end_layout
-
-\begin_layout Standard
-En la siguiente gráfica se muestra el tiempo de espera por cada una de las
- llamadas, en el eje horizontal se encuentra secuencialmente cada llamada
- y en el eje vertical su tiempo de espera.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Resultado Tiempo de Espera
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-AI
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/ai-te.png
-	width 40page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Convencional
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/conv-te.png
-	width 40page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Comparación Tiempo de Espera
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-En ésta gráfica se se muestra el tiempo de espera propmedio según el minutos
- de simulación, en el eje horizotal está el tiempo de simulación en minutos
- y en el eje vertical el tiempo de espera promedio para ese momento.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Resultado Tiempo de Espera
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-AI
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/wtHoutIA.png
-	width 40page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Convencional
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/wtHourConv.png
-	width 40page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Comparación Tiempo de Espera
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-Tiempo de Viaje
-\end_layout
-
-\begin_layout Standard
-De acuerdo al tiempo de viaje de un pasajero, -desde que se sube al ascensor
- y hasta que se baja- se evidencia una reducción en los tiempo de servicio
- de un 25%.
- Esto muestra una dispersión mayor en los resultados del controlador convenciona
-l.
-\end_layout
-
-\begin_layout Standard
-En la siguiente gráfica se muestra el tiempo de viaje por cada una de las
- llamadas, en el eje horizontal se encuentra secuencialmente cada llamada
- y en el eje vertical su tiempo de viaje.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Resultado Tiempo de Servicio
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-AI
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/ai-ts.png
-	width 40page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Convencional
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/conv-ts.png
-	width 40page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Comparación Tiempo de Viaje
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-Energía Consumida
-\end_layout
-
-\begin_layout Standard
-La energía consumida también logró ser reducida en cerca de un 10%, esta
- mejora a pesar de ser significativa si le permitirá a un edificio de gran
- altura ahorra millones de dolares en el consumo de energía.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Resultado Energía Consumida
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-AI
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/ai-ec.png
-	width 40page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Convencional
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/conv-ec.png
-	width 40page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Comparación Energía Consumida
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \end_body
 \end_document

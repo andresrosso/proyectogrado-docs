@@ -296,6 +296,97 @@ En este trabajo se propone el uso del concepto de Sistema Multi-Agente (SMA)
  del sistema.
 \end_layout
 
+\begin_layout Standard
+El diseño de sistema multiagente propuesto toma cada cabina de ascensor
+ como un agente que quiere participar por obtener una llamada.
+ Aquel que presente una mejor oferta 
+\begin_inset Quotes eld
+\end_inset
+
+mejor servicio
+\begin_inset Quotes erd
+\end_inset
+
+ la atenderá.
+ La lista de agentes participantes puede ser variable dependiendo del estado
+ de los agentes -ACTIVO, FUERA DE SERVICIO-, si una cabina pasa a un estado
+ 
+\begin_inset Quotes eld
+\end_inset
+
+FUERA DE SERVICIO
+\begin_inset Quotes erd
+\end_inset
+
+ significa que no puede participar en la subasta de la llamada y que debe
+ apoyarse en los demás 
+\begin_inset Quotes eld
+\end_inset
+
+agentes de cabina
+\begin_inset Quotes erd
+\end_inset
+
+ para que se hagan cargo de sus llamadas asignadas.
+ Por ésto y por otras razones como escalabilidad y separación de responsabilidad
+es una arquitectura 
+\begin_inset Quotes eld
+\end_inset
+
+NO Centralizada
+\begin_inset Quotes erd
+\end_inset
+
+ es adecuada.
+ Aunque podría hacerce de manera tradicional, por diseño de software y pensando
+ en la evolución del algorítmo de asignación de llamadas 
+\begin_inset Quotes eld
+\end_inset
+
+objetivo del trabajo de grado
+\begin_inset Quotes erd
+\end_inset
+
+ es preferible mantenerlo en una entidad separada.
+ De esta manera el algorítmo de asignación de llamadas puede cambiar en
+ cuanto a su implementación -Fuzzy, RPSO, AG, etc- y comportamiento -prioridad
+ en los objetivos de control- de manera independiente sin que tengan que
+ conocerlo los agentes controladores de cabina.
+\end_layout
+
+\begin_layout Standard
+La elección de la cabina más apropiada para atender una llamada se hace
+ por medio de un agente 
+\begin_inset Quotes eld
+\end_inset
+
+árbitro del sistema
+\begin_inset Quotes erd
+\end_inset
+
+, el cual evalua las ofertas de las cabinas y la asigna usando un motor
+ de inferencia difuso a aquel que presente una mejor oferta.
+ Éste mismo enfoque -de tener un agente central que asigna la llamada- es
+ usado por Yunww Gu en el árticulo 
+\begin_inset Quotes eld
+\end_inset
+
+Multi-Objective Optimization of Multi-Agent Elevator Group Control System
+ Based on Real-Time Particle Swarm Optimization Algorithm
+\begin_inset Quotes erd
+\end_inset
+
+ con buenos resultados, usando un motor de inferencia basado en particulas
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yanwu2012"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Descripción General De Los Agentes
 \end_layout
