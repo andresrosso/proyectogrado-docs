@@ -147,6 +147,15 @@
   timestamp = {2012.04.17}
 }
 
+@ARTICLE{Granger1993,
+  author = {Granger, C.W.J., Terasvirta, T.},
+  title = {Modelling Nonlinear Economic Relationships.},
+  journal = {Oxford University Press},
+  year = {1993},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
 @ARTICLE{Yanwu2012,
   author = {Yanwu Gu},
   title = {Multi-Objective Optimization of Multi-Agent Elevator Group Control
@@ -702,6 +711,15 @@
   timestamp = {2012.04.23}
 }
 
+@ARTICLE{Naitoh1991,
+  author = {Y, Naitoh},
+  title = {A variable ordinal structure model for fuzzy reasoning and its application
+	to decision problem of working order.},
+  journal = {International Conference on Control},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
 @ARTICLE{YOUNG2000,
   author = {Young Cheol Cho, Zavarin Gagov, Wook Hyun Kwon},
   title = {Timed Petri Net Based Approach for Elevator Group Controls},
@@ -709,6 +727,17 @@
   year = {2000},
   owner = {arosso},
   timestamp = {2011.12.02}
+}
+
+@ARTICLE{Zadeh1973,
+  author = {L. A. Zadeh},
+  title = {Outline of new approach to the analysis complex systems
+	
+	and decision processes},
+  journal = {IEEE Trans.},
+  year = {1973},
+  owner = {andres},
+  timestamp = {2013.04.04}
 }
 
 @ARTICLE{ZHANGTANG,

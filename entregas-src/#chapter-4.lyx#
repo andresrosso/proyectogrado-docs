@@ -2961,6 +2961,13 @@ Arquitectura ANN Tiempo de Espera
 \begin_layout Itemize
 
 \series bold
+Entradas
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
 Pasajeros dentro del elevador
 \series default
 : es el número de pasajeros que se encuentran el elevador, esta entrada
@@ -3007,6 +3014,23 @@ Dirección del elevador
  se obtiene del agente controlador de cabina.
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Salida
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Tiempo de viaje:
+\series default
+ Valor estimado del tiempo de viaje, se normaliza a un valor entre 0 y 1.
+\end_layout
+
+\end_deeper
 \begin_layout Paragraph
 Aprendizaje y Entrenamiento
 \end_layout
@@ -3031,8 +3055,8 @@ El entrenamiento de esta red neuronal se hace de manera supervisada, proveyendo
  un controlador convencional.
  La evolución por épocas de la red neuronal con un coeficiente de aprendizaje
  de 0.6 y un momentum de 0.1, se muestra a continuación.
- Éstos paráse encontraron que eran los más apropiados para el entrenamiento
- por medio de la experimentación.
+ Éstos parámetros de entrenamiento se encontraron que eran los más apropiados
+ para el entrenamiento por medio de la experimentación.
 \end_layout
 
 \begin_layout Standard
@@ -3075,49 +3099,21 @@ Arquitectura Red Estimador Tiempo de Espera
 \end_layout
 
 \begin_layout Standard
-La red neurunal artificial está encargada de estimar el tiempo que un pasajero
- debe esperar para que determinado ascensor llegue a recogerlo.
- Esta compuesta de 6 neuronas de entrada, 50 neuronas en la capa oculta
- y 5 neuronas de salida.
- Las entradas son obetenidas mediante la comunicación con otros agentes.
+Ésta red neuronal artificial está encargada de estimar el tiempo que un
+ pasajero debe esperar desde que registra la llamada hasta que una cabina
+ de ascensor llegue a recogerlo.
+ Se determina por experimentación que la red debe estar compuesta de 6 neuronas
+ de entrada, 50 neuronas en la capa oculta y 5 neuronas de salida.
+ A continuación se detallan las entradas.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
+\begin_layout Itemize
 
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/AnnWT.png
-	width 50page%
-	height 50page%
-	keepAspectRatio
-
-\end_inset
-
-
+\series bold
+Entradas
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Arquitectura ANN Tiempo de Espera
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
+\begin_deeper
 \begin_layout Itemize
 
 \series bold
@@ -3176,11 +3172,31 @@ Dirección del elevador
  se obtiene del agente controlador de cabina.
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Salida
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Tiempo de espera:
+\series default
+ Valor estimado del tiempo de espera, se normaliza a un valor entre 0 y
+ 1.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 Como en el caso anterior esta red neuronal en entrenada de manera supervisada
- con ejemplos de tiempos de espera obtenidos en el simulador.
- El coeficiente de aprendizaje de 0.6 y un momentum de 0.1, en la siguiente
- figura se grafica la evolución en el aprendizaje.
+ con ejemplos obtenidos a partir de simulaciones hechas usando el controlador
+ convencional.
+ Los parámetros de entrenamiento: coeficiente de aprendizaje de 0.6 y momentum
+ de 0.1, se obtienen por experimentación.
+ En la siguiente figura se grafica la evolución en el aprendizaje.
 \end_layout
 
 \begin_layout Standard
@@ -3226,9 +3242,8 @@ Entrenamiento de las Redes Neuronales Artificiales
 Para el entrenamiento SUPERVISADO se usó la técnica de BACKPROPAGATION,
  y consistió en minimizar el error a lo largo de 8000 iteraciones.
  Debido a que una taza de aprendizaje muy pequeña haría lento el aprendizaje
- y una taza muy alta haría oscilar mucho el error, por experimentación el
- valor con mejor resultado fue usar una tasa de aprendizaje de 0.6 y de momentum
- de 0.1.
+ y una taza muy alta haría oscilar mucho el error,  el valor con mejor resultado
+ fue usar una tasa de aprendizaje de 0.6 y de momentum de 0.1.
 \end_layout
 
 \begin_layout Standard
@@ -4270,25 +4285,70 @@ Inferencia en el Agente Arbitro del Sistema
 \end_layout
 
 \begin_layout Standard
-Determinar que ascensor puede atender en una mejor medida una llamada es
+Determinar qué ascensor puede atender en una mejor medida una llamada es
  una decisión compleja.
  Está sujeta a muchas variables del ambiente que cambian en el tiempo y
  que tienen naturaleza estocástica.
- Por esta razón no es posible calcular con algoritmo de optimización la
- mejor opción de elevador para atender la llamada.
+ Por esta razón no es posible calcular por medio de un algoritmo de optimización
+ la mejor opción de elevador para atender la llamada.
 \end_layout
 
 \begin_layout Standard
-Por en este trabajo se propone tomar la decisión usando redes neurOnales
- para estimar datos con incertidumbre y reglas de inferencia difusas para
- tener en cuenta los objetivos de control trazados.
+Se conoce por medio de estudios previos que algunas características hacen
+ que los tiempos de espera y de viaje de los usuarios puedan ser reducidos
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, por ejemplo la carga que contenga el ascensor, las paradas que éste deba
+ hacer, área del piso destino y origen de la llamada, entre otros, aportando
+ cada uno en diferente medida para resolver los objetivos de control.
+ Éstos factores se pueden incorporar por medio de un conjunto de reglas
+ tendientes a aumentar la eficiencia del algorítmo de control, pero las
+ reglas son fragmentadas y difíciles de organizar 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Naitoh1991"
+
+\end_inset
+
+, así mismo la escogencia de las reglas más apropiadas para escenario de
+ control es complejo.
+ En resumidas cuentas es complicado incorporar adecuadamente éste conocimiento
+ para ser usado por el software de control.
+\end_layout
+
+\begin_layout Standard
+La lógica difusa se caracteriza por producir resultados exactos sobre datos
+ imprecisos.
+ En general cuando la complejidad del sistema es alta y la covergencia hacia
+ la solución óptima presenta dificultades es posible utilizar métodos de
+ aproximación basados en lógica difusa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zadeh1973"
+
+\end_inset
+
+.
+ Muchas aplicaciones para el control en problemas de optimización han sido
+ usados en otros estudios .
+\end_layout
+
+\begin_layout Standard
+asd
+\end_layout
+
+\begin_layout Standard
+En éste trabajo la lógica difusa es usada para describir el estado del sistema
+ así como el conocimiento del experto.
  Las reglas difusas se alimentan de datos que pueden ser calculados y otros
  que simplemente son estimados estadísticamente o por medio de las redes
  neuronales antes mencionadas.
-\end_layout
-
-\begin_layout Standard
-Este tipo de controlador permite que la solución se robusta y que el control
+ Este tipo de controlador permite que la solución se robusta y que el control
  no se vea afectado ante el ruido que puedan presentar las varibles de control.
 \end_layout
 

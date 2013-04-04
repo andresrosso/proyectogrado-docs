@@ -3242,9 +3242,8 @@ Entrenamiento de las Redes Neuronales Artificiales
 Para el entrenamiento SUPERVISADO se usó la técnica de BACKPROPAGATION,
  y consistió en minimizar el error a lo largo de 8000 iteraciones.
  Debido a que una taza de aprendizaje muy pequeña haría lento el aprendizaje
- y una taza muy alta haría oscilar mucho el error, por experimentación el
- valor con mejor resultado fue usar una tasa de aprendizaje de 0.6 y de momentum
- de 0.1.
+ y una taza muy alta haría oscilar mucho el error,  el valor con mejor resultado
+ fue usar una tasa de aprendizaje de 0.6 y de momentum de 0.1.
 \end_layout
 
 \begin_layout Standard
@@ -4286,16 +4285,28 @@ Inferencia en el Agente Arbitro del Sistema
 \end_layout
 
 \begin_layout Standard
-Determinar que ascensor puede atender en una mejor medida una llamada es
+Determinar qué ascensor puede atender en una mejor medida una llamada es
  una decisión compleja.
  Está sujeta a muchas variables del ambiente que cambian en el tiempo y
  que tienen naturaleza estocástica.
- Por esta razón no es posible calcular con algoritmo de optimización la
- mejor opción de elevador para atender la llamada.
+ Por esta razón no es posible calcular por medio de un algoritmo de optimización
+ la mejor opción de elevador para atender la llamada.
 \end_layout
 
 \begin_layout Standard
-Por en este trabajo se propone tomar la decisión usando redes neurOnales
+jjj
+\end_layout
+
+\begin_layout Standard
+asd
+\end_layout
+
+\begin_layout Standard
+asd
+\end_layout
+
+\begin_layout Standard
+Por en este trabajo se propone tomar la decisión usando redes neuronales
  para estimar datos con incertidumbre y reglas de inferencia difusas para
  tener en cuenta los objetivos de control trazados.
  Las reglas difusas se alimentan de datos que pueden ser calculados y otros
