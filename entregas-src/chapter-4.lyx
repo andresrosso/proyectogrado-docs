@@ -338,8 +338,8 @@ NO Centralizada
 \end_inset
 
  es adecuada.
- Aunque podría hacerce de manera tradicional, por diseño de software y pensando
- en la evolución del algorítmo de asignación de llamadas 
+ Aunque podría hacerse de manera tradicional, por diseño de software y pensando
+ en la evolución del algoritmo de asignación de llamadas 
 \begin_inset Quotes eld
 \end_inset
 
@@ -348,7 +348,7 @@ objetivo del trabajo de grado
 \end_inset
 
  es preferible mantenerlo en una entidad separada.
- De esta manera el algorítmo de asignación de llamadas puede cambiar en
+ De esta manera el algoritmo de asignación de llamadas puede cambiar en
  cuanto a su implementación -Fuzzy, RPSO, AG, etc- y comportamiento -prioridad
  en los objetivos de control- de manera independiente, sin que tengan que
  conocerlo los agentes controladores de cabina.
@@ -364,10 +364,10 @@ La elección de la cabina más apropiada para atender una llamada se hace
 \begin_inset Quotes erd
 \end_inset
 
-, el cual evalua las ofertas de las cabinas y la asigna usando un motor
+, el cual evalúa las ofertas de las cabinas y la asigna usando un motor
  de inferencia difuso a aquel que presente una mejor oferta.
  Éste mismo enfoque -de tener un agente central que asigna la llamada- es
- usado por Yunww Gu en el árticulo 
+ usado por Yunww Gu en el artículo 
 \begin_inset Quotes eld
 \end_inset
 
@@ -376,7 +376,7 @@ Multi-Objective Optimization of Multi-Agent Elevator Group Control System
 \begin_inset Quotes erd
 \end_inset
 
- con buenos resultados, usando un motor de inferencia basado en particulas
+ con buenos resultados, usando un motor de inferencia basado en partículas
  RPSO 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -403,14 +403,14 @@ En este caso particular existen varios actores que interactúan con el medio,
 
 \begin_layout Standard
 Los roles están dados por los objetivos de los agentes.
- El paradigma es analítico tomando como base la realidad diferenciandose
+ El paradigma es analítico tomando como base la realidad diferenciándose
  al modelo de AOPOA que es más deductivo en donde los agentes no son evidentes
  y son descubiertos recursivamente bajo el paradigma organizacional.
  De acuerdo a éste acercamiento de modelado se identifican 5 agentes, que
  son abstracciones de las entidades que existen en la realidad en un sistema
  de grupo de elevadores.
  En el modelo de éste trabajo se hizo una descomposición de metas y submetas
- que intrínsecamente le dán los roles a los agentes, los cuales son invariables
+ que intrínsecamente le dan los roles a los agentes, los cuales son invariables
  en el tiempo.
 \end_layout
 
@@ -970,7 +970,7 @@ Submetas
 \end_layout
 
 \begin_layout Plain Layout
-* Notificar los estados en los que se encuetra una llamada: aceptada, recogida,
+* Notificar los estados en los que se encuentra una llamada: aceptada, recogida,
  despachada.
 \end_layout
 
@@ -995,7 +995,7 @@ Submetas
 \end_layout
 
 \begin_layout Plain Layout
-* Participar en la apuesta para obetener una llamada generada en el 
+* Participar en la apuesta para obtener una llamada generada en el 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1147,7 +1147,7 @@ Meta
 
 \begin_layout Plain Layout
 * Identificar cuales agentes cabina no está en servicio para no tenerlos
- en cuenta en la asiganción.
+ en cuenta en la asignación.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1268,7 +1268,7 @@ Recursos
 \begin_inset Text
 
 \begin_layout Plain Layout
-Base de datos estadíticos
+Base de datos estadísticos
 \end_layout
 
 \end_inset
@@ -1362,7 +1362,7 @@ Nombre
 \begin_layout Plain Layout
 
 \series bold
-Agente De Servidcio Estimador Tiempo de Espera
+Agente De Servicio Estimador Tiempo de Espera
 \end_layout
 
 \end_inset
@@ -1781,7 +1781,7 @@ Diagrama Interacciones
 
 \begin_layout Standard
 En la siguiente tabla se explican las interacciones entre los agentes a
- excepción de los mecanísmos cooperativos, éstos se explicarán más adelante
+ excepción de los mecanismos cooperativos, éstos se explicarán más adelante
  en la sección de cooperación.
 \end_layout
 
@@ -1940,7 +1940,7 @@ Información del patrón de tráfico presente en la edificación (Subida, bajada
 
 \begin_layout Plain Layout
 3.
- Número de pasajeros moviendose entre pisos en la edificación 
+ Número de pasajeros moviéndose entre pisos en la edificación 
 \end_layout
 
 \end_inset
@@ -2368,7 +2368,7 @@ Pronóstico del tiempo que puede tardar el ascensor en llegar al piso origen
 
 \begin_layout Plain Layout
 5.
- Porcentaje de la población de la edificación que se esta transladando entre
+ Porcentaje de la población de la edificación que se esta trasladando entre
  los pisos superiores de la edificación 
 \end_layout
 
@@ -2569,7 +2569,7 @@ Pronóstico del tiempo que tarda el pasajero en la cabina de ascensor desde
 
 \begin_layout Plain Layout
 4.
- Porcentaje de la población de la edificación que se esta transladando entre
+ Porcentaje de la población de la edificación que se esta trasladando entre
  los pisos superiores de la edificación
 \end_layout
 
@@ -2671,16 +2671,16 @@ Resolución del Conflictos
 
 \begin_layout Standard
 De acuerdo al modelo multiagente se presenta un conflicto por los objetivos
- antagónicos entre los agentes Contraladores de Cabina.
+ antagónicos entre los agentes Controladores de Cabina.
  Este conflicto ocurre cuando los agente de cabina compiten por una llamada
  registrada.
 \end_layout
 
 \begin_layout Standard
-Para solucionar éste conflicto se plantea un mecanísmo de subasta en donde
+Para solucionar éste conflicto se plantea un mecanismo de subasta en donde
  los agentes que compiten por la llamada envían información relevante para
  que el Arbitro tome la decisión de asignar la llamada a aquel que la pueda
- atender en mejor medidad de acuerdo a los objetivos de control.
+ atender en mejor medida de acuerdo a los objetivos de control.
  Se utiliza el protocolo contract-net extendido basado en las siguientes
  interacciones.
 \end_layout
@@ -2727,7 +2727,7 @@ Ejemplo 1 (Sin conflictos)
 
 \begin_layout Standard
 Tomemos el caso en dónde llega una llamada al sistema, esta llamada la recibe
- el árbitro del sitema y éste le envía a cada uno de los agentes controladores
+ el árbitro del sistema y éste le envía a cada uno de los agentes controladores
  de cabina las características de la llamada.
  
 \end_layout
@@ -2744,7 +2744,7 @@ En éste ejemplo solo un ascensor está en servicio, por lo tanto el árbitro
 El agente cabina incluye la llamada en su lista de llamadas y notifica al
  árbitro que la va a atender.
  Una vez la cabina llegue al sitio origen de llamada, notifica al árbitro
- que ya la recogio.
+ que ya la recogió.
  Cuando deje al pasajero en su piso destino, notifica nuevamente al árbitro
  que el pasajero fue servido.
 \end_layout
@@ -2758,8 +2758,8 @@ Ejemplo 2 (Conflictos)
 \begin_layout Standard
 En este segundo ejemplo todos los agentes están disponibles para atender
  la llamada.
- La llamada la recibe el árbitro del sitema y éste le envía a cada uno de
- los agentes controladores de cabina las características de la llamada.
+ La llamada la recibe el árbitro del sistema y éste le envía a cada uno
+ de los agentes controladores de cabina las características de la llamada.
  
 \end_layout
 
@@ -2767,8 +2767,8 @@ En este segundo ejemplo todos los agentes están disponibles para atender
 Ya que hay más agentes de cabina pujando por la llamada, cada uno de éstos
  calcula el tiempo de espera, el tiempo de viaje, su porcentaje de ocupación,
  las otras llamadas que tenga en el piso origen y destino de la llamada.
- Con éstos datos el árbitro decide de acuerdo a los obejtivos de control
- cúal de los ascensores será el ganador de la subasta por la llamada, aquel
+ Con éstos datos el árbitro decide de acuerdo a los objetivos de control
+ cuál de los ascensores será el ganador de la subasta por la llamada, aquel
  que haya hecho la mejor oferta será el que se quede con la llamada.
 \end_layout
 
@@ -2780,7 +2780,7 @@ Decidido quien atenderá la llamada, le notifica al agente cabina ganador.
 El agente cabina incluye la llamada en su lista de llamadas y notifica al
  árbitro que la va a atender.
  Una vez la cabina llegue al sitio origen de llamada, notifica al árbitro
- que ya la recogio.
+ que ya la recogió.
  Cuando deje al pasajero en su piso destino, notifica nuevamente al árbitro
  que el pasajero fue servido.
 \end_layout
@@ -2794,12 +2794,12 @@ Los agentes cabina deben hacer la oferta por la llamada generada, esta oferta
  contiene datos que pueden ser calculados como el porcentaje de ocupación,
  las paradas en piso origen y destino.
  Pero otras características de la oferta son apenas estimadas, estas son
- el tiempo de espera que vá a tener el pasajero y el tiempo de viaje.
+ el tiempo de espera que va a tener el pasajero y el tiempo de viaje.
  
 \end_layout
 
 \begin_layout Standard
-El mecanismo por el cúal se estiman estos tiempos es por medio de redes
+El mecanismo por el cuál se estiman estos tiempos es por medio de redes
  neuronales, ya es conocido que las redes neuronales tiene la característica
  de predecir una salida de acuerdo a unas entradas, o para decirlo en otros
  términos de mapear unas entradas a una salida, en éste caso se deben predecir
@@ -2824,13 +2824,13 @@ key "Guoqiang1997"
 \end_inset
 
 .
- Cómo los modelos biológicos que lo insipiraron las RNA tiene capacidad
- de aprender de la experiencia.
+ Cómo los modelos biológicos que lo inspiraron las RNA tiene capacidad de
+ aprender de la experiencia.
  La experiencia es dada por ejemplos de la realidad en dónde la red neuronal
  es capaz de capturar las relaciones existentes entre los datos presentados.
  Por lo tanto las redes neuronales son apropiadas para problemas en los
  que el conocimiento del problema es difícil de especificar y en los que
- se cuentan con sufientes datos observados para su análisis
+ se cuentan con suficientes datos observados para su análisis
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Guoqiang1997"
@@ -2873,7 +2873,7 @@ es de tráfico pueda estimar -basada en la experiencia- cuanto tiempo tardará
  tiempo puede transcurrir para que éste pasajero llegue a su piso destino.
  Esta estimación como se puede observar tiene una muy buena aproximación,
  lo que le permitirá al motor de inferencia contar con más información para
- así decidir con claridad cúal de las cabinas es más apropiada para ser
+ así decidir con claridad cuál de las cabinas es más apropiada para ser
  enviada al piso en el que el pasajero aguarda.
 \end_layout
 
@@ -2905,9 +2905,9 @@ Este mismo caso ocurre con el tiempo de viaje que debe hacer un pasajero,
 Las entradas en ambos casos se presentan de manera normalizada para que
  la convergencia a la solución sea más rápida, las salidas de la red neuronal
  son una estimación en cuanto al tiempo que debe esperar o viajar un pasajero,
- esta salida tambien está normalizada.
- Despues de explicar la topología de las redes, sus entradas, salidas se
- ahodará en el entrenamiento de éstas.
+ esta salida también está normalizada.
+ Después de explicar la topología de las redes, sus entradas, salidas se
+ ahondará en el entrenamiento de éstas.
 \end_layout
 
 \begin_layout Paragraph
@@ -3010,7 +3010,7 @@ Pasajeros dentro del elevador
 \series bold
 Dirección del elevador
 \series default
-: esta la diracción en la que se dirige la cabina ARRIBA o ABAJO, esta entrada
+: esta la dirección en la que se dirige la cabina ARRIBA o ABAJO, esta entrada
  se obtiene del agente controlador de cabina.
 \end_layout
 
@@ -3037,7 +3037,7 @@ Aprendizaje y Entrenamiento
 
 \begin_layout Standard
 La red neuronal mapea una serie de entradas en una serie de salidas.
- Este mapeo no lineal se se hace a traves de una superficie multidemensional,
+ Este mapeo no lineal se se hace a través de una superficie multidemensional,
  el objetivo de la fase de aprendizaje y entrenamiento es moldear esta superfici
 e de acuerdo a la respuesta requerida 
 \begin_inset CommandInset citation
@@ -3081,7 +3081,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Raiz del error cuadrático para el estimador Tiempo Viaje
+Raíz del error cuadrático para el estimador Tiempo Viaje
 \end_layout
 
 \end_inset
@@ -3168,7 +3168,7 @@ Pasajeros dentro del elevador
 \series bold
 Dirección del elevador
 \series default
-: esta la diracción en la que se dirige la cabina ARRIBA o ABAJO, esta entrada
+: esta la dirección en la que se dirige la cabina ARRIBA o ABAJO, esta entrada
  se obtiene del agente controlador de cabina.
 \end_layout
 
@@ -3196,7 +3196,7 @@ Como en el caso anterior esta red neuronal en entrenada de manera supervisada
  convencional.
  Los parámetros de entrenamiento: coeficiente de aprendizaje de 0.6 y momentum
  de 0.1, se obtienen por experimentación.
- En la siguiente figura se grafica la evolución en el aprendizaje.
+ En la siguiente figura se gráfica la evolución en el aprendizaje.
 \end_layout
 
 \begin_layout Standard
@@ -3221,7 +3221,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Raiz del error cuadrático para el estimador Tiempo Espera
+Raíz del error cuadrático para el estimador Tiempo Espera
 \end_layout
 
 \end_inset
@@ -3248,7 +3248,7 @@ Para el entrenamiento SUPERVISADO se usó la técnica de BACKPROPAGATION,
 
 \begin_layout Standard
 A las redes neuronales se les presentaron 7378 ejemplos, éstos se obtuvieron
- midiendo en el simulador cuanto duraba un pasajero esperando que el ascesor
+ midiendo en el simulador cuanto duraba un pasajero esperando que el ascensor
  llegara a recogerlo (para estimar el tiempo de espera) y cuanto duraba
  este mismo pasajero desde que el ascensor lo recogía hasta que llegaba
  a su destino (para estimar el tiempo de viaje).
@@ -4307,7 +4307,7 @@ key "BARNEY2003"
  hacer, área del piso destino y origen de la llamada, entre otros, aportando
  cada uno en diferente medida para resolver los objetivos de control.
  Éstos factores se pueden incorporar por medio de un conjunto de reglas
- tendientes a aumentar la eficiencia del algorítmo de control, pero las
+ tendientes a aumentar la eficiencia del algoritmo de control, pero las
  reglas son fragmentadas y difíciles de organizar 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4324,9 +4324,9 @@ key "Naitoh1991"
 \begin_layout Standard
 La lógica difusa se caracteriza por producir resultados exactos sobre datos
  imprecisos.
- En general cuando la complejidad del sistema es alta y la covergencia hacia
- la solución óptima presenta dificultades es posible utilizar métodos de
- aproximación basados en lógica difusa 
+ En general cuando la complejidad del sistema es alta y la convergencia
+ hacia la solución óptima presenta dificultades es posible utilizar métodos
+ de aproximación basados en lógica difusa 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zadeh1973"
@@ -4351,16 +4351,17 @@ En éste trabajo la lógica difusa es usada para describir el estado del sistema
  Las reglas difusas se alimentan de datos que pueden ser calculados y otros
  que simplemente son estimados estadísticamente o por medio de las redes
  neuronales antes mencionadas.
- Este tipo de controlador permite que la solución se robusta y que el control
- no se vea afectado ante el ruido que puedan presentar las varibles de control.
+ Este tipo de controlador permite que la solución sea robusta y que el control
+ no se vea afectado ante el ruido que puedan presentar las variables de
+ control.
 \end_layout
 
 \begin_layout Standard
 Los conjuntos de entrada se obtuvieron analizando que factores pueden determinar
- que una llamada sea atendida rápidamente o con una demora mayor, asi mismo
- se incoporan conjuntos difusos con el fin de involucrar el tiempo que pueda
- tardar un pasajeron dentro de un elevador y la energía que el sistema pueda
- consumir.
+ que una llamada sea atendida rápidamente o con una demora mayor, así mismo
+ se incorporan conjuntos difusos con el fin de involucrar el tiempo que
+ pueda tardar un pasajero dentro de un elevador y la energía que el sistema
+ pueda consumir.
 \end_layout
 
 \begin_layout Standard
@@ -4372,7 +4373,7 @@ En la fase de desarrollo se probó usando otras entradas pero no tuvieron
 \end_layout
 
 \begin_layout Standard
-En los siguientes párrafos se prensentan las entradas del sistema, las salidas
+En los siguientes párrafos se presentan las entradas del sistema, las salidas
  y las reglas de inferencia con sus pesos asignados.
  En el desarrollo de este componente se uso la librería JFuzzyLogic 
 \begin_inset CommandInset citation
@@ -4447,7 +4448,7 @@ Conjuntos Difusos Tiempo de Espera
 \series bold
 Estimación Tiempo de Viaje:
 \series default
- Representa la estimación del tiempo que requiere un pasajero para ser trasnport
+ Representa la estimación del tiempo que requiere un pasajero para ser transport
 ado de su piso origen a su piso destino.
  Esta entrada está normalizada [0,1].
  
@@ -4458,7 +4459,7 @@ ado de su piso origen a su piso destino.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4502,7 +4503,7 @@ Porcentaje de Ocupación del Elevador:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4546,7 +4547,7 @@ Paradas en Piso Origen
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4590,7 +4591,7 @@ Paradas en Piso Destino
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4624,8 +4625,8 @@ Salida Difusa Agente Obtener Ascensor Para Llamada
 
 \begin_layout Standard
 La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
- para la llamada, esta prioridad puede ser muy alta, alta, media, baja,
- muy baja.
+ para atender la llamada, esta prioridad puede ser muy alta, alta, media,
+ baja, muy baja.
 \end_layout
 
 \begin_layout Standard
@@ -4633,7 +4634,7 @@ La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4666,16 +4667,16 @@ Reglas de Inferencia Difusas Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
-Las reglas que determinan la prioridad de un ascensor para atender una llamada
- son 23.
- En estas reglas están plasmados los objetivos de control, cada una de estas
- reglas tiene un peso asociado que puede ser modificado por el agente de
+Las reglas que describen el estado del sistema e incorporan el conocimiento
+ del experto para éste caso son 23.
+ En éstas reglas están plasmados los objetivos de control, cada una de estas
+ reglas tiene un peso asociado que podría ser modificado por el agente de
  acuerdo al objetivo que tenga más importancia en el momento de la decisión.
 \end_layout
 
 \begin_layout Standard
 Estas reglas se toman de acuerdo a los factores que tiene más importancia
- para cunplir con los objetivos de control.
+ para cumplir con los objetivos de control.
 \end_layout
 
 \begin_layout Standard
@@ -4683,7 +4684,7 @@ Estas reglas se toman de acuerdo a los factores que tiene más importancia
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -5705,6 +5706,103 @@ Paradas en Piso Destino
 
 \begin_layout Plain Layout
 Tabla reglas de inferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Integración Controlador Simulador
+\end_layout
+
+\begin_layout Standard
+La integración entre el simulador el controlador basado en sistemas multiagentes
+ e inteligencia artificial se realiza por medio una interfaz java.
+ Ésta interfaz java expone a modo de contrato lo métodos que las clases
+ que implementen ésta interfaz deben proveer así como los objetos que están
+ visibles para la implementación.
+ En la siguiente gráfica se observa el modelo de clases de lo expuesto.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzyiaIntegration.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo de Integración
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto la implementación del simulador es agnóstica al controlador
+ que se configure, solamente en tiempo de ejecución se conoce cuál es el
+ controlador que se va a utilizar y éste podrá consultar las características
+ del sistema en tiempo de simulación para tomar la decisión de asignación
+ de llamada.
+\end_layout
+
+\begin_layout Standard
+Ésta arquitectura distribuida y débilmente acoplada permite que el controlador
+ pueda ser llevado a un ambiente real sin modificar en gran medida el código
+ de la implementación.
+ Se deja la siguiente figura para hacer más claridad entre la separación
+ de lo que es SIMULADOR y CONTROLADOR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/IntegracionSMA.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arquitectura Integración
 \end_layout
 
 \end_inset

@@ -338,8 +338,8 @@ NO Centralizada
 \end_inset
 
  es adecuada.
- Aunque podría hacerce de manera tradicional, por diseño de software y pensando
- en la evolución del algorítmo de asignación de llamadas 
+ Aunque podría hacerse de manera tradicional, por diseño de software y pensando
+ en la evolución del algoritmo de asignación de llamadas 
 \begin_inset Quotes eld
 \end_inset
 
@@ -348,7 +348,7 @@ objetivo del trabajo de grado
 \end_inset
 
  es preferible mantenerlo en una entidad separada.
- De esta manera el algorítmo de asignación de llamadas puede cambiar en
+ De esta manera el algoritmo de asignación de llamadas puede cambiar en
  cuanto a su implementación -Fuzzy, RPSO, AG, etc- y comportamiento -prioridad
  en los objetivos de control- de manera independiente, sin que tengan que
  conocerlo los agentes controladores de cabina.
@@ -364,10 +364,10 @@ La elección de la cabina más apropiada para atender una llamada se hace
 \begin_inset Quotes erd
 \end_inset
 
-, el cual evalua las ofertas de las cabinas y la asigna usando un motor
+, el cual evalúa las ofertas de las cabinas y la asigna usando un motor
  de inferencia difuso a aquel que presente una mejor oferta.
  Éste mismo enfoque -de tener un agente central que asigna la llamada- es
- usado por Yunww Gu en el árticulo 
+ usado por Yunww Gu en el artículo 
 \begin_inset Quotes eld
 \end_inset
 
@@ -376,7 +376,7 @@ Multi-Objective Optimization of Multi-Agent Elevator Group Control System
 \begin_inset Quotes erd
 \end_inset
 
- con buenos resultados, usando un motor de inferencia basado en particulas
+ con buenos resultados, usando un motor de inferencia basado en partículas
  RPSO 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -403,14 +403,14 @@ En este caso particular existen varios actores que interactúan con el medio,
 
 \begin_layout Standard
 Los roles están dados por los objetivos de los agentes.
- El paradigma es analítico tomando como base la realidad diferenciandose
+ El paradigma es analítico tomando como base la realidad diferenciándose
  al modelo de AOPOA que es más deductivo en donde los agentes no son evidentes
  y son descubiertos recursivamente bajo el paradigma organizacional.
  De acuerdo a éste acercamiento de modelado se identifican 5 agentes, que
  son abstracciones de las entidades que existen en la realidad en un sistema
  de grupo de elevadores.
  En el modelo de éste trabajo se hizo una descomposición de metas y submetas
- que intrínsecamente le dán los roles a los agentes, los cuales son invariables
+ que intrínsecamente le dan los roles a los agentes, los cuales son invariables
  en el tiempo.
 \end_layout
 
@@ -970,7 +970,7 @@ Submetas
 \end_layout
 
 \begin_layout Plain Layout
-* Notificar los estados en los que se encuetra una llamada: aceptada, recogida,
+* Notificar los estados en los que se encuentra una llamada: aceptada, recogida,
  despachada.
 \end_layout
 
@@ -995,7 +995,7 @@ Submetas
 \end_layout
 
 \begin_layout Plain Layout
-* Participar en la apuesta para obetener una llamada generada en el 
+* Participar en la apuesta para obtener una llamada generada en el 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4334,12 +4334,15 @@ key "Zadeh1973"
 \end_inset
 
 .
- Muchas aplicaciones para el control en problemas de optimización han sido
- usados en otros estudios .
-\end_layout
+ Muchas aplicaciones de la lógica difusa para el control en problemas de
+ optimización han sido usados en otros estudios 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen1992"
 
-\begin_layout Standard
-asd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4348,15 +4351,15 @@ En éste trabajo la lógica difusa es usada para describir el estado del sistema
  Las reglas difusas se alimentan de datos que pueden ser calculados y otros
  que simplemente son estimados estadísticamente o por medio de las redes
  neuronales antes mencionadas.
- Este tipo de controlador permite que la solución se robusta y que el control
+ Este tipo de controlador permite que la solución sea robusta y que el control
  no se vea afectado ante el ruido que puedan presentar las varibles de control.
 \end_layout
 
 \begin_layout Standard
 Los conjuntos de entrada se obtuvieron analizando que factores pueden determinar
- que una llamada sea atendida rápidamente o con una demora mayor, asi mismo
+ que una llamada sea atendida rápidamente o con una demora mayor, así mismo
  se incoporan conjuntos difusos con el fin de involucrar el tiempo que pueda
- tardar un pasajeron dentro de un elevador y la energía que el sistema pueda
+ tardar un pasajero dentro de un elevador y la energía que el sistema pueda
  consumir.
 \end_layout
 
@@ -4455,7 +4458,7 @@ ado de su piso origen a su piso destino.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4499,7 +4502,7 @@ Porcentaje de Ocupación del Elevador:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4543,7 +4546,7 @@ Paradas en Piso Origen
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4587,7 +4590,7 @@ Paradas en Piso Destino
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4621,8 +4624,8 @@ Salida Difusa Agente Obtener Ascensor Para Llamada
 
 \begin_layout Standard
 La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
- para la llamada, esta prioridad puede ser muy alta, alta, media, baja,
- muy baja.
+ para atender la llamada, esta prioridad puede ser muy alta, alta, media,
+ baja, muy baja.
 \end_layout
 
 \begin_layout Standard
@@ -4630,7 +4633,7 @@ La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4663,10 +4666,10 @@ Reglas de Inferencia Difusas Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
-Las reglas que determinan la prioridad de un ascensor para atender una llamada
- son 23.
- En estas reglas están plasmados los objetivos de control, cada una de estas
- reglas tiene un peso asociado que puede ser modificado por el agente de
+Las reglas que describen el estado del sistema e incorporan el conocimiento
+ del experto para éste caso son 23.
+ En éstas reglas están plasmados los objetivos de control, cada una de estas
+ reglas tiene un peso asociado que podría ser modificado por el agente de
  acuerdo al objetivo que tenga más importancia en el momento de la decisión.
 \end_layout
 
@@ -4680,7 +4683,7 @@ Estas reglas se toman de acuerdo a los factores que tiene más importancia
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -5702,6 +5705,103 @@ Paradas en Piso Destino
 
 \begin_layout Plain Layout
 Tabla reglas de inferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Integración Controlador Simulador
+\end_layout
+
+\begin_layout Standard
+La integración entre el simulador el controlador basado en sistemas multiagentes
+ e inteligencia artificial se realiza por medio una interfaz java.
+ Ésta interfaz java expone a modo de contrato lo métodos que las clases
+ que implementen ésta interfaz deben proveer así como los objetos que están
+ visibles para la implementación.
+ En la siguiente gráfica se observa el modelo de clases de lo expuesto.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzyiaIntegration.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo de Integración
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto la implementación del simulador es agnóstica al controlador
+ que se configure, solamente en tiempo de ejecución se conoce cúal es el
+ controlador que se va a utilizar y éste podrá consultar las características
+ del sistema en tiempo de simulación para tomar la decisión de asignación
+ de llamada.
+\end_layout
+
+\begin_layout Standard
+Ésta arquitectura distribuida y debilmente acomplada permite que el controlador
+ pueda ser llevado a un ambiente real sin modificar en gran medida el código
+ de la implementación.
+ Se deja la siguiente figura para hacer más claridad entre la separación
+ de lo que es SIMULADOR y CONTROLADOR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/IntegracionSMA.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arquitectura Integración
 \end_layout
 
 \end_inset

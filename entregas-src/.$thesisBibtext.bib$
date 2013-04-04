@@ -1,0 +1,795 @@
+% This file was created with JabRef 2.7.2.
+% Encoding: Cp1252
+
+@BOOK{BARNEY2003,
+  title = {Elevator Traffic Handbook: Theory and Practice},
+  publisher = {Spon Press},
+  year = {2003},
+  editor = {London and NewYork},
+  author = {Barney, G.C.},
+  owner = {arosso},
+  timestamp = {2012.02.23}
+}
+
+@ARTICLE{NEMIROVSKI1998,
+  author = {A. Ben-Tal and a. Nemirovski},
+  title = {Robust Convex Optimization},
+  year = {1991},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@ELECTRONIC{BORIS,
+  author = {BORIS},
+  title = {Platform for multiagent systems (MAS) development \& deployment.},
+  url = {http://www.scm.tees.ac.uk/isg/website/index.php},
+  owner = {arosso},
+  timestamp = {2013.01.17}
+}
+
+@ARTICLE{MANHEW2003,
+  author = {Manhew Brand and Daniel Nikovski},
+  title = {Optimal parking of elevator cars in supervisery group control},
+  journal = {IEEE Transacions},
+  year = {2003},
+  owner = {arosso},
+  timestamp = {2011.12.03}
+}
+
+@ARTICLE{BRANDSTATTER2000,
+  author = {Brandstatter, B. Baumgartner},
+  title = {Particle swarm optimization mass-spring system analogon},
+  journal = {IEEE Transaction},
+  year = {2000},
+  volume = {38},
+  pages = {997-1000},
+  owner = {arosso},
+  timestamp = {2011.12.03}
+}
+
+@ARTICLE{CALVINO2003,
+  author = {Manuel Hernández Calviño},
+  title = {Aclarando la Lógica Borrosa (Fuzzy Logic)},
+  journal = {Revista Cubana de Física},
+  year = {2003},
+  volume = {20},
+  owner = {andres},
+  timestamp = {2013.01.14}
+}
+
+@ARTICLE{CANOSMJ,
+  author = {Canos, Mocholí, Navarro, Sanchis, Sala},
+  title = {Aplicaciones Económicas De La Optimización Robusta},
+  journal = {JORNADAS ASEPUMA.},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@ARTICLE{IGLESIAS2009,
+  author = {Carlos A. Iglesias , Mercedes Garijo , Jose C. Gonzalez and Juan
+	R. Velasco},
+  title = {Analysis and Design of Multiagent Systems using MAS-CommonKADS},
+  journal = {Dep. de Ingenieria de Sistemas Telematicos},
+  owner = {arosso},
+  timestamp = {2013.01.17}
+}
+
+@ELECTRONIC{JFuzzyLogic,
+  author = {Pablo Cingolani},
+  title = {A Robust and Flexible Fuzzy-Logic Inference System Language Implementation},
+  url = {jfuzzylogic.sourceforge.neT},
+  owner = {arosso},
+  timestamp = {2013.01.17}
+}
+
+@ARTICLE{NATSAFCOUNCIL,
+  author = {NATIONAL SAFETY COUNCIL},
+  title = {Evacuation Systems for High-Rise Buildings},
+  journal = {NATIONAL SAFETY COUNCIL},
+  year = {2011},
+  owner = {arosso},
+  timestamp = {2012.03.06}
+}
+
+@ARTICLE{CRITES1998,
+  author = {Crites, R.H. y Barto, A.G.},
+  title = {Improving elevator Performance Using Reinforcement Learning},
+  journal = {Advances in Neural Information Processing Systems},
+  year = {1998},
+  owner = {arosso},
+  timestamp = {2011.12.03}
+}
+
+@BOOK{RAY2008,
+  title = {Estadistica para administracion y economia},
+  publisher = {CENGAGE Learning},
+  year = {2008},
+  author = {David Ray Anderson,Dennis J. Sweeney},
+  owner = {andres},
+  timestamp = {2013.03.31}
+}
+
+@BOOK{INSUA2000,
+  title = {Simulacion Metodos y Aplicaciones},
+  publisher = {AlfaOmega},
+  year = {2000},
+  editor = {AlfaOmega},
+  author = {David Rios Insua, Sixto Rios Insua, Jacinto Martín},
+  owner = {arosso},
+  timestamp = {2012.03.05}
+}
+
+@BOOK{DRIANKOV1996,
+  title = {An Introduction to Fuzzy Control (context)},
+  publisher = {Springer-Verlag},
+  year = {1996},
+  author = {Driankov, Hellendoorn},
+  owner = {andres},
+  timestamp = {2013.01.14}
+}
+
+@BOOK{RICH1994,
+  title = {INTELIGENCIA ARTIFICIAL},
+  year = {1994},
+  editor = {McGraw-Hill},
+  author = {Rich Elaine},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ELECTRONIC{EMPORIS2012,
+  author = {EMPORIS},
+  year = {2012},
+  title = {World's tallest buildings - Top 200},
+  address = {http://www.emporis.com/statistics/worlds-tallest-buildings},
+  url = {http://www.emporis.com/statistics/worlds-tallest-buildings},
+  owner = {arosso},
+  timestamp = {2012.04.17}
+}
+
+@ARTICLE{Granger1993,
+  author = {Granger, C.W.J., Terasvirta, T.},
+  title = {Modelling Nonlinear Economic Relationships.},
+  journal = {Oxford University Press},
+  year = {1993},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@ARTICLE{Yanwu2012,
+  author = {Yanwu Gu},
+  title = {Multi-Objective Optimization of Multi-Agent Elevator Group Control
+	System Based on Real-Time Particle Swarm Optimization Algorithm},
+  journal = {Scientific Research},
+  year = {2012},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@ARTICLE{Yanwu2012,
+  author = {Yanwu Gu},
+  title = {Multi-Objective Optimization of Multi-Agent Elevator Group Control
+	System Based on Real-Time Particle Swarm Optimization Algorithm},
+  journal = {Scientific Research},
+  year = {2012},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@ARTICLE{Guoqiang1997,
+  author = {Guoqiang Zhang, B. Eddy Patuwo, Michael Y. Hu},
+  title = {Forecasting with artificial neural networks},
+  journal = {ELSEVIER},
+  year = {1997},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@ARTICLE{Chen1992,
+  author = {H. Chen, M. Mizumoto and Y.-fel Ling},
+  title = {Automatic control of sewerage pumpstation by using fuzzy controls
+	and neural networks},
+  journal = {Fuuy Logic \& Neural Networks,},
+  year = {1992},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@ARTICLE{HAKONEN2003,
+  author = {Henri Hakonen},
+  title = {Simulation of Building Traffic and Evacuation by Elevators},
+  journal = {Helsinki University of Technology},
+  year = {2003},
+  owner = {arosso},
+  timestamp = {2012.03.06}
+}
+
+@ARTICLE{HAUPTMEIER1999,
+  author = {Hauptmeier D., Krumke, Rambau, J.},
+  title = {The online dial-a-ride problem under reasonable load},
+  journal = {Konrad-Zuse-Zentrumfür Informationstechnik Berlin},
+  year = {1999},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{HAKONEN-SIIKONEN-2008,
+  author = {Henri Hakonen, Marja-Liisa Siikonen},
+  title = {ELEVATOR TRAFFIC SIMULATION PROCEDURE},
+  journal = {International Congress on Vertical Transportation},
+  year = {2008},
+  owner = {arosso},
+  timestamp = {2012.02.15}
+}
+
+@ARTICLE{HAKONEN2004,
+  author = {Henri M. Hakonen, Aiying Rong and Risto Lahdelma},
+  title = {Multiobjective Optimization In Elevator Group Control},
+  journal = {European Congress on Computational Methods in Applied Sciences and
+	Engineering},
+  year = {2004},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@ARTICLE{IMRAK2000,
+  author = {Imrak, E. y Barney, G.C.},
+  title = {Application of neural networks on traffic control},
+  journal = {Lift Report},
+  year = {2000},
+  owner = {arosso},
+  timestamp = {2011.12.03}
+}
+
+@ARTICLE{Irie1988,
+  author = {Irie, B., Miyake, S, B., Miyake, S},
+  title = {Capabilities of three-layered percep- Lapedes, A., Farber, R., 1987.
+	Nonlinear signal processing using
+	
+	trons},
+  journal = {Proceedings of the IEEE International Conference on neural networks:
+	prediction and system modeling. Technical Neural Networks},
+  year = {1988},
+  pages = {641–648},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@BOOK{BANKS2000,
+  title = {Discrete-Event System Simulation},
+  publisher = {Prentice Hall},
+  year = {2000},
+  author = {Banks J},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ELECTRONIC{JADE,
+  author = {JADE},
+  title = {A FIPA-ACL compliant, JAVA based software agents middleware.},
+  url = {http://jade.tilab.com/},
+  owner = {arosso},
+  timestamp = {2013.01.17}
+}
+
+@ARTICLE{JIANLIU2010,
+  author = {Jian Liu,Chengdong WU,Xin Wang,Weize Wang, and Ting Zhang},
+  title = {A Hybrid Control for Elevator Group System},
+  journal = {Third International Workshop on Advanced Computational Intelligence},
+  year = {2010},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ELECTRONIC{JOONE,
+  author = {JOONE},
+  title = {an Object Oriented Neural Engine},
+  url = {http://sourceforge.net/projects/joone/},
+  owner = {arosso},
+  timestamp = {2013.01.17}
+}
+
+@BOOK{AVERILL2000,
+  title = {Simulation Modeling And Analysis},
+  publisher = {McGraw Hill},
+  year = {2000},
+  author = {Averill M. Law
+	
+	David Kelton},
+  owner = {arosso},
+  timestamp = {2012.02.27}
+}
+
+@ARTICLE{SIIKONEN1998,
+  author = {Siikonen M. L.},
+  title = {Planning And Control Models For Elevators In High-Rise Buildings},
+  journal = {Doctoral thesis, Helsinki University of Technology,},
+  year = {1998},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@ARTICLE{SIIKONEN1997,
+  author = {Siikonen M. L.},
+  title = {Elevator group control with artificial intelligence},
+  journal = {Helsinki University of Technology, Systems Analysis Laboratory, Research
+	Reports},
+  year = {1997},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{LARRANETA2001,
+  author = {Larrañeta J. , Cortés P.},
+  title = {Optimización Dinámica en Sistemas de Tráfico Vertical},
+  journal = {AICIA Technical Report},
+  year = {2001},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{LIQIAN-DOU,
+  author = {Liqian Dou, Qun Zong, Yuehui Ji.},
+  title = {A Mixed Robust Optimization and Multi-agent Coordination Method for
+	Elevator Group Control Scheduling},
+  journal = {Tianjin University},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@ARTICLE{SOUSA2000,
+  author = {Miguel Sousa Lobo},
+  title = {Robust and convex optimization With Applications in Finance,},
+  journal = {Stanford University},
+  year = {2000},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@ARTICLE{LUYU2009,
+  author = {Lu Yu, Shingo Mabu, Kotaro Hirasawa},
+  title = {Multi-Car Elevator System using Genetic Network Programming for High-rise
+	Building},
+  journal = {Graduate School of Information, Production and Systems, Waseda University},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{LUOFEI2010,
+  author = {Luo Fei ,Zhao Xiaocui, Xu Yuge},
+  title = {A New Hybrid Elevator Group Control System Scheduling Strategy Based
+	on Particle Swarm Simulated Annealing Optimization Algorithm},
+  journal = {World Congress on Intelligent Control and Automation},
+  year = {2010},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{XIAOCUI2010,
+  author = {Luo Fei ,Zhao Xiaocui, Xu Yuge},
+  title = {A New Hybrid Elevator Group Control System Scheduling Strategy Based
+	on Particle Swarm Simulated Annealing Optimization Algorithm},
+  journal = {World Congress on Intelligent Control and Automation},
+  year = {2010},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@PATENT{MACDONALD1988,
+  nationality = {U.S.},
+  number = {4 782 921},
+  year = {1988},
+  yearfiled = {1988},
+  author = {MacDonald Robert, Abrego E.},
+  title = {Coincident call optimization in a elevator dispatching system},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{SIIKONEN2001,
+  author = {Marja-Liisa Siikonen, Tuomas Susi, Henri Hakonen},
+  title = {Passenger Traffic Flow Simulation In Tall Buildings},
+  journal = {Helsinki University of Technology},
+  year = {2001},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@BOOK{MiraveteAntonio1996,
+  title = {El Libro Del Transporte Vertical},
+  publisher = {Centro Politécnico Superior Universidad de Zaragoza},
+  year = {1996},
+  author = {Miravete Antonio, Larrode Emilio},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@BOOK{MIRAVETE1996,
+  title = {El libro del transporte vertical},
+  publisher = {Universidad de Zaragoza},
+  year = {1996},
+  author = {Miravete, A. and Larrodé, E. and Universidad de Zaragoza. Centro
+	Politécnico Superior. Servicio de Publicaciones},
+  isbn = {9788492134922},
+  owner = {arosso},
+  timestamp = {2012.04.16},
+  url = {http://bks3.books.google.com.ec/books?id=D-O6AAAACAAJ}
+}
+
+@CONFERENCE{NAKAI1994,
+  author = {Nakai, S., Kubo, S., Imasaki, N., Yoshitsuku, T., Kiji, J, Endo,
+	T.},
+  title = {Elevator group control system with fuzzy neural network model},
+  booktitle = {The Fourth IEEE International Conference on Fuzzy Systems},
+  year = {1994},
+  owner = {arosso},
+  timestamp = {2012.04.17}
+}
+
+@ARTICLE{Wooldridge1998,
+  author = {Nicholas R. Jennings, Katia Sycara, and Michael Wooldridge.},
+  title = {A roadmap to cigent research and development. Autonomous Agents and
+	Multi Agent Systems},
+  journal = {Autonomous Agents and Multi-Agent Systems},
+  year = {1998},
+  owner = {arosso},
+  timestamp = {2013.01.16}
+}
+
+@ARTICLE{OTISPLAN_Brochure,
+  author = {OTIS},
+  title = {OTIS Elevatot Plan Brochure},
+  journal = {Otis Elevator Company},
+  year = {1999},
+  owner = {arosso},
+  timestamp = {2012.04.16}
+}
+
+@ARTICLE{CORTES2001,
+  author = {P. Cortés, J. Larrañeta, L.Onieva},
+  title = {GENETIC ALGORITHM FOR CONTROLLERS IN ELEVATOR GROUPS: ANALYSIS AND
+	SIMULATION DURING LUNCHPEAK TRAFFIC},
+  journal = {Escuela Superior Ingenieros, Camino de los Descubrimientos},
+  owner = {arosso},
+  timestamp = {2011.12.03}
+}
+
+@ARTICLE{ZHIFENG2007,
+  author = {Zhifeng Pan and Fei Luo and Yuge Xu},
+  title = {Elevator Traffic Flow Model Based On Dynamic Passenger Distribution},
+  year = {2007},
+  pages = {2386 -2390},
+  month = {30 2007-june 1},
+  booktitle = {Control and Automation, 2007. ICCA 2007. IEEE International Conference
+	on},
+  doi = {10.1109/ICCA.2007.4376789},
+  keywords = {dynamic passenger distribution;elevator group control systems;elevator
+	system configuration;elevator traffic flow model;origin-destination
+	matrix;lifts;matrix algebra;traffic;},
+  owner = {arosso},
+  timestamp = {2012.04.16}
+}
+
+@BOOK{PERROS2009,
+  title = {Computer Simulation Techniques: The definitive introduction},
+  publisher = {Computer Science Department},
+  year = {2009},
+  editor = {NC State University},
+  author = {HARRY PERROS},
+  owner = {arosso},
+  timestamp = {2012.02.13}
+}
+
+@ARTICLE{PETERS2000,
+  author = {Peters, R., Mehta, P. y Haddon, J.},
+  title = {Lift Passenger Traffic Patterns:Applications, Current Knowledge and
+	Measurement},
+  journal = {Elevator World},
+  year = {2000},
+  owner = {arosso},
+  timestamp = {2011.12.03}
+}
+
+@ARTICLE{POWELL1992,
+  author = {Powell, B. A.},
+  title = {Important issues in up peak traffic handling},
+  journal = {Elevator Technology},
+  year = {1992},
+  volume = {Proceedings of ELEVCON 92},
+  owner = {arosso},
+  timestamp = {2012.04.17}
+}
+
+@BOOK{PARKER1971,
+  title = {ARQUITECTURA DEL ASCENSOR},
+  year = {1971},
+  editor = {IRIS},
+  author = {Parker E. R.},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@BOOK{VALLURU1995,
+  title = {C++ Neural Networks and Fuzzy Logic},
+  year = {1995},
+  editor = {M\&T Books},
+  author = {Valluru B. Rao},
+  owner = {arosso},
+  timestamp = {2013.01.19}
+}
+
+@ELECTRONIC{ElevateLicence,
+  author = {Peters Research},
+  title = {Peters Research Elevate Simulator},
+  url = {https://www.peters-research.com/catalog/index.php},
+  owner = {arosso},
+  timestamp = {2012.04.16}
+}
+
+@ARTICLE{ROBERT2000,
+  author = {C. Robert},
+  title = {Elevate traffic analysis software (Eliminating the 
+	
+	Guesswork)},
+  journal = {Elevator World},
+  year = {2000},
+  volume = {48},
+  pages = {118-121},
+  owner = {arosso},
+  timestamp = {2012.02.22}
+}
+
+@BOOK{SANDOR2006,
+  title = {Control of Traffic Systems in Buildings},
+  publisher = {Springer-Verlag London Limited},
+  year = {2006},
+  editor = {Springer},
+  author = {Sandor Markon, Hajime Kita, Hiroshi Kise and Thomas Bartz-Beielstein},
+  owner = {arosso},
+  timestamp = {2012.04.25}
+}
+
+@ARTICLE{SENEVIRATHNA,
+  author = {Senevirathna, H. Ekanayake},
+  title = {Intelligent Elevator Group Control System},
+  year = {2007},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@ARTICLE{SIIKONEN2004,
+  author = {Marja-Liisa Siikonen},
+  title = {Elevator Simulation and Control},
+  journal = {FORS Seminar},
+  year = {2004},
+  owner = {arosso},
+  timestamp = {2012.02.20}
+}
+
+@ARTICLE{SIIKONEN_BTS2004,
+  author = {Marja-Liisa Siikonen},
+  title = {Elevator Simulation And Control},
+  journal = {KONE Elevators},
+  year = {2004},
+  owner = {arosso},
+  timestamp = {2012.04.16}
+}
+
+@ARTICLE{SIIKONEN_REVIEW,
+  author = {Marja-Liisa Siikonen},
+  title = {Planning and Control Models for Elevators in High-Rise Buildings},
+  journal = {KONE Corporation},
+  year = {1997},
+  owner = {arosso},
+  timestamp = {2012.04.16}
+}
+
+@BOOK{STONE2000,
+  title = {Layered Learning in Multiagent Systems: {A} Winning Approach to Robotic
+	Soccer},
+  publisher = {MIT Press},
+  year = {2000},
+  author = {Peter Stone},
+  abstract = { This book looks at multiagent systems that consist of teams of autonomous
+	agents acting in real-time, noisy, collaborative, and adversarial
+	environments. The book makes four main contributions to the fields
+	of machine learning and multiagent systems. First, it describes an
+	architecture within which a flexible team structure allows member
+	agents to decompose a task into flexible roles and to switch roles
+	while acting. Second, it presents layered learning, a general-purpose
+	machine-learning method for complex domains in which learning a mapping
+	directly from agents' sensors to their actuators is intractable with
+	existing machine-learning methods. Third, the book introduces a new
+	multiagent reinforcement learning algorithm--team-partitioned, opaque-transition
+	reinforcement learning (TPOT-RL)--designed for domains in which agents
+	cannot necessarily observe the state-changes caused by other agents'
+	actions. The final contribution is a fully functioning multiagent
+	system that incorporates learning in a real-time, noisy domain with
+	teammates and adversaries--a computer-simulated robotic soccer team.
+	Peter Stone's work is the basis for the CMUnited Robotic Soccer Team,
+	which has dominated recent RoboCup competitions. RoboCup not only
+	helps roboticists to prove their theories in a realistic situation,
+	but has drawn considerable public and professional attention to the
+	field of intelligent robotics. The CMUnited team won the 1999 Stockholm
+	simulator competition, outscoring its opponents by the rather impressive
+	cumulative score of 110-0. },
+  owner = {arosso},
+  timestamp = {2012.04.16},
+  wwwnote = {A book based on my <a href="http://reports-archive.adm.cs.cmu.edu/anon/1998/abstracts/98-187.html">Ph.D.
+	thesis</a><br> <a href="http://www.cs.utexas.edu/users/pstone/book">Contents,
+	availability, and on-line appendices</a><br> ISBN: 0262194384 }
+}
+
+@ARTICLE{STONE1999,
+  author = {Peter Stone and Manuela Veloso},
+  title = {Task Decomposition, Dynamic Role Assignment, and Low-Bandwidth Communication
+	for Real-Time Strategic Teamwork},
+  journal = {Artificial Intelligence},
+  year = {1999},
+  volume = {110},
+  pages = {241--273},
+  number = {2},
+  month = {June},
+  abstract = { Multi-agent domains consisting of teams of agents that need to collaborate
+	in an adversarial environment offer challenging research opportunities.
+	In this article, we introduce periodic team synchronization (PTS)
+	domains as time-critical environments in which agents act autonomously
+	with low communication, but in which they can periodically synchronize
+	in a full-communication setting. The two main contributions of this
+	article are a flexible team agent structure and a method for inter-agent
+	communication in domains with unreliable, single-channel, low-bandwidth
+	communication. First, the novel team agent structure allows agents
+	to capture and reason about team agreements. We achieve collaboration
+	between agents through the introduction of formations. A formation
+	decomposes the task space defining a set of roles. Homogeneous agents
+	can flexibly switch roles within formations, and agents can change
+	formations dynamically, according to pre-defined triggers to be evaluated
+	at run-time. This flexibility increases the performance of the overall
+	team. Our teamwork structure further includes pre-planning for frequent
+	situations. Second, the novel communication method is designed for
+	use during the low-communication periods in PTS domains. It overcomes
+	the obstacles to inter-agent communication in multi-agent environments
+	with unreliable, high-cost, low-bandwidth communication. We fully
+	implemented both the flexible teamwork structure and the communication
+	method in the domain of simulated robotic soccer, and conducted controlled
+	empirical experiments to verify their effectiveness. In addition,
+	our simulator team made it to the semi-finals of the RoboCup-97 competition,
+	in which 29 teams participated. It achieved a total score of 67--9
+	over six different games, and successfully demonstrated its flexible
+	teamwork structure and inter-agent communication. },
+  owner = {arosso},
+  timestamp = {2012.04.16},
+  wwwnote = {<a href="http://www.cs.utexas.edu/~pstone/Papers/99aij/teamwork.html">HTML
+	version</a>.}
+}
+
+@ARTICLE{KHIANG1996,
+  author = {Tan Kok Khiang , Marzuki Khalid, Rubiyah Yusof},
+  title = {Intelligent Elevator control by ordinal structure Fuzzy logic Algorithm},
+  journal = {ICARCV 97},
+  year = {1996},
+  owner = {arosso},
+  timestamp = {2011.12.01}
+}
+
+@PATENT{THANGAVELU1989,
+  nationality = {U.S.},
+  number = {4 838 384},
+  year = {1989},
+  yearfiled = {1989},
+  author = {Thangavelu, Kandasamy},
+  title = {Queue based elevator dispatching system using peak period traffic
+	prediction,},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{UTGOFF2010,
+  author = {Paul E. Utgoff},
+  title = {Real-Time Combinatorial Optimization for Elevator Group Dispatching},
+  journal = {IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETIC},
+  year = {2010},
+  owner = {arosso},
+  timestamp = {2011.12.03}
+}
+
+@BOOK{WEISS1999,
+  title = {Multiagent systems: a modern approach to distributed artificial intelligence},
+  publisher = {MIT Press},
+  year = {1999},
+  editor = {MIT Press},
+  author = {Weiss, Gerhard},
+  address = {Cambridge, MA, USA},
+  isbn = {0-262-23203-0},
+  owner = {arosso},
+  timestamp = {2012.10.08}
+}
+
+@ARTICLE{JOCHEMWIT,
+  author = {Jochem Wit},
+  title = {Elevator planning for high rise buildings},
+  owner = {arosso},
+  timestamp = {2012.04.17}
+}
+
+@BOOK{WOOLDRIDGE1995,
+  title = {Intelligent Agents: Theory and Practice. Knowledge},
+  publisher = {Engineering Review},
+  year = {1995},
+  author = {Wooldridge, M. and Jennings, N.},
+  owner = {arosso},
+  timestamp = {2012.04.23}
+}
+
+@ARTICLE{Naitoh1991,
+  author = {Y, Naitoh},
+  title = {A variable ordinal structure model for fuzzy reasoning and its application
+	to decision problem of working order.},
+  journal = {International Conference on Control},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@ARTICLE{YOUNG2000,
+  author = {Young Cheol Cho, Zavarin Gagov, Wook Hyun Kwon},
+  title = {Timed Petri Net Based Approach for Elevator Group Controls},
+  journal = {Transaction on Control, Automation, and Systems Engineering},
+  year = {2000},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{Zadeh1973,
+  author = {L. A. Zadeh},
+  title = {Outline of new approach to the analysis complex systems
+	
+	and decision processes},
+  journal = {IEEE Trans.},
+  year = {1973},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@ARTICLE{ZHANGTANG,
+  author = {ZHANG Jing-long, TANG Jie2, ZONG Qun},
+  title = {ENERGY-SAVING SCHEDULING STRATEGY FOR ELEVATOR GROUP CONTROL SYSTEM
+	BASED ON ANT COLONY OPTIMIZATION},
+  journal = {IEEE. Changchun Institute of Optics, Fine Mechanics and Physics,
+	Chinese Academy of Sciences},
+  owner = {arosso},
+  timestamp = {2011.12.02}
+}
+
+@ARTICLE{ZHENSHAN2010,
+  author = {Yang Zhenshan and Zhang Yunli},
+  title = {A simulation based verification method for elevator traffic planning},
+  year = {2010},
+  volume = {12},
+  pages = {V12-572 -V12-576},
+  month = {oct.},
+  booktitle = {Computer Application and System Modeling (ICCASM), 2010 International
+	Conference on},
+  doi = {10.1109/ICCASM.2010.5622409},
+  keywords = {elevator traffic planning;multiserver batch service queuing discipline;object
+	oriented discrete event driven technique;quality of service;simulation
+	based verification method;lifts;object-oriented methods;program verification;traffic
+	engineering computing;},
+  owner = {arosso},
+  timestamp = {2012.04.16}
+}
+
+@ARTICLE{,
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
+@comment{jabref-meta: selector_review:}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+

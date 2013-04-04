@@ -79,7 +79,7 @@ customHeadersFooters
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -279,11 +279,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Apendix
-\end_layout
-
-\begin_layout Section
-Código fuente
+Apendice
 \end_layout
 
 \begin_layout Section
@@ -358,7 +354,7 @@ Tomas de Pantalla Simulador
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -395,7 +391,7 @@ Simulador
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -428,7 +424,7 @@ Simulador
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -465,7 +461,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename resources/simulador1.png
+	filename resources/ai-ec.png
 	scale 70
 
 \end_inset
@@ -477,7 +473,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Simulador
+Reporte PDF energía consumida
 \end_layout
 
 \end_inset
@@ -494,11 +490,11 @@ Simulador
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename resources/simulador1.png
+	filename resources/ai-te.png
 	scale 70
 
 \end_inset
@@ -510,7 +506,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Simulador
+Reporte PDF Tiempo de Espera
 \end_layout
 
 \end_inset
@@ -527,11 +523,11 @@ Simulador
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename resources/simulador1.png
+	filename resources/ai-ts.png
 	scale 70
 
 \end_inset
@@ -543,7 +539,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Simulador
+Reporte Tiempo de Servicio
 \end_layout
 
 \end_inset
@@ -551,10 +547,6 @@ Simulador
 
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 

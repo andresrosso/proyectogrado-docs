@@ -286,9 +286,16 @@ Conclusiones
 \end_layout
 
 \begin_layout Standard
-Se logró demostrar que haciendo uso de técnicas inteligentes en el problema
- de asignación de tráfico en edificaciones de gran altura es posible mejorar
- el desempeño en el control para grupo de elevadores.
+En éste trabajo de grado se presenta un simulador parametrizable que puede
+ representar cualquier tipo de edificación y cualquier patrón de tráfico.
+ Se comprobo rigurosamente la confiabilidad en el modelo simulado.
+\end_layout
+
+\begin_layout Standard
+Se presentó un controlador basado en SMA e Inteligencia Artificial, demostrando
+ que con el uso de técnicas inteligentes en el problema de asignación de
+ tráfico en edificaciones de gran altura es posible mejorar el desempeño
+ en el control para grupo de elevadores.
  En promedio después de correr la simulación alrededor de 68 veces variando
  los parámetros se observa una mejora en promedio del tiempo de espera 17%,
  tiempo de viaje 14% y energía consumida 16%.

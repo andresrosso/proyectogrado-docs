@@ -4294,36 +4294,72 @@ Determinar qué ascensor puede atender en una mejor medida una llamada es
 \end_layout
 
 \begin_layout Standard
-jjj
+Se conoce por medio de estudios previos que algunas características hacen
+ que los tiempos de espera y de viaje de los usuarios puedan ser reducidos
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, por ejemplo la carga que contenga el ascensor, las paradas que éste deba
+ hacer, área del piso destino y origen de la llamada, entre otros, aportando
+ cada uno en diferente medida para resolver los objetivos de control.
+ Éstos factores se pueden incorporar por medio de un conjunto de reglas
+ tendientes a aumentar la eficiencia del algorítmo de control, pero las
+ reglas son fragmentadas y difíciles de organizar 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Naitoh1991"
+
+\end_inset
+
+, así mismo la escogencia de las reglas más apropiadas para escenario de
+ control es complejo.
+ En resumidas cuentas es complicado incorporar adecuadamente éste conocimiento
+ para ser usado por el software de control.
 \end_layout
 
 \begin_layout Standard
-asd
+La lógica difusa se caracteriza por producir resultados exactos sobre datos
+ imprecisos.
+ En general cuando la complejidad del sistema es alta y la covergencia hacia
+ la solución óptima presenta dificultades es posible utilizar métodos de
+ aproximación basados en lógica difusa 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zadeh1973"
+
+\end_inset
+
+.
+ Muchas aplicaciones de la lógica difusa para el control en problemas de
+ optimización han sido usados en otros estudios 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen1992"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-asd
-\end_layout
-
-\begin_layout Standard
-Por en este trabajo se propone tomar la decisión usando redes neuronales
- para estimar datos con incertidumbre y reglas de inferencia difusas para
- tener en cuenta los objetivos de control trazados.
+En éste trabajo la lógica difusa es usada para describir el estado del sistema
+ así como el conocimiento del experto.
  Las reglas difusas se alimentan de datos que pueden ser calculados y otros
  que simplemente son estimados estadísticamente o por medio de las redes
  neuronales antes mencionadas.
-\end_layout
-
-\begin_layout Standard
-Este tipo de controlador permite que la solución se robusta y que el control
+ Este tipo de controlador permite que la solución sea robusta y que el control
  no se vea afectado ante el ruido que puedan presentar las varibles de control.
 \end_layout
 
 \begin_layout Standard
 Los conjuntos de entrada se obtuvieron analizando que factores pueden determinar
- que una llamada sea atendida rápidamente o con una demora mayor, asi mismo
+ que una llamada sea atendida rápidamente o con una demora mayor, así mismo
  se incoporan conjuntos difusos con el fin de involucrar el tiempo que pueda
- tardar un pasajeron dentro de un elevador y la energía que el sistema pueda
+ tardar un pasajero dentro de un elevador y la energía que el sistema pueda
  consumir.
 \end_layout
 
@@ -4422,7 +4458,7 @@ ado de su piso origen a su piso destino.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4466,7 +4502,7 @@ Porcentaje de Ocupación del Elevador:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4510,7 +4546,7 @@ Paradas en Piso Origen
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4554,7 +4590,7 @@ Paradas en Piso Destino
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4588,8 +4624,8 @@ Salida Difusa Agente Obtener Ascensor Para Llamada
 
 \begin_layout Standard
 La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
- para la llamada, esta prioridad puede ser muy alta, alta, media, baja,
- muy baja.
+ para atender la llamada, esta prioridad puede ser muy alta, alta, media,
+ baja, muy baja.
 \end_layout
 
 \begin_layout Standard
@@ -4597,7 +4633,7 @@ La salida del motor de inferencia difuso es la prioridad que tiene el ascensor
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4630,10 +4666,10 @@ Reglas de Inferencia Difusas Agente Obtener Ascensor Para Llamada
 \end_layout
 
 \begin_layout Standard
-Las reglas que determinan la prioridad de un ascensor para atender una llamada
- son 23.
- En estas reglas están plasmados los objetivos de control, cada una de estas
- reglas tiene un peso asociado que puede ser modificado por el agente de
+Las reglas que describen el estado del sistema e incorporan el conocimiento
+ del experto para éste caso son 23.
+ En éstas reglas están plasmados los objetivos de control, cada una de estas
+ reglas tiene un peso asociado que podría ser modificado por el agente de
  acuerdo al objetivo que tenga más importancia en el momento de la decisión.
 \end_layout
 
@@ -4647,7 +4683,7 @@ Estas reglas se toman de acuerdo a los factores que tiene más importancia
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -5669,6 +5705,103 @@ Paradas en Piso Destino
 
 \begin_layout Plain Layout
 Tabla reglas de inferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Integración Controlador Simulador
+\end_layout
+
+\begin_layout Standard
+La integración entre el simulador el controlador basado en sistemas multiagentes
+ e inteligencia artificial se realiza por medio una interfaz java.
+ Ésta interfaz java expone a modo de contrato lo métodos que las clases
+ que implementen ésta interfaz deben proveer así como los objetos que están
+ visibles para la implementación.
+ En la siguiente gráfica se observa el modelo de clases de lo expuesto.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/fuzzyiaIntegration.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo de Integración
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto la implementación del simulador es agnóstica al controlador
+ que se configure, solamente en tiempo de ejecución se conoce cúal es el
+ controlador que se va a utilizar y éste podrá consultar las características
+ del sistema en tiempo de simulación para tomar la decisión de asignación
+ de llamada.
+\end_layout
+
+\begin_layout Standard
+Ésta arquitectura distribuida y debilmente acomplada permite que el controlador
+ pueda ser llevado a un ambiente real sin modificar en gran medida el código
+ de la implementación.
+ Se deja la siguiente figura para hacer más claridad entre la separación
+ de lo que es SIMULADOR y CONTROLADOR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/IntegracionSMA.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arquitectura Integración
 \end_layout
 
 \end_inset
