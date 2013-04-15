@@ -679,12 +679,12 @@ as observadas no difieren mucho de las esperadas para la distribución de
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/rPoiss-7am-21.png
-	scale 30
+	scale 20
 
 \end_inset
 
@@ -3517,7 +3517,7 @@ Este comportamiento se debe a que la configuración de la edificación en
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -4522,7 +4522,7 @@ Esto se debe a que el controlador inteligente al tener mayor cantidad de
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -4622,7 +4622,7 @@ Constantes de la simulación
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -4647,7 +4647,7 @@ status collapsed
 
 \series bold
 \size scriptsize
-Cabinas 
+#Cab 
 \end_layout
 
 \end_inset
@@ -4659,7 +4659,7 @@ Cabinas
 
 \series bold
 \size scriptsize
-Población
+Pob
 \end_layout
 
 \end_inset
@@ -5787,7 +5787,7 @@ En el siguiente ejemplo se genera una llamada desde el piso 6 hasta el piso
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -6173,7 +6173,7 @@ En el siguiente ejemplo se genera una llamada desde el piso 11 hasta el
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent

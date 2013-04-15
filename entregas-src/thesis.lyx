@@ -52,6 +52,8 @@
 
 % avoid that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\let\cleardoublepage\clearpage
 \end_preamble
 \options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
 \use_default_options true
@@ -153,9 +155,9 @@ customHeadersFooters
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 1cm
+\leftmargin 3cm
 \topmargin 2cm
-\rightmargin 1cm
+\rightmargin 2cm
 \bottommargin 2cm
 \headheight 1cm
 \headsep 1cm

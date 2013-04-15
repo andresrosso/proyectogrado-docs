@@ -298,7 +298,7 @@ En esta sección se hará una revisión de las técnicas de simulación existent
 \end_layout
 
 \begin_layout Section
-Controladores
+Métodos de Control
 \end_layout
 
 \begin_layout Standard
@@ -311,10 +311,10 @@ Controlador Basado en Lógica Difusa (CBLD)
 \end_layout
 
 \begin_layout Standard
-El control difuso puede tratar las imposiciones de los sistemas para dar
- soluciones en condiciones más reales y menos ideales, además es posible
- mejorar aún más el rendimiento, optimizando los conjuntos difusos y la
- ponderación de las reglas.
+El control difuso puede tratar las imprecisiones en los sistemas para dar
+ soluciones en condiciones más reales y menos ideales.
+ Además es posible mejorar aún más el rendimiento, optimizando los conjuntos
+ difusos y la ponderación de las reglas.
  
 \end_layout
 
@@ -328,12 +328,13 @@ En los modelos de programación matemática aplicados a fenómenos reales se
  lo que permite abordar su planteamiento y resolución.
  Sin embargo, esta hipótesis de constancia no suele ser cierta puesto que
  normalmente los datos pueden ser erróneos o incompletos [CANOSMJ], para
- lo cual la CBOR es muy buena opción ya que garantiza convergencia al óptimo,
- además de ello es tolerante a pequeñas variaciones en las condiciones iniciales
- de optimización, entra las desventajas se encuentra que la implementación
+ lo cual la CBOR es muy buena opción ya que garantiza convergencia al óptimo.
+ Además es tolerante a pequeñas variaciones en las condiciones iniciales
+ de optimización, entre las desventajas se encuentra que la implementación
  computacional de este algoritmo es muy compleja y el tiempo de ejecución
- será muy pobre finalmente la eficiencia de la solución obtenida con este
- método es alta, más es costoso su tiempo de ejecución.
+ será muy pobre.
+ Finalmente la eficiencia de la solución obtenida con este método es alta,
+ más es costoso su tiempo de ejecución.
  
 \end_layout
 
@@ -471,8 +472,8 @@ Proceso de simulación de BANKS
 
 \begin_layout Standard
 Pese a la gran variedad de modelos de simulación existentes todos estos
- se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
- se usará esta simplificación .
+ se adaptan al siguiente esquema simplificado de Schmeiser.
+ Para este trabajo se usará esta simplificación:
 \end_layout
 
 \begin_layout Enumerate
@@ -568,7 +569,7 @@ Avance por Unidad de Tiempo
 Esta técnica mantiene un reloj interno del sistema que avanza un intervalo
  de tiempo definido en cada iteración.
  En cada avance de tiempo se valida si hay eventos que ocurran en ese preciso
- instante o y se ejecutan las tareas necesarias 
+ instante y se ejecutan las tareas necesarias 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PERROS2009"
@@ -1008,7 +1009,7 @@ key "BARNEY2003"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1032,6 +1033,381 @@ EGCS Arquitectura Típica
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Criterios de Optimización en el Transporte Vertical
+\end_layout
+
+\begin_layout Standard
+El problema de asignación de elevadores para atender las llamadas se puede
+ ver como un problema de optimización.
+ El objetivo del controlador es asignar las llamadas a los ascensores que
+ tienen mayores posibilidades de atenderla eficientemente.
+ El problema en si es una combinación de programación no lineal en tiempo
+ real, distribución de recursos y control estocástico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
+ los elevadores optimizando la función de costo.
+ La optimización más usual es minimizar el tiempo de espera de los pasajeros.
+ Se ha encontrado también que optimizando el tiempo de viaje de los pasajeros,
+ se reduce el número de paradas del elevador.
+ Lo cual hace que los elevadores viajen con más carga dentro de sí.
+\end_layout
+
+\begin_layout Standard
+Es común que los controladores para grupo de ascensor manejen los mismos
+ criterios de optimización, los cuales recopilando todos los criterios vistos
+ se pueden dividir en dos grupos: funcionamiento del sistema y servicio
+ ofrecido al usuario, los cuales se explican a continuación.
+\end_layout
+
+\begin_layout Subsection
+Criterios De Desempeño
+\end_layout
+
+\begin_layout Standard
+Para medir la eficiencia del sistema de control usado, usualmente se tienen
+ criterios de desempeño orientados al servicio.
+ Estos criterios buscan reducir la insatisfacción del cliente en cuanto
+ al tiempo que invierte para movilizarse desde su piso origen hasta el piso
+ destino.
+ El criterio de desempeño más usado en cualquier tipo de edificación diurna
+ va en busca de reducir el tiempo de espera que el pasajero gasta desde
+ que oprime el botón de llamada y el tiempo que el ascensor toma para llevar
+ el pasajero a su piso destino 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN-SIIKONEN-2008"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Se tendrán en cuenta como criterios de optimización de servicio el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Espera
+\begin_inset Quotes erd
+\end_inset
+
+ y el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de Espera: 
+\series default
+Uno de los factores que justifica como objetivo el tiempo de espera es que
+ sicológicamente una pasajero pierde la paciencia después de esperar 60
+ segundo en promedio 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de Viaje
+\series default
+: Es también comprobable que sicológicamente una persona espera a lo sumo
+ que el tiempo desde que toma el ascensor hasta que llega a su piso destino
+ no debe ser mayor a los 90 segundos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Situación de emergencia
+\series default
+: por medio de estudios realizados se determinó que el el tiempo en el que
+ se debe efectuar una evacuación completa de una edificación esta entre
+ los 15 y 30 minutos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Desempeño dado por el Tiempo De Espera
+\end_layout
+
+\begin_layout Standard
+En un sistema de elevadores con buen desempeño se observa que el tiempo
+ de espera sigue una distribución exponencial 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, de esta forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{t}=exp(-t/T_{av}),$
+\end_inset
+
+en donde 
+\begin_inset Formula $T_{av}$
+\end_inset
+
+, es el promedio de tiempo de espera y 
+\begin_inset Formula $F_{t}$
+\end_inset
+
+ muestra las fracciones de tiempos de espera que que exceden el tiempo t.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/performanceCriteria_wt.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "performanceCriteria_wt"
+
+\end_inset
+
+
+\lang spanish
+Criterio de desempeño <Tiempo de Espera>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Desempeño dado por el Tiempo De Viaje
+\end_layout
+
+\begin_layout Standard
+Para el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+ se usa una distribución Gamma.
+ Los límites de esta se encuentran en la Figura 3.11.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/performanceCriteria_rt.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "performanceCriteria_rt"
+
+\end_inset
+
+
+\lang spanish
+Criterio de desempeño <Tiempo de Viaje>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Controladores Convencionales
+\end_layout
+
+\begin_layout Standard
+El diseño de controladores convencionales en el campo de tráfico de pasajeros
+ en edificaciones está orientado por reglas de tráfico fijas en las cuales
+ no se tienen en cuenta la optimización del servicio.
+ Esta aproximación no tiene en cuenta la naturaleza dinámica del problema
+ que implica parámetros de operación cambiantes -por patrones de tráfico
+ diferentes y fluctuaciones en el transcurrir normal de los mismos-.
+ 
+\end_layout
+
+\begin_layout Standard
+En la actualidad se han normalizado un grupo de algoritmos para el control
+ de elevadores, éstos se programan en microprocesadores y se convierten
+ en soluciones generalizadas para el problema del control de tráfico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación se describen brevemente los principios básicos de los algoritmos
+ más empleados.
+\end_layout
+
+\begin_layout Standard
+•
+\series bold
+ Maniobra Universal Por Pulsadores
+\series default
+: Cuando el ascensor está desocupado, y es el primero en recibir la orden
+ ira a atender la llamada.
+ Si durante el funcionamiento se solicita el ascensor desde cualquier otra
+ planta la llamada será ignorada y el carro seguirá obedeciendo la orden
+ que ha iniciado la llamada.
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+Maniobra Duplex
+\series default
+: Cualquier llamada es atendida por el elevador que se encuentre libre;
+ pero si están libre dos elevadores, acudirá a la llamada el que esté mas
+ próximo al piso origen del llamado.
+ Solamente acude un elevador a cualquier llamado.
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+Maniobra Colectiva selectiva en los dos sentidos
+\series default
+: El elevador va a registrar únicamente los llamados que se generen en el
+ sentido que va el ascensor.
+ Es decir si el ascensor va hacia arriba sólo se registrarán los llamados
+ que se hagan en los pisos superiores, y si va hacia abajo sólo registrará
+ los que se generen en pisos inferiores.
+ El sentido se invierte cuando el elevador llega al último piso, ya sea
+ por una llamada de piso o una llamada de ascensor.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Reglas Básicas
+\end_layout
+
+\begin_layout Standard
+El control convencional usualmente atiende las llamadas hechas por los pasajeros
+ siguiendo ciertas reglas básicas:
+\end_layout
+
+\begin_layout Standard
+• El elevador no llevara a un pasajero dentro del ascensor en dirección
+ contraria a la que él se dirige.
+\end_layout
+
+\begin_layout Standard
+• La capacidad de cada ascensor son n personas, y si el cupo está lleno
+ no atenderá llamadas.
+\end_layout
+
+\begin_layout Standard
+• Un elevador viaja a una velocidad constante de n pisos por segundo.
+\end_layout
+
+\begin_layout Standard
+• Atender cada piso toma n segundos.
+ Durante este tiempo la persona entrara o saldrá del ascensor.
+ Si el número de personas es mayor que n se necesitaran de n+2 segundos.
+\end_layout
+
+\begin_layout Standard
+• Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando
+ una de las restricciones anteriormente mencionadas.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1081,42 +1457,6 @@ Matriz de botones para registro de llamadas de elevador
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Criterios de Optimización en el Transporte Vertical
-\end_layout
-
-\begin_layout Standard
-El problema de asignación de elevadores para atender las llamadas se puede
- ver como un problema de optimización.
- El objetivo del controlador es asignar las llamadas a los ascensores que
- tienen mayores posibilidades de atenderla eficientemente.
- El problema en si es una combinación de programación no lineal en tiempo
- real, distribución de recursos y control estocástico 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "HAKONEN2004"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
- los elevadores optimizando la función de costo.
- La optimización más usual es minimizar el tiempo de espera de los pasajeros.
- Se ha encontrado también que optimizando el tiempo de viaje de los pasajeros,
- se reduce el número de paradas del elevador.
- Lo cual hace que los elevadores viajen con más carga dentro de sí.
-\end_layout
-
-\begin_layout Standard
-Es común que los controladores para grupo de ascensor manejen los mismos
- criterios de optimización, los cuales recopilando todos los criterios vistos
- se pueden dividir en dos grupos: funcionamiento del sistema y servicio
- ofrecido al usuario, los cuales se explican a continuación 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1397,7 +1737,7 @@ key "PARKER1971"
 \end_layout
 
 \begin_layout Enumerate
-El elevador no llevara a un pasajero dentro del ascensor en la dirección
+El elevador no llevará a un pasajero dentro del ascensor en la dirección
  contraria a la que se dirige.
  
 \end_layout
@@ -1415,12 +1755,12 @@ Un elevador viaja a una velocidad constante de n pisos por segundo.
 
 \begin_layout Enumerate
 Atender cada piso toma i segundos.
- Durante este tiempo la persona entrara o saldrá del ascensor.
+ Durante este tiempo la persona entrará o saldrá del ascensor.
  
 \end_layout
 
 \begin_layout Enumerate
-Si el número de personas es mayor que v se necesitaran de w segundos.
+Si el número de personas es mayor que v se necesitará de w segundos.
  
 \end_layout
 
@@ -1739,7 +2079,7 @@ La idea de una lógica multi-valuada ha estado presente desde principios
  del siglo XX.
  Charles Sanders Pierce (1839-1914) fue uno de los primeros pensadores que
  se interesaron en la vaguedad o incertidumbre, él no creía en la separación
- entre verdad y falsedad y postuló que la incertidumbre era un grado entre
+ entre verdad-falsedad y postuló que la incertidumbre era un grado entre
  estos dos estados.
  Pero fue Lukasiewicz, quien dio el primer paso hacia la definición formal
  de la incertidumbre, al introducir en 1920 la idea de una lógica tri-valuada
@@ -1870,13 +2210,13 @@ En el cerebro humano hay aproximadamente cien mil millones de neuronas (
 \begin_inset Formula $10^{11}$
 \end_inset
 
-células nerviosas), cada cécula conectada con sus vecinos por medio de conexione
+células nerviosas), cada célula conectada con sus vecinos por medio de conexione
 s sinápticas, se estima que en un cerebro adulto hay 
 \begin_inset Formula $10^{14}$
 \end_inset
 
- sinápsis.
- Las señales se propagan entre neuronas mediante una reaccón electroquímica:
+ sinapsis.
+ Las señales se propagan entre neuronas mediante una reacción electro-química:
  a nivel de la sinapsis, la neurona que genera la señal emite unos neurotransmis
 ores que activan los receptores de la neurona que recibe la señal.
 \end_layout
@@ -1884,7 +2224,7 @@ ores que activan los receptores de la neurona que recibe la señal.
 \begin_layout Standard
 En 1943, McCulloch y Pitts propusieron un modelo matemático sencillo del
  funcionamiento de las neuronas: la neurona dispara un potencial de acción
- cuando la combinación lineal de sus entradas supera un umbral, estye tipo
+ cuando la combinación lineal de sus entradas supera un umbral, este tipo
  de redes se conocen bajo el nombre de perceptron.
 \end_layout
 
@@ -2027,7 +2367,7 @@ Aprendizaje supervisado
 Aprendizaje no supervisado
 \series default
 .
- Se presenta ala red un conjunto de patrones de entrada.
+ Se presenta a la red un conjunto de patrones de entrada.
  No hay información disponible sobre la salida esperada.
  El proceso de entrenamiento en este caso deberá ajustar sus pesos en base
  a la correlación existente entre los datos de entrada.

@@ -298,7 +298,7 @@ En esta sección se hará una revisión de las técnicas de simulación existent
 \end_layout
 
 \begin_layout Section
-Controladores
+Métodos de Control
 \end_layout
 
 \begin_layout Standard
@@ -1009,7 +1009,7 @@ key "BARNEY2003"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1033,6 +1033,432 @@ EGCS Arquitectura Típica
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Criterios de Optimización en el Transporte Vertical
+\end_layout
+
+\begin_layout Standard
+El problema de asignación de elevadores para atender las llamadas se puede
+ ver como un problema de optimización.
+ El objetivo del controlador es asignar las llamadas a los ascensores que
+ tienen mayores posibilidades de atenderla eficientemente.
+ El problema en si es una combinación de programación no lineal en tiempo
+ real, distribución de recursos y control estocástico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
+ los elevadores optimizando la función de costo.
+ La optimización más usual es minimizar el tiempo de espera de los pasajeros.
+ Se ha encontrado también que optimizando el tiempo de viaje de los pasajeros,
+ se reduce el número de paradas del elevador.
+ Lo cual hace que los elevadores viajen con más carga dentro de sí.
+\end_layout
+
+\begin_layout Standard
+Es común que los controladores para grupo de ascensor manejen los mismos
+ criterios de optimización, los cuales recopilando todos los criterios vistos
+ se pueden dividir en dos grupos: funcionamiento del sistema y servicio
+ ofrecido al usuario, los cuales se explican a continuación.
+\end_layout
+
+\begin_layout Subsection
+Criterios De Desempeño
+\end_layout
+
+\begin_layout Standard
+Para medir la eficiencia del sistema de control usado, usualmente se tienen
+ criterios de desempeño orientados al servicio.
+ Estos criterios buscan reducir la insatisfacción del cliente en cuanto
+ al tiempo que invierte para movilizarse desde su piso origen hasta el piso
+ destino.
+ El criterio de desempeño más usado en cualquier tipo de edificación diurna
+ va en busca de reducir el tiempo de espera que el pasajero gasta desde
+ que oprime el botón de llamada y el tiempo que el ascensor toma para llevar
+ el pasajero a su piso destino 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN-SIIKONEN-2008"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Se tendrán en cuenta como criterios de optimización de servicio el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Espera
+\begin_inset Quotes erd
+\end_inset
+
+ y el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de Espera: 
+\series default
+Uno de los factores que justifica como objetivo el tiempo de espera es que
+ sicológicamente una pasajero pierde la paciencia después de esperar 60
+ segundo en promedio 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tiempo de Viaje
+\series default
+: Es también comprobable que sicológicamente una persona espera a lo sumo
+ que el tiempo desde que toma el ascensor hasta que llega a su piso destino
+ no debe ser mayor a los 90 segundos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Situación de emergencia
+\series default
+: por medio de estudios realizados se determinó que el el tiempo en el que
+ se debe efectuar una evacuación completa de una edificación esta entre
+ los 15 y 30 minutos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HAKONEN2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Desempeño dado por el Tiempo De Espera
+\end_layout
+
+\begin_layout Standard
+En un sistema de elevadores con buen desempeño se observa que el tiempo
+ de espera sigue una distribución exponencial 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BARNEY2003"
+
+\end_inset
+
+, de esta forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{t}=exp(-t/T_{av}),$
+\end_inset
+
+en donde 
+\begin_inset Formula $T_{av}$
+\end_inset
+
+, es el promedio de tiempo de espera y 
+\begin_inset Formula $F_{t}$
+\end_inset
+
+ muestra las fracciones de tiempos de espera que que exceden el tiempo t.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/performanceCriteria_wt.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "performanceCriteria_wt"
+
+\end_inset
+
+
+\lang spanish
+Criterio de desempeño <Tiempo de Espera>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Desempeño dado por el Tiempo De Viaje
+\end_layout
+
+\begin_layout Standard
+Para el 
+\begin_inset Quotes eld
+\end_inset
+
+Tiempo de Viaje
+\begin_inset Quotes erd
+\end_inset
+
+ se usa una distribución Gamma.
+ Los límites de esta se encuentran en la Figura 3.11.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename resources/performanceCriteria_rt.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "performanceCriteria_rt"
+
+\end_inset
+
+
+\lang spanish
+Criterio de desempeño <Tiempo de Viaje>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Diseño del Controlador de Grupo de Elevadores
+\end_layout
+
+\begin_layout Standard
+Las reglas básicas que un controlador para grupo de elevadores debe seguir
+ son:
+\end_layout
+
+\begin_layout Itemize
+El elevador no llevara a un pasajero dentro del ascensor en dirección contraria
+ a la que él se dirige.
+\end_layout
+
+\begin_layout Itemize
+La capacidad de cada ascensor son n personas, y si el cupo está lleno no
+ atenderá llamadas.
+\end_layout
+
+\begin_layout Itemize
+Un elevador viaja a una velocidad constante de n pisos por segundo.
+\end_layout
+
+\begin_layout Itemize
+Atender cada piso toma 
+\begin_inset Formula $n$
+\end_inset
+
+ segundos.
+ Durante este tiempo entran y salen del ascensor 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ personas, por lo tanto el tiempo que el ascensor está detenido en cada
+ piso es:
+\begin_inset Formula $n+\alpha(\rho)$
+\end_inset
+
+, en donde 
+\begin_inset Formula $\rho$
+\end_inset
+
+ es un factor multiplicador.
+\end_layout
+
+\begin_layout Itemize
+Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando una
+ de las restricciones anteriormente mencionadas.
+ 
+\end_layout
+
+\begin_layout Subsection
+Controladores Convencionales
+\end_layout
+
+\begin_layout Standard
+El diseño de controladores convencionales en el campo de tráfico de pasajeros
+ en edificaciones está orientado por reglas de tráfico fijas en las cuales
+ no se tienen en cuenta la optimización del servicio.
+ Esta aproximación no tiene en cuenta la naturaleza dinámica del problema
+ que implica parámetros de operación cambiantes -por patrones de tráfico
+ diferentes y fluctuaciones en el transcurrir normal de los mismos-.
+ 
+\end_layout
+
+\begin_layout Standard
+En la actualidad se han normalizado un grupo de algoritmos para el control
+ de elevadores, éstos se programan en microprocesadores y se convierten
+ en soluciones generalizadas para el problema del control de tráfico 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MIRAVETE1996"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación se describen brevemente los principios básicos de los algoritmos
+ más empleados.
+\end_layout
+
+\begin_layout Standard
+•
+\series bold
+ Maniobra Universal Por Pulsadores
+\series default
+: Cuando el ascensor está desocupado, y es el primero en recibir la orden
+ ira a atender la llamada.
+ Si durante el funcionamiento se solicita el ascensor desde cualquier otra
+ planta la llamada será ignorada y el carro seguirá obedeciendo la orden
+ que ha iniciado la llamada.
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+Maniobra Duplex
+\series default
+: Cualquier llamada es atendida por el elevador que se encuentre libre;
+ pero si están libre dos elevadores, acudirá a la llamada el que esté mas
+ próximo al piso origen del llamado.
+ Solamente acude un elevador a cualquier llamado.
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+Maniobra Colectiva selectiva en los dos sentidos
+\series default
+: El elevador va a registrar únicamente los llamados que se generen en el
+ sentido que va el ascensor.
+ Es decir si el ascensor va hacia arriba sólo se registrarán los llamados
+ que se hagan en los pisos superiores, y si va hacia abajo sólo registrará
+ los que se generen en pisos inferiores.
+ El sentido se invierte cuando el elevador llega al último piso, ya sea
+ por una llamada de piso o una llamada de ascensor.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Reglas Básicas
+\end_layout
+
+\begin_layout Standard
+El control convencional usualmente atiende las llamadas hechas por los pasajeros
+ siguiendo ciertas reglas básicas:
+\end_layout
+
+\begin_layout Standard
+• El elevador no llevara a un pasajero dentro del ascensor en dirección
+ contraria a la que él se dirige.
+\end_layout
+
+\begin_layout Standard
+• La capacidad de cada ascensor son n personas, y si el cupo está lleno
+ no atenderá llamadas.
+\end_layout
+
+\begin_layout Standard
+• Un elevador viaja a una velocidad constante de n pisos por segundo.
+\end_layout
+
+\begin_layout Standard
+• Atender cada piso toma n segundos.
+ Durante este tiempo la persona entrara o saldrá del ascensor.
+ Si el número de personas es mayor que n se necesitaran de n+2 segundos.
+\end_layout
+
+\begin_layout Standard
+• Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando
+ una de las restricciones anteriormente mencionadas.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1082,42 +1508,6 @@ Matriz de botones para registro de llamadas de elevador
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Criterios de Optimización en el Transporte Vertical
-\end_layout
-
-\begin_layout Standard
-El problema de asignación de elevadores para atender las llamadas se puede
- ver como un problema de optimización.
- El objetivo del controlador es asignar las llamadas a los ascensores que
- tienen mayores posibilidades de atenderla eficientemente.
- El problema en si es una combinación de programación no lineal en tiempo
- real, distribución de recursos y control estocástico 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "HAKONEN2004"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
- los elevadores optimizando la función de costo.
- La optimización más usual es minimizar el tiempo de espera de los pasajeros.
- Se ha encontrado también que optimizando el tiempo de viaje de los pasajeros,
- se reduce el número de paradas del elevador.
- Lo cual hace que los elevadores viajen con más carga dentro de sí.
-\end_layout
-
-\begin_layout Standard
-Es común que los controladores para grupo de ascensor manejen los mismos
- criterios de optimización, los cuales recopilando todos los criterios vistos
- se pueden dividir en dos grupos: funcionamiento del sistema y servicio
- ofrecido al usuario, los cuales se explican a continuación.
 \end_layout
 
 \begin_layout Subsubsection

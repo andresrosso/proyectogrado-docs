@@ -52,6 +52,8 @@
 
 % avoid that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\let\cleardoublepage\clearpage
 \end_preamble
 \options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
 \use_default_options true
@@ -154,7 +156,7 @@ customHeadersFooters
 \color #008000
 \end_index
 \leftmargin 2cm
-\topmargin 3cm
+\topmargin 2cm
 \rightmargin 2cm
 \bottommargin 2cm
 \headheight 1cm
@@ -201,7 +203,7 @@ ANDRES ENRIQUE ROSSO MATEUS
 \end_layout
 
 \begin_layout Date
-16 de Enero de 2013
+4 de Abril de 2013
 \end_layout
 
 \begin_layout Publishers

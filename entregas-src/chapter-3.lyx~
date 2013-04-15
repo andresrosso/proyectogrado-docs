@@ -373,7 +373,7 @@ Para evitar la construcción del simulador se buscó en la comunidad académica
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -466,7 +466,11 @@ Un sistema puede verse como un objeto en el cual interactúan variables de
 Para el desarrollo del presente estudio, se ha identificado el sistema edificio,
  éste constituye un ejemplo de los sistemas abiertos.
  Así mismo, se ha identificado el subsistema elevador.
- Un sistema abierto “puede considerarse como un conjunto de partes en constante
+ 
+\end_layout
+
+\begin_layout Standard
+Un sistema abierto “puede considerarse como un conjunto de partes en constante
  interacción constituyendo un todo sinérgico orientado hacia determinados
  propósitos y en permanente relación de interdependencia con el ambiente
  externo” 
@@ -687,38 +691,7 @@ key "INSUA2000"
 \end_layout
 
 \begin_layout Standard
-Pese a la gran variedad de modelos de simulación existentes todos estos
- se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
- se usará esta simplificación .
-\end_layout
-
-\begin_layout Enumerate
-Obtener observaciones básicas de una fuente de números aleatorios.
- En la simulación de este trabajo es necesario generar los usuarios del
- sistema y comportamientos dentro de el, esta generación estará basada en
- observaciones de la realidad identificada en otros trabajos académicos.
-\end_layout
-
-\begin_layout Enumerate
-Transformar las observaciones básicas de entradas al modelo, según las especific
-aciones del mismo.
- Es necesario por lo tanto asignar a estos datos aleatorios un significado
- real dentro de la simulación, por ejemplo el momento de ingreso de un usuario
- al sistema según la variable temporal de la simulación, o el piso al que
- se dirige según el patrón de tráfico presente.
-\end_layout
-
-\begin_layout Enumerate
-Trasformar las entradas, a través del modelo, en salidas.
- Esto se logra simulando de acuerdo a los datos de entrada y cuantificando
- las salidas medidas del sistema.
-\end_layout
-
-\begin_layout Enumerate
-Calcular estadísticas a partir de salidas, para estimar las medidas de comportam
-iento.
- Una vez corrida y finalizada la simulación es necesario medir estadísticamente
- el desempeño del sistema.
+A continuación se identifican las variables del sistema a simular.
 \end_layout
 
 \begin_layout Subsection
@@ -791,7 +764,7 @@ Pisos portal
 \begin_inset Formula $i\:\epsilon\:0\leq i\leq f$
 \end_inset
 
- ): ): Pisos por los cuales están entrando nuevos usuarios al sistema.
+ ): Pisos por los cuales están entrando nuevos usuarios al sistema.
 \end_layout
 
 \begin_layout Itemize
@@ -1007,7 +980,7 @@ key "SANDOR2006"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1185,7 +1158,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/probLeftBehindUser.png
-	scale 70
+	scale 40
 
 \end_inset
 
@@ -1418,7 +1391,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/commonSimCharacteristics.png
-	scale 50
+	scale 70
 
 \end_inset
 
@@ -1429,7 +1402,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Rangos cumunes de operación en edificaciones
+Rangos comunes de operación en edificaciones
 \end_layout
 
 \end_inset
@@ -1448,7 +1421,7 @@ Componentes del Simulador
 
 \begin_layout Standard
 Los componentes de la simulación discreta basada en avance de tiempo se
- maneja como lo propone Averill para este tipo de sistemas a simular 
+ manejan como lo propone Averill para este tipo de sistemas a simular 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "AVERILL2000"
@@ -1622,7 +1595,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
-	scale 55
+	scale 45
 
 \end_inset
 
@@ -1661,12 +1634,15 @@ s imitando de una forma cercana el sistema modelado.
  Cuando se busca modelar un sistema es necesario reunir un número importante
  de parámetros que lo representen, estos parámetros por lo general son difíciles
  de identificar, para obtenerlos puede ser necesario un estudio muy riguroso
- del mismo, así como contar con una logística apropiada, el sistema analizado
- será traducido en datos que podrán ingresarse en el sistema, éste debe
- permitir ingresar los datos de una manera fácil y ágil, además debe permitir
- exportar estos datos para que sean compartidos con otros usuarios, permitiendo
- así que un estudio pueda ser incluido en diferentes ordenadores, proporcionando
- a la comunidad académica datos confiables.
+ del mismo, así como contar con una logística apropiada.
+\end_layout
+
+\begin_layout Standard
+El sistema analizado será traducido en datos que podrán ingresarse en el
+ sistema, éste debe permitir ingresar los datos de una manera fácil y ágil,
+ además debe permitir exportar estos datos para que sean compartidos con
+ otros usuarios, permitiendo así que un estudio pueda ser incluido en diferentes
+ ordenadores, proporcionando a la comunidad académica datos confiables.
  Este módulo será el encargado de establecer las datos con los cuales se
  ejecute la simulación, por nombrar algunos: 
 \end_layout
@@ -1674,7 +1650,7 @@ s imitando de una forma cercana el sistema modelado.
 \begin_layout Standard
 
 \series bold
-Del Ascensor
+Datos Del Ascensor
 \end_layout
 
 \begin_layout Itemize
@@ -1704,7 +1680,7 @@ Máximo Número de Pasajeros dentro del Ascensor
 \begin_layout Standard
 
 \series bold
-De la simulación
+Datos De la simulación
 \end_layout
 
 \begin_layout Itemize
@@ -1752,9 +1728,9 @@ Tasa de Arribo
  uno es el tiempo en el que se mide y otro es el piso en el que se realice
  la correspondiente medición, este tráfico podemos representarlo como un
  vector de dos dimensiones, en el cual la tasa de arribo ingresada es el
- número de pasajeros que entran al sistema cada 5 minutos, se escogió un
- espacio de tiempo de cinco minutos ya que es representativo para la simulación
- 
+ número de pasajeros que entran al sistema cada 5 minutos.
+ Se escogió un espacio de tiempo de cinco minutos ya que es representativo
+ para la simulación 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "HAKONEN2003"
@@ -1769,22 +1745,9 @@ key "HAKONEN2003"
 \series bold
 Probabilidad de destino
 \series default
-: Es la probabilidad que estándo en el piso Po el pasajero se dirija al
- piso destino Pd, esta probabilidad se puede representar como un vector
+: Es la probabilidad que estando en el piso origen Po el pasajero se dirija
+ al piso destino Pd, esta probabilidad se puede representar como un vector
  de tres dimensiones en donde los componentes son: <Po, Pd, Probabilidad>.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Se debe incluir el diagrama de secuencia de la generación de tráfico.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -1814,6 +1777,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/PIMmodelSimModel.png
+	scale 60
 
 \end_inset
 
@@ -1841,22 +1805,30 @@ Diagrama de clases simulation model
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Building Simulator
 \end_layout
 
 \begin_layout Standard
 Este componente es el encargado de coordinar las tareas necesarias que se
- ejecutan durante del ciclo de vida de la simulación lo hace por medio del
- componente RoutineManager.
- Es el componente centran de a simulación y tiene comunicación con todos
- los demás componentes de la simulación.
+ ejecutan durante del ciclo de vida de la simulación por medio del componente
+ RoutineManager.
+ Es el componente central de la simulación y tiene comunicación con todos
+ los demás componentes.
 \end_layout
 
 \begin_layout Standard
 En la siguiente figura se presenta un diagrama de flujo detallando los pasos
- que ocurren durante la simulación, la coordinación de estas tareas es responsab
-ilidad del componente central BuildingSimulator.
+ que ocurren durante la simulación.
+ La coordinación de estas tareas es responsabilidad del componente central
+ BuildingSimulator.
 \end_layout
 
 \begin_layout Standard
@@ -1864,12 +1836,12 @@ ilidad del componente central BuildingSimulator.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/FlowDiagSimulation.png
-	scale 50
+	scale 35
 
 \end_inset
 
@@ -1893,6 +1865,13 @@ Diagrama de flujo resumido simulación
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Routine Manager
 \end_layout
@@ -1903,14 +1882,14 @@ or, Elevator Group Controller (Rutina para asignar las llamadas) y Elevator
  Controller (Rutina que ejecuta la dinámica de cada cabina de ascensor).
  Se decide ejecutarlo en un solo hilo para no perder la sincronización entre
  las tareas y no introducir error en la simulación por los tiempos de procesamie
-nto que tiene cada una de as tareas que en algunos casos pueden ser significante
-s.
+nto que tiene cada una de as tareas -que en algunos casos pueden ser significati
+vos-.
 \end_layout
 
 \begin_layout Standard
 Este componente gestiona el inicio, ejecución y muerte de cada una de las
  rutinas que se configuren.
- Ya que la arquitectura lo permite se podría en cualquier momento introducir
+ Ya que la arquitectura lo permite, se podría en cualquier momento introducir
  una nueva rutina de manera fácil.
 \end_layout
 
@@ -1921,12 +1900,10 @@ GUI Controller
 \begin_layout Standard
 Este componente será el encargado de mantener un modelo visual 2d de edificación
  simulada.
- Además incorporará un componente tipo linea de comandos para poder introducir
- llamadas al sistema de manera manual.
  Este componente se ejecuta en un hilo separado del hilo de la simulación,
- esto para mejorar el desempeño de la aplicación, ya que en este caso no
- es tan crítico perder algo sincronía con la simulación es posible mantenerlo
- en un hilo independiente.
+ esto para mejorar el desempeño de la aplicación.
+ Ya que en este caso no es tan crítico perder algo sincronía con la simulación,
+ es posible mantenerlo en un hilo independiente.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1948,10 +1925,14 @@ La verificación de esta tesis se hará mediante un estudio de los resultados
  la energía consumida por los ascensores medida respecto a la distancia
  recorrida por los mismos.
  Sería posible realizar este estudio manualmente, y mostrar las cifras que
- avalen tales resultados, pero con el fin de automatizar este proceso y
- de hacerlo más entendible y vistoso al usuario final, se creó el módulo
- de reportes con el cual se generarán los reportes definidos una vez culminada
- la simulación.
+ avalen tales resultados.
+ 
+\end_layout
+
+\begin_layout Standard
+Con el fin de automatizar éste proceso y hacerlo más entendible y vistoso
+ al usuario final, se creó el módulo de reportes con el cual se generarán
+ los reportes definidos una vez culminada la simulación.
  El Módulo de Reportes es el encargado de generar y visualizar los reportes
  generados con los datos obtenidos de la simulación, este módulo contiene
  2 componentes.
@@ -2049,387 +2030,6 @@ La probabilidad de tener n pasajeros en el intervalo de tiempo T para una
 
 \begin_layout Standard
 \begin_inset Formula $p_{r}(n)=\frac{(\lambda T)^{n}}{n!}e^{-\lambda T}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Diseño del Controlador de Grupo de Elevadores
-\end_layout
-
-\begin_layout Itemize
-El elevador no llevara a un pasajero dentro del ascensor en dirección contraria
- a la que él se dirige.
-\end_layout
-
-\begin_layout Itemize
-La capacidad de cada ascensor son n personas, y si el cupo está lleno no
- atenderá llamadas.
-\end_layout
-
-\begin_layout Itemize
-Un elevador viaja a una velocidad constante de n pisos por segundo.
-\end_layout
-
-\begin_layout Itemize
-Atender cada piso toma 
-\begin_inset Formula $n$
-\end_inset
-
- segundos.
- Durante este tiempo entran y salen del ascensor 
-\begin_inset Formula $\alpha$
-\end_inset
-
- personas, por lo tanto el tiempo que el ascensor está detenido en cada
- piso es:
-\begin_inset Formula $n+\alpha(\rho)$
-\end_inset
-
-, en donde 
-\begin_inset Formula $\rho$
-\end_inset
-
- es un factor multiplicador.
-\end_layout
-
-\begin_layout Itemize
-Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando una
- de las restricciones anteriormente mencionadas.
- 
-\end_layout
-
-\begin_layout Subsubsection
-Controlador Convencional
-\end_layout
-
-\begin_layout Standard
-El diseño de controladores convencionales en el campo de tráfico de pasajeros
- en edificaciones está orientado por reglas de tráfico fijas en las cuales
- no se tienen en cuenta la optimización del servicio.
- Esta aproximación no tiene en cuanta la naturaleza dinámica del problema
- que implica parámetros de operación cambiantes -por patrones de tráfico
- diferentes y fluctuaciones en el transcurrir normal de los mismos-.
- 
-\end_layout
-
-\begin_layout Standard
-En la actualidad se han normalizado un grupo de algoritmos para el control
- de elevadores, éstos se programan en microprocesadores y se convierten
- en soluciones generalizadas al problema del control de tráfico 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "MIRAVETE1996"
-
-\end_inset
-
-.A continuación se describen brevemente los principios básicos de los algoritmos
- más empleados.
-\end_layout
-
-\begin_layout Standard
-•
-\series bold
- Maniobra Universal Por Pulsadores
-\series default
-: Cuando el ascensor está desocupado, y es el primero en recibir la orden
- ira a atender la llamada.
- Si durante el funcionamiento se solicita el ascensor desde cualquier otra
- planta la llamada será ignorada y el carro seguirá obedeciendo la orden
- que ha iniciado la llamada.
-\end_layout
-
-\begin_layout Standard
-• 
-\series bold
-Maniobra Duplex
-\series default
-: Cualquier llamada es atendida por el elevador que se encuentre libre;
- pero si están libre dos elevadores, acudirá a la llamada el que esté mas
- próximo al piso origen del llamado.
- Solamente acude un elevador a cualquier llamado.
-\end_layout
-
-\begin_layout Standard
-• 
-\series bold
-Maniobra Colectiva selectiva en los dos sentidos
-\series default
-: El elevador va a registrar únicamente los llamados que se generen en el
- sentido que va el ascensor.
- Es decir si el ascensor va hacia arriba sólo se registrarán los llamados
- que se hagan en los pisos superiores, y si va hacia abajo sólo registrará
- los que se generen en pisos inferiores.
- El sentido se invierte cuando el elevador llega al último piso, ya sea
- por una llamada de piso o una llamada de ascensor.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Reglas Básicas
-\end_layout
-
-\begin_layout Standard
-El control convencional usualmente atiende las llamadas hechas por los pasajeros
- siguiendo ciertas reglas básicas:
-\end_layout
-
-\begin_layout Standard
-• El elevador no llevara a un pasajero dentro del ascensor en dirección
- contraria a la que él se dirige.
-\end_layout
-
-\begin_layout Standard
-• La capacidad de cada ascensor son n personas, y si el cupo está lleno
- no atenderá llamadas.
-\end_layout
-
-\begin_layout Standard
-• Un elevador viaja a una velocidad constante de n pisos por segundo.
-\end_layout
-
-\begin_layout Standard
-• Atender cada piso toma n segundos.
- Durante este tiempo la persona entrara o saldrá del ascensor.
- Si el número de personas es mayor que n se necesitaran de n+2 segundos.
-\end_layout
-
-\begin_layout Standard
-• Un ascensor no ignorará ninguna llamada, a no ser que esté ejecutando
- una de las restricciones anteriormente mencionadas.
- 
-\end_layout
-
-\begin_layout Subsection
-Criterios De Desempeño
-\end_layout
-
-\begin_layout Standard
-Para medir la eficiencia del sistema de control usado, usualmente se tienen
- criterios de desempeño orientados al servicio.
- Estos criterios buscan reducir la insatisfacción del cliente en cuanto
- al tiempo que invierte para movilizarse desde su piso origen hasta el piso
- destino.
- El criterio de desempeño más usado en cualquier tipo de edificación diurna
- va en busca de reducir el tiempo de espera que el pasajero gasta desde
- que oprime el botón de llamada y el tiempo que el ascensor toma para llevar
- el pasajero a su piso destino 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "HAKONEN-SIIKONEN-2008"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Se tendrán en cuenta como criterios de optimización de servicio el 
-\begin_inset Quotes eld
-\end_inset
-
-Tiempo de Espera
-\begin_inset Quotes erd
-\end_inset
-
- y el 
-\begin_inset Quotes eld
-\end_inset
-
-Tiempo de Viaje
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Tiempo de Espera: 
-\series default
-Uno de los factores que justifica como objetivo el tiempo de espera es que
- sicológicamente una pasajero pierde la paciencia después de esperar 60
- segundo en promedio 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BARNEY2003"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Tiempo de Viaje
-\series default
-: Es también comprobable que sicológicamente una persona espera a lo sumo
- que el tiempo desde que toma el ascensor hasta que llega a su piso destino
- no debe ser mayor a los 90 segundos 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BARNEY2003"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Situación de emergencia
-\series default
-: por medio de estudios realizados se determinó que el el tiempo en el que
- se debe efectuar una evacuación completa de una edificación esta entre
- los 15 y 30 minutos 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "HAKONEN2003"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-Desempeño dado por el Tiempo De Espera
-\end_layout
-
-\begin_layout Standard
-En un sistema de elevadores con buen desempeño se observa que el tiempo
- de espera sigue una distribución exponencial 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "BARNEY2003"
-
-\end_inset
-
-, de esta forma:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $F_{t}=exp(-t/T_{av}),$
-\end_inset
-
-en donde 
-\begin_inset Formula $T_{av}$
-\end_inset
-
-, es el promedio de tiempo de espera y 
-\begin_inset Formula $F_{t}$
-\end_inset
-
- muestra las fracciones de tiempos de espera que que exceden el tiempo t.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/performanceCriteria_wt.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\lang english
-\begin_inset CommandInset label
-LatexCommand label
-name "performanceCriteria_wt"
-
-\end_inset
-
-
-\lang spanish
-Criterio de desempeño <Tiempo de Espera>
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Desempeño dado por el Tiempo De Viaje
-\end_layout
-
-\begin_layout Standard
-Para el 
-\begin_inset Quotes eld
-\end_inset
-
-Tiempo de Viaje
-\begin_inset Quotes erd
-\end_inset
-
- se usa una distribución Gamma.
- Los límites de esta se encuentran en la Figura 3.11.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename resources/performanceCriteria_rt.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\lang english
-\begin_inset CommandInset label
-LatexCommand label
-name "performanceCriteria_rt"
-
-\end_inset
-
-
-\lang spanish
-Criterio de desempeño <Tiempo de Viaje>
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \end_inset
 
 

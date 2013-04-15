@@ -281,7 +281,7 @@ thepage
 Resultados
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Introducción
 \end_layout
 
@@ -400,7 +400,7 @@ Plantilla de tráfico Tour Europe en el simulador propuesto
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Validación del Simulador
 \end_layout
 
@@ -679,12 +679,12 @@ as observadas no difieren mucho de las esperadas para la distribución de
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/rPoiss-7am-21.png
-	scale 30
+	scale 20
 
 \end_inset
 
@@ -708,7 +708,7 @@ Prueba chi-cuadrado en R
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Protocolo de Experimentación
 \end_layout
 
@@ -5787,7 +5787,7 @@ En el siguiente ejemplo se genera una llamada desde el piso 6 hasta el piso
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -6173,7 +6173,7 @@ En el siguiente ejemplo se genera una llamada desde el piso 11 hasta el
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent

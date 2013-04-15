@@ -344,6 +344,10 @@ Patrón de tráfico: es la caracterización del comportamiento estocástico
  que se presenta en el arribo de pasajeros al sistema.
  Para este trabajo se consideran principalmente cuatro patrones: subida
  -uppeak-, entre pisos -interfloor-, bajada -downpeak-.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -390,7 +394,7 @@ Simulador
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
+placement t
 wide false
 sideways false
 status collapsed
@@ -424,7 +428,7 @@ Simulador
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
+placement t
 wide false
 sideways false
 status collapsed
@@ -458,7 +462,7 @@ Simulador
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
+placement t
 wide false
 sideways false
 status collapsed
@@ -492,7 +496,7 @@ Reporte PDF energía consumida
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
+placement t
 wide false
 sideways false
 status collapsed
@@ -526,7 +530,7 @@ Reporte PDF Tiempo de Espera
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
+placement t
 wide false
 sideways false
 status collapsed
