@@ -311,10 +311,10 @@ Controlador Basado en Lógica Difusa (CBLD)
 \end_layout
 
 \begin_layout Standard
-El control difuso puede tratar las imposiciones de los sistemas para dar
- soluciones en condiciones más reales y menos ideales, además es posible
- mejorar aún más el rendimiento, optimizando los conjuntos difusos y la
- ponderación de las reglas.
+El control difuso puede tratar las imprecisiones en los sistemas para dar
+ soluciones en condiciones más reales y menos ideales.
+ Además es posible mejorar aún más el rendimiento, optimizando los conjuntos
+ difusos y la ponderación de las reglas.
  
 \end_layout
 
@@ -328,12 +328,13 @@ En los modelos de programación matemática aplicados a fenómenos reales se
  lo que permite abordar su planteamiento y resolución.
  Sin embargo, esta hipótesis de constancia no suele ser cierta puesto que
  normalmente los datos pueden ser erróneos o incompletos [CANOSMJ], para
- lo cual la CBOR es muy buena opción ya que garantiza convergencia al óptimo,
- además de ello es tolerante a pequeñas variaciones en las condiciones iniciales
- de optimización, entra las desventajas se encuentra que la implementación
+ lo cual la CBOR es muy buena opción ya que garantiza convergencia al óptimo.
+ Además es tolerante a pequeñas variaciones en las condiciones iniciales
+ de optimización, entre las desventajas se encuentra que la implementación
  computacional de este algoritmo es muy compleja y el tiempo de ejecución
- será muy pobre finalmente la eficiencia de la solución obtenida con este
- método es alta, más es costoso su tiempo de ejecución.
+ será muy pobre.
+ Finalmente la eficiencia de la solución obtenida con este método es alta,
+ más es costoso su tiempo de ejecución.
  
 \end_layout
 
@@ -471,8 +472,8 @@ Proceso de simulación de BANKS
 
 \begin_layout Standard
 Pese a la gran variedad de modelos de simulación existentes todos estos
- se adaptan al siguiente esquema simplificado de Schmeiser, para este trabajo
- se usará esta simplificación .
+ se adaptan al siguiente esquema simplificado de Schmeiser.
+ Para este trabajo se usará esta simplificación:
 \end_layout
 
 \begin_layout Enumerate
@@ -568,7 +569,7 @@ Avance por Unidad de Tiempo
 Esta técnica mantiene un reloj interno del sistema que avanza un intervalo
  de tiempo definido en cada iteración.
  En cada avance de tiempo se valida si hay eventos que ocurran en ese preciso
- instante o y se ejecutan las tareas necesarias 
+ instante y se ejecutan las tareas necesarias 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PERROS2009"
@@ -1116,7 +1117,7 @@ Como ya se ha dicho el controlador de grupo busca asignar las llamadas a
 Es común que los controladores para grupo de ascensor manejen los mismos
  criterios de optimización, los cuales recopilando todos los criterios vistos
  se pueden dividir en dos grupos: funcionamiento del sistema y servicio
- ofrecido al usuario, los cuales se explican a continuación 
+ ofrecido al usuario, los cuales se explican a continuación.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1397,7 +1398,7 @@ key "PARKER1971"
 \end_layout
 
 \begin_layout Enumerate
-El elevador no llevara a un pasajero dentro del ascensor en la dirección
+El elevador no llevará a un pasajero dentro del ascensor en la dirección
  contraria a la que se dirige.
  
 \end_layout
@@ -1415,12 +1416,12 @@ Un elevador viaja a una velocidad constante de n pisos por segundo.
 
 \begin_layout Enumerate
 Atender cada piso toma i segundos.
- Durante este tiempo la persona entrara o saldrá del ascensor.
+ Durante este tiempo la persona entrará o saldrá del ascensor.
  
 \end_layout
 
 \begin_layout Enumerate
-Si el número de personas es mayor que v se necesitaran de w segundos.
+Si el número de personas es mayor que v se necesitará de w segundos.
  
 \end_layout
 
@@ -1739,7 +1740,7 @@ La idea de una lógica multi-valuada ha estado presente desde principios
  del siglo XX.
  Charles Sanders Pierce (1839-1914) fue uno de los primeros pensadores que
  se interesaron en la vaguedad o incertidumbre, él no creía en la separación
- entre verdad y falsedad y postuló que la incertidumbre era un grado entre
+ entre verdad-falsedad y postuló que la incertidumbre era un grado entre
  estos dos estados.
  Pero fue Lukasiewicz, quien dio el primer paso hacia la definición formal
  de la incertidumbre, al introducir en 1920 la idea de una lógica tri-valuada
@@ -1870,13 +1871,13 @@ En el cerebro humano hay aproximadamente cien mil millones de neuronas (
 \begin_inset Formula $10^{11}$
 \end_inset
 
-células nerviosas), cada cécula conectada con sus vecinos por medio de conexione
+células nerviosas), cada célula conectada con sus vecinos por medio de conexione
 s sinápticas, se estima que en un cerebro adulto hay 
 \begin_inset Formula $10^{14}$
 \end_inset
 
- sinápsis.
- Las señales se propagan entre neuronas mediante una reaccón electroquímica:
+ sinapsis.
+ Las señales se propagan entre neuronas mediante una reacción electro-química:
  a nivel de la sinapsis, la neurona que genera la señal emite unos neurotransmis
 ores que activan los receptores de la neurona que recibe la señal.
 \end_layout
@@ -1884,7 +1885,7 @@ ores que activan los receptores de la neurona que recibe la señal.
 \begin_layout Standard
 En 1943, McCulloch y Pitts propusieron un modelo matemático sencillo del
  funcionamiento de las neuronas: la neurona dispara un potencial de acción
- cuando la combinación lineal de sus entradas supera un umbral, estye tipo
+ cuando la combinación lineal de sus entradas supera un umbral, este tipo
  de redes se conocen bajo el nombre de perceptron.
 \end_layout
 
@@ -2027,7 +2028,7 @@ Aprendizaje supervisado
 Aprendizaje no supervisado
 \series default
 .
- Se presenta ala red un conjunto de patrones de entrada.
+ Se presenta a la red un conjunto de patrones de entrada.
  No hay información disponible sobre la salida esperada.
  El proceso de entrenamiento en este caso deberá ajustar sus pesos en base
  a la correlación existente entre los datos de entrada.

@@ -528,7 +528,7 @@ En la tabla No.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -720,12 +720,18 @@ Descripción Detallada de Agentes
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="7cm">
+<column alignment="left" valignment="top" width="10cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -733,6 +739,7 @@ Descripción Detallada de Agentes
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Nombre
 \series default
  
@@ -740,12 +747,13 @@ Nombre
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="7cm">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="12cm">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Agente Controlador de Cabina
 \end_layout
 
@@ -768,24 +776,29 @@ Agente Controlador de Cabina
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Sensores
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor de peso 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Determina el número de personas presentes en la cabina, basándose en el
  peso de estas
 \end_layout
@@ -803,19 +816,23 @@ Determina el número de personas presentes en la cabina, basándose en el
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor de Puerta
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Identifica si la puerta del ascensor se encuentra abierta o cerrada
 \end_layout
 
@@ -832,19 +849,23 @@ Identifica si la puerta del ascensor se encuentra abierta o cerrada
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor de Piso 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Detecta si el ascensor a llegado a un piso 
 \end_layout
 
@@ -861,19 +882,23 @@ Detecta si el ascensor a llegado a un piso
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor de Llamada
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Detecta que se genera una llamada en el sistema con con piso origen (po)
  y un piso destino (pd)
 \end_layout
@@ -882,30 +907,35 @@ Detecta que se genera una llamada en el sistema con con piso origen (po)
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Actuadores
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Actuador de puerta 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Se encarga de abrir o cerrar la puerta para el ingreso o salida de pasajeros
  
 \end_layout
@@ -923,19 +953,23 @@ Se encarga de abrir o cerrar la puerta para el ingreso o salida de pasajeros
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Actuador de Cabina
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Hace que la cabina del ascensor se dirija en una dirección determinada (arriba,
  abajo)
 \end_layout
@@ -950,15 +984,18 @@ Hace que la cabina del ascensor se dirija en una dirección determinada (arriba,
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Meta
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="10cm">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="12cm">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Movilizar a un pasajero de un piso origen a un piso destino en el menor
  tiempo posible.
 \end_layout
@@ -966,40 +1003,49 @@ Meta
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Submetas
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Notificar los estados en los que se encuentra una llamada: aceptada, recogida,
- despachada.
+despachada.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Enviar la oferta para competir por la llamada generada.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Abrir y cerrar las puertas de la cabina del ascensor para permitir el
  ingreso y la salida de pasajeros.
  
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Controlar el motor de la cabina para desplazar hacia arriba o hacia abajo.
  
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Activar el freno de la cabina en determinado lugar para detenerse.
  
 \end_layout
 
 \begin_layout Plain Layout
-* Participar en la apuesta para obtener una llamada generada en el 
-\end_layout
 
-\begin_layout Plain Layout
-sistema.
+\size footnotesize
+* Participar en la apuesta para obtener una llamada generada en el sistema.
 \end_layout
 
 \end_inset
@@ -1021,13 +1067,36 @@ sistema.
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Descripción detallada del agente controlador de cabina
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="5cm">
+<column alignment="left" valignment="top" width="4cm">
+<column alignment="left" valignment="top" width="8cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1040,7 +1109,7 @@ Nombre
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="10cm">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1068,24 +1137,29 @@ Agente Arbitro del Sistema
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Sensores
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor de llamada generada 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Determina en que piso se esta generando la llamada 
 \end_layout
 
@@ -1099,24 +1173,29 @@ Determina en que piso se esta generando la llamada
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Actuadores
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Actuador asignador de llamada
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Basándose en los criterios establecidos el actuador identifica una cabina
  de ascensor que pueda atender eficientemente la llamada 
 \end_layout
@@ -1131,31 +1210,40 @@ Basándose en los criterios establecidos el actuador identifica una cabina
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Meta
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="7cm">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="10cm">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Solucionar los conflictos entre las los agentes controladores de cabina
  para asignar la llamada, este flujo de asignación utiliza en protocolo
  contract-net.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Identificar cuales agentes cabina no está en servicio para no tenerlos
  en cuenta en la asignación.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Reasignar las llamadas pertenecientes a un agente cabina que cambia a
  estado fuera de servicio.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 *Seleccionar de manera eficiente cual de las cabinas oferentes pueda atender
  las llamadas generadas dentro de la edificación.
 \end_layout
@@ -1179,13 +1267,36 @@ Meta
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Descripción detallada del agente árbitro del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="4cm">
-<column alignment="center" valignment="top" width="5cm">
+<column alignment="left" valignment="top" width="2cm">
+<column alignment="left" valignment="top" width="8cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1193,6 +1304,7 @@ Meta
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Nombre 
 \end_layout
 
@@ -1204,6 +1316,7 @@ Nombre
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Agente Estimador Patrón de Tráfico
 \end_layout
 
@@ -1226,24 +1339,29 @@ Agente Estimador Patrón de Tráfico
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Actuadores
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Registrador en BDD.
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Se encarga de registrar en la BDD la llamada generada para así determinar
  el patrón de tráfico presente en el sistema (Subida, bajada y entre pisos)
  
@@ -1259,24 +1377,29 @@ Se encarga de registrar en la BDD la llamada generada para así determinar
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Recursos
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Base de datos estadísticos
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Recurso de base de datos propia del agente en donde registra las llamadas
  que ingresan al sistema
 \end_layout
@@ -1291,6 +1414,7 @@ Recurso de base de datos propia del agente en donde registra las llamadas
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Meta
 \end_layout
 
@@ -1300,6 +1424,8 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Identificar el tipo de tráfico que se esta presentando en la edificación
  (subida, bajada y entre pisos).
 \end_layout
@@ -1307,14 +1433,19 @@ Meta
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Tareas
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Registrar las llamadas generadas en el sistema.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Obtener las llamadas para generar estadísticas.
 \end_layout
 
@@ -1337,13 +1468,36 @@ Tareas
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Descripción detallada del agente estimador patrón de tráfico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="4cm">
-<column alignment="center" valignment="top" width="5cm">
+<column alignment="left" valignment="top" width="2cm">
+<column alignment="left" valignment="top" width="8cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1351,17 +1505,19 @@ Tareas
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Nombre 
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="5cm">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="10cm">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Agente De Servicio Estimador Tiempo de Espera
 \end_layout
 
@@ -1384,24 +1540,29 @@ Agente De Servicio Estimador Tiempo de Espera
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Sensores
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor Posición del elevador 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Determina el piso en el que se encuentra el elevador en el momento en el
  que se genera la llamada 
 \end_layout
@@ -1419,19 +1580,23 @@ Determina el piso en el que se encuentra el elevador en el momento en el
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor Pasajeros en el elevador 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Determina el número de pasajeros en el elevador en el momento en el que
  se genera la llamada
 \end_layout
@@ -1449,19 +1614,23 @@ Determina el número de pasajeros en el elevador en el momento en el que
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor Dirección del elevador 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Determina la dirección del elevador en el momento en el que se genera la
  llamada 
 \end_layout
@@ -1476,24 +1645,29 @@ Determina la dirección del elevador en el momento en el que se genera la
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Actuadores
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Estimador de Tiempo 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Se encarga de estimar el tiempo que debe esperar un pasajero desde el momento
  en que ingresa la llamada hasta que la cabina llega al piso en el que se
  encuentra para atenderla 
@@ -1509,20 +1683,25 @@ Se encarga de estimar el tiempo que debe esperar un pasajero desde el momento
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Meta
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="10cm">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none" width="10cm">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Llevar la estadística de llamadas para determinar el porcentaje de tráfico
  de salida-entrada-entrepisos en el momento en el que se genera la llamada.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Estimar de manera acertada la cantidad de tiempo que debe esperar un pasajero
  desde el momento en que ingresa la llamada hasta que la cabina llega al
  piso en el que se encuentra para atenderla
@@ -1547,13 +1726,36 @@ Meta
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Descripción detallada del agente estimador tiempo de espera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="4cm">
-<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="8cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1561,6 +1763,7 @@ Meta
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Nombre 
 \end_layout
 
@@ -1572,6 +1775,7 @@ Nombre
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Agente Estimador Tiempo de Servicio 
 \end_layout
 
@@ -1592,15 +1796,19 @@ Agente Estimador Tiempo de Servicio
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensores 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor Pasajeros en el elevador 
 \end_layout
 
@@ -1610,6 +1818,8 @@ Sensor Pasajeros en el elevador
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Determina el número de pasajeros en el elevador en el momento en el que
  se genera la llamada
 \end_layout
@@ -1627,10 +1837,12 @@ Determina el número de pasajeros en el elevador en el momento en el que
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Sensor Dirección del elevador 
 \end_layout
 
@@ -1640,6 +1852,8 @@ Sensor Dirección del elevador
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Determina la dirección del elevador en el momento en el que se genera la
  llamada 
 \end_layout
@@ -1654,15 +1868,18 @@ Determina la dirección del elevador en el momento en el que se genera la
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Actuadores
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Estimador de Tiempo
 \end_layout
 
@@ -1672,6 +1889,8 @@ Estimador de Tiempo
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 Se encarga de estimar el tiempo que debe esperar un pasajero desde que es
  recogido en su piso origen hasta que es llevado a su piso de destino 
 \end_layout
@@ -1686,6 +1905,7 @@ Se encarga de estimar el tiempo que debe esperar un pasajero desde que es
 \begin_layout Plain Layout
 
 \series bold
+\size footnotesize
 Meta
 \end_layout
 
@@ -1695,11 +1915,15 @@ Meta
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Llevar la estadística de llamadas para determinar el porcentaje de tráfico
  de salida-entrada-entrepisos en el momento en el que se genera la llamada.
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 * Estimar de manera acertada la cantidad de tiempo que debe esperar un pasajero
  desde que es recogido en su piso origen hasta que es llevado a su piso
  de destino.
@@ -1719,6 +1943,23 @@ Meta
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Descripción detallada del agente estimador tiempo de servicio
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

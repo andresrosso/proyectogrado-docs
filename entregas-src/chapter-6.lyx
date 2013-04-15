@@ -288,7 +288,7 @@ Conclusiones
 \begin_layout Standard
 En éste trabajo de grado se presenta un simulador parametrizable que puede
  representar cualquier tipo de edificación y cualquier patrón de tráfico.
- Se comprobo rigurosamente la confiabilidad en el modelo simulado.
+ Se comprobó rigurosamente la confiabilidad en el modelo simulado.
 \end_layout
 
 \begin_layout Standard
@@ -310,11 +310,9 @@ La combinación de técnicas como: redes neuronales para la predicción de
 \end_layout
 
 \begin_layout Standard
-Se ofrece un entorno de simulación abierto, parametrizable y a la altura
- de los entornos empresariales para el problema de tráfico vertical.
- Este simulador permitirá a los investigadores centrarse en resolver el
- problema de asignación de llamadas, un problema que debido a su naturaleza
- dinámica es candidata a tratarse con técnicas de inteligencia computacional.
+El simulador permitirá a los investigadores centrarse en resolver el problema
+ de asignación de llamadas, un problema que debido a su naturaleza dinámica
+ es candidata a tratarse con técnicas de inteligencia computacional.
 \end_layout
 
 \begin_layout Section

@@ -305,7 +305,7 @@ key "SIIKONEN2001"
 \end_inset
 
 .
- Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.
+ Otros más los tienen OTIS, SCHINDLER, MITSUBISHI.
 \end_layout
 
 \begin_layout Standard
@@ -350,7 +350,7 @@ key "SIIKONEN_BTS2004"
 Estas herramientas de simulación sofisticadas tienen en común que son propietari
 as, en el caso de BTS y OtisPlan su uso está restringido a personal de la
  compañía únicamente y para el caso de Elevate existe una licencia comercial
- de usuario único con un costo de 2900 dolares 
+ de usuario único con un costo de 2900 dolares anuales 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ElevateLicence"
@@ -376,10 +376,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/modeloSimBANKS.png
 	scale 50
@@ -401,10 +397,6 @@ Modelo simulación, flujo Banks [BANKS2000]
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -415,7 +407,7 @@ Diseño de la Simulación
 \end_layout
 
 \begin_layout Standard
-El simulador a desarrollar permitió tener un ambiente controlado que representó
+El simulador desarrollado permitió tener un ambiente controlado que representó
  las características más importantes de una edificación y simplificó su
  representación, facilitando así, el mantenimiento, adaptación y reutilización
 \end_layout
@@ -651,7 +643,11 @@ despachar pasajero
 \end_inset
 
 , etc.
- Si se usara por ejemplo una técnica de basada en 
+ 
+\end_layout
+
+\begin_layout Standard
+Si se usara por ejemplo una técnica de basada en 
 \begin_inset Quotes eld
 \end_inset
 
@@ -662,13 +658,15 @@ avance por eventos
 , sería necesario manejar una lista doblemente enlazada de eventos e ir
  introduciendo entre dos eventos ya almacenados uno nuevo que genere alguna
  de las rutinas del simulador.
- 
+ Éste proceso es costoso computacionalmente además de frecuente.
 \end_layout
 
 \begin_layout Standard
-Éste proceso es costoso computacionalmente y además es de una frecuencia
- altísima.
- La escogencia de la t
+La escogencia de la técnica de simulación estocástica y no determinística
+ responde a la naturaleza misma del problema.
+ Ya que la generación de pasajeros, no se puede llevar a cabo de manera
+ determinística, si no que debe basarse en una función de probabilidad que
+ modele éste tipo de problemas de tráfico.
 \end_layout
 
 \begin_layout Subsection
@@ -1009,7 +1007,7 @@ key "SANDOR2006"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1187,7 +1185,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/probLeftBehindUser.png
-	scale 70
+	scale 40
 
 \end_inset
 
@@ -1415,12 +1413,12 @@ key "SANDOR2006"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/commonSimCharacteristics.png
-	scale 50
+	scale 70
 
 \end_inset
 
@@ -1624,7 +1622,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/componentsUML.png
-	scale 55
+	scale 45
 
 \end_inset
 
@@ -1776,19 +1774,6 @@ Probabilidad de destino
  de tres dimensiones en donde los componentes son: <Po, Pd, Probabilidad>.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Se debe incluir el diagrama de secuencia de la generación de tráfico.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection
 Simulation Model
 \end_layout
@@ -1816,6 +1801,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/PIMmodelSimModel.png
+	scale 60
 
 \end_inset
 
@@ -1866,12 +1852,12 @@ ilidad del componente central BuildingSimulator.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename resources/FlowDiagSimulation.png
-	scale 50
+	scale 45
 
 \end_inset
 
@@ -2026,8 +2012,8 @@ Dinámica de Arribo de Pasajeros
 \end_layout
 
 \begin_layout Standard
-Los usuarios arribaran al sistema siguiendo un proceso de Poisson, esto
- es aceptado en generalmente en las investigaciones de este tipo 
+Los usuarios arribarán al sistema siguiendo un proceso de Poisson, esto
+ es aceptado generalmente en las investigaciones de este tipo 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BARNEY2003"
@@ -2046,7 +2032,7 @@ La probabilidad de tener n pasajeros en el intervalo de tiempo T para una
 \begin_inset Formula $\lambda$
 \end_inset
 
-(en llamadas por segundo) es:
+(en llamadas por intervalo de tiempo) es:
 \end_layout
 
 \begin_layout Standard
@@ -2335,7 +2321,7 @@ en donde
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2397,7 +2383,7 @@ Tiempo de Viaje
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics

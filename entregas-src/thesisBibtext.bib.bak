@@ -185,6 +185,16 @@
   timestamp = {2013.04.04}
 }
 
+@ARTICLE{Chen1992,
+  author = {H. Chen, M. Mizumoto and Y.-fel Ling},
+  title = {Automatic control of sewerage pumpstation by using fuzzy controls
+	and neural networks},
+  journal = {Fuuy Logic \& Neural Networks,},
+  year = {1992},
+  owner = {andres},
+  timestamp = {2013.04.04}
+}
+
 @ARTICLE{HAKONEN2003,
   author = {Henri Hakonen},
   title = {Simulation of Building Traffic and Evacuation by Elevators},
@@ -229,20 +239,6 @@
   year = {2000},
   owner = {arosso},
   timestamp = {2011.12.03}
-}
-
-@ARTICLE{Irie1988,
-  author = {Irie, B., Miyake, S, B., Miyake, S},
-  title = {Capabilities of three-layered percep- Lapedes, A., Farber, R., 1987.
-	Nonlinear signal processing using
-	
-	trons},
-  journal = {Proceedings of the IEEE International Conference on neural networks:
-	prediction and system modeling. Technical Neural Networks},
-  year = {1988},
-  pages = {641–648},
-  owner = {andres},
-  timestamp = {2013.04.04}
 }
 
 @BOOK{BANKS2000,
@@ -404,6 +400,16 @@
   owner = {arosso},
   timestamp = {2012.04.16},
   url = {http://bks3.books.google.com.ec/books?id=D-O6AAAACAAJ}
+}
+
+@ARTICLE{Irie1988,
+  author = {Irie Miyake},
+  title = {Capabilities of three-layered perceptrons.},
+  journal = {Proceedings of the IEEE International Conference on neural networks},
+  year = {1988},
+  pages = {641–648},
+  owner = {andres},
+  timestamp = {2013.04.04}
 }
 
 @CONFERENCE{NAKAI1994,
@@ -766,6 +772,11 @@
 	engineering computing;},
   owner = {arosso},
   timestamp = {2012.04.16}
+}
+
+@ARTICLE{,
+  owner = {andres},
+  timestamp = {2013.04.04}
 }
 
 @comment{jabref-meta: selector_review:}

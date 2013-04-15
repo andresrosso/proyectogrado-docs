@@ -78,7 +78,7 @@ customHeadersFooters
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
+\float_placement H
 \paperfontsize 12
 \spacing single
 \use_hyperref true
@@ -286,7 +286,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Introducción
+Introduction
 \end_layout
 
 \begin_layout Standard
@@ -359,7 +359,7 @@ Para el año de 1880 Werner von Siemens introdujo la utilización de fuentes
 A partir de entonces las construcciones eran cada vez más altas, y en países
  como Estados Unidos y Asia se marcaba una clara tendencia a preferir este
  tipo de edificaciones en ciudades con alta densidad poblacional.
- Un ejemplo de estas edificaciones son la torre Taipei 101 con una altura
+ Un ejemplo de estas edificaciones es la torre Taipei 101 con una altura
  de 509 metros o la torre Burj Khalifa en Dubai con 828 metros de altura
  y 163 pisos, siendo hasta el momento la construcción habitable más alta
  del mundo 
@@ -402,7 +402,7 @@ Se ha observado que el servicio prestado por los elevadores, en la mayoría
  de los casos es deficiente.
  Bajo condiciones de alto tráfico las personas tienen que esperar mucho
  tiempo para ser atendidas.
- En edificios pequeños no comportan mayores inconvenientes, sin embargo,
+ En edificios pequeños no implican mayores inconvenientes, sin embargo,
  en una construcción de gran altura, el transporte de los pasajeros debe
  hacerse de una manera ágil, eficiente y por qué no decirlo; de una manera
  inteligente, en donde se economice tanto el tiempo del pasajero, como la
@@ -430,9 +430,7 @@ key "MIRAVETE1996"
 \end_layout
 
 \begin_layout Standard
-Estos nuevos controladores utilizan técnicas inteligentes puras o híbridas
- que incorporan más de una técnica para mejorar el rendimiento.
- La mayoría de las técnicas usadas tienen arquitectura centralizada.
+La mayoría de las técnicas usadas tienen arquitectura centralizada.
  Se propone replantear el problema desde la perspectiva distribuida en donde
  cada una de las cabinas compita por la llamada teniendo en cuenta el estado
  de las demás cabinas y el de sí misma.
@@ -440,7 +438,7 @@ Estos nuevos controladores utilizan técnicas inteligentes puras o híbridas
 \end_layout
 
 \begin_layout Standard
-Las cabinas actuan como agentes inteligentes que cooperan para atender eficiente
+Las cabinas actúan como agentes inteligentes que cooperan para atender eficiente
 mente las llamadas de los usuarios.
  Existe además un agente intermediador, que resuelve los conflictos cuando
  hay varias cabinas compitiendo por la misma llamada.

@@ -286,7 +286,7 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Introduction
+Introducción
 \end_layout
 
 \begin_layout Standard
@@ -359,7 +359,7 @@ Para el año de 1880 Werner von Siemens introdujo la utilización de fuentes
 A partir de entonces las construcciones eran cada vez más altas, y en países
  como Estados Unidos y Asia se marcaba una clara tendencia a preferir este
  tipo de edificaciones en ciudades con alta densidad poblacional.
- Un ejemplo de estas edificaciones son la torre Taipei 101 con una altura
+ Un ejemplo de estas edificaciones es la torre Taipei 101 con una altura
  de 509 metros o la torre Burj Khalifa en Dubai con 828 metros de altura
  y 163 pisos, siendo hasta el momento la construcción habitable más alta
  del mundo 
@@ -421,8 +421,8 @@ key "MIRAVETE1996"
 \end_inset
 
 .
- La creciente necesidad hizo que nuevas técnicas más complejas empezaran
- a ser aplicadas a este problema.
+ La creciente necesidad hizo que nuevas técnicas complejas empezaran a ser
+ aplicadas a este problema.
  A partir del desarrollo de la inteligencia artificial han ido apareciendo
  controladores basados en técnicas inteligentes que aumentan considerablemente
  la efectividad en la asignación de llamadas.
@@ -455,7 +455,7 @@ Objetivos
 El trabajo presentado es un aporte a la academia en el estudio del tráfico
  vertical, promueve además la investigación en esta área al ofrecer un simulador
  de código abierto.
- Lo objetivos planteados para siguiente trabajo se enuncian a continuación.
+ Los objetivos planteados para siguiente trabajo se enuncian a continuación.
 \end_layout
 
 \begin_layout Subsection
@@ -478,7 +478,7 @@ Modelar matemáticamente el problema de tráfico presentado en las edificaciones
 \end_layout
 
 \begin_layout Enumerate
-Diseño del método distribuido de control para la asignación de ascensores,
+Diseñar un método distribuido de control para la asignación de ascensores,
  haciendo uso de técnicas de control inteligente.
  
 \end_layout

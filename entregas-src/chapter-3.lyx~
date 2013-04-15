@@ -305,7 +305,7 @@ key "SIIKONEN2001"
 \end_inset
 
 .
- Otros más lo tienen OTIS, SCHINDLER, MITSUBISHI.
+ Otros más los tienen OTIS, SCHINDLER, MITSUBISHI.
 \end_layout
 
 \begin_layout Standard
@@ -350,7 +350,7 @@ key "SIIKONEN_BTS2004"
 Estas herramientas de simulación sofisticadas tienen en común que son propietari
 as, en el caso de BTS y OtisPlan su uso está restringido a personal de la
  compañía únicamente y para el caso de Elevate existe una licencia comercial
- de usuario único con un costo de 2900 dolares 
+ de usuario único con un costo de 2900 dolares anuales 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ElevateLicence"
@@ -373,11 +373,7 @@ Para evitar la construcción del simulador se buscó en la comunidad académica
 \begin_inset Float figure
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -401,10 +397,6 @@ Modelo simulación, flujo Banks [BANKS2000]
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -415,7 +407,7 @@ Diseño de la Simulación
 \end_layout
 
 \begin_layout Standard
-El simulador a desarrollar permitió tener un ambiente controlado que representó
+El simulador desarrollado permitió tener un ambiente controlado que representó
  las características más importantes de una edificación y simplificó su
  representación, facilitando así, el mantenimiento, adaptación y reutilización
 \end_layout
@@ -1421,7 +1413,7 @@ key "SANDOR2006"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2032,8 +2024,8 @@ Dinámica de Arribo de Pasajeros
 \end_layout
 
 \begin_layout Standard
-Los usuarios arribaran al sistema siguiendo un proceso de Poisson, esto
- es aceptado en generalmente en las investigaciones de este tipo 
+Los usuarios arribarán al sistema siguiendo un proceso de Poisson, esto
+ es aceptado generalmente en las investigaciones de este tipo 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BARNEY2003"
@@ -2052,7 +2044,7 @@ La probabilidad de tener n pasajeros en el intervalo de tiempo T para una
 \begin_inset Formula $\lambda$
 \end_inset
 
-(en llamadas por segundo) es:
+(en llamadas por intervalo de tiempo) es:
 \end_layout
 
 \begin_layout Standard
@@ -2341,7 +2333,7 @@ en donde
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2403,7 +2395,7 @@ Tiempo de Viaje
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
